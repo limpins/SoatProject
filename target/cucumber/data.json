@@ -1,0 +1,169 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4830863000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TODO: Implement getLocation in similar fashion to ScalaStepDefinition"
+            }
+          },
+          {
+            "result": {
+              "duration": 1635900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TODO: Implement getLocation in similar fashion to ScalaStepDefinition"
+            }
+          },
+          {
+            "result": {
+              "duration": 340375900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TODO: Implement getLocation in similar fashion to ScalaStepDefinition"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "exercice scenario 1",
+        "description": "",
+        "id": ";exercice-scenario-1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2022537000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the data",
+            "match": {
+              "location": "StepDefs.scala:24"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "Value"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "Blue"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "Red"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "Blue"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "Blue"
+                ]
+              },
+              {
+                "cells": [
+                  "2",
+                  "Green"
+                ]
+              },
+              {
+                "cells": [
+                  "2",
+                  "Purpule"
+                ]
+              },
+              {
+                "cells": [
+                  "2",
+                  "Purpule"
+                ]
+              },
+              {
+                "cells": [
+                  "3",
+                  "Black"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.apache.spark.SparkException: Job 0 cancelled because SparkContext was shut down\r\n\tat org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1085)\r\n\tat org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1083)\r\n\tat scala.collection.mutable.HashSet.foreach(HashSet.scala:79)\r\n\tat org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1083)\r\n\tat org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:2463)\r\n\tat org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)\r\n\tat org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2369)\r\n\tat org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2069)\r\n\tat org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1419)\r\n\tat org.apache.spark.SparkContext.stop(SparkContext.scala:2069)\r\n\tat org.apache.spark.SparkContext.$anonfun$new$37(SparkContext.scala:661)\r\n\tat org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\r\n\tat org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1996)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\r\n\tat scala.util.Try$.apply(Try.scala:213)\r\n\tat org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)\r\n\tat org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)\r\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\r\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n\tat org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)\r\n\tat org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)\r\n\tat org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)\r\n\tat org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)\r\n\tat org.apache.spark.sql.execution.SparkPlan.executeTake(SparkPlan.scala:472)\r\n\tat org.apache.spark.sql.execution.SparkPlan.executeTake(SparkPlan.scala:425)\r\n\tat org.apache.spark.sql.execution.CollectLimitExec.executeCollect(limit.scala:47)\r\n\tat org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:3696)\r\n\tat org.apache.spark.sql.Dataset.$anonfun$head$1(Dataset.scala:2722)\r\n\tat org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)\r\n\tat org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)\r\n\tat org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)\r\n\tat org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)\r\n\tat org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)\r\n\tat org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)\r\n\tat org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)\r\n\tat org.apache.spark.sql.Dataset.head(Dataset.scala:2722)\r\n\tat org.apache.spark.sql.Dataset.take(Dataset.scala:2929)\r\n\tat org.apache.spark.sql.Dataset.getRows(Dataset.scala:301)\r\n\tat org.apache.spark.sql.Dataset.showString(Dataset.scala:338)\r\n\tat org.apache.spark.sql.Dataset.show(Dataset.scala:825)\r\n\tat org.apache.spark.sql.Dataset.show(Dataset.scala:784)\r\n\tat org.apache.spark.sql.Dataset.show(Dataset.scala:793)\r\n\tat Service.DataService$.map(DataService.scala:19)\r\n\tat Service.DataProcessor.process(DataProcessor.scala:17)\r\n\tat stepdefs.StepDefs.$anonfun$new$3(StepDefs.scala:31)\r\n\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)\r\n\tat cucumber.api.scala.ScalaDsl$StepBody$$anonfun$apply$1.applyOrElse(ScalaDsl.scala:90)\r\n\tat cucumber.api.scala.ScalaDsl$StepBody$$anonfun$apply$1.applyOrElse(ScalaDsl.scala:89)\r\n\tat scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)\r\n\tat cucumber.runtime.scala.ScalaStepDefinition.execute(ScalaStepDefinition.scala:70)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:78)\r\n\tat cucumber.api.TestStep.run(TestStep.java:61)\r\n\tat cucumber.api.TestCase.run(TestCase.java:28)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:99)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:41)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:108)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n\tat ✽.I process scenario 1(test/resources/Project.feature:14)\r\n",
+              "duration": 16611553200,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "I process scenario 1",
+            "match": {
+              "location": "StepDefs.scala:29"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "The result should be",
+            "match": {
+              "location": "StepDefs.scala:34"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "Value"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "Blue"
+                ]
+              },
+              {
+                "cells": [
+                  "2",
+                  "Green"
+                ]
+              },
+              {
+                "cells": [
+                  "3",
+                  "Black"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "test/resources/Project.feature"
+  }
+]
