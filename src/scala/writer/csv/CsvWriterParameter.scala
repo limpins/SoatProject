@@ -1,4 +1,4 @@
-package writer
+package writer.csv
 
 import org.apache.spark.sql.SaveMode
 
