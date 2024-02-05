@@ -1,4 +1,4 @@
-package reader
+package reader.csv
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
