@@ -1,0 +1,96 @@
+spark:
+  appName: 'test spark safir'
+  master: 'spark://192.166.206.195:7077'
+  sparkConfs:
+    spark.hadoop.fs.s3a.fast.upload: 'true'
+    spark.hadoop.fs.s3a.connection.timeout: '100000'
+    spark.hadoop.fs.s3a.attempts.maximum: '10'
+    #spark.hadoop.fs.s3a.fast.upload.buffer: 'bytebuffer'
+    #spark.hadoop.fs.s3a.fast.upload.active.blocks: '4'
+    spark.hadoop.fs.s3a.connection.ssl.enabled: 'true'
+    spark.hadoop.fs.s3a.access.key: 'NATCMI2G4QGSE9G96K78'
+    spark.hadoop.fs.s3a.secret.key: 'Ey+zN3hHp=DVpqofmvbB8I3KHPuP7ROV4EQT8ZhY'
+    spark.hadoop.fs.s3a.endpoint: 'https://objs3parlow01.fr.world.socgen:4443'
+    spark.hadoop.mapreduce.fileoutputcommitter.cleanup-failures.ignored: 'true'
+    spark.hadoop.parquet.enable.summary-metadata: 'false'
+    spark.sql.parquet.mergeSchema: 'false'
+    spark.sql.parquet.filterPushdown: 'true'
+    spark.sql.hive.metastorePartitionPruning: 'true'
+    spark.hadoop.parquet.block.size: '4000000'
+    spark.sql.adaptive.enabled: 'true'
+    spark.hadoop.fs.s3a.buffer.dir: '/run/user/1002/s3a'
+    #spark.sql.autoBroadcastJoinThreshold: '-1'
+    spark.sql.join.preferSortMergeJoin: 'true'
+    spark.sql.adaptive.skewJoin.enabled: 'true'
+    spark.sql.adaptive.skewJoin.skewedPartitionFactor: '1'
+    spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes: '10KB'
+    spark.sql.broadcastTimeout: '3600'
+    # Enable S3 file system to be recognise
+    spark.hadoop.fs.s3a.impl: 'org.apache.hadoop.fs.s3a.S3AFileSystem'
+    # Parameters to use new commiters
+    spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version: '2'
+    spark.hadoop.fs.s3a.committer.name: 'magic'
+    spark.hadoop.fs.s3a.committer.magic.enabled: 'true'
+    spark.hadoop.fs.s3a.commiter.staging.conflict-mode: 'replace'
+    spark.hadoop.fs.s3a.committer.staging.unique-filenames: 'true'
+    spark.hadoop.fs.s3a.committer.staging.abort.pending.uploads: 'true'
+    spark.hadoop.mapreduce.outputcommitter.factory.scheme.s3a: 'org.apache.hadoop.fs.s3a.commit.S3ACommitterFactory'
+    spark.sql.sources.commitProtocolClass: 'org.apache.spark.internal.io.cloud.PathOutputCommitProtocol'
+    spark.sql.parquet.output.committer.class: 'org.apache.spark.internal.io.cloud.BindingParquetOutputCommitter'
+    #spark.hadoop.fs.s3a.committer.staging.tmp.path: 's3://cpy-67561-dev-cpr-dtl-staging/tmp/'
+
+s3Client:
+  uri: 'https://objs3parlow01.fr.world.socgen:4443'
+  credential:
+    accessKey: 'NATCMI2G4QGSE9G96K78'
+    secretKey: 'Ey+zN3hHp=DVpqofmvbB8I3KHPuP7ROV4EQT8ZhY'
+
+s3CopyRequest:
+  fromBucket: 'cpy-67561-dev-cpr-dtl-safir'
+  toBucket: 'cpy-67561-dev-cpr-dtl-safir-processed'
+
+parquet:
+  paths:
+    ref:
+      rootPath: 'cpy-67561-dev-cpr-dtl-ref-tables'
+      data:
+        fpv: 'fpv'
+        client: 'client'
+        matrix: 'matrix'
+        agency: 'agency'
+        deal: 'deal'
+        application: 'application'
+        level: 'level'
+        classif: 'classif'
+    fact:
+      rootPath: 'cpy-67561-dev-cpr-dtl-fact'
+      data:
+        nbi: 'nbi'
+
+jdbc:
+  databases:
+    gbis:
+      connection:
+        host: 'cpyprd1scan-dns.fr.world.socgen'
+        port: '1521'
+        service: 'CPYPRD_REPORT'
+        username: 'CPY$OWNER_DTM_GBIS'
+        pass: 'OWNER_DTM_GBIS123'
+      tables:
+        fact_income: 'fact_income_detail'
+    cprofit:
+      connection:
+        host: 'cpyprd1scan-dns.fr.world.socgen'
+        port: '1521'
+        service: 'CPYPRD_FEED'
+        username: 'CPY$OWNER_CUR'
+        pass: 'OWNER_CUR123'
+      tables:
+        deal_corr: 'dim_deal_corr'
+        agency: 'dim_agency'
+        indicator: 'dim_indicator'
+        product: 'dim_product'
+        dim_fpv: 'dim_financial_perf_view'
+mapping:
+  keys:
+    nb_split: '4000000'
