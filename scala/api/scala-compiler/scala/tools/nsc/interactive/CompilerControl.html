@@ -1,0 +1,1724 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.interactive.CompilerControl</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.interactive.CompilerControl" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.interactive.CompilerControl" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interactive"></a><a id="interactive:interactive"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#interactive" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">interactive</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.tests" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tests"></a><a id="tests:tests"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/index.html#tests" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="tests/index.html"><span class="name">tests</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.tools.nsc.interactive">interactive</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="CancelException$.html" title=""></a>
+                        <a href="CancelException$.html" title="">CancelException</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="CommentPreservingTypers.html" title="This trait allows the IDE to have an instance of the PC that does not clear the comments table at every new typer run (those being many and close between in this context)."></a>
+                        <a href="CommentPreservingTypers.html" title="This trait allows the IDE to have an instance of the PC that does not clear the comments table at every new typer run (those being many and close between in this context).">CommentPreservingTypers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Interface of interactive compiler to a client such as an IDE The model the presentation compiler consists of the following parts:"></a>
+                        <a href="" title="Interface of interactive compiler to a client such as an IDE The model the presentation compiler consists of the following parts:">CompilerControl</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="CondPickler.html" title="A subclass of Pickler can indicate whether a particular value can be pickled by instances of this class."></a>
+                        <a href="CondPickler.html" title="A subclass of Pickler can indicate whether a particular value can be pickled by instances of this class.">CondPickler</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextTrees.html" title=""></a>
+                        <a href="ContextTrees.html" title="">ContextTrees</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="FreshRunReq.html" title="Signals a request for a fresh background compiler run."></a>
+                        <a href="FreshRunReq.html" title="Signals a request for a fresh background compiler run.">FreshRunReq</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Global.html" title="The main class of the presentation compiler in an interactive environment such as an IDE"></a>
+                        <a href="Global.html" title="The main class of the presentation compiler in an interactive environment such as an IDE">Global</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="InteractiveAnalyzer.html" title=""></a>
+                        <a href="InteractiveAnalyzer.html" title="">InteractiveAnalyzer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="InteractiveReporter.html" title=""></a>
+                        <a href="InteractiveReporter.html" title="">InteractiveReporter</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Lexer$.html" title="Companion object of class Lexer which defines tokens and some utility concepts used for tokens and lexers"></a>
+                        <a class="class" href="Lexer.html" title="A simple lexer for tokens as they are used in JSON, plus parens (, ) Tokens understood are:"></a>
+                        <a href="Lexer.html" title="A simple lexer for tokens as they are used in JSON, plus parens (, ) Tokens understood are:">Lexer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="LogReplay.html" title=""></a>
+                        <a href="LogReplay.html" title="">LogReplay</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Logger.html" title=""></a>
+                        <a href="Logger.html" title="">Logger</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="Main$.html" title="The main class for NSC, a compiler for the programming language Scala."></a>
+                        <a href="Main$.html" title="The main class for NSC, a compiler for the programming language Scala.">Main</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MissingResponse.html" title=""></a>
+                        <a href="MissingResponse.html" title="">MissingResponse</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchUnitError.html" title=""></a>
+                        <a href="NoSuchUnitError.html" title="">NoSuchUnitError</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="NullLogger$.html" title=""></a>
+                        <a href="NullLogger$.html" title="">NullLogger</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Pickler$.html" title=""></a>
+                        <a class="class" href="Pickler.html" title="An abstract class for writing and reading Scala objects to and from a legible representation."></a>
+                        <a href="Pickler.html" title="An abstract class for writing and reading Scala objects to and from a legible representation.">Pickler</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Picklers.html" title=""></a>
+                        <a href="Picklers.html" title="">Picklers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="PresentationCompilerThread.html" title="A presentation compiler thread."></a>
+                        <a href="PresentationCompilerThread.html" title="A presentation compiler thread.">PresentationCompilerThread</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="PrettyWriter.html" title=""></a>
+                        <a href="PrettyWriter.html" title="">PrettyWriter</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Problem.html" title=""></a>
+                        <a href="Problem.html" title="">Problem</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="REPL$.html" title="Interface of interactive compiler to a client such as an IDE"></a>
+                        <a href="REPL$.html" title="Interface of interactive compiler to a client such as an IDE">REPL</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="RangePositions.html" title=""></a>
+                        <a href="RangePositions.html" title="">RangePositions</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Replayer.html" title=""></a>
+                        <a href="Replayer.html" title="">Replayer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Response.html" title="Typical interaction, given a predicate &lt;user-input&gt;, a function &lt;display&gt;, and an exception handler &lt;handle&gt;:"></a>
+                        <a href="Response.html" title="Typical interaction, given a predicate &lt;user-input&gt;, a function &lt;display&gt;, and an exception handler &lt;handle&gt;:">Response</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="RichCompilationUnits.html" title=""></a>
+                        <a href="RichCompilationUnits.html" title="">RichCompilationUnits</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="ShutdownReq$.html" title="Signals a request for a shutdown of the presentation compiler."></a>
+                        <a href="ShutdownReq$.html" title="Signals a request for a shutdown of the presentation compiler.">ShutdownReq</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.interactive">interactive</a></p>
+        <h1>CompilerControl<span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CompilerControl</span><span class="result"> extends <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interface of interactive compiler to a client such as an IDE
+ The model the presentation compiler consists of the following parts:</p><p> unitOfFile: The map from sourcefiles to loaded units. A sourcefile/unit is loaded if it occurs in that map.</p><p> manipulated by: removeUnitOf, reloadSources.</p><p> A call to reloadSources will add the given sources to the loaded units, and
+ start a new background compiler pass to compile all loaded units (with the indicated sources first).
+ Each background compiler pass has its own typer run.
+ The background compiler thread can be interrupted each time an AST node is
+ completely typechecked in the following ways:</p><ol class="decimal"><li>by a new call to reloadSources. This starts a new background compiler pass with a new typer run.
+ 2. by a call to askTypeTree. This starts a new typer run if the forceReload parameter = true
+ 3. by a call to askTypeAt, askTypeCompletion, askScopeCompletion, askToDoFirst, askLinkPos, askLastType.
+ 4. by raising an exception in the scheduler.
+ 5. by passing a high-priority action wrapped in ask { ... }.</li></ol><p> Actions under 1-3 can themselves be interrupted if they involve typechecking
+ AST nodes. High-priority actions under 5 cannot; they always run to completion.
+ So these high-priority actions should to be short.</p><p> Normally, an interrupted action continues after the interrupting action is finished.
+ However, if the interrupting action created a new typer run, the interrupted
+ action is aborted. If there's an outstanding response, it will be set to
+ a Right value with a FreshRunReq exception.
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="Global.html" class="extype" name="scala.tools.nsc.interactive.Global">Global</a></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/interactive/scala/tools/nsc/interactive/CompilerControl.scala#L1" target="_blank">CompilerControl.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="Global.html" class="extype" name="scala.tools.nsc.interactive.Global">Global</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.interactive.CompilerControl"><span>CompilerControl</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.interactive.CompilerControl.AskDocCommentItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskDocCommentItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskDocCommentItem:Global.AskDocCommentItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskDocCommentItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskDocCommentItem.html"><span class="name">AskDocCommentItem</span></a><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="site">site: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="fragments">fragments: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[(<a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a>, <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>)]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>)]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskLinkPosItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskLinkPosItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskLinkPosItem:Global.AskLinkPosItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskLinkPosItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskLinkPosItem.html"><span class="name">AskLinkPosItem</span></a><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskLoadedTypedItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskLoadedTypedItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskLoadedTypedItem:Global.AskLoadedTypedItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskLoadedTypedItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskLoadedTypedItem.html"><span class="name">AskLoadedTypedItem</span></a><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="keepLoaded">keepLoaded: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskParsedEnteredItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskParsedEnteredItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskParsedEnteredItem:Global.AskParsedEnteredItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskParsedEnteredItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskParsedEnteredItem.html"><span class="name">AskParsedEnteredItem</span></a><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="keepLoaded">keepLoaded: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskScopeCompletionItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskScopeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskScopeCompletionItem:Global.AskScopeCompletionItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskScopeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskScopeCompletionItem.html"><span class="name">AskScopeCompletionItem</span></a><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a>]]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskToDoFirstItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskToDoFirstItemextendsCompilerControl.this.WorkItem"></a><a id="AskToDoFirstItem:Global.AskToDoFirstItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskToDoFirstItemextendsCompilerControl.this.WorkItem" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskToDoFirstItem.html"><span class="name">AskToDoFirstItem</span></a><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskTypeAtItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskTypeAtItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskTypeAtItem:Global.AskTypeAtItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskTypeAtItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskTypeAtItem.html"><span class="name">AskTypeAtItem</span></a><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskTypeCompletionItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskTypeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskTypeCompletionItem:Global.AskTypeCompletionItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskTypeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskTypeCompletionItem.html"><span class="name">AskTypeCompletionItem</span></a><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a>]]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.AskTypeItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AskTypeItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="AskTypeItem:Global.AskTypeItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#AskTypeItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$AskTypeItem.html"><span class="name">AskTypeItem</span></a><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="forceReload">forceReload: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.FilesDeletedItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilesDeletedItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="FilesDeletedItem:Global.FilesDeletedItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#FilesDeletedItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$FilesDeletedItem.html"><span class="name">FilesDeletedItem</span></a><span class="params">(<span name="sources">sources: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.Member" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MemberextendsAnyRef"></a><a id="Member:Global.Member"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#MemberextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Info given for every member found by completion" href="CompilerControl$Member.html"><span class="name">Member</span></a><span class="result"> extends <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Info given for every member found by completion
+</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.NoWorkScheduler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NoWorkSchedulerextendsWorkScheduler"></a><a id="NoWorkScheduler:Global.NoWorkScheduler"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#NoWorkSchedulerextendsWorkScheduler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A do-nothing work scheduler that responds immediately with MissingResponse." href="CompilerControl$NoWorkScheduler.html"><span class="name">NoWorkScheduler</span></a><span class="result"> extends <a href="../util/WorkScheduler.html" class="extype" name="scala.tools.nsc.util.WorkScheduler">WorkScheduler</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A do-nothing work scheduler that responds immediately with MissingResponse.</p><div class="fullcomment"><div class="comment cmt"><p>A do-nothing work scheduler that responds immediately with MissingResponse.</p><p> Used during compiler shutdown.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.ReloadItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReloadItemextendsCompilerControl.this.WorkItemwithProductwithSerializable"></a><a id="ReloadItem:Global.ReloadItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ReloadItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$ReloadItem.html"><span class="name">ReloadItem</span></a><span class="params">(<span name="sources">sources: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result"> extends <a href="Global.html#WorkItemextends()=&gt;Unit" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.WorkItem">Global.WorkItem</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.Response" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Response[T]=scala.tools.nsc.interactive.Response[T]"></a><a id="Response[T]:Global.Response[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#Response[T]=scala.tools.nsc.interactive.Response[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Response</span><span class="tparams">[<span name="T">T</span>]</span><span class="result alias"> = <a href="Response.html" class="extype" name="scala.tools.nsc.interactive.Response">interactive.Response</a>[<span class="extype" name="scala.tools.nsc.interactive.CompilerControl.Response.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.ScopeMember" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScopeMemberextendsCompilerControl.this.MemberwithProductwithSerializable"></a><a id="ScopeMember:Global.ScopeMember"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ScopeMemberextendsCompilerControl.this.MemberwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$ScopeMember.html"><span class="name">ScopeMember</span></a><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="tpe">tpe: <a href="Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.interactive.Global.Type">Global.Type</a></span>, <span name="accessible">accessible: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="viaImport">viaImport: <a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a></span>)</span><span class="result"> extends <a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.TypeMember" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TypeMemberextendsCompilerControl.this.MemberwithProductwithSerializable"></a><a id="TypeMember:Global.TypeMember"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#TypeMemberextendsCompilerControl.this.MemberwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$TypeMember.html"><span class="name">TypeMember</span></a><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="tpe">tpe: <a href="Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.interactive.Global.Type">Global.Type</a></span>, <span name="accessible">accessible: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="inherited">inherited: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="viaView">viaView: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>)</span><span class="result"> extends <a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl.WorkItem" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WorkItemextends()=&gt;Unit"></a><a id="WorkItem:Global.WorkItem"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#WorkItemextends()=&gt;Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CompilerControl$WorkItem.html"><span class="name">WorkItem</span></a><span class="result"> extends () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(CompilerControl,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#ask" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ask[A](op:()=&gt;A):A"></a><a id="ask[A](()⇒A):A"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ask[A](op:()=&gt;A):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ask</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="op">op: () ⇒ <span class="extype" name="scala.tools.nsc.interactive.CompilerControl.ask.A">A</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.interactive.CompilerControl.ask.A">A</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Asks for a computation to be done quickly on the presentation compiler thread</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askDocComment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askDocComment(sym:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,site:CompilerControl.this.Symbol,fragments:List[(CompilerControl.this.Symbol,scala.reflect.internal.util.SourceFile)],response:CompilerControl.this.Response[(String,String,CompilerControl.this.Position)]):Unit"></a><a id="askDocComment(Global.Symbol,SourceFile,Global.Symbol,List[(Global.Symbol,SourceFile)],Global.Response[(String,String,Global.Position)]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askDocComment(sym:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,site:CompilerControl.this.Symbol,fragments:List[(CompilerControl.this.Symbol,scala.reflect.internal.util.SourceFile)],response:CompilerControl.this.Response[(String,String,CompilerControl.this.Position)]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askDocComment</span><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="site">site: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="fragments">fragments: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[(<a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a>, <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>)]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>)]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to doc comment information for a given symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Sets sync var <code>response</code> to doc comment information for a given symbol.
+</p></div><dl class="paramcmts block"><dt class="param">sym</dt><dd class="cmt"><p>The symbol whose doc comment should be retrieved (might come from a classfile)</p></dd><dt class="param">source</dt><dd class="cmt"><p>The source file that's supposed to contain the definition</p></dd><dt class="param">site</dt><dd class="cmt"><p>The symbol where 'sym' is observed</p></dd><dt class="param">fragments</dt><dd class="cmt"><p>All symbols that can contribute to the generated documentation
+                     together with their source files.</p></dd><dt class="param">response</dt><dd class="cmt"><p>A response that will be set to the following:
+                     If <code>source</code> contains a definition of a given symbol that has a doc comment,
+                     the (expanded, raw, position) triplet for a comment, otherwise (&quot;&quot;, &quot;&quot;, NoPosition).
+ Note: This operation does not automatically load sources that are not yet loaded.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askFilesDeleted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askFilesDeleted(sources:List[scala.reflect.internal.util.SourceFile],response:CompilerControl.this.Response[Unit]):Unit"></a><a id="askFilesDeleted(List[SourceFile],Global.Response[Unit]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askFilesDeleted(sources:List[scala.reflect.internal.util.SourceFile],response:CompilerControl.this.Response[Unit]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askFilesDeleted</span><span class="params">(<span name="sources">sources: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Removes source files and toplevel symbols, and issues a new typer run.</p><div class="fullcomment"><div class="comment cmt"><p>Removes source files and toplevel symbols, and issues a new typer run.
+ Returns () to syncvar <code>response</code> on completion.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askForResponse" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askForResponse[A](op:()=&gt;A):CompilerControl.this.Response[A]"></a><a id="askForResponse[A](()⇒A):Global.Response[A]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askForResponse[A](op:()=&gt;A):CompilerControl.this.Response[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askForResponse</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="op">op: () ⇒ <span class="extype" name="scala.tools.nsc.interactive.CompilerControl.askForResponse.A">A</span></span>)</span><span class="result">: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<span class="extype" name="scala.tools.nsc.interactive.CompilerControl.askForResponse.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Asks for a computation to be done on presentation compiler thread, returning
+ a response with the result or an exception
+</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askLinkPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askLinkPos(sym:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Position]):Unit"></a><a id="askLinkPos(Global.Symbol,SourceFile,Global.Response[Global.Position]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askLinkPos(sym:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Position]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askLinkPos</span><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to the position of the definition of the given link in
+ the given sourcefile.</p><div class="fullcomment"><div class="comment cmt"><p>Sets sync var <code>response</code> to the position of the definition of the given link in
+ the given sourcefile.
+</p></div><dl class="paramcmts block"><dt class="param">sym</dt><dd class="cmt"><p>The symbol referenced by the link (might come from a classfile)</p></dd><dt class="param">source</dt><dd class="cmt"><p>The source file that's supposed to contain the definition</p></dd><dt class="param">response</dt><dd class="cmt"><p>A response that will be set to the following:
+                   If <code>source</code> contains a definition that is referenced by the given link
+                   the position of that definition, otherwise NoPosition.
+ Note: This operation does not automatically load <code>source</code>. If <code>source</code>
+ is unloaded, it stays that way.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askLoadedTyped" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askLoadedTyped(source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askLoadedTyped(SourceFile,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askLoadedTyped(source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askLoadedTyped</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askLoadedTyped" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askLoadedTyped(source:scala.reflect.internal.util.SourceFile,keepLoaded:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askLoadedTyped(SourceFile,Boolean,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askLoadedTyped(source:scala.reflect.internal.util.SourceFile,keepLoaded:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askLoadedTyped</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="keepLoaded">keepLoaded: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">If source is not yet loaded, loads it, and starts a new run, otherwise
+continues with current pass.</p><div class="fullcomment"><div class="comment cmt"><p>If source is not yet loaded, loads it, and starts a new run, otherwise
+continues with current pass.
+Waits until source is fully type checked and returns body in response.</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The source file that needs to be fully typed.</p></dd><dt class="param">keepLoaded</dt><dd class="cmt"><p>Whether to keep that file in the PC if it was not loaded before. If
+                       the file is already loaded, this flag is ignored.</p></dd><dt class="param">response</dt><dd class="cmt"><p>The response, which is set to the fully attributed tree of <code>source</code>.
+                  If the unit corresponding to <code>source</code> has been removed in the meantime
+                  the a NoSuchUnitError is raised in the response.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askParsedEntered" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askParsedEntered(source:scala.reflect.internal.util.SourceFile,keepLoaded:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askParsedEntered(SourceFile,Boolean,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askParsedEntered(source:scala.reflect.internal.util.SourceFile,keepLoaded:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askParsedEntered</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="keepLoaded">keepLoaded: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Set sync var <code>response</code> to the parse tree of <code>source</code> with all top-level symbols entered.</p><div class="fullcomment"><div class="comment cmt"><p>Set sync var <code>response</code> to the parse tree of <code>source</code> with all top-level symbols entered.</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The source file to be analyzed</p></dd><dt class="param">keepLoaded</dt><dd class="cmt"><p>If set to <code>true</code>, source file will be kept as a loaded unit afterwards.
+                     If keepLoaded is <code>false</code> the operation is run at low priority, only after
+                     everything is brought up to date in a regular type checker run.</p></dd><dt class="param">response</dt><dd class="cmt"><p>The response.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askReload" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askReload(sources:List[scala.reflect.internal.util.SourceFile],response:CompilerControl.this.Response[Unit]):Unit"></a><a id="askReload(List[SourceFile],Global.Response[Unit]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askReload(sources:List[scala.reflect.internal.util.SourceFile],response:CompilerControl.this.Response[Unit]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askReload</span><span class="params">(<span name="sources">sources: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>]</span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Makes sure a set of compilation units is loaded and parsed.</p><div class="fullcomment"><div class="comment cmt"><p>Makes sure a set of compilation units is loaded and parsed.
+ Returns () to syncvar <code>response</code> on completion.
+ Afterwards a new background compiler run is started with
+ the given sources at the head of the list of to-be-compiled sources.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askReset" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askReset():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askReset():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askReset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Cancels current compiler run and start a fresh one where everything will be re-typechecked
+ (but not re-loaded).</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askScopeCompletion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askScopeCompletion(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[List[CompilerControl.this.Member]]):Unit"></a><a id="askScopeCompletion(Global.Position,Global.Response[List[Global.Member]]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askScopeCompletion(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[List[CompilerControl.this.Member]]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askScopeCompletion</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to list of members that are visible
+ as members of the scope enclosing <code>pos</code>.</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askShutdown" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askShutdown():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askShutdown():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askShutdown</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Tells the compile server to shutdown, and not to restart again</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askStructure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askStructure(keepSrcLoaded:Boolean)(source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askStructure(Boolean)(SourceFile,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askStructure(keepSrcLoaded:Boolean)(source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askStructure</span><span class="params">(<span name="keepSrcLoaded">keepSrcLoaded: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">If source if not yet loaded, get an outline view with askParseEntered.</p><div class="fullcomment"><div class="comment cmt"><p>If source if not yet loaded, get an outline view with askParseEntered.
+ If source is loaded, wait for it to be typechecked.
+ In both cases, set response to parsed (and possibly typechecked) tree.</p></div><dl class="paramcmts block"><dt class="param">keepSrcLoaded</dt><dd class="cmt"><p>If set to <code>true</code>, source file will be kept as a loaded unit afterwards.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askToDoFirst" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askToDoFirst(source:scala.reflect.internal.util.SourceFile):Unit"></a><a id="askToDoFirst(SourceFile):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askToDoFirst(source:scala.reflect.internal.util.SourceFile):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askToDoFirst</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Asks to do unit corresponding to given source file on present and subsequent type checking passes.</p><div class="fullcomment"><div class="comment cmt"><p>Asks to do unit corresponding to given source file on present and subsequent type checking passes.
+ If the file is in the 'crashedFiles' ignore list it is removed and typechecked normally.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askTypeAt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askTypeAt(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askTypeAt(Global.Position,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askTypeAt(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askTypeAt</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to the smallest fully attributed tree that encloses position <code>pos</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Sets sync var <code>response</code> to the smallest fully attributed tree that encloses position <code>pos</code>.
+ Note: Unlike for most other ask... operations, the source file belonging to <code>pos</code> needs not be loaded.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askTypeCompletion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askTypeCompletion(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[List[CompilerControl.this.Member]]):Unit"></a><a id="askTypeCompletion(Global.Position,Global.Response[List[Global.Member]]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askTypeCompletion(pos:CompilerControl.this.Position,response:CompilerControl.this.Response[List[CompilerControl.this.Member]]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askTypeCompletion</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Global.html#MemberextendsAnyRef" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.Member">Global.Member</a>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to list of members that are visible
+ as members of the tree enclosing <code>pos</code>, possibly reachable by an implicit.</p>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#doLocateContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doLocateContext(pos:CompilerControl.this.Position):CompilerControl.this.Context"></a><a id="doLocateContext(Global.Position):Global.Context"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#doLocateContext(pos:CompilerControl.this.Position):CompilerControl.this.Context" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doLocateContext</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>)</span><span class="result">: <a href="Global.html#Context=ContextTrees.this.analyzer.Context" class="extmbr" name="scala.tools.nsc.interactive.Global.Context">Global.Context</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the smallest context that contains given <code>pos</code>, throws FatalError if none exists.</p>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((CompilerControl)⇒Boolean,⇒Any):CompilerControl"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((CompilerControl)⇒Boolean):CompilerControl"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):CompilerControl"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):CompilerControl"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#getUnitOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getUnitOf(s:scala.reflect.internal.util.SourceFile):Option[CompilerControl.this.RichCompilationUnit]"></a><a id="getUnitOf(SourceFile):Option[Global.RichCompilationUnit]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#getUnitOf(s:scala.reflect.internal.util.SourceFile):Option[CompilerControl.this.RichCompilationUnit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getUnitOf</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Global.html#RichCompilationUnitextendsRichCompilationUnits.this.CompilationUnit" class="extmbr" name="scala.tools.nsc.interactive.RichCompilationUnits.RichCompilationUnit">Global.RichCompilationUnit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Return the compilation unit attached to a source file, or None
+ if source is not loaded.</p>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#locateContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="locateContext(pos:CompilerControl.this.Position):Option[CompilerControl.this.Context]"></a><a id="locateContext(Global.Position):Option[Global.Context]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#locateContext(pos:CompilerControl.this.Position):Option[CompilerControl.this.Context]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">locateContext</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Global.html#Context=ContextTrees.this.analyzer.Context" class="extmbr" name="scala.tools.nsc.interactive.Global.Context">Global.Context</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Locates smallest context that encloses position as an optional value.</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#locateTree" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="locateTree(pos:CompilerControl.this.Position):CompilerControl.this.Tree"></a><a id="locateTree(Global.Position):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#locateTree(pos:CompilerControl.this.Position):CompilerControl.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">locateTree</span><span class="params">(<span name="pos">pos: <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a></span>)</span><span class="result">: <a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Locate smallest tree that encloses position</p>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#onCompilerThread" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onCompilerThread:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#onCompilerThread:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCompilerThread</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#onUnitOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onUnitOf[T](source:scala.reflect.internal.util.SourceFile)(op:CompilerControl.this.RichCompilationUnit=&gt;T):T"></a><a id="onUnitOf[T](SourceFile)((Global.RichCompilationUnit)⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#onUnitOf[T](source:scala.reflect.internal.util.SourceFile)(op:CompilerControl.this.RichCompilationUnit=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onUnitOf</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>)</span><span class="params">(<span name="op">op: (<a href="Global.html#RichCompilationUnitextendsRichCompilationUnits.this.CompilationUnit" class="extmbr" name="scala.tools.nsc.interactive.RichCompilationUnits.RichCompilationUnit">Global.RichCompilationUnit</a>) ⇒ <span class="extype" name="scala.tools.nsc.interactive.CompilerControl.onUnitOf.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.interactive.CompilerControl.onUnitOf.T">T</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Run operation <code>op</code> on a compilation unit associated with given <code>source</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Run operation <code>op</code> on a compilation unit associated with given <code>source</code>.
+ If source has a loaded compilation unit, this one is passed to <code>op</code>.
+ Otherwise a new compilation unit is created, but not added to the set of loaded units.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#parseTree" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseTree(source:scala.reflect.internal.util.SourceFile):CompilerControl.this.Tree"></a><a id="parseTree(SourceFile):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#parseTree(source:scala.reflect.internal.util.SourceFile):CompilerControl.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parseTree</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>)</span><span class="result">: <a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns parse tree for source <code>source</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns parse tree for source <code>source</code>. No symbols are entered. Syntax errors are reported.</p><p> This method is thread-safe and as such can safely run outside of the presentation
+ compiler thread.
+</p></div></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#recentlyDeleted" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="recentlyDeleted():List[CompilerControl.this.Symbol]"></a><a id="recentlyDeleted():List[Global.Symbol]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#recentlyDeleted():List[CompilerControl.this.Symbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recentlyDeleted</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the top level classes and objects that were deleted
+in the editor since last time recentlyDeleted() was called.</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#removeUnitOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="removeUnitOf(s:scala.reflect.internal.util.SourceFile):Option[CompilerControl.this.RichCompilationUnit]"></a><a id="removeUnitOf(SourceFile):Option[Global.RichCompilationUnit]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#removeUnitOf(s:scala.reflect.internal.util.SourceFile):Option[CompilerControl.this.RichCompilationUnit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeUnitOf</span><span class="params">(<span name="s">s: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Global.html#RichCompilationUnitextendsRichCompilationUnits.this.CompilationUnit" class="extmbr" name="scala.tools.nsc.interactive.RichCompilationUnits.RichCompilationUnit">Global.RichCompilationUnit</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Removes the CompilationUnit corresponding to the given SourceFile
+ from consideration for recompilation.</p>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#scheduler" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scheduler:scala.tools.nsc.util.WorkScheduler"></a><a id="scheduler:WorkScheduler"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#scheduler:scala.tools.nsc.util.WorkScheduler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scheduler</span><span class="result">: <a href="../util/WorkScheduler.html" class="extype" name="scala.tools.nsc.util.WorkScheduler">WorkScheduler</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The scheduler by which client and compiler communicate
+ Must be initialized before starting compilerRunner
+</p><div class="fullcomment"><div class="comment cmt"><p>The scheduler by which client and compiler communicate
+ Must be initialized before starting compilerRunner
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="scala.tools.nsc.interactive">scala.tools.nsc.interactive</a>] </dd><dt>Annotations</dt><dd>
+                <span class="name">@volatile</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(CompilerControl,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.tools.nsc.interactive.CompilerControl#askDocComment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askDocComment(sym:CompilerControl.this.Symbol,site:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[(String,String,CompilerControl.this.Position)]):Unit"></a><a id="askDocComment(Global.Symbol,Global.Symbol,SourceFile,Global.Response[(String,String,Global.Position)]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askDocComment(sym:CompilerControl.this.Symbol,site:CompilerControl.this.Symbol,source:scala.reflect.internal.util.SourceFile,response:CompilerControl.this.Response[(String,String,CompilerControl.this.Position)]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.2) Use method that accepts fragments">askDocComment</span><span class="params">(<span name="sym">sym: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="site">site: <a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a></span>, <span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>)]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.2)</i> Use method that accepts fragments</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.CompilerControl#askType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="askType(source:scala.reflect.internal.util.SourceFile,forceReload:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit"></a><a id="askType(SourceFile,Boolean,Global.Response[Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/CompilerControl.html#askType(source:scala.reflect.internal.util.SourceFile,forceReload:Boolean,response:CompilerControl.this.Response[CompilerControl.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.10.1) Use askLoadedTyped instead to avoid race conditions in the typechecker">askType</span><span class="params">(<span name="source">source: <span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span></span>, <span name="forceReload">forceReload: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="response">response: <a href="Global.html#Response[T]=scala.tools.nsc.interactive.Response[T]" class="extmbr" name="scala.tools.nsc.interactive.Global.Response">Global.Response</a>[<a href="Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.interactive.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets sync var <code>response</code> to the fully attributed &amp; typechecked tree contained in <code>source</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Sets sync var <code>response</code> to the fully attributed &amp; typechecked tree contained in <code>source</code>.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.1)</i> Use <code>askLoadedTyped</code> instead to avoid race conditions in the typechecker</p></dd><dt>Note</dt><dd><span class="cmt"><p>Deprecated because of race conditions in the typechecker when the background compiler
+       is interrupted while typing the same <code>source</code>.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>scala/bug#6578</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.CompilerControl">CompilerControl</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

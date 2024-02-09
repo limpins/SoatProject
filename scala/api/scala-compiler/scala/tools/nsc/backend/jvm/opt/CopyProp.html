@@ -1,0 +1,1038 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.backend.jvm.opt.CopyProp</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.backend.jvm.opt.CopyProp" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.backend.jvm.opt.CopyProp" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.backend" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="backend"></a><a id="backend:backend"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#backend" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">backend</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.backend.jvm" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jvm"></a><a id="jvm:jvm"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/backend/index.html#jvm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">jvm</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools.nsc.backend">backend</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.backend.jvm.opt" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opt"></a><a id="opt:opt"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/backend/jvm/index.html#opt" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">opt</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc.backend.jvm">jvm</a></dd></dl></div>
+    </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="BoxUnbox.html" title=""></a>
+                        <a href="BoxUnbox.html" title="">BoxUnbox</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="ByteCodeRepository.html" title="The ByteCodeRepository provides utilities to read the bytecode of classfiles from the compilation classpath."></a>
+                        <a href="ByteCodeRepository.html" title="The ByteCodeRepository provides utilities to read the bytecode of classfiles from the compilation classpath.">ByteCodeRepository</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="BytecodeUtils$.html" title=""></a>
+                        <a href="BytecodeUtils$.html" title="">BytecodeUtils</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="CallGraph.html" title=""></a>
+                        <a href="CallGraph.html" title="">CallGraph</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="ClosureOptimizer$.html" title=""></a>
+                        <a class="class" href="ClosureOptimizer.html" title=""></a>
+                        <a href="ClosureOptimizer.html" title="">ClosureOptimizer</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">CopyProp</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="InlineInfoAttribute$.html" title=""></a>
+                        <a class="class" href="InlineInfoAttribute.html" title="This attribute stores the InlineInfo for a ClassBType as an independent classfile attribute."></a>
+                        <a href="InlineInfoAttribute.html" title="This attribute stores the InlineInfo for a ClassBType as an independent classfile attribute.">InlineInfoAttribute</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="InlineInfoAttributePrototype$.html" title="In order to instruct the ASM framework to deserialize the ScalaInlineInfo attribute, we need to pass a prototype instance when running the class reader."></a>
+                        <a href="InlineInfoAttributePrototype$.html" title="In order to instruct the ASM framework to deserialize the ScalaInlineInfo attribute, we need to pass a prototype instance when running the class reader.">InlineInfoAttributePrototype</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="Inliner.html" title=""></a>
+                        <a href="Inliner.html" title="">Inliner</a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="InlinerHeuristics$.html" title=""></a>
+                        <a class="class" href="InlinerHeuristics.html" title=""></a>
+                        <a href="InlinerHeuristics.html" title="">InlinerHeuristics</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LabelNotLive.html" title=""></a>
+                        <a href="LabelNotLive.html" title="">LabelNotLive</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalOpt.html" title="Optimizations within a single method."></a>
+                        <a href="LocalOpt.html" title="Optimizations within a single method.">LocalOpt</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LocalOptImpls$.html" title=""></a>
+                        <a href="LocalOptImpls$.html" title="">LocalOptImpls</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="LruMap$.html" title=""></a>
+                        <a href="LruMap$.html" title="">LruMap</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="class" href="RemovePair.html" title=""></a>
+                        <a href="RemovePair.html" title="">RemovePair</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="trait" href="RemovePairDependency.html" title=""></a>
+                        <a href="RemovePairDependency.html" title="">RemovePairDependency</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../../index.html" class="extype" name="scala">scala</a>.<a href="../../../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../../../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="../../index.html" class="extype" name="scala.tools.nsc.backend">backend</a>.<a href="../index.html" class="extype" name="scala.tools.nsc.backend.jvm">jvm</a>.<a href="index.html" class="extype" name="scala.tools.nsc.backend.jvm.opt">opt</a></p>
+        <h1>CopyProp<span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CopyProp</span><span class="result"> extends <a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/compiler/scala/tools/nsc/backend/jvm/opt/CopyProp.scala#L1" target="_blank">CopyProp.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.backend.jvm.opt.CopyProp"><span>CopyProp</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():scala.tools.nsc.backend.jvm.opt.CopyProp"></a><a id="&lt;init&gt;:CopyProp"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#&lt;init&gt;():scala.tools.nsc.backend.jvm.opt.CopyProp" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CopyProp</span><span class="params">()</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.backend.jvm.opt.CopyProp.ProducedValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProducedValueextendsProductwithSerializable"></a><a id="ProducedValue:ProducedValue"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ProducedValueextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CopyProp$ProducedValue.html"><span class="name">ProducedValue</span></a><span class="params">(<span name="producer">producer: <span class="extype" name="scala.tools.asm.tree.AbstractInsnNode">AbstractInsnNode</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#postProcessor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="postProcessor:scala.tools.nsc.backend.jvm.PostProcessor"></a><a id="postProcessor:PostProcessor"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#postProcessor:scala.tools.nsc.backend.jvm.PostProcessor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">postProcessor</span><span class="result">: <a href="../PostProcessor.html" class="extype" name="scala.tools.nsc.backend.jvm.PostProcessor">PostProcessor</a></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(CopyProp,B)"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#copyPropagation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyPropagation(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean"></a><a id="copyPropagation(MethodNode,InternalName):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#copyPropagation(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyPropagation</span><span class="params">(<span name="method">method: <span class="extype" name="scala.tools.asm.tree.MethodNode">MethodNode</span></span>, <span name="owner">owner: <a href="../BTypes$.html#InternalName=String" class="extmbr" name="scala.tools.nsc.backend.jvm.BTypes.InternalName">InternalName</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">For every <code>xLOAD n</code>, find all local variable slots that are aliases of <code>n</code> using an
+AliasingAnalyzer and change the instruction to <code>xLOAD m</code> where <code>m</code> is the smallest alias.</p><div class="fullcomment"><div class="comment cmt"><p>For every <code>xLOAD n</code>, find all local variable slots that are aliases of <code>n</code> using an
+AliasingAnalyzer and change the instruction to <code>xLOAD m</code> where <code>m</code> is the smallest alias.
+This leaves behind potentially stale <code>xSTORE n</code> instructions, which are then eliminated
+by <a href="#eliminateStaleStores(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" class="extmbr" name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminateStaleStores">eliminateStaleStores</a>.
+</p></div></div>
+    </li><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminatePushPop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eliminatePushPop(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean"></a><a id="eliminatePushPop(MethodNode,InternalName):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#eliminatePushPop(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eliminatePushPop</span><span class="params">(<span name="method">method: <span class="extype" name="scala.tools.asm.tree.MethodNode">MethodNode</span></span>, <span name="owner">owner: <a href="../BTypes$.html#InternalName=String" class="extmbr" name="scala.tools.nsc.backend.jvm.BTypes.InternalName">InternalName</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">When a POP instruction has a single producer, remove the POP and eliminate the producer by
+bubbling up the POPs.</p><div class="fullcomment"><div class="comment cmt"><p>When a POP instruction has a single producer, remove the POP and eliminate the producer by
+bubbling up the POPs. For example, given
+  ILOAD 1; ILOAD 2; IADD; POP
+we first eliminate the POP, then the IADD, then its inputs, so the entire sequence goes away.
+If a producer cannot be eliminated (need to keep side-effects), a POP is inserted.</p><p>A special case eliminates the creation of unused objects with side-effect-free constructors:
+  NEW scala/Tuple1; DUP; ALOAD 0; INVOKESPECIAL scala/Tuple1.&lt;init&gt;; POP
+The POP has a single producer (the DUP), it's easy to eliminate these two. A special case
+is needed to eliminate the INVOKESPECIAL and NEW.
+</p></div></div>
+    </li><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminateStaleStores" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eliminateStaleStores(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean"></a><a id="eliminateStaleStores(MethodNode,InternalName):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#eliminateStaleStores(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eliminateStaleStores</span><span class="params">(<span name="method">method: <span class="extype" name="scala.tools.asm.tree.MethodNode">MethodNode</span></span>, <span name="owner">owner: <a href="../BTypes$.html#InternalName=String" class="extmbr" name="scala.tools.nsc.backend.jvm.BTypes.InternalName">InternalName</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Eliminate <code>xSTORE</code> instructions that have no consumer.</p><div class="fullcomment"><div class="comment cmt"><p>Eliminate <code>xSTORE</code> instructions that have no consumer. If the instruction can be completely
+eliminated, it is replaced by a POP. The <a href="#eliminatePushPop(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" class="extmbr" name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminatePushPop">eliminatePushPop</a> cleans up unnecessary POPs.</p><p>Note that an <code>ASOTRE</code> can not always be eliminated: it removes a reference to the object that
+is currently stored in that local, which potentially frees it for GC (scala/bug#5313). Therefore
+we replace such stores by <code>POP; ACONST_NULL; ASTORE x</code>.
+</p></div></div>
+    </li><li name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminateStoreLoad" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eliminateStoreLoad(method:scala.tools.asm.tree.MethodNode):Boolean"></a><a id="eliminateStoreLoad(MethodNode):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#eliminateStoreLoad(method:scala.tools.asm.tree.MethodNode):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eliminateStoreLoad</span><span class="params">(<span name="method">method: <span class="extype" name="scala.tools.asm.tree.MethodNode">MethodNode</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Remove <code>xSTORE n; xLOAD n</code> pairs if</p><div class="fullcomment"><div class="comment cmt"><p>Remove <code>xSTORE n; xLOAD n</code> pairs if</p><ul><li>the local variable n is not used anywhere else in the method (1), and</li><li>there are no executable instructions and no live labels (jump targets) between the two (2)</li></ul><p>Note: store-load pairs that cannot be eliminated could be replaced by <code>DUP; xSTORE n</code>, but
+that's just cosmetic and doesn't help for anything.</p><p>(1) This could be made more precise by running a prodCons analysis and checking that the load
+is the only user of the store. Then we could eliminate the pair even if the variable is live
+(except for ASTORE, scala/bug#5313). Not needing an analyzer is more efficient, and catches most
+cases.</p><p>(2) The implementation uses a conservative estimation for liveness (if some instruction uses
+local n, then n is considered live in the entire method). In return, it doesn't need to run an
+Analyzer on the method, making it more efficient.</p><p>This method also removes <code>ACONST_NULL; ASTORE n</code> if the local n is not live. This pattern is
+introduced by <a href="#eliminateStaleStores(method:scala.tools.asm.tree.MethodNode,owner:tools.nsc.backend.jvm.BTypes.InternalName):Boolean" class="extmbr" name="scala.tools.nsc.backend.jvm.opt.CopyProp#eliminateStaleStores">eliminateStaleStores</a>.</p><p>The implementation is a little tricky to support the following case:
+  ISTORE 1; ISTORE 2; ILOAD 2; ACONST_NULL; ASTORE 3; ILOAD 1
+The outer store-load pair can be removed if two the inner pairs can be.
+</p></div></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((CopyProp)⇒Boolean,⇒Any):CopyProp"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((CopyProp)⇒Boolean):CopyProp"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):CopyProp"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):CopyProp"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(CopyProp,B)"></a>
+      <span class="permalink">
+      <a href="../../../../../../scala/tools/nsc/backend/jvm/opt/CopyProp.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.backend.jvm.opt.CopyProp">CopyProp</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

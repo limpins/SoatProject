@@ -1,0 +1,2444 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.javac.JavaTokens</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.javac.JavaTokens" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.javac.JavaTokens" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="javac"></a><a id="javac:javac"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#javac" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">javac</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="JavaParsers.html" title=""></a>
+                        <a href="JavaParsers.html" title="">JavaParsers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="JavaScanners.html" title=""></a>
+                        <a href="JavaScanners.html" title="">JavaScanners</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="" title=""></a>
+                        <a href="" title="">JavaTokens</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.javac">javac</a></p>
+        <h1>JavaTokens<span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JavaTokens</span><span class="result"> extends <a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/compiler/scala/tools/nsc/javac/JavaTokens.scala#L1" target="_blank">JavaTokens.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a>, <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.javac.JavaTokens"><span>JavaTokens</span></li><li class="in" name="scala.tools.nsc.ast.parser.CommonTokens"><span>CommonTokens</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#ABSTRACT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ABSTRACT:Int(46)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ABSTRACT:Int(46)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ABSTRACT</span><span class="result">: Int(46)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#AMP" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AMP:Int(148)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#AMP:Int(148)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AMP</span><span class="result">: Int(148)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#AMPAMP" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AMPAMP:Int(159)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#AMPAMP:Int(159)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AMPAMP</span><span class="result">: Int(159)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#AMPEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AMPEQ:Int(165)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#AMPEQ:Int(165)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AMPEQ</span><span class="result">: Int(165)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#ASSERT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ASSERT:Int(98)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ASSERT:Int(98)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ASSERT</span><span class="result">: Int(98)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#ASTERISK" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ASTERISK:Int(152)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ASTERISK:Int(152)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ASTERISK</span><span class="result">: Int(152)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#ASTERISKEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ASTERISKEQ:Int(169)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ASTERISKEQ:Int(169)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ASTERISKEQ</span><span class="result">: Int(169)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#AT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AT:Int(125)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#AT:Int(125)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AT</span><span class="result">: Int(125)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BANG" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BANG:Int(146)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BANG:Int(146)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BANG</span><span class="result">: Int(146)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BANGEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BANGEQ:Int(141)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BANGEQ:Int(141)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BANGEQ</span><span class="result">: Int(141)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BAR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BAR:Int(149)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BAR:Int(149)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BAR</span><span class="result">: Int(149)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BARBAR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BARBAR:Int(160)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BARBAR:Int(160)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BARBAR</span><span class="result">: Int(160)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BAREQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BAREQ:Int(166)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BAREQ:Int(166)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BAREQ</span><span class="result">: Int(166)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BOOLEAN" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BOOLEAN:Int(181)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BOOLEAN:Int(181)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BOOLEAN</span><span class="result">: Int(181)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BREAK" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BREAK:Int(87)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BREAK:Int(87)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BREAK</span><span class="result">: Int(87)</span>
+      </span>
+      
+      <p class="shortcomment cmt">control structures</p>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#BYTE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BYTE:Int(182)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#BYTE:Int(182)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BYTE</span><span class="result">: Int(182)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#CASE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CASE:Int(96)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CASE:Int(96)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CASE</span><span class="result">: Int(96)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#CATCH" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CATCH:Int(92)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CATCH:Int(92)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CATCH</span><span class="result">: Int(92)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#CHAR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CHAR:Int(184)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CHAR:Int(184)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CHAR</span><span class="result">: Int(184)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#CHARLIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CHARLIT:Int(1)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CHARLIT:Int(1)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CHARLIT</span><span class="result">: Int(1)</span>
+      </span>
+      
+      <p class="shortcomment cmt">literals</p><div class="fullcomment"><div class="comment cmt"><p>literals</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#CLASS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CLASS:Int(62)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CLASS:Int(62)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CLASS</span><span class="result">: Int(62)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#COLON" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="COLON:Int(123)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#COLON:Int(123)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">COLON</span><span class="result">: Int(123)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#COMMA" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="COMMA:Int(120)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#COMMA:Int(120)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">COMMA</span><span class="result">: Int(120)</span>
+      </span>
+      
+      <p class="shortcomment cmt">special symbols</p><div class="fullcomment"><div class="comment cmt"><p>special symbols</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#CONST" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CONST:Int(28)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CONST:Int(28)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CONST</span><span class="result">: Int(28)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#CONTINUE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CONTINUE:Int(88)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#CONTINUE:Int(88)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CONTINUE</span><span class="result">: Int(88)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#DEFAULT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DEFAULT:Int(47)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DEFAULT:Int(47)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DEFAULT</span><span class="result">: Int(47)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#DO" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DO:Int(84)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DO:Int(84)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DO</span><span class="result">: Int(84)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#DOT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DOT:Int(122)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DOT:Int(122)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DOT</span><span class="result">: Int(122)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#DOTDOTDOT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DOTDOTDOT:Int(164)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DOTDOTDOT:Int(164)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DOTDOTDOT</span><span class="result">: Int(164)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#DOUBLE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DOUBLE:Int(188)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DOUBLE:Int(188)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DOUBLE</span><span class="result">: Int(188)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#DOUBLELIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DOUBLELIT:Int(5)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#DOUBLELIT:Int(5)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DOUBLELIT</span><span class="result">: Int(5)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#ELSE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ELSE:Int(82)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ELSE:Int(82)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ELSE</span><span class="result">: Int(82)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#EMPTY" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EMPTY:Int(-3)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#EMPTY:Int(-3)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EMPTY</span><span class="result">: Int(-3)</span>
+      </span>
+      
+      <p class="shortcomment cmt">special tokens</p><div class="fullcomment"><div class="comment cmt"><p>special tokens</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#ENUM" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ENUM:Int(67)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ENUM:Int(67)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ENUM</span><span class="result">: Int(67)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#EOF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EOF:Int(0)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#EOF:Int(0)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EOF</span><span class="result">: Int(0)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#EQEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EQEQ:Int(140)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#EQEQ:Int(140)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EQEQ</span><span class="result">: Int(140)</span>
+      </span>
+      
+      <p class="shortcomment cmt">special symbols</p>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#EQUALS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EQUALS:Int(124)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#EQUALS:Int(124)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EQUALS</span><span class="result">: Int(124)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#ERROR" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ERROR:Int(-1)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ERROR:Int(-1)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ERROR</span><span class="result">: Int(-1)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#EXTENDS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EXTENDS:Int(68)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#EXTENDS:Int(68)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EXTENDS</span><span class="result">: Int(68)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#FALSE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FALSE:Int(26)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FALSE:Int(26)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FALSE</span><span class="result">: Int(26)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#FINAL" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FINAL:Int(49)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FINAL:Int(49)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FINAL</span><span class="result">: Int(49)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#FINALLY" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FINALLY:Int(93)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FINALLY:Int(93)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FINALLY</span><span class="result">: Int(93)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#FLOAT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FLOAT:Int(187)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FLOAT:Int(187)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FLOAT</span><span class="result">: Int(187)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#FLOATLIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FLOATLIT:Int(4)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FLOATLIT:Int(4)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FLOATLIT</span><span class="result">: Int(4)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#FOR" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FOR:Int(85)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#FOR:Int(85)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FOR</span><span class="result">: Int(85)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GOTO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GOTO:Int(89)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GOTO:Int(89)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GOTO</span><span class="result">: Int(89)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GT:Int(143)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GT:Int(143)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GT</span><span class="result">: Int(143)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GTEQ:Int(145)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GTEQ:Int(145)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GTEQ</span><span class="result">: Int(145)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GTGT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GTGT:Int(157)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GTGT:Int(157)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GTGT</span><span class="result">: Int(157)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GTGTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GTGTEQ:Int(174)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GTGTEQ:Int(174)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GTGTEQ</span><span class="result">: Int(174)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GTGTGT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GTGTGT:Int(158)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GTGTGT:Int(158)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GTGTGT</span><span class="result">: Int(158)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#GTGTGTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GTGTGTEQ:Int(175)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#GTGTGTEQ:Int(175)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GTGTGTEQ</span><span class="result">: Int(175)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#HAT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HAT:Int(155)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#HAT:Int(155)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HAT</span><span class="result">: Int(155)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#HATEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HATEQ:Int(172)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#HATEQ:Int(172)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HATEQ</span><span class="result">: Int(172)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#IDENTIFIER" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IDENTIFIER:Int(10)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#IDENTIFIER:Int(10)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IDENTIFIER</span><span class="result">: Int(10)</span>
+      </span>
+      
+      <p class="shortcomment cmt">identifiers</p>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#IF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IF:Int(80)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#IF:Int(80)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IF</span><span class="result">: Int(80)</span>
+      </span>
+      
+      <p class="shortcomment cmt">control structures</p><div class="fullcomment"><div class="comment cmt"><p>control structures</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#IMPLEMENTS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IMPLEMENTS:Int(69)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#IMPLEMENTS:Int(69)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IMPLEMENTS</span><span class="result">: Int(69)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#IMPORT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IMPORT:Int(61)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#IMPORT:Int(61)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IMPORT</span><span class="result">: Int(61)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#INSTANCEOF" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="INSTANCEOF:Int(27)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#INSTANCEOF:Int(27)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">INSTANCEOF</span><span class="result">: Int(27)</span>
+      </span>
+      
+      <p class="shortcomment cmt">keywords</p>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#INT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="INT:Int(185)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#INT:Int(185)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">INT</span><span class="result">: Int(185)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#INTERFACE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="INTERFACE:Int(66)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#INTERFACE:Int(66)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">INTERFACE</span><span class="result">: Int(66)</span>
+      </span>
+      
+      <p class="shortcomment cmt">templates</p>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#INTLIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="INTLIT:Int(2)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#INTLIT:Int(2)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">INTLIT</span><span class="result">: Int(2)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#LBRACE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LBRACE:Int(104)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LBRACE:Int(104)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LBRACE</span><span class="result">: Int(104)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#LBRACKET" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LBRACKET:Int(102)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LBRACKET:Int(102)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LBRACKET</span><span class="result">: Int(102)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#LONG" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LONG:Int(186)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LONG:Int(186)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LONG</span><span class="result">: Int(186)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#LONGLIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LONGLIT:Int(3)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LONGLIT:Int(3)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LONGLIT</span><span class="result">: Int(3)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#LPAREN" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LPAREN:Int(100)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LPAREN:Int(100)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LPAREN</span><span class="result">: Int(100)</span>
+      </span>
+      
+      <p class="shortcomment cmt">parenthesis</p><div class="fullcomment"><div class="comment cmt"><p>parenthesis</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#LT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LT:Int(142)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LT:Int(142)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LT</span><span class="result">: Int(142)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#LTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LTEQ:Int(144)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LTEQ:Int(144)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LTEQ</span><span class="result">: Int(144)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#LTLT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LTLT:Int(156)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LTLT:Int(156)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LTLT</span><span class="result">: Int(156)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#LTLTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LTLTEQ:Int(173)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#LTLTEQ:Int(173)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LTLTEQ</span><span class="result">: Int(173)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#MINUS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MINUS:Int(151)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#MINUS:Int(151)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MINUS</span><span class="result">: Int(151)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#MINUSEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MINUSEQ:Int(168)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#MINUSEQ:Int(168)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MINUSEQ</span><span class="result">: Int(168)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#MINUSMINUS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MINUSMINUS:Int(162)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#MINUSMINUS:Int(162)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MINUSMINUS</span><span class="result">: Int(162)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#NATIVE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NATIVE:Int(53)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#NATIVE:Int(53)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NATIVE</span><span class="result">: Int(53)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#NEW" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NEW:Int(20)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#NEW:Int(20)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NEW</span><span class="result">: Int(20)</span>
+      </span>
+      
+      <p class="shortcomment cmt">keywords</p><div class="fullcomment"><div class="comment cmt"><p>keywords</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#NULL" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NULL:Int(24)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#NULL:Int(24)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NULL</span><span class="result">: Int(24)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#PACKAGE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PACKAGE:Int(60)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PACKAGE:Int(60)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PACKAGE</span><span class="result">: Int(60)</span>
+      </span>
+      
+      <p class="shortcomment cmt">templates</p><div class="fullcomment"><div class="comment cmt"><p>templates</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PERCENT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PERCENT:Int(154)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PERCENT:Int(154)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PERCENT</span><span class="result">: Int(154)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PERCENTEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PERCENTEQ:Int(171)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PERCENTEQ:Int(171)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PERCENTEQ</span><span class="result">: Int(171)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PLUS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PLUS:Int(150)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PLUS:Int(150)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PLUS</span><span class="result">: Int(150)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PLUSEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PLUSEQ:Int(167)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PLUSEQ:Int(167)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PLUSEQ</span><span class="result">: Int(167)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PLUSPLUS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PLUSPLUS:Int(161)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PLUSPLUS:Int(161)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PLUSPLUS</span><span class="result">: Int(161)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#PRIVATE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PRIVATE:Int(44)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PRIVATE:Int(44)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PRIVATE</span><span class="result">: Int(44)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#PROTECTED" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PROTECTED:Int(43)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PROTECTED:Int(43)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PROTECTED</span><span class="result">: Int(43)</span>
+      </span>
+      
+      <p class="shortcomment cmt">modifiers</p><div class="fullcomment"><div class="comment cmt"><p>modifiers</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#PUBLIC" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PUBLIC:Int(42)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#PUBLIC:Int(42)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PUBLIC</span><span class="result">: Int(42)</span>
+      </span>
+      
+      <p class="shortcomment cmt">modifiers</p>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#QMARK" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QMARK:Int(147)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#QMARK:Int(147)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">QMARK</span><span class="result">: Int(147)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#RBRACE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RBRACE:Int(105)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#RBRACE:Int(105)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RBRACE</span><span class="result">: Int(105)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#RBRACKET" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RBRACKET:Int(103)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#RBRACKET:Int(103)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RBRACKET</span><span class="result">: Int(103)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#RETURN" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RETURN:Int(97)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#RETURN:Int(97)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RETURN</span><span class="result">: Int(97)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#RPAREN" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RPAREN:Int(101)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#RPAREN:Int(101)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RPAREN</span><span class="result">: Int(101)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#SEMI" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SEMI:Int(121)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SEMI:Int(121)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SEMI</span><span class="result">: Int(121)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#SHORT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SHORT:Int(183)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SHORT:Int(183)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SHORT</span><span class="result">: Int(183)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#SLASH" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SLASH:Int(153)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SLASH:Int(153)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SLASH</span><span class="result">: Int(153)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#SLASHEQ" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SLASHEQ:Int(170)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SLASHEQ:Int(170)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SLASHEQ</span><span class="result">: Int(170)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#STATIC" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STATIC:Int(48)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#STATIC:Int(48)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STATIC</span><span class="result">: Int(48)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#STRICTFP" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STRICTFP:Int(54)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#STRICTFP:Int(54)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STRICTFP</span><span class="result">: Int(54)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#STRINGLIT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="STRINGLIT:Int(6)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#STRINGLIT:Int(6)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STRINGLIT</span><span class="result">: Int(6)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#SUPER" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SUPER:Int(23)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SUPER:Int(23)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SUPER</span><span class="result">: Int(23)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#SWITCH" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SWITCH:Int(94)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SWITCH:Int(94)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SWITCH</span><span class="result">: Int(94)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#SYNCHRONIZED" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SYNCHRONIZED:Int(52)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#SYNCHRONIZED:Int(52)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SYNCHRONIZED</span><span class="result">: Int(52)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#THIS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="THIS:Int(21)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#THIS:Int(21)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">THIS</span><span class="result">: Int(21)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#THROW" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="THROW:Int(90)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#THROW:Int(90)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">THROW</span><span class="result">: Int(90)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#THROWS" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="THROWS:Int(56)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#THROWS:Int(56)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">THROWS</span><span class="result">: Int(56)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#TILDE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TILDE:Int(163)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#TILDE:Int(163)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TILDE</span><span class="result">: Int(163)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.javac.JavaTokens#TRANSIENT" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TRANSIENT:Int(50)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#TRANSIENT:Int(50)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TRANSIENT</span><span class="result">: Int(50)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#TRUE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TRUE:Int(25)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#TRUE:Int(25)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TRUE</span><span class="result">: Int(25)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#TRY" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TRY:Int(91)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#TRY:Int(91)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TRY</span><span class="result">: Int(91)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#UNDEF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UNDEF:Int(-2)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#UNDEF:Int(-2)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UNDEF</span><span class="result">: Int(-2)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#VOID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VOID:Int(180)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#VOID:Int(180)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VOID</span><span class="result">: Int(180)</span>
+      </span>
+      
+      <p class="shortcomment cmt">primitive types</p>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#VOLATILE" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VOLATILE:Int(51)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#VOLATILE:Int(51)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VOLATILE</span><span class="result">: Int(51)</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens#WHILE" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="WHILE:Int(83)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#WHILE:Int(83)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">WHILE</span><span class="result">: Int(83)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#isIdentifier" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isIdentifier(code:Int):Boolean"></a><a id="isIdentifier(Int):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#isIdentifier(code:Int):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isIdentifier</span><span class="params">(<span name="code">code: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.javac.JavaTokens">JavaTokens</a> → <a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaTokens#isLiteral" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isLiteral(code:Int):Boolean"></a><a id="isLiteral(Int):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#isLiteral(code:Int):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isLiteral</span><span class="params">(<span name="code">code: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.javac.JavaTokens">JavaTokens</a> → <a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/javac/JavaTokens$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.tools.nsc.ast.parser.CommonTokens">
+              <h3>Inherited from <a href="../ast/parser/CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

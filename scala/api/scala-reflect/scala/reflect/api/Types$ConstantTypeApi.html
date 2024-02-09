@@ -1,0 +1,1789 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Reflection Library 2.12.8 - scala.reflect.api.Types.ConstantTypeApi</title>
+          <meta name="description" content="Scala Reflection Library 2.12.8 - scala.reflect.api.Types.ConstantTypeApi" />
+          <meta name="keywords" content="Scala Reflection Library 2.12.8 scala.reflect.api.Types.ConstantTypeApi" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Reflection Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.reflect" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reflect"></a><a id="reflect:reflect"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#reflect" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">reflect</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.reflect.api" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="api"></a><a id="api:api"></a>
+      <span class="permalink">
+      <a href="../../scala/reflect/index.html#api" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="index.html"><span class="name">api</span></a>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>The Scala Reflection API (located in scala-reflect.jar).</p><p>In Scala 2.10.0, the Scala Reflection API and its implementation have an &quot;experimental&quot; status.
+This means that the API and the docs are not complete and can be changed in binary- and source-incompatible
+manner in 2.10.1. This also means that the implementation has some known issues.</p><p>The following types are the backbone of the Scala Reflection API, and serve as a good starting point
+for information about Scala Reflection:</p><ul><li><a href="Symbols.html" class="extype" name="scala.reflect.api.Symbols">scala.reflect.api.Symbols</a></li><li><a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a></li><li><a href="Mirrors.html" class="extype" name="scala.reflect.api.Mirrors">scala.reflect.api.Mirrors</a></li><li><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a></li></ul><p> For more information about Scala Reflection, see the
+<a href="http://docs.scala-lang.org/overviews/reflection/overview.html" target="_blank">Reflection Guide</a>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.reflect">reflect</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types" visbl="pub" class="indented4 " data-isabs="true" fullComment="yes" group="ReflectionAPI">
+      <a id="TypesextendsAnyRef"></a><a id="Types:Types"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/index.html#TypesextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="Types.html"><span class="name">Types</span></a><span class="result"> extends <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"> <span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p> <span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p> A trait that defines types and operations on them.</p><p> Type instances represent information about the type of a corresponding symbol. This includes its members
+ (methods, fields, type parameters, nested classes, traits, etc.) either declared directly or inherited, its base types,
+ its erasure and so on. Types also provide operations to test for type conformance or equivalence or for widening.</p><p> To instantiate a type, most of the time, the <a href="TypeTags.html#typeOf[T](implicitttag:TypeTags.this.TypeTag[T]):TypeTags.this.Type" class="extmbr" name="scala.reflect.api.TypeTags#typeOf">scala.reflect.api.TypeTags#typeOf</a> method can be used. It takes
+ a type argument and produces a <code>Type</code> instance which represents that argument. For example:</p><pre>scala&gt; typeOf[<span class="std">List</span>[<span class="std">Int</span>]]
+res0: reflect.runtime.universe.Type = scala.<span class="std">List</span>[<span class="std">Int</span>]</pre><p> In this example, a <a href="Types$TypeRef.html" class="extype" name="scala.reflect.api.Types.TypeRef">scala.reflect.api.Types#TypeRef</a> is returned, which corresponds to the type constructor <code>List</code>
+ applied to the type argument <code>Int</code>.</p><p> <i>Note:</i> Method <code>typeOf</code> does not work for types with type parameters, such as <code>typeOf[List[A]]</code> where <code>A</code> is
+ a type parameter. In this case, use <a href="TypeTags.html#weakTypeOf[T](implicitattag:TypeTags.this.WeakTypeTag[T]):TypeTags.this.Type" class="extmbr" name="scala.reflect.api.TypeTags#weakTypeOf">scala.reflect.api.TypeTags#weakTypeOf</a> instead.</p><p> For other ways to instantiate types, see the <a href="http://docs.scala-lang.org/overviews/reflection/symbols-trees-types.html" target="_blank">corresponding section of the Reflection Guide</a>.</p><h5> Common Operations on Types </h5><p> Types are typically used for type conformance tests or are queried for declarations of members or inner types.</p><ul><li><b>Subtyping Relationships</b> can be tested using <code>&lt;:&lt;</code> and <code>weak_&lt;:&lt;</code>.</li><li><b>Type Equality</b> can be checked with <code>=:=</code>. It's important to note that <code>==</code> should not be used to compare types for equality-- <code>==</code> can't check for type equality in the presence of type aliases, while <code>=:=</code> can.</li></ul><p> Types can be queried for members and declarations by using the <code>members</code> and <code>declarations</code> methods (along with
+ their singular counterparts <code>member</code> and <code>declaration</code>), which provide the list of definitions associated with that type.
+ For example, to look up the <code>map</code> method of <code>List</code>, one can do:</p><pre>scala&gt; typeOf[<span class="std">List</span>[_]].member(<span class="lit">"map"</span>: TermName)
+res1: reflect.runtime.universe.<span class="std">Symbol</span> = method map</pre><p>For more information about <code>Type</code>s, see the <a href="http://docs.scala-lang.org/overviews/reflection/symbols-trees-types.html" target="_blank">Reflection Guide: Symbols, Trees, and Types</a>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.reflect.api">api</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <a class="object" href="Types$AnnotatedTypeExtractor.html" title="An extractor class to create and pattern match with syntax AnnotatedType(annotations, underlying)."></a>
+                        <a class="abstract type" href="Types$AnnotatedType.html" title="The AnnotatedType type signature is used for annotated types of the for &lt;type&gt; @&lt;annotation&gt;."></a>
+                        <a href="Types$AnnotatedType.html" title="The AnnotatedType type signature is used for annotated types of the for &lt;type&gt; @&lt;annotation&gt;.">AnnotatedType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$AnnotatedTypeApi.html" title="The API that all annotated types support."></a>
+                        <a href="Types$AnnotatedTypeApi.html" title="The API that all annotated types support.">AnnotatedTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$AnnotatedTypeExtractor.html" title="An extractor class to create and pattern match with syntax AnnotatedType(annotations, underlying)."></a>
+                        <a href="Types$AnnotatedTypeExtractor.html" title="An extractor class to create and pattern match with syntax AnnotatedType(annotations, underlying).">AnnotatedTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$BoundedWildcardTypeExtractor.html" title="An extractor class to create and pattern match with syntax BoundedWildcardTypeExtractor(bounds) with bounds denoting the type bounds."></a>
+                        <a class="abstract type" href="Types$BoundedWildcardType.html" title="BoundedWildcardTypes, used only during type inference, are created in two places:"></a>
+                        <a href="Types$BoundedWildcardType.html" title="BoundedWildcardTypes, used only during type inference, are created in two places:">BoundedWildcardType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$BoundedWildcardTypeApi.html" title="The API that all this types support."></a>
+                        <a href="Types$BoundedWildcardTypeApi.html" title="The API that all this types support.">BoundedWildcardTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$BoundedWildcardTypeExtractor.html" title="An extractor class to create and pattern match with syntax BoundedWildcardTypeExtractor(bounds) with bounds denoting the type bounds."></a>
+                        <a href="Types$BoundedWildcardTypeExtractor.html" title="An extractor class to create and pattern match with syntax BoundedWildcardTypeExtractor(bounds) with bounds denoting the type bounds.">BoundedWildcardTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$ClassInfoTypeExtractor.html" title="An extractor class to create and pattern match with syntax ClassInfo(parents, decls, clazz) Here, parents is the list of parent types of the class, decls is the scope containing all declarations in the class, and clazz is the symbol of the class itself."></a>
+                        <a class="abstract type" href="Types$ClassInfoType.html" title="The ClassInfo type signature is used to define parents and declarations of classes, traits, and objects."></a>
+                        <a href="Types$ClassInfoType.html" title="The ClassInfo type signature is used to define parents and declarations of classes, traits, and objects.">ClassInfoType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$ClassInfoTypeApi.html" title="The API that all class info types support."></a>
+                        <a href="Types$ClassInfoTypeApi.html" title="The API that all class info types support.">ClassInfoTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$ClassInfoTypeExtractor.html" title="An extractor class to create and pattern match with syntax ClassInfo(parents, decls, clazz) Here, parents is the list of parent types of the class, decls is the scope containing all declarations in the class, and clazz is the symbol of the class itself."></a>
+                        <a href="Types$ClassInfoTypeExtractor.html" title="An extractor class to create and pattern match with syntax ClassInfo(parents, decls, clazz) Here, parents is the list of parent types of the class, decls is the scope containing all declarations in the class, and clazz is the symbol of the class itself.">ClassInfoTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Types$CompoundType.html" title="A subtype of Type representing refined types as well as ClassInfo signatures."></a>
+                        <a href="Types$CompoundType.html" title="A subtype of Type representing refined types as well as ClassInfo signatures.">CompoundType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$CompoundTypeApi.html" title="Has no special methods."></a>
+                        <a href="Types$CompoundTypeApi.html" title="Has no special methods.">CompoundTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$ConstantTypeExtractor.html" title="An extractor class to create and pattern match with syntax ConstantType(constant) Here, constant is the constant value represented by the type."></a>
+                        <a class="abstract type" href="Types$ConstantType.html" title="The ConstantType type is not directly written in user programs, but arises as the type of a constant."></a>
+                        <a href="Types$ConstantType.html" title="The ConstantType type is not directly written in user programs, but arises as the type of a constant.">ConstantType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="The API that all constant types support."></a>
+                        <a href="" title="The API that all constant types support.">ConstantTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$ConstantTypeExtractor.html" title="An extractor class to create and pattern match with syntax ConstantType(constant) Here, constant is the constant value represented by the type."></a>
+                        <a href="Types$ConstantTypeExtractor.html" title="An extractor class to create and pattern match with syntax ConstantType(constant) Here, constant is the constant value represented by the type.">ConstantTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$ExistentialTypeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialType(quantified, underlying)."></a>
+                        <a class="abstract type" href="Types$ExistentialType.html" title="The ExistentialType type signature is used for existential types and wildcard types."></a>
+                        <a href="Types$ExistentialType.html" title="The ExistentialType type signature is used for existential types and wildcard types.">ExistentialType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$ExistentialTypeApi.html" title="The API that all existential types support."></a>
+                        <a href="Types$ExistentialTypeApi.html" title="The API that all existential types support.">ExistentialTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$ExistentialTypeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialType(quantified, underlying)."></a>
+                        <a href="Types$ExistentialTypeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialType(quantified, underlying).">ExistentialTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$MethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax MethodType(params, restpe) Here, params is a potentially empty list of parameter symbols of the method, and restpe is the result type of the method."></a>
+                        <a class="abstract type" href="Types$MethodType.html" title="The MethodType type signature is used to indicate parameters and result type of a method"></a>
+                        <a href="Types$MethodType.html" title="The MethodType type signature is used to indicate parameters and result type of a method">MethodType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$MethodTypeApi.html" title="The API that all method types support."></a>
+                        <a href="Types$MethodTypeApi.html" title="The API that all method types support.">MethodTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$MethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax MethodType(params, restpe) Here, params is a potentially empty list of parameter symbols of the method, and restpe is the result type of the method."></a>
+                        <a href="Types$MethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax MethodType(params, restpe) Here, params is a potentially empty list of parameter symbols of the method, and restpe is the result type of the method.">MethodTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$NullaryMethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax NullaryMethodType(resultType)."></a>
+                        <a class="abstract type" href="Types$NullaryMethodType.html" title="The NullaryMethodType type signature is used for parameterless methods with declarations of the form def foo: T"></a>
+                        <a href="Types$NullaryMethodType.html" title="The NullaryMethodType type signature is used for parameterless methods with declarations of the form def foo: T">NullaryMethodType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$NullaryMethodTypeApi.html" title="The API that all nullary method types support."></a>
+                        <a href="Types$NullaryMethodTypeApi.html" title="The API that all nullary method types support.">NullaryMethodTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$NullaryMethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax NullaryMethodType(resultType)."></a>
+                        <a href="Types$NullaryMethodTypeExtractor.html" title="An extractor class to create and pattern match with syntax NullaryMethodType(resultType).">NullaryMethodTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$PolyTypeExtractor.html" title="An extractor class to create and pattern match with syntax PolyType(typeParams, resultType)."></a>
+                        <a class="abstract type" href="Types$PolyType.html" title="The PolyType type signature is used for polymorphic methods that have at least one type parameter."></a>
+                        <a href="Types$PolyType.html" title="The PolyType type signature is used for polymorphic methods that have at least one type parameter.">PolyType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$PolyTypeApi.html" title="The API that all polymorphic types support."></a>
+                        <a href="Types$PolyTypeApi.html" title="The API that all polymorphic types support.">PolyTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$PolyTypeExtractor.html" title="An extractor class to create and pattern match with syntax PolyType(typeParams, resultType)."></a>
+                        <a href="Types$PolyTypeExtractor.html" title="An extractor class to create and pattern match with syntax PolyType(typeParams, resultType).">PolyTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$RefinedTypeExtractor.html" title="An extractor class to create and pattern match with syntax RefinedType(parents, decls) Here, parents is the list of parent types of the class, and decls is the scope containing all declarations in the class."></a>
+                        <a class="abstract type" href="Types$RefinedType.html" title="The RefinedType type defines types of any of the forms on the left, with their RefinedType representations to the right."></a>
+                        <a href="Types$RefinedType.html" title="The RefinedType type defines types of any of the forms on the left, with their RefinedType representations to the right.">RefinedType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$RefinedTypeApi.html" title="The API that all refined types support."></a>
+                        <a href="Types$RefinedTypeApi.html" title="The API that all refined types support.">RefinedTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$RefinedTypeExtractor.html" title="An extractor class to create and pattern match with syntax RefinedType(parents, decls) Here, parents is the list of parent types of the class, and decls is the scope containing all declarations in the class."></a>
+                        <a href="Types$RefinedTypeExtractor.html" title="An extractor class to create and pattern match with syntax RefinedType(parents, decls) Here, parents is the list of parent types of the class, and decls is the scope containing all declarations in the class.">RefinedTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$SingleTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(pre, sym) Here, pre is the prefix of the single-type, and sym is the stable value symbol referred to by the single-type."></a>
+                        <a class="abstract type" href="Types$SingleType.html" title="The SingleType type describes types of any of the forms on the left, with their TypeRef representations to the right."></a>
+                        <a href="Types$SingleType.html" title="The SingleType type describes types of any of the forms on the left, with their TypeRef representations to the right.">SingleType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$SingleTypeApi.html" title="The API that all single types support."></a>
+                        <a href="Types$SingleTypeApi.html" title="The API that all single types support.">SingleTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$SingleTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(pre, sym) Here, pre is the prefix of the single-type, and sym is the stable value symbol referred to by the single-type."></a>
+                        <a href="Types$SingleTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(pre, sym) Here, pre is the prefix of the single-type, and sym is the stable value symbol referred to by the single-type.">SingleTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Types$SingletonType.html" title="The type of Scala singleton types, i.e., types that are inhabited by only one nun-null value."></a>
+                        <a href="Types$SingletonType.html" title="The type of Scala singleton types, i.e., types that are inhabited by only one nun-null value.">SingletonType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$SingletonTypeApi.html" title="Has no special methods."></a>
+                        <a href="Types$SingletonTypeApi.html" title="Has no special methods.">SingletonTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$SuperTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(thistpe, supertpe)"></a>
+                        <a class="abstract type" href="Types$SuperType.html" title="The SuperType type is not directly written, but arises when C.super is used as a prefix in a TypeRef or SingleType."></a>
+                        <a href="Types$SuperType.html" title="The SuperType type is not directly written, but arises when C.super is used as a prefix in a TypeRef or SingleType.">SuperType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$SuperTypeApi.html" title="The API that all super types support."></a>
+                        <a href="Types$SuperTypeApi.html" title="The API that all super types support.">SuperTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$SuperTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(thistpe, supertpe)"></a>
+                        <a href="Types$SuperTypeExtractor.html" title="An extractor class to create and pattern match with syntax SingleType(thistpe, supertpe)">SuperTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$ThisTypeExtractor.html" title="An extractor class to create and pattern match with syntax ThisType(sym) where sym is the class prefix of the this type."></a>
+                        <a class="abstract type" href="Types$ThisType.html" title="A singleton type that describes types of the form on the left with the corresponding ThisType representation to the right:"></a>
+                        <a href="Types$ThisType.html" title="A singleton type that describes types of the form on the left with the corresponding ThisType representation to the right:">ThisType</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$ThisTypeApi.html" title="The API that all this types support."></a>
+                        <a href="Types$ThisTypeApi.html" title="The API that all this types support.">ThisTypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$ThisTypeExtractor.html" title="An extractor class to create and pattern match with syntax ThisType(sym) where sym is the class prefix of the this type."></a>
+                        <a href="Types$ThisTypeExtractor.html" title="An extractor class to create and pattern match with syntax ThisType(sym) where sym is the class prefix of the this type.">ThisTypeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Types$Type.html" title="The type of Scala types, and also Scala type signatures."></a>
+                        <a href="Types$Type.html" title="The type of Scala types, and also Scala type signatures.">Type</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$TypeApi.html" title="The API of types."></a>
+                        <a href="Types$TypeApi.html" title="The API of types.">TypeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$TypeBoundsExtractor.html" title="An extractor class to create and pattern match with syntax TypeBound(lower, upper) Here, lower is the lower bound of the TypeBounds pair, and upper is the upper bound."></a>
+                        <a class="abstract type" href="Types$TypeBounds.html" title="The TypeBounds type signature is used to indicate lower and upper type bounds of type parameters and abstract types."></a>
+                        <a href="Types$TypeBounds.html" title="The TypeBounds type signature is used to indicate lower and upper type bounds of type parameters and abstract types.">TypeBounds</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$TypeBoundsApi.html" title="The API that all type bounds support."></a>
+                        <a href="Types$TypeBoundsApi.html" title="The API that all type bounds support.">TypeBoundsApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$TypeBoundsExtractor.html" title="An extractor class to create and pattern match with syntax TypeBound(lower, upper) Here, lower is the lower bound of the TypeBounds pair, and upper is the upper bound."></a>
+                        <a href="Types$TypeBoundsExtractor.html" title="An extractor class to create and pattern match with syntax TypeBound(lower, upper) Here, lower is the lower bound of the TypeBounds pair, and upper is the upper bound.">TypeBoundsExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Types$TypeRefExtractor.html" title="An extractor class to create and pattern match with syntax TypeRef(pre, sym, args) Here, pre is the prefix of the type reference, sym is the symbol referred to by the type reference, and args is a possible empty list of type arguments."></a>
+                        <a class="abstract type" href="Types$TypeRef.html" title="The TypeRef type describes types of any of the forms on the left, with their TypeRef representations to the right."></a>
+                        <a href="Types$TypeRef.html" title="The TypeRef type describes types of any of the forms on the left, with their TypeRef representations to the right.">TypeRef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types$TypeRefApi.html" title="The API that all type refs support."></a>
+                        <a href="Types$TypeRefApi.html" title="The API that all type refs support.">TypeRefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Types$TypeRefExtractor.html" title="An extractor class to create and pattern match with syntax TypeRef(pre, sym, args) Here, pre is the prefix of the type reference, sym is the symbol referred to by the type reference, and args is a possible empty list of type arguments."></a>
+                        <a href="Types$TypeRefExtractor.html" title="An extractor class to create and pattern match with syntax TypeRef(pre, sym, args) Here, pre is the prefix of the type reference, sym is the symbol referred to by the type reference, and args is a possible empty list of type arguments.">TypeRefExtractor</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="scala">scala</a>.<a href="../index.html" class="extype" name="scala.reflect">reflect</a>.<a href="index.html" class="extype" name="scala.reflect.api">api</a>.<a href="Types.html" class="extype" name="scala.reflect.api.Types">Types</a></p>
+        <h1>ConstantTypeApi<span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ConstantTypeApi</span><span class="result"> extends <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The API that all constant types support.
+ The main source of information about types is the <a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a> page.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="Universe.html#ConstantType&gt;:Null&lt;:Types.this.ConstantTypeApiwithTypes.this.SingletonType" class="extmbr" name="scala.reflect.api.Types.ConstantType">Universe.ConstantType</a></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/reflect/scala/reflect/api/Types.scala#L1" target="_blank">Types.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a>, <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent">ConstantType</div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              <li class="group out"><span>Grouped</span></li>
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.reflect.api.Types.ConstantTypeApi"><span>ConstantTypeApi</span></li><li class="in" name="scala.reflect.api.Types.TypeApi"><span>TypeApi</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.reflect.api.Types.TypeApi#&lt;:&lt;" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="&lt;:&lt;(that:Types.this.Type):Boolean"></a><a id="&lt;:&lt;(Universe.Type):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#&lt;:&lt;(that:Types.this.Type):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$colon$less" class="name">&lt;:&lt;</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Does this type conform to given type argument <code>that</code>?</p><div class="fullcomment"><div class="comment cmt"><p>Does this type conform to given type argument <code>that</code>?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#=:=" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="=:=(that:Types.this.Type):Boolean"></a><a id="=:=(Universe.Type):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#=:=(that:Types.this.Type):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$colon$eq" class="name">=:=</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is this type equivalent to given type argument <code>that</code>?</p><div class="fullcomment"><div class="comment cmt"><p>Is this type equivalent to given type argument <code>that</code>?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#asSeenFrom" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="asSeenFrom(pre:Types.this.Type,clazz:Types.this.Symbol):Types.this.Type"></a><a id="asSeenFrom(Universe.Type,Universe.Symbol):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#asSeenFrom(pre:Types.this.Type,clazz:Types.this.Symbol):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asSeenFrom</span><span class="params">(<span name="pre">pre: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>, <span name="clazz">clazz: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This type as seen from prefix <code>pre</code> and class <code>clazz</code>.</p><div class="fullcomment"><div class="comment cmt"><p>This type as seen from prefix <code>pre</code> and class <code>clazz</code>. This means:
+ Replace all <code>ThisType</code>s of <code>clazz</code> or one of its subclasses
+ by <code>pre</code> and instantiate all parameters by arguments of <code>pre</code>.
+ Proceed analogously for <code>ThisType</code>s referring to outer classes.</p><p> Example:</p><pre>scala&gt; <span class="kw">import</span> scala.reflect.runtime.universe._
+<span class="kw">import</span> scala.reflect.runtime.universe._
+
+scala&gt; <span class="kw">class</span> D[T] { <span class="kw">def</span> m: T = ??? }
+defined <span class="kw">class</span> D
+
+scala&gt; <span class="kw">class</span> C <span class="kw">extends</span> D[<span class="std">Int</span>]
+defined <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> D = typeOf[D[_]].typeSymbol.asClass
+D: reflect.runtime.universe.ClassSymbol = <span class="kw">class</span> D
+
+scala&gt; <span class="kw">val</span> C = typeOf[C].typeSymbol.asClass
+C: reflect.runtime.universe.ClassSymbol = <span class="kw">class</span> C
+
+scala&gt; <span class="kw">val</span> T = D.typeParams(<span class="num">0</span>).asType.toType
+T: reflect.runtime.universe.Type = T
+
+scala&gt; T.asSeenFrom(ThisType(C), D)
+res0: reflect.runtime.universe.Type = scala.<span class="std">Int</span></pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#baseClasses" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="baseClasses:List[Types.this.Symbol]"></a><a id="baseClasses:List[Universe.Symbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#baseClasses:List[Types.this.Symbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">baseClasses</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The list of all base classes of this type (including its own typeSymbol)
+ in linearization order, starting with the class itself and ending
+ in class Any.</p><div class="fullcomment"><div class="comment cmt"><p>The list of all base classes of this type (including its own typeSymbol)
+ in linearization order, starting with the class itself and ending
+ in class Any.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#baseType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="baseType(clazz:Types.this.Symbol):Types.this.Type"></a><a id="baseType(Universe.Symbol):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#baseType(clazz:Types.this.Symbol):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">baseType</span><span class="params">(<span name="clazz">clazz: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The least type instance of given class which is a super-type
+ of this type.</p><div class="fullcomment"><div class="comment cmt"><p>The least type instance of given class which is a super-type
+ of this type.  Example:</p><pre><span class="kw">class</span> D[T]
+<span class="kw">class</span> C <span class="kw">extends</span> p.D[<span class="std">Int</span>]
+ThisType(C).baseType(D) = p.D[<span class="std">Int</span>]</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#companion" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="companion:Types.this.Type"></a><a id="companion:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#companion:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">companion</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Type signature of the companion of the underlying class symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Type signature of the companion of the underlying class symbol.
+ NoType if the underlying symbol is not a class symbol, or if it doesn't have a companion.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#contains" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="contains(sym:Types.this.Symbol):Boolean"></a><a id="contains(Universe.Symbol):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#contains(sym:Types.this.Symbol):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contains</span><span class="params">(<span name="sym">sym: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Does this type contain a reference to given symbol?</p><div class="fullcomment"><div class="comment cmt"><p>Does this type contain a reference to given symbol?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#dealias" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="dealias:Types.this.Type"></a><a id="dealias:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#dealias:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dealias</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Expands type aliases arising from type members.</p><div class="fullcomment"><div class="comment cmt"><p>Expands type aliases arising from type members.
+ Note that type aliases can hide beneath
+ singleton types and singleton types can hide inside type aliases.
+ Moreover, aliases might lurk in the upper bounds of abstract types.
+ Therefore careful thought has to be applied to identify and carry out
+ unwrapping logic specific to your use case.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#decl" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="decl(name:Types.this.Name):Types.this.Symbol"></a><a id="decl(Universe.Name):Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#decl(name:Types.this.Name):Types.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">decl</span><span class="params">(<span name="name">name: <a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a></span>)</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The defined or declared members with name <code>name</code> in this type;
+ an OverloadedSymbol if several exist, NoSymbol if none exist.</p><div class="fullcomment"><div class="comment cmt"><p>The defined or declared members with name <code>name</code> in this type;
+ an OverloadedSymbol if several exist, NoSymbol if none exist.
+ Alternatives of overloaded symbol appear in the order they are declared.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#decls" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="decls:Types.this.MemberScope"></a><a id="decls:Universe.MemberScope"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#decls:Types.this.MemberScope" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">decls</span><span class="result">: <a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.MemberScopeApiwithScopes.this.Scope" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code>Scope</code> containing directly declared members of this type.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>Scope</code> containing directly declared members of this type.
+ Unlike <code>members</code> this method doesn't returns inherited members.</p><p> Members in the returned scope might appear in arbitrary order.
+ Use <code>declarations.sorted</code> to get an ordered list of members.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#erasure" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="erasure:Types.this.Type"></a><a id="erasure:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#erasure:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">erasure</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The erased type corresponding to this type after
+ all transformations from Scala to Java have been performed.</p><div class="fullcomment"><div class="comment cmt"><p>The erased type corresponding to this type after
+ all transformations from Scala to Java have been performed.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#etaExpand" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="etaExpand:Types.this.Type"></a><a id="etaExpand:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#etaExpand:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">etaExpand</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Converts higher-kinded TypeRefs to PolyTypes.</p><div class="fullcomment"><div class="comment cmt"><p>Converts higher-kinded TypeRefs to PolyTypes.
+ Functions on types are also implemented as PolyTypes.</p><p> Example: (in the below, &lt;List&gt; is the type constructor of List)
+   TypeRef(pre, &lt;List&gt;, List()) is replaced by
+   PolyType(X, TypeRef(pre, &lt;List&gt;, List(X)))
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#exists" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="exists(p:Types.this.Type=&gt;Boolean):Boolean"></a><a id="exists((Universe.Type)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#exists(p:Types.this.Type=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exists</span><span class="params">(<span name="p">p: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is there part of this type which satisfies predicate <code>p</code>?</p><div class="fullcomment"><div class="comment cmt"><p>Is there part of this type which satisfies predicate <code>p</code>?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#finalResultType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="finalResultType:Types.this.Type"></a><a id="finalResultType:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#finalResultType:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalResultType</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">For a curried/nullary method or poly type its non-method result type,
+ the type itself for all other types.</p><div class="fullcomment"><div class="comment cmt"><p>For a curried/nullary method or poly type its non-method result type,
+ the type itself for all other types.</p><pre>scala&gt; <span class="kw">class</span> C {
+     | <span class="kw">def</span> foo[T](x: T)(y: T) = ???
+     | <span class="kw">def</span> bar: <span class="std">Int</span> = ???
+     | }
+defined <span class="kw">class</span> C
+
+scala&gt; typeOf[C].member(TermName(<span class="lit">"foo"</span>)).asMethod
+res0: reflect.runtime.universe.MethodSymbol = method foo
+
+scala&gt; res0.info <span class="cmt">// PolyType wrapping a MethodType</span>
+res1: reflect.runtime.universe.Type = [T](x: T)(y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType <span class="cmt">// MethodType wrapping a MethodType</span>
+res2: reflect.runtime.universe.Type = (x: T)(y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType.resultType <span class="cmt">// vanilla MethodType</span>
+res3: reflect.runtime.universe.Type = (y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType.resultType.resultType
+res4: reflect.runtime.universe.Type = scala.<span class="std">Nothing</span>
+
+scala&gt; res1.finalResultType
+res5: reflect.runtime.universe.Type = scala.<span class="std">Nothing</span>
+
+scala&gt; typeOf[C].member(TermName(<span class="lit">"bar"</span>)).asMethod
+res6: reflect.runtime.universe.MethodSymbol = method bar
+
+scala&gt; res6.info
+res7: reflect.runtime.universe.Type = <span class="kw">=&gt;</span> scala.<span class="std">Int</span>
+
+scala&gt; res6.info.resultType
+res8: reflect.runtime.universe.Type = scala.<span class="std">Int</span>
+
+scala&gt; res6.info.finalResultType
+res9: reflect.runtime.universe.Type = scala.<span class="std">Int</span></pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>See also</dt><dd><span class="cmt"><p>resultType</p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#find" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="find(p:Types.this.Type=&gt;Boolean):Option[Types.this.Type]"></a><a id="find((Universe.Type)⇒Boolean):Option[Universe.Type]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#find(p:Types.this.Type=&gt;Boolean):Option[Types.this.Type]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">find</span><span class="params">(<span name="p">p: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns optionally first type (in a preorder traversal) which satisfies predicate <code>p</code>,
+ or None if none exists.</p><div class="fullcomment"><div class="comment cmt"><p>Returns optionally first type (in a preorder traversal) which satisfies predicate <code>p</code>,
+ or None if none exists.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#foreach" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="foreach(f:Types.this.Type=&gt;Unit):Unit"></a><a id="foreach((Universe.Type)⇒Unit):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#foreach(f:Types.this.Type=&gt;Unit):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Apply <code>f</code> to each part of this type, for side effects only</p><div class="fullcomment"><div class="comment cmt"><p>Apply <code>f</code> to each part of this type, for side effects only</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#map" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="map(f:Types.this.Type=&gt;Types.this.Type):Types.this.Type"></a><a id="map((Universe.Type)⇒Universe.Type):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#map(f:Types.this.Type=&gt;Types.this.Type):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>) ⇒ <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Apply <code>f</code> to each part of this type, returning
+ a new type.</p><div class="fullcomment"><div class="comment cmt"><p>Apply <code>f</code> to each part of this type, returning
+ a new type. children get mapped before their parents</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#member" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="member(name:Types.this.Name):Types.this.Symbol"></a><a id="member(Universe.Name):Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#member(name:Types.this.Name):Types.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">member</span><span class="params">(<span name="name">name: <a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a></span>)</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The member with given name, either directly declared or inherited,
+ an OverloadedSymbol if several exist, NoSymbol if none exist.</p><div class="fullcomment"><div class="comment cmt"><p>The member with given name, either directly declared or inherited,
+ an OverloadedSymbol if several exist, NoSymbol if none exist.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#members" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="members:Types.this.MemberScope"></a><a id="members:Universe.MemberScope"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#members:Types.this.MemberScope" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">members</span><span class="result">: <a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.MemberScopeApiwithScopes.this.Scope" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A <code>Scope</code> containing all members of this type (directly declared or inherited).</p><div class="fullcomment"><div class="comment cmt"><p>A <code>Scope</code> containing all members of this type (directly declared or inherited).
+ Unlike <code>declarations</code> this method also returns inherited members.</p><p> Members in the returned scope might appear in arbitrary order.
+ Use <code>declarations.sorted</code> to get an ordered list of members.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#orElse" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Helpers">
+      <a id="orElse(alt:=&gt;Types.this.Type):Types.this.Type"></a><a id="orElse(⇒Universe.Type):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#orElse(alt:=&gt;Types.this.Type):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orElse</span><span class="params">(<span name="alt">alt: ⇒ <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides an alternate if type is NoType.</p><div class="fullcomment"><div class="comment cmt"><p>Provides an alternate if type is NoType.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#paramLists" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="paramLists:List[List[Types.this.Symbol]]"></a><a id="paramLists:List[List[Universe.Symbol]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#paramLists:List[List[Types.this.Symbol]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paramLists</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">For a method or poly type, a list of its value parameter sections,
+ the empty list of lists for all other types.</p><div class="fullcomment"><div class="comment cmt"><p>For a method or poly type, a list of its value parameter sections,
+ the empty list of lists for all other types.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#resultType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="resultType:Types.this.Type"></a><a id="resultType:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#resultType:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resultType</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">For a (nullary) method or poly type, its direct result type
+ (can be a MethodType if the method has multiple argument lists),
+ the type itself for all other types.</p><div class="fullcomment"><div class="comment cmt"><p>For a (nullary) method or poly type, its direct result type
+ (can be a MethodType if the method has multiple argument lists),
+ the type itself for all other types.</p><pre>scala&gt; <span class="kw">class</span> C { <span class="kw">def</span> foo[T](x: T)(y: T) = ??? }
+defined <span class="kw">class</span> C
+
+scala&gt; typeOf[C].member(TermName(<span class="lit">"foo"</span>)).asMethod
+res0: reflect.runtime.universe.MethodSymbol = method foo
+
+scala&gt; res0.info <span class="cmt">// PolyType wrapping a MethodType</span>
+res1: reflect.runtime.universe.Type = [T](x: T)(y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType <span class="cmt">// MethodType wrapping a MethodType</span>
+res2: reflect.runtime.universe.Type = (x: T)(y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType.resultType <span class="cmt">// vanilla MethodType</span>
+res3: reflect.runtime.universe.Type = (y: T)scala.<span class="std">Nothing</span>
+
+scala&gt; res1.resultType.resultType.resultType
+res4: reflect.runtime.universe.Type = scala.<span class="std">Nothing</span>
+
+scala&gt; res1.finalResultType
+res5: reflect.runtime.universe.Type = scala.<span class="std">Nothing</span></pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>See also</dt><dd><span class="cmt"><p>finalResultType</p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#substituteSymbols" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="substituteSymbols(from:List[Types.this.Symbol],to:List[Types.this.Symbol]):Types.this.Type"></a><a id="substituteSymbols(List[Universe.Symbol],List[Universe.Symbol]):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#substituteSymbols(from:List[Types.this.Symbol],to:List[Types.this.Symbol]):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteSymbols</span><span class="params">(<span name="from">from: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>, <span name="to">to: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Substitute symbols in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.</p><div class="fullcomment"><div class="comment cmt"><p>Substitute symbols in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#substituteTypes" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="substituteTypes(from:List[Types.this.Symbol],to:List[Types.this.Type]):Types.this.Type"></a><a id="substituteTypes(List[Universe.Symbol],List[Universe.Type]):Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#substituteTypes(from:List[Types.this.Symbol],to:List[Types.this.Type]):Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteTypes</span><span class="params">(<span name="from">from: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>, <span name="to">to: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>)</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Substitute types in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.</p><div class="fullcomment"><div class="comment cmt"><p>Substitute types in <code>to</code> for corresponding occurrences of references to
+ symbols <code>from</code> in this type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#takesTypeArgs" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="takesTypeArgs:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#takesTypeArgs:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">takesTypeArgs</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is this type a type constructor that is missing its type arguments?
+</p><div class="fullcomment"><div class="comment cmt"><p>Is this type a type constructor that is missing its type arguments?
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#termSymbol" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="termSymbol:Types.this.Symbol"></a><a id="termSymbol:Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#termSymbol:Types.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">termSymbol</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The term symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a term symbol.</p><div class="fullcomment"><div class="comment cmt"><p>The term symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a term symbol.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeArgs" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="typeArgs:List[Types.this.Type]"></a><a id="typeArgs:List[Universe.Type]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#typeArgs:List[Types.this.Type]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeArgs</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">List of type arguments ingrained in this type reference.</p><div class="fullcomment"><div class="comment cmt"><p>List of type arguments ingrained in this type reference.
+ Depending on your use case you might or might not want to call <code>dealias</code> first.</p><pre>scala&gt; <span class="kw">type</span> T = <span class="std">List</span>[<span class="std">Int</span>]
+defined <span class="kw">type</span> alias T
+
+scala&gt; typeOf[T].typeArgs
+res0: <span class="std">List</span>[reflect.runtime.universe.Type] = <span class="std">List</span>()
+
+scala&gt; typeOf[T].dealias.typeArgs
+res1: <span class="std">List</span>[reflect.runtime.universe.Type] = <span class="std">List</span>(scala.<span class="std">Int</span>)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeConstructor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="typeConstructor:Types.this.Type"></a><a id="typeConstructor:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#typeConstructor:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeConstructor</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the corresponding type constructor (e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the corresponding type constructor (e.g. List for List[T] or List[String])
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeParams" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="typeParams:List[Types.this.Symbol]"></a><a id="typeParams:List[Universe.Symbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#typeParams:List[Types.this.Symbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeParams</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">For a poly type, its type parameters,
+ the empty list for all other types.</p><div class="fullcomment"><div class="comment cmt"><p>For a poly type, its type parameters,
+ the empty list for all other types.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#typeSymbol" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="typeSymbol:Types.this.Symbol"></a><a id="typeSymbol:Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#typeSymbol:Types.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeSymbol</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The type symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a type symbol.</p><div class="fullcomment"><div class="comment cmt"><p>The type symbol associated with the type, or <code>NoSymbol</code> for types
+ that do not refer to a type symbol.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.ConstantTypeApi#value" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="value:Types.this.Constant"></a><a id="value:Universe.Constant"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#value:Types.this.Constant" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">value</span><span class="result">: <a href="Universe.html#Constant&gt;:Null&lt;:Constants.this.ConstantApi" class="extmbr" name="scala.reflect.api.Constants.Constant">Universe.Constant</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The compile-time constant underlying this type.</p>
+    </li><li name="scala.reflect.api.Types.TypeApi#weak_&lt;:&lt;" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="weak_&lt;:&lt;(that:Types.this.Type):Boolean"></a><a id="weak_&lt;:&lt;(Universe.Type):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#weak_&lt;:&lt;(that:Types.this.Type):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: weak_$less$colon$less" class="name">weak_&lt;:&lt;</span><span class="params">(<span name="that">that: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Does this type weakly conform to given type argument <code>that</code>, i.e., either conforms in terms of <code>&lt;:&lt;</code> or both are primitive number types
+ that conform according to Section &quot;Weak Conformance&quot; in the spec.</p><div class="fullcomment"><div class="comment cmt"><p>Does this type weakly conform to given type argument <code>that</code>, i.e., either conforms in terms of <code>&lt;:&lt;</code> or both are primitive number types
+ that conform according to Section &quot;Weak Conformance&quot; in the spec. For example, Int weak_&lt;:&lt; Long.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#widen" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="widen:Types.this.Type"></a><a id="widen:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#widen:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">widen</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">If this is a singleton type, widen it to its nearest underlying non-singleton
+ base type by applying one or more <code>underlying</code> dereferences.</p><div class="fullcomment"><div class="comment cmt"><p>If this is a singleton type, widen it to its nearest underlying non-singleton
+ base type by applying one or more <code>underlying</code> dereferences.
+ If this is not a singleton type, returns this type itself.</p><p> Example:</p><p> class Outer { class C ; val x: C }
+ val o: Outer
+ &lt;o.x.type&gt;.widen = o.C</p><p> Note that type aliases can hide beneath
+ singleton types and singleton types can hide inside type aliases.
+ Moreover, aliases might lurk in the upper bounds of abstract types.
+ Therefore careful thought has to be applied to identify and carry out
+ unwrapping logic specific to your use case.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#declaration" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="declaration(name:Types.this.Name):Types.this.Symbol"></a><a id="declaration(Universe.Name):Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#declaration(name:Types.this.Name):Types.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.11.0) use decl instead">declaration</span><span class="params">(<span name="name">name: <a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a></span>)</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use <code>decl</code> instead</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Types$TypeApi.html#decl(name:Types.this.Name):Types.this.Symbol" class="extmbr" name="scala.reflect.api.Types.TypeApi#decl">decl</a></p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#declarations" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="declarations:Types.this.MemberScope"></a><a id="declarations:Universe.MemberScope"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#declarations:Types.this.MemberScope" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.11.0) use decls instead">declarations</span><span class="result">: <a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.MemberScopeApiwithScopes.this.Scope" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use <code>decls</code> instead</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Types$TypeApi.html#decls:Types.this.MemberScope" class="extmbr" name="scala.reflect.api.Types.TypeApi#decls">decls</a></p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#normalize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="normalize:Types.this.Type"></a><a id="normalize:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#normalize:Types.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.11.0) use dealias or etaExpand instead">normalize</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Reduce to beta eta-long normal form.</p><div class="fullcomment"><div class="comment cmt"><p>Reduce to beta eta-long normal form.
+ Expands type aliases and converts higher-kinded TypeRefs to PolyTypes.
+ Functions on types are also implemented as PolyTypes.</p><p> Example: (in the below, &lt;List&gt; is the type constructor of List)
+   TypeRef(pre, &lt;List&gt;, List()) is replaced by
+   PolyType(X, TypeRef(pre, &lt;List&gt;, List(X)))
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use <code>dealias</code> or <code>etaExpand</code> instead</p></dd></dl></div>
+    </li><li name="scala.reflect.api.Types.TypeApi#paramss" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="paramss:List[List[Types.this.Symbol]]"></a><a id="paramss:List[List[Universe.Symbol]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#paramss:List[List[Types.this.Symbol]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.11.0) use paramLists instead">paramss</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Types$TypeApi.html" class="extype" name="scala.reflect.api.Types.TypeApi">TypeApi</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use <code>paramLists</code> instead</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Types$TypeApi.html#paramLists:List[List[Types.this.Symbol]]" class="extmbr" name="scala.reflect.api.Types.TypeApi#paramLists">paramLists</a></p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(Universe.ConstantTypeApi,B)"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Universe.ConstantTypeApi)⇒Boolean,⇒Any):Universe.ConstantTypeApi"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((Universe.ConstantTypeApi)⇒Boolean):Universe.ConstantTypeApi"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):Universe.ConstantTypeApi"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):Universe.ConstantTypeApi"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(Universe.ConstantTypeApi,B)"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Types$ConstantTypeApi.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.reflect.api.Types.TypeApi">
+              <h3>Inherited from <a href="Universe.html#TypeApiextendsAnyRef" class="extmbr" name="scala.reflect.api.Types.TypeApi">Universe.TypeApi</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="Universe.html#ConstantTypeApiextendsTypes.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.ConstantTypeApi">Universe.ConstantTypeApi</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Helpers">
+              <h3>Helpers</h3>
+              
+            </div><div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,1797 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.ast.TreeBrowsers.ProgramTree</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.ast.TreeBrowsers.ProgramTree" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.ast.TreeBrowsers.ProgramTree" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ast"></a><a id="ast:ast"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#ast" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">ast</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.TreeBrowsers" visbl="pub" class="indented5 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="TreeBrowsersextendsAnyRef"></a><a id="TreeBrowsers:TreeBrowsers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/index.html#TreeBrowsersextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Tree browsers can show the AST in a graphical and interactive way, useful for debugging and understanding." href="TreeBrowsers.html"><span class="name">TreeBrowsers</span></a><span class="result"> extends <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Tree browsers can show the AST in a graphical and interactive
+way, useful for debugging and understanding.</p><div class="fullcomment"><div class="comment cmt"><p>Tree browsers can show the AST in a graphical and interactive
+way, useful for debugging and understanding.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.tools.nsc.ast">ast</a></dd><dt>Version</dt><dd><p>1.0</p></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBrowsers$ASTTreeModel.html" title="Tree model for abstract syntax trees"></a>
+                        <a href="TreeBrowsers$ASTTreeModel.html" title="Tree model for abstract syntax trees">ASTTreeModel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBrowsers$BrowserFrame.html" title="A window that can host the Tree widget and provide methods for displaying information"></a>
+                        <a href="TreeBrowsers$BrowserFrame.html" title="A window that can host the Tree widget and provide methods for displaying information">BrowserFrame</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Pseudo tree class, so that all JTree nodes are treated uniformly"></a>
+                        <a href="" title="Pseudo tree class, so that all JTree nodes are treated uniformly">ProgramTree</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBrowsers$SwingBrowser.html" title="Java Swing pretty printer for Scala abstract syntax trees."></a>
+                        <a href="TreeBrowsers$SwingBrowser.html" title="Java Swing pretty printer for Scala abstract syntax trees.">SwingBrowser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBrowsers$TextInfoPanel.html" title="Present detailed information about the selected tree node."></a>
+                        <a href="TreeBrowsers$TextInfoPanel.html" title="Present detailed information about the selected tree node.">TextInfoPanel</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="TreeBrowsers$TreeInfo$.html" title="Computes different information about a tree node."></a>
+                        <a href="TreeBrowsers$TreeInfo$.html" title="Computes different information about a tree node.">TreeInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="TreeBrowsers$TypePrinter$.html" title=""></a>
+                        <a href="TreeBrowsers$TypePrinter$.html" title="">TypePrinter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBrowsers$UnitTree.html" title="Pseudo tree class, so that all JTree nodes are treated uniformly"></a>
+                        <a href="TreeBrowsers$UnitTree.html" title="Pseudo tree class, so that all JTree nodes are treated uniformly">UnitTree</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.ast">ast</a>.<a href="TreeBrowsers.html" class="extype" name="scala.tools.nsc.ast.TreeBrowsers">TreeBrowsers</a></p>
+        <h1>ProgramTree<span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ProgramTree</span><span class="params">(<span name="units">units: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="TreeBrowsers$UnitTree.html" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.UnitTree">UnitTree</a>]</span>)</span><span class="result"> extends <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Pseudo tree class, so that all JTree nodes are treated uniformly</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/compiler/scala/tools/nsc/ast/TreeBrowsers.scala#L1" target="_blank">TreeBrowsers.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">java.io.Serializable</span>, <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>, <a href="../Global.html#AttachableextendsAnyRef" class="extmbr" name="scala.tools.nsc.Global.Attachable">Global.Attachable</a>, <a href="../Global.html#TreeContextApiImplextendsTrees.this.TreeApi" class="extmbr" name="scala.tools.nsc.Global.TreeContextApiImpl">Global.TreeContextApiImpl</a>, <a href="../Global.html#TreeApiextendsProduct" class="extmbr" name="scala.tools.nsc.Global.TreeApi">Global.TreeApi</a>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree"><span>ProgramTree</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.reflect.internal.Trees.Tree"><span>Tree</span></li><li class="in" name="scala.reflect.internal.StdAttachments.Attachable"><span>Attachable</span></li><li class="in" name="scala.reflect.internal.Trees.TreeContextApiImpl"><span>TreeContextApiImpl</span></li><li class="in" name="scala.reflect.api.Trees.TreeApi"><span>TreeApi</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(units:List[TreeBrowsers.this.UnitTree]):TreeBrowsers.this.ProgramTree"></a><a id="&lt;init&gt;:ProgramTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#&lt;init&gt;(units:List[TreeBrowsers.this.UnitTree]):TreeBrowsers.this.ProgramTree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ProgramTree</span><span class="params">(<span name="units">units: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="TreeBrowsers$UnitTree.html" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.UnitTree">UnitTree</a>]</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(ProgramTree,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#attachments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="attachments:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}"></a><a id="attachments:Attachments{typePos=TreeBrowsers.this.global.Position}"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#attachments:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attachments</span><span class="result">: <span class="extype" name="scala.reflect.macros.Attachments">Attachments</span> { type Pos = TreeBrowsers.this.global.Position }</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#canHaveAttrs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canHaveAttrs:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#canHaveAttrs:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canHaveAttrs</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#changeOwner" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changeOwner(from:Trees.this.Symbol,to:Trees.this.Symbol):Trees.this.Tree"></a><a id="changeOwner(Global.Symbol,Global.Symbol):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#changeOwner(from:Trees.this.Symbol,to:Trees.this.Symbol):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changeOwner</span><span class="params">(<span name="from">from: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>, <span name="to">to: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#changeOwner" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changeOwner(pairs:(Trees.this.Symbol,Trees.this.Symbol)*):Trees.this.Tree"></a><a id="changeOwner((Global.Symbol,Global.Symbol)*):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#changeOwner(pairs:(Trees.this.Symbol,Trees.this.Symbol)*):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changeOwner</span><span class="params">(<span name="pairs">pairs: (<a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>, <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>)*</span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#children" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="children:List[Trees.this.Tree]"></a><a id="children:List[Global.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#children:List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">children</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#clearType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clearType():Tree.this.type"></a><a id="clearType():ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#clearType():Tree.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearType</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#collect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collect[T](pf:PartialFunction[Trees.this.Tree,T]):List[T]"></a><a id="collect[T](PartialFunction[Global.Tree,T]):List[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#collect[T](pf:PartialFunction[Trees.this.Tree,T]):List[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collect</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>, <span class="extype" name="scala.reflect.internal.Trees.TreeContextApiImpl.collect.T">T</span>]</span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.TreeContextApiImpl.collect.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#correspondsStructure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="correspondsStructure(that:Trees.this.Tree)(f:(Trees.this.Tree,Trees.this.Tree)=&gt;Boolean):Boolean"></a><a id="correspondsStructure(Global.Tree)((Global.Tree,Global.Tree)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#correspondsStructure(that:Trees.this.Tree)(f:(Trees.this.Tree,Trees.this.Tree)=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">correspondsStructure</span><span class="params">(<span name="that">that: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>)</span><span class="params">(<span name="f">f: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>, <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#defineType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="defineType(tp:Trees.this.Type):Tree.this.type"></a><a id="defineType(Global.Type):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#defineType(tp:Trees.this.Type):Tree.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defineType</span><span class="params">(<span name="tp">tp: <a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#duplicate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="duplicate:Tree.this.type"></a><a id="duplicate:ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#duplicate:Tree.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">duplicate</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((ProgramTree)⇒Boolean,⇒Any):ProgramTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((ProgramTree)⇒Boolean):ProgramTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):ProgramTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):ProgramTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(that:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#equals(that:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → Equals → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#equalsStructure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equalsStructure(that:Trees.this.Tree):Boolean"></a><a id="equalsStructure(Global.Tree):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#equalsStructure(that:Trees.this.Tree):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equalsStructure</span><span class="params">(<span name="that">that: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#exists" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exists(p:Trees.this.Tree=&gt;Boolean):Boolean"></a><a id="exists((Global.Tree)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#exists(p:Trees.this.Tree=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exists</span><span class="params">(<span name="p">p: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#filter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]"></a><a id="filter((Global.Tree)⇒Boolean):List[Global.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#filter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#find" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="find(p:Trees.this.Tree=&gt;Boolean):Option[Trees.this.Tree]"></a><a id="find((Global.Tree)⇒Boolean):Option[Global.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#find(p:Trees.this.Tree=&gt;Boolean):Option[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">find</span><span class="params">(<span name="p">p: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#forAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forAll(p:Trees.this.Tree=&gt;Boolean):Boolean"></a><a id="forAll((Global.Tree)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#forAll(p:Trees.this.Tree=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forAll</span><span class="params">(<span name="p">p: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#foreach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach(f:Trees.this.Tree=&gt;Unit):Unit"></a><a id="foreach((Global.Tree)⇒Unit):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#foreach(f:Trees.this.Tree=&gt;Unit):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#foreachPartial" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachPartial(pf:PartialFunction[Trees.this.Tree,Trees.this.Tree]):Unit"></a><a id="foreachPartial(PartialFunction[Global.Tree,Global.Tree]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#foreachPartial(pf:PartialFunction[Trees.this.Tree,Trees.this.Tree]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachPartial</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>, <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#freeTerms" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="freeTerms:List[Trees.this.FreeTermSymbol]"></a><a id="freeTerms:List[Global.FreeTermSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#freeTerms:List[Trees.this.FreeTermSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freeTerms</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#FreeTermSymbolextendsSymbols.this.TermSymbolwithSymbols.this.FreeSymbolwithSymbols.this.FreeTermSymbolApi" class="extmbr" name="scala.tools.nsc.Global.FreeTermSymbol">Global.FreeTermSymbol</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#freeTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="freeTypes:List[Trees.this.FreeTypeSymbol]"></a><a id="freeTypes:List[Global.FreeTypeSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#freeTypes:List[Trees.this.FreeTypeSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freeTypes</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#FreeTypeSymbolextendsSymbols.this.TypeSkolemwithSymbols.this.FreeSymbolwithSymbols.this.FreeTypeSymbolApi" class="extmbr" name="scala.tools.nsc.Global.FreeTypeSymbol">Global.FreeTypeSymbol</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#getAndRemoveAttachment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAndRemoveAttachment[T](implicitevidence$3:scala.reflect.ClassTag[T]):Option[T]"></a><a id="getAndRemoveAttachment[T](ClassTag[T]):Option[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#getAndRemoveAttachment[T](implicitevidence$3:scala.reflect.ClassTag[T]):Option[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAndRemoveAttachment</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.getAndRemoveAttachment.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.getAndRemoveAttachment.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#hasAttachment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasAttachment[T](implicitevidence$4:scala.reflect.ClassTag[T]):Boolean"></a><a id="hasAttachment[T](ClassTag[T]):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hasAttachment[T](implicitevidence$4:scala.reflect.ClassTag[T]):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasAttachment</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.hasAttachment.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#hasExistingSymbol" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasExistingSymbol:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hasExistingSymbol:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasExistingSymbol</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#hasSymbolField" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasSymbolField:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hasSymbolField:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasSymbolField</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#hasSymbolWhich" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasSymbolWhich(f:Trees.this.Symbol=&gt;Boolean):Boolean"></a><a id="hasSymbolWhich((Global.Symbol)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hasSymbolWhich(f:Trees.this.Symbol=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasSymbolWhich</span><span class="params">(<span name="f">f: (<a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#id:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#isDef" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isDef:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isDef:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDef</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#isEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isEmpty:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#isErroneous" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isErroneous:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isErroneous:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isErroneous</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#isErrorTyped" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isErrorTyped:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isErrorTyped:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isErrorTyped</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#isTerm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTerm:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isTerm:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTerm</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#isType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isType:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isType:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isType</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#isTyped" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTyped:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#isTyped:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTyped</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#modifyType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modifyType(f:Trees.this.Type=&gt;Trees.this.Type):Trees.this.Tree"></a><a id="modifyType((Global.Type)⇒Global.Type):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#modifyType(f:Trees.this.Type=&gt;Trees.this.Type):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modifyType</span><span class="params">(<span name="f">f: (<a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a>) ⇒ <a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a></span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#nonEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nonEmpty:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#nonEmpty:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nonEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#orElse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="orElse(alt:=&gt;Trees.this.Tree):Trees.this.Tree"></a><a id="orElse(⇒Global.Tree):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#orElse(alt:=&gt;Trees.this.Tree):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orElse</span><span class="params">(<span name="alt">alt: ⇒ <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#pos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pos:Trees.this.Position"></a><a id="pos:Global.Position"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#pos:Trees.this.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pos</span><span class="result">: <a href="../Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.Global.Position">Global.Position</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → Attachable → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#pos_=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pos_=(pos:StdAttachments.this.Position):Unit"></a><a id="pos_=(Global.Position):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#pos_=(pos:StdAttachments.this.Position):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: pos_$eq" class="name">pos_=</span><span class="params">(<span name="pos">pos: <a href="../Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.Global.Position">Global.Position</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#rawatt" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rawatt:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}"></a><a id="rawatt:Attachments{typePos=TreeBrowsers.this.global.Position}"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#rawatt:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rawatt</span><span class="result">: <span class="extype" name="scala.reflect.macros.Attachments">Attachments</span> { type Pos = TreeBrowsers.this.global.Position }</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#removeAttachment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeAttachment[T](implicitevidence$2:scala.reflect.ClassTag[T]):Attachable.this.type"></a><a id="removeAttachment[T](ClassTag[T]):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#removeAttachment[T](implicitevidence$2:scala.reflect.ClassTag[T]):Attachable.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeAttachment</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.removeAttachment.T">T</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#setAttachments" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setAttachments(attachments:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}):Attachable.this.type"></a><a id="setAttachments(Attachments{typePos=TreeBrowsers.this.global.Position}):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#setAttachments(attachments:scala.reflect.macros.Attachments{typePos=StdAttachments.this.Position}):Attachable.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAttachments</span><span class="params">(<span name="attachments">attachments: <span class="extype" name="scala.reflect.macros.Attachments">Attachments</span> { type Pos = TreeBrowsers.this.global.Position }</span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#setPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setPos(newpos:StdAttachments.this.Position):Attachable.this.type"></a><a id="setPos(Global.Position):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#setPos(newpos:StdAttachments.this.Position):Attachable.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPos</span><span class="params">(<span name="newpos">newpos: <a href="../Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.Global.Position">Global.Position</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#setSymbol" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setSymbol(sym:Trees.this.Symbol):Tree.this.type"></a><a id="setSymbol(Global.Symbol):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#setSymbol(sym:Trees.this.Symbol):Tree.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSymbol</span><span class="params">(<span name="sym">sym: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#setType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setType(tp:Trees.this.Type):Tree.this.type"></a><a id="setType(Global.Type):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#setType(tp:Trees.this.Type):Tree.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setType</span><span class="params">(<span name="tp">tp: <a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#shallowDuplicate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shallowDuplicate:Trees.this.Tree"></a><a id="shallowDuplicate:Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#shallowDuplicate:Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shallowDuplicate</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#shortClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shortClass:String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#shortClass:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shortClass</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#substituteSymbols" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="substituteSymbols(from:List[Trees.this.Symbol],to:List[Trees.this.Symbol]):Trees.this.Tree"></a><a id="substituteSymbols(List[Global.Symbol],List[Global.Symbol]):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#substituteSymbols(from:List[Trees.this.Symbol],to:List[Trees.this.Symbol]):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteSymbols</span><span class="params">(<span name="from">from: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>]</span>, <span name="to">to: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>]</span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#substituteThis" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="substituteThis(clazz:Trees.this.Symbol,to:=&gt;Trees.this.Tree):Trees.this.Tree"></a><a id="substituteThis(Global.Symbol,⇒Global.Tree):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#substituteThis(clazz:Trees.this.Symbol,to:=&gt;Trees.this.Tree):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteThis</span><span class="params">(<span name="clazz">clazz: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>, <span name="to">to: ⇒ <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#substituteTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="substituteTypes(from:List[Trees.this.Symbol],to:List[Trees.this.Type]):Trees.this.Tree"></a><a id="substituteTypes(List[Global.Symbol],List[Global.Type]):Global.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#substituteTypes(from:List[Trees.this.Symbol],to:List[Trees.this.Type]):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">substituteTypes</span><span class="params">(<span name="from">from: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a>]</span>, <span name="to">to: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a>]</span>)</span><span class="result">: <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#summaryString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="summaryString:String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#summaryString:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">summaryString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#symbol" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="symbol:Trees.this.Symbol"></a><a id="symbol:Global.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#symbol:Trees.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symbol</span><span class="result">: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#symbol_=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="symbol_=(sym:Trees.this.Symbol):Unit"></a><a id="symbol_=(Global.Symbol):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#symbol_=(sym:Trees.this.Symbol):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: symbol_$eq" class="name">symbol_=</span><span class="params">(<span name="sym">sym: <a href="../Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.Global.Symbol">Global.Symbol</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> → TreeApi → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#tpe" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tpe:Trees.this.Type"></a><a id="tpe:Global.Type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#tpe:Trees.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tpe</span><span class="result">: <a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree → TreeApi</dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree#units" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="units:List[TreeBrowsers.this.UnitTree]"></a><a id="units:List[UnitTree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#units:List[TreeBrowsers.this.UnitTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">units</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="TreeBrowsers$UnitTree.html" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.UnitTree">UnitTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.internal.StdAttachments.Attachable#updateAttachment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateAttachment[T](attachment:T)(implicitevidence$1:scala.reflect.ClassTag[T]):Attachable.this.type"></a><a id="updateAttachment[T](T)(ClassTag[T]):ProgramTree.this.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#updateAttachment[T](attachment:T)(implicitevidence$1:scala.reflect.ClassTag[T]):Attachable.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateAttachment</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="attachment">attachment: <span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.updateAttachment.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.reflect.internal.StdAttachments.Attachable.updateAttachment.T">T</span>]</span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>.this.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Attachable</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.TreeContextApiImpl#withFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withFilter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]"></a><a id="withFilter((Global.Tree)⇒Boolean):List[Global.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#withFilter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withFilter</span><span class="params">(<span name="f">f: (<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TreeContextApiImpl → TreeApi</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(ProgramTree,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.reflect.internal.Trees.Tree#hasSymbol" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasSymbol:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#hasSymbol:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.11.0) use hasSymbolField">hasSymbol</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use hasSymbolField</p></dd></dl></div>
+    </li><li name="scala.reflect.internal.Trees.Tree#tpe_=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tpe_=(t:Trees.this.Type):Unit"></a><a id="tpe_=(Global.Type):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/TreeBrowsers$ProgramTree.html#tpe_=(t:Trees.this.Type):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: tpe_$eq. Deprecated: (Since version 2.11.0) use setType" class="name deprecated">tpe_=</span><span class="params">(<span name="t">t: <a href="../Global.html#TypeextendsTypes.this.TypeApiImplwithTypes.this.Annotatable[Types.this.Type]" class="extmbr" name="scala.tools.nsc.Global.Type">Global.Type</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tree</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.11.0)</i> use setType</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">java.io.Serializable</span></h3>
+            </div><div class="parent" name="scala.reflect.internal.Trees.Tree">
+              <h3>Inherited from <a href="../Global.html#TreeextendsTrees.this.TreeContextApiImplwithTrees.this.AttachablewithProduct" class="extmbr" name="scala.tools.nsc.Global.Tree">Global.Tree</a></h3>
+            </div><div class="parent" name="scala.reflect.internal.StdAttachments.Attachable">
+              <h3>Inherited from <a href="../Global.html#AttachableextendsAnyRef" class="extmbr" name="scala.tools.nsc.Global.Attachable">Global.Attachable</a></h3>
+            </div><div class="parent" name="scala.reflect.internal.Trees.TreeContextApiImpl">
+              <h3>Inherited from <a href="../Global.html#TreeContextApiImplextendsTrees.this.TreeApi" class="extmbr" name="scala.tools.nsc.Global.TreeContextApiImpl">Global.TreeContextApiImpl</a></h3>
+            </div><div class="parent" name="scala.reflect.api.Trees.TreeApi">
+              <h3>Inherited from <a href="../Global.html#TreeApiextendsProduct" class="extmbr" name="scala.tools.nsc.Global.TreeApi">Global.TreeApi</a></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.ast.TreeBrowsers.ProgramTree">ProgramTree</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

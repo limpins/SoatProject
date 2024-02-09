@@ -1,0 +1,262 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Reflection Library 2.12.8 - scala.reflect.macros.blackbox</title>
+          <meta name="description" content="Scala Reflection Library 2.12.8 - scala.reflect.macros.blackbox" />
+          <meta name="keywords" content="Scala Reflection Library 2.12.8 scala.reflect.macros.blackbox" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Reflection Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.reflect" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reflect"></a><a id="reflect:reflect"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#reflect" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">reflect</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.reflect.macros" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="macros"></a><a id="macros:macros"></a>
+      <span class="permalink">
+      <a href="../../scala/reflect/index.html#macros" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="../index.html"><span class="name">macros</span></a>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p> The base package for Scala macros.</p><p> Macros are functions that are called by the compiler during compilation.
+ Within these functions the programmer has access to compiler APIs.
+ For example, it is possible to generate, analyze and typecheck code.</p><p> See the <a href="http://docs.scala-lang.org/overviews/macros/overview.html" target="_blank">Macros Guide</a> on how to get started with Scala macros.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.reflect">reflect</a></dd></dl></div>
+    </li><li name="scala.reflect.macros.blackbox" visbl="pub" class="indented4 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="blackbox"></a><a id="blackbox:blackbox"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/macros/index.html#blackbox" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">blackbox</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.reflect.macros">macros</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Context.html" title="EXPERIMENTAL"></a>
+                        <a href="Context.html" title="EXPERIMENTAL">Context</a>
+                      </li><li name="scala.reflect.macros.whitebox" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="whitebox"></a><a id="whitebox:whitebox"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/macros/index.html#whitebox" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../whitebox/index.html"><span class="name">whitebox</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.reflect.macros">macros</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.reflect">reflect</a>.<a href="../index.html" class="extype" name="scala.reflect.macros">macros</a></p>
+        <h1>blackbox<span class="permalink">
+      <a href="../../../../scala/reflect/macros/blackbox/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">blackbox</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.reflect.macros.blackbox.Context" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ContextextendsAliaseswithEnclosureswithNameswithReifierswithFrontEndswithInfrastructurewithTyperswithParserswithEvalswithExprUtilswithInternals"></a><a id="Context:Context"></a>
+      <span class="permalink">
+      <a href="../../../../scala/reflect/macros/blackbox/index.html#ContextextendsAliaseswithEnclosureswithNameswithReifierswithFrontEndswithInfrastructurewithTyperswithParserswithEvalswithExprUtilswithInternals" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="Context.html"><span class="name">Context</span></a><span class="result"> extends <a href="../Aliases.html" class="extype" name="scala.reflect.macros.Aliases">Aliases</a> with <a href="../Enclosures.html" class="extype" name="scala.reflect.macros.Enclosures">Enclosures</a> with <a href="../Names.html" class="extype" name="scala.reflect.macros.Names">Names</a> with <a href="../Reifiers.html" class="extype" name="scala.reflect.macros.Reifiers">Reifiers</a> with <a href="../FrontEnds.html" class="extype" name="scala.reflect.macros.FrontEnds">FrontEnds</a> with <a href="../Infrastructure.html" class="extype" name="scala.reflect.macros.Infrastructure">Infrastructure</a> with <a href="../Typers.html" class="extype" name="scala.reflect.macros.Typers">Typers</a> with <a href="../Parsers.html" class="extype" name="scala.reflect.macros.Parsers">Parsers</a> with <a href="../Evals.html" class="extype" name="scala.reflect.macros.Evals">Evals</a> with <a href="../ExprUtils.html" class="extype" name="scala.reflect.macros.ExprUtils">ExprUtils</a> with <a href="../Internals.html" class="extype" name="scala.reflect.macros.Internals">Internals</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p> The blackbox Scala macros context.</p><p> See <a href="../index.html" class="extype" name="scala.reflect.macros">the overview page</a> for a description of how macros work. This documentation
+ entry provides information on the API available to macro writers.</p><p> A macro context wraps a compiler universe exposed in <code>universe</code> and having type <a href="../Universe.html" class="extype" name="scala.reflect.macros.Universe">scala.reflect.macros.Universe</a>.
+ This type is a refinement over the generic reflection API provided in <a href="../../api/Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a>. The
+ extended Universe provides mutability for reflection artifacts (e.g. macros can change types of compiler trees,
+ add annotation to symbols representing definitions, etc) and exposes some internal compiler functionality
+ such as <code>Symbol.deSkolemize</code> or <code>Tree.attachments</code>.</p><p> Another fundamental part of a macro context is <code>macroApplication</code>, which provides access to the tree undergoing
+ macro expansion. Parts of this tree can be found in arguments of the corresponding macro implementations and
+ in <code>prefix</code>, but <code>macroApplication</code> gives the full picture.</p><p> Other than that, macro contexts provide facilities for typechecking, exploring the compiler's symbol table and
+ enclosing trees and compilation units, evaluating trees, logging warnings/errors and much more.
+ Refer to the documentation of top-level traits in this package to learn the details.</p><p> If a macro def refers to a macro impl that uses <code>blackbox.Context</code>, then this macro def becomes a blackbox macro,
+ which means that its expansion will be upcast to its return type, enforcing faithfulness of that macro to its
+ type signature. Whitebox macros, i.e. the ones defined with <code>whitebox.Context</code>, aren't bound by this restriction,
+ which enables a number of important use cases, but they are also going to enjoy less support than blackbox macros,
+ so choose wisely. See the <a href="http://docs.scala-lang.org/overviews/macros/overview.html" target="_blank">Macros Guide</a> for more information.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>scala.reflect.macros.whitebox.Context</code></p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Standard Library 2.12.8 - scala.collection.concurrent</title>
+          <meta name="description" content="Scala Standard Library 2.12.8 - scala.collection.concurrent" />
+          <meta name="keywords" content="Scala Standard Library 2.12.8 scala.collection.concurrent" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This is the documentation for the Scala standard library." href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This is the documentation for the Scala standard library.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for the Scala standard library.</p><h4> Package structure </h4><p>The <a href="../../index.html" class="extype" name="scala">scala</a> package contains core types like <a href="../../Int.html" class="extype" name="scala.Int"><code>Int</code></a>, <a href="../../Float.html" class="extype" name="scala.Float"><code>Float</code></a>, <a href="../../Array.html" class="extype" name="scala.Array"><code>Array</code></a>
+or <a href="../../Option.html" class="extype" name="scala.Option"><code>Option</code></a> which are accessible in all Scala compilation units without explicit qualification or
+imports.</p><p>Notable packages include:</p><ul><li><a href="../index.html" class="extype" name="scala.collection"><code>scala.collection</code></a> and its sub-packages contain Scala's collections framework<ul><li><a href="../immutable/index.html" class="extype" name="scala.collection.immutable"><code>scala.collection.immutable</code></a> - Immutable, sequential data-structures such as
+      <a href="../immutable/Vector.html" class="extype" name="scala.collection.immutable.Vector"><code>Vector</code></a>, <a href="../immutable/List.html" class="extype" name="scala.collection.immutable.List"><code>List</code></a>,
+      <a href="../immutable/Range.html" class="extype" name="scala.collection.immutable.Range"><code>Range</code></a>, <a href="../immutable/HashMap.html" class="extype" name="scala.collection.immutable.HashMap"><code>HashMap</code></a> or
+      <a href="../immutable/HashSet.html" class="extype" name="scala.collection.immutable.HashSet"><code>HashSet</code></a></li><li><a href="../mutable/index.html" class="extype" name="scala.collection.mutable"><code>scala.collection.mutable</code></a> - Mutable, sequential data-structures such as
+      <a href="../mutable/ArrayBuffer.html" class="extype" name="scala.collection.mutable.ArrayBuffer"><code>ArrayBuffer</code></a>,
+      <a href="../mutable/StringBuilder.html" class="extype" name="scala.collection.mutable.StringBuilder"><code>StringBuilder</code></a>,
+      <a href="../mutable/HashMap.html" class="extype" name="scala.collection.mutable.HashMap"><code>HashMap</code></a> or <a href="../mutable/HashSet.html" class="extype" name="scala.collection.mutable.HashSet"><code>HashSet</code></a></li><li><a href="" class="extype" name="scala.collection.concurrent"><code>scala.collection.concurrent</code></a> - Mutable, concurrent data-structures such as
+      <a href="TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap"><code>TrieMap</code></a></li><li><a href="../parallel/immutable/index.html" class="extype" name="scala.collection.parallel.immutable"><code>scala.collection.parallel.immutable</code></a> - Immutable, parallel
+      data-structures such as <a href="../parallel/immutable/ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector"><code>ParVector</code></a>,
+      <a href="../parallel/immutable/ParRange.html" class="extype" name="scala.collection.parallel.immutable.ParRange"><code>ParRange</code></a>,
+      <a href="../parallel/immutable/ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap"><code>ParHashMap</code></a> or
+      <a href="../parallel/immutable/ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet"><code>ParHashSet</code></a></li><li><a href="../parallel/mutable/index.html" class="extype" name="scala.collection.parallel.mutable"><code>scala.collection.parallel.mutable</code></a> - Mutable, parallel
+      data-structures such as <a href="../parallel/mutable/ParArray.html" class="extype" name="scala.collection.parallel.mutable.ParArray"><code>ParArray</code></a>,
+      <a href="../parallel/mutable/ParHashMap.html" class="extype" name="scala.collection.parallel.mutable.ParHashMap"><code>ParHashMap</code></a>,
+      <a href="../parallel/mutable/ParTrieMap.html" class="extype" name="scala.collection.parallel.mutable.ParTrieMap"><code>ParTrieMap</code></a> or
+      <a href="../parallel/mutable/ParHashSet.html" class="extype" name="scala.collection.parallel.mutable.ParHashSet"><code>ParHashSet</code></a></li></ul></li><li><a href="../../concurrent/index.html" class="extype" name="scala.concurrent"><code>scala.concurrent</code></a> - Primitives for concurrent programming such as
+    <a href="../../concurrent/Future.html" class="extype" name="scala.concurrent.Future"><code>Futures</code></a> and <a href="../../concurrent/Promise.html" class="extype" name="scala.concurrent.Promise"><code>Promises</code></a></li><li><a href="../../io/index.html" class="extype" name="scala.io"><code>scala.io</code></a>     - Input and output operations</li><li><a href="../../math/index.html" class="extype" name="scala.math"><code>scala.math</code></a>   - Basic math functions and additional numeric types like
+    <a href="../../math/BigInt.html" class="extype" name="scala.math.BigInt"><code>BigInt</code></a> and <a href="../../math/BigDecimal.html" class="extype" name="scala.math.BigDecimal"><code>BigDecimal</code></a></li><li><a href="../../sys/index.html" class="extype" name="scala.sys"><code>scala.sys</code></a>    - Interaction with other processes and the operating system</li><li><a href="../../util/matching/index.html" class="extype" name="scala.util.matching"><code>scala.util.matching</code></a> - <a href="../../util/matching/Regex.html" class="extype" name="scala.util.matching.Regex">Regular expressions</a></li></ul><p>Other packages exist.  See the complete list on the right.</p><p>Additional parts of the standard library are shipped as separate libraries. These include:</p><ul><li><a href="../../reflect/index.html" class="extype" name="scala.reflect"><code>scala.reflect</code></a>   - Scala's reflection API (scala-reflect.jar)</li><li><span class="extype" name="scala.xml"><code>scala.xml</code></span>    - XML parsing, manipulation, and serialization (scala-xml.jar)</li><li><span class="extype" name="scala.swing"><code>scala.swing</code></span>  - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)</li><li><span class="extype" name="scala.util.parsing"><code>scala.util.parsing</code></span> - Parser combinators (scala-parser-combinators.jar)</li></ul><h4> Automatic imports </h4><p>Identifiers in the scala package and the <a href="../../Predef$.html" class="extype" name="scala.Predef"><code>scala.Predef</code></a> object are always in scope by default.</p><p>Some of these identifiers are type aliases provided as shortcuts to commonly used classes.  For example, <code>List</code> is an alias for
+<a href="../immutable/List.html" class="extype" name="scala.collection.immutable.List"><code>scala.collection.immutable.List</code></a>.</p><p>Other aliases refer to classes provided by the underlying platform.  For example, on the JVM, <code>String</code> is an alias for <code>java.lang.String</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Scala types." href="../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Scala types.</p><div class="fullcomment"><div class="comment cmt"><p>Core Scala types. They are always available without an explicit import.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.collection" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collection"></a><a id="collection:collection"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#collection" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains the base traits and objects needed to use and extend Scala's collection library." href="../index.html"><span class="name">collection</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains the base traits and objects needed to use and extend Scala's collection library.</p><div class="fullcomment"><div class="comment cmt"><p>Contains the base traits and objects needed to use and extend Scala's collection library.</p><h4> Guide </h4><p>A detailed guide for using the collections library is available
+at <a href="http://docs.scala-lang.org/overviews/collections/introduction.html" target="_blank">http://docs.scala-lang.org/overviews/collections/introduction.html</a>.
+Developers looking to extend the collections library can find a description
+of its architecture at
+<a href="http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html" target="_blank">http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html</a>.</p><h4> Using Collections </h4><p>It is convenient to treat all collections as either
+a <a href="../Traversable.html" class="extype" name="scala.collection.Traversable">scala.collection.Traversable</a> or <a href="../Iterable.html" class="extype" name="scala.collection.Iterable">scala.collection.Iterable</a>, as
+these traits define the vast majority of operations
+on a collection.</p><p>Collections can, of course, be treated as specifically as needed, and
+the library is designed to ensure that
+the methods that transform collections will return a collection of the same
+type: </p><pre>scala&gt; <span class="kw">val</span> array = <span class="std">Array</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+array: <span class="std">Array</span>[<span class="std">Int</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; array map { _.toString }
+res0: <span class="std">Array</span>[<span class="std">String</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; <span class="kw">val</span> list = <span class="std">List</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+list: <span class="std">List</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; list map { _.toString }
+res1: <span class="std">List</span>[<span class="std">String</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)</pre><h4> Creating Collections </h4><p>The most common way to create a collection is to use its companion object as
+a factory. The three most commonly used collections are
+<a href="../Seq.html" class="extype" name="scala.collection.Seq">scala.collection.Seq</a>, <a href="../immutable/Set.html" class="extype" name="scala.collection.immutable.Set">scala.collection.immutable.Set</a>, and
+<a href="../immutable/Map.html" class="extype" name="scala.collection.immutable.Map">scala.collection.immutable.Map</a>.
+They can be used directly as shown below since their companion objects are
+all available as type aliases in either the <a href="../../index.html" class="extype" name="scala">scala</a> package or in
+<code>scala.Predef</code>. New collections are created like this:</p><pre>scala&gt; <span class="kw">val</span> seq = <span class="std">Seq</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+seq: <span class="std">Seq</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">1</span>)
+
+scala&gt; <span class="kw">val</span> set = <span class="std">Set</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+set: scala.collection.immutable.<span class="std">Set</span>[<span class="std">Int</span>] = <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>)
+
+scala&gt; <span class="kw">val</span> map = <span class="std">Map</span>(<span class="num">1</span> -&gt; <span class="lit">"one"</span>, <span class="num">2</span> -&gt; <span class="lit">"two"</span>, <span class="num">3</span> -&gt; <span class="lit">"three"</span>, <span class="num">2</span> -&gt; <span class="lit">"too"</span>)
+map: scala.collection.immutable.<span class="std">Map</span>[<span class="std">Int</span>,<span class="std">String</span>] = <span class="std">Map</span>(<span class="num">1</span> -&gt; one, <span class="num">2</span> -&gt; too, <span class="num">3</span> -&gt; three)</pre><p>It is also typical to prefer the <a href="../immutable/index.html" class="extype" name="scala.collection.immutable">scala.collection.immutable</a> collections
+over those in <a href="../mutable/index.html" class="extype" name="scala.collection.mutable">scala.collection.mutable</a>; the types aliased in
+the <code>scala.Predef</code> object are the immutable versions.</p><p>Also note that the collections library was carefully designed to include several implementations of
+each of the three basic collection types. These implementations have specific performance
+characteristics which are described
+in <a href="http://docs.scala-lang.org/overviews/collections/performance-characteristics.html" target="_blank">the guide</a>.</p><p>The concrete parallel collections also have specific performance characteristics which are
+described in <a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#performance-characteristics" target="_blank">the parallel collections guide</a></p><h5> Converting to and from Java Collections </h5><p>The <a href="../JavaConverters$.html" class="extype" name="scala.collection.JavaConverters">scala.collection.JavaConverters</a> object provides a collection
+of decorators that allow converting between Scala and Java collections using <code>asScala</code>
+and <code>asJava</code> methods.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.collection.concurrent" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="concurrent"></a><a id="concurrent:concurrent"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#concurrent" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">concurrent</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Map.html" title="A template trait for mutable maps that allow concurrent access."></a>
+                        <a href="Map.html" title="A template trait for mutable maps that allow concurrent access.">Map</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="TrieMap$.html" title=""></a>
+                        <a class="class" href="TrieMap.html" title="A concurrent hash-trie or TrieMap is a concurrent thread-safe lock-free implementation of a hash array mapped trie."></a>
+                        <a href="TrieMap.html" title="A concurrent hash-trie or TrieMap is a concurrent thread-safe lock-free implementation of a hash array mapped trie.">TrieMap</a>
+                      </li><li name="scala.collection.convert" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="convert"></a><a id="convert:convert"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#convert" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../convert/index.html"><span class="name">convert</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.generic" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="generic"></a><a id="generic:generic"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#generic" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../generic/index.html"><span class="name">generic</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.immutable" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="immutable"></a><a id="immutable:immutable"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#immutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../immutable/index.html"><span class="name">immutable</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.mutable" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutable"></a><a id="mutable:mutable"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#mutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../mutable/index.html"><span class="name">mutable</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.parallel" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parallel"></a><a id="parallel:parallel"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#parallel" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Package object for parallel collections." href="../parallel/index.html"><span class="name">parallel</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Package object for parallel collections.</p><div class="fullcomment"><div class="comment cmt"><p>Package object for parallel collections.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.script" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="script"></a><a id="script:script"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#script" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../script/index.html"><span class="name">script</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="scala">scala</a>.<a href="../index.html" class="extype" name="scala.collection">collection</a></p>
+        <h1>concurrent<span class="permalink">
+      <a href="../../../scala/collection/concurrent/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">concurrent</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.collection.concurrent.Map" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Map[A,B]extendsMap[A,B]"></a><a id="Map[A,B]:Map[A,B]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/concurrent/index.html#Map[A,B]extendsMap[A,B]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A template trait for mutable maps that allow concurrent access." href="Map.html"><span class="name">Map</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="../mutable/Map.html" class="extype" name="scala.collection.mutable.Map">mutable.Map</a>[<span class="extype" name="scala.collection.concurrent.Map.A">A</span>, <span class="extype" name="scala.collection.concurrent.Map.B">B</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A template trait for mutable maps that allow concurrent access.</p><div class="fullcomment"><div class="comment cmt"><p>A template trait for mutable maps that allow concurrent access.</p><p> This is a base trait for all Scala concurrent map implementations. It
+ provides all of the methods a <code>Map</code> does, with the difference that all the
+ changes are atomic. It also describes methods specific to concurrent maps.</p><p> <b>Note</b>: The concurrent maps do not accept <code><b>null</b></code> for keys or values.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the key type of the map</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>the value type of the map</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>2.8</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://docs.scala-lang.org/overviews/collections/concrete-mutable-collection-classes.html#concurrent_maps" target="_blank">&quot;Scala's Collection Library overview&quot;</a>
+ section on <code>Concurrent Maps</code> for more information.</p></span></dd></dl></div>
+    </li><li name="scala.collection.concurrent.TrieMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TrieMap[K,V]extendsMap[K,V]withMapLike[K,V,scala.collection.concurrent.TrieMap[K,V]]withCustomParallelizable[(K,V),scala.collection.parallel.mutable.ParTrieMap[K,V]]withSerializable"></a><a id="TrieMap[K,V]:TrieMap[K,V]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/concurrent/index.html#TrieMap[K,V]extendsMap[K,V]withMapLike[K,V,scala.collection.concurrent.TrieMap[K,V]]withCustomParallelizable[(K,V),scala.collection.parallel.mutable.ParTrieMap[K,V]]withSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A concurrent hash-trie or TrieMap is a concurrent thread-safe lock-free implementation of a hash array mapped trie." href="TrieMap.html"><span class="name">TrieMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Map.html" class="extype" name="scala.collection.concurrent.Map">Map</a>[<span class="extype" name="scala.collection.concurrent.TrieMap.K">K</span>, <span class="extype" name="scala.collection.concurrent.TrieMap.V">V</span>] with <a href="../mutable/MapLike.html" class="extype" name="scala.collection.mutable.MapLike">mutable.MapLike</a>[<span class="extype" name="scala.collection.concurrent.TrieMap.K">K</span>, <span class="extype" name="scala.collection.concurrent.TrieMap.V">V</span>, <a href="TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap">TrieMap</a>[<span class="extype" name="scala.collection.concurrent.TrieMap.K">K</span>, <span class="extype" name="scala.collection.concurrent.TrieMap.V">V</span>]] with <a href="../CustomParallelizable.html" class="extype" name="scala.collection.CustomParallelizable">CustomParallelizable</a>[(<span class="extype" name="scala.collection.concurrent.TrieMap.K">K</span>, <span class="extype" name="scala.collection.concurrent.TrieMap.V">V</span>), <a href="../parallel/mutable/ParTrieMap.html" class="extype" name="scala.collection.parallel.mutable.ParTrieMap">ParTrieMap</a>[<span class="extype" name="scala.collection.concurrent.TrieMap.K">K</span>, <span class="extype" name="scala.collection.concurrent.TrieMap.V">V</span>]] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A concurrent hash-trie or TrieMap is a concurrent thread-safe lock-free
+ implementation of a hash array mapped trie.</p><div class="fullcomment"><div class="comment cmt"><p>A concurrent hash-trie or TrieMap is a concurrent thread-safe lock-free
+ implementation of a hash array mapped trie. It is used to implement the
+ concurrent map abstraction. It has particularly scalable concurrent insert
+ and remove operations and is memory-efficient. It supports O(1), atomic,
+ lock-free snapshots which are used to implement linearizable lock-free size,
+ iterator and clear operations. The cost of evaluating the (lazy) snapshot is
+ distributed across subsequent updates, thus making snapshot evaluation horizontally scalable.</p><p> For details, see: <a href="http://lampwww.epfl.ch/~prokopec/ctries-snapshot.pdf" target="_blank">http://lampwww.epfl.ch/~prokopec/ctries-snapshot.pdf</a>
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>2.10</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.collection.concurrent.TrieMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TrieMap"></a><a id="TrieMap:TrieMap"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/concurrent/index.html#TrieMap" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TrieMap$.html"><span class="name">TrieMap</span></a><span class="result"> extends <a href="../generic/MutableMapFactory.html" class="extype" name="scala.collection.generic.MutableMapFactory">MutableMapFactory</a>[<a href="TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap">TrieMap</a>] with <a href="../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

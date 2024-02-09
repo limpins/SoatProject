@@ -1,0 +1,652 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.transform.patmat</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.transform.patmat" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.transform.patmat" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.transform" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform"></a><a id="transform:transform"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#transform" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">transform</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.transform.patmat" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="patmat"></a><a id="patmat:patmat"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/transform/index.html#patmat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">patmat</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc.transform">transform</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Debugging.html" title=""></a>
+                        <a href="Debugging.html" title="">Debugging</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Interface.html" title=""></a>
+                        <a href="Interface.html" title="">Interface</a>
+                      </li><li class="current-entities indented5">
+                        <a class="object" href="Lit$.html" title=""></a>
+                        <a class="class" href="Lit.html" title=""></a>
+                        <a href="Lit.html" title="">Lit</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Logic.html" title=""></a>
+                        <a href="Logic.html" title="">Logic</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchAnalysis.html" title=""></a>
+                        <a href="MatchAnalysis.html" title="">MatchAnalysis</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchApproximation.html" title=""></a>
+                        <a href="MatchApproximation.html" title="">MatchApproximation</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchCodeGen.html" title="Factory methods used by TreeMakers to make the actual trees."></a>
+                        <a href="MatchCodeGen.html" title="Factory methods used by TreeMakers to make the actual trees.">MatchCodeGen</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchCps.html" title="Segregating this super hacky CPS code."></a>
+                        <a href="MatchCps.html" title="Segregating this super hacky CPS code.">MatchCps</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchOptimization.html" title="Optimize and analyze matches based on their TreeMaker-representation."></a>
+                        <a href="MatchOptimization.html" title="Optimize and analyze matches based on their TreeMaker-representation.">MatchOptimization</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchTranslation.html" title="Translate typed Trees that represent pattern matches into the patternmatching IR, defined by TreeMakers."></a>
+                        <a href="MatchTranslation.html" title="Translate typed Trees that represent pattern matches into the patternmatching IR, defined by TreeMakers.">MatchTranslation</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchTreeMaking.html" title="Translate our IR (TreeMakers) into actual Scala Trees using the factory methods in MatchCodeGen."></a>
+                        <a href="MatchTreeMaking.html" title="Translate our IR (TreeMakers) into actual Scala Trees using the factory methods in MatchCodeGen.">MatchTreeMaking</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatchWarnings.html" title=""></a>
+                        <a href="MatchWarnings.html" title="">MatchWarnings</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="PatternExpansion.html" title="An 'extractor' can be a case class or an unapply or unapplySeq method."></a>
+                        <a href="PatternExpansion.html" title="An 'extractor' can be a case class or an unapply or unapplySeq method.">PatternExpansion</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="PatternMatching.html" title="Translate pattern matching."></a>
+                        <a href="PatternMatching.html" title="Translate pattern matching.">PatternMatching</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="PatternMatchingStats.html" title=""></a>
+                        <a href="PatternMatchingStats.html" title="">PatternMatchingStats</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScalaLogic.html" title=""></a>
+                        <a href="ScalaLogic.html" title="">ScalaLogic</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Solving.html" title="Solve pattern matcher exhaustivity problem via DPLL."></a>
+                        <a href="Solving.html" title="Solve pattern matcher exhaustivity problem via DPLL.">Solving</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="TreeAndTypeAnalysis.html" title=""></a>
+                        <a href="TreeAndTypeAnalysis.html" title="">TreeAndTypeAnalysis</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="scala">scala</a>.<a href="../../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="../index.html" class="extype" name="scala.tools.nsc.transform">transform</a></p>
+        <h1>patmat<span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">patmat</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.transform.patmat.Debugging" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DebuggingextendsAnyRef"></a><a id="Debugging:Debugging"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#DebuggingextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Debugging.html"><span class="name">Debugging</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.Interface" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InterfaceextendsTreeDSL"></a><a id="Interface:Interface"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#InterfaceextendsTreeDSL" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Interface.html"><span class="name">Interface</span></a><span class="result"> extends <a href="../../ast/TreeDSL.html" class="extype" name="scala.tools.nsc.ast.TreeDSL">TreeDSL</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.Lit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LitextendsAnyVal"></a><a id="Lit:Lit"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#LitextendsAnyVal" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Lit.html"><span class="name">Lit</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.Logic" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LogicextendsDebugging"></a><a id="Logic:Logic"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#LogicextendsDebugging" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Logic.html"><span class="name">Logic</span></a><span class="result"> extends <a href="Debugging.html" class="extype" name="scala.tools.nsc.transform.patmat.Debugging">Debugging</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.MatchAnalysis" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchAnalysisextendsMatchApproximation"></a><a id="MatchAnalysis:MatchAnalysis"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchAnalysisextendsMatchApproximation" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatchAnalysis.html"><span class="name">MatchAnalysis</span></a><span class="result"> extends <a href="MatchApproximation.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchApproximation">MatchApproximation</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.MatchApproximation" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchApproximationextendsTreeAndTypeAnalysiswithScalaLogicwithMatchTreeMaking"></a><a id="MatchApproximation:MatchApproximation"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchApproximationextendsTreeAndTypeAnalysiswithScalaLogicwithMatchTreeMaking" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatchApproximation.html"><span class="name">MatchApproximation</span></a><span class="result"> extends <a href="TreeAndTypeAnalysis.html" class="extype" name="scala.tools.nsc.transform.patmat.TreeAndTypeAnalysis">TreeAndTypeAnalysis</a> with <a href="ScalaLogic.html" class="extype" name="scala.tools.nsc.transform.patmat.ScalaLogic">ScalaLogic</a> with <a href="MatchTreeMaking.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchTreeMaking">MatchTreeMaking</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.MatchCodeGen" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatchCodeGenextendsInterface"></a><a id="MatchCodeGen:MatchCodeGen"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchCodeGenextendsInterface" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Factory methods used by TreeMakers to make the actual trees." href="MatchCodeGen.html"><span class="name">MatchCodeGen</span></a><span class="result"> extends <a href="Interface.html" class="extype" name="scala.tools.nsc.transform.patmat.Interface">Interface</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Factory methods used by TreeMakers to make the actual trees.</p><div class="fullcomment"><div class="comment cmt"><p>Factory methods used by TreeMakers to make the actual trees.</p><p>We have two modes in which to emit trees: optimized (the default)
+and pure (aka &quot;virtualized&quot;: match is parametric in its monad).
+</p></div></div>
+    </li><li name="scala.tools.nsc.transform.patmat.MatchCps" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchCpsextendsAnyRef"></a><a id="MatchCps:MatchCps"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchCpsextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Segregating this super hacky CPS code." href="MatchCps.html"><span class="name">MatchCps</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Segregating this super hacky CPS code.</p>
+    </li><li name="scala.tools.nsc.transform.patmat.MatchOptimization" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatchOptimizationextendsMatchTreeMakingwithMatchAnalysis"></a><a id="MatchOptimization:MatchOptimization"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchOptimizationextendsMatchTreeMakingwithMatchAnalysis" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Optimize and analyze matches based on their TreeMaker-representation." href="MatchOptimization.html"><span class="name">MatchOptimization</span></a><span class="result"> extends <a href="MatchTreeMaking.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchTreeMaking">MatchTreeMaking</a> with <a href="MatchAnalysis.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchAnalysis">MatchAnalysis</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Optimize and analyze matches based on their TreeMaker-representation.</p><div class="fullcomment"><div class="comment cmt"><p>Optimize and analyze matches based on their TreeMaker-representation.</p><p>The patmat translation doesn't rely on this, so it could be disabled in principle.</p><ul><li>well, not quite: the backend crashes if we emit duplicates in switches (e.g. scala/bug#7290)
+</li></ul></div></div>
+    </li><li name="scala.tools.nsc.transform.patmat.MatchTranslation" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchTranslationextendsAnyRef"></a><a id="MatchTranslation:MatchTranslation"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchTranslationextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Translate typed Trees that represent pattern matches into the patternmatching IR, defined by TreeMakers." href="MatchTranslation.html"><span class="name">MatchTranslation</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Translate typed Trees that represent pattern matches into the patternmatching IR, defined by TreeMakers.</p>
+    </li><li name="scala.tools.nsc.transform.patmat.MatchTreeMaking" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatchTreeMakingextendsMatchCodeGenwithDebugging"></a><a id="MatchTreeMaking:MatchTreeMaking"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchTreeMakingextendsMatchCodeGenwithDebugging" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Translate our IR (TreeMakers) into actual Scala Trees using the factory methods in MatchCodeGen." href="MatchTreeMaking.html"><span class="name">MatchTreeMaking</span></a><span class="result"> extends <a href="MatchCodeGen.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchCodeGen">MatchCodeGen</a> with <a href="Debugging.html" class="extype" name="scala.tools.nsc.transform.patmat.Debugging">Debugging</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Translate our IR (TreeMakers) into actual Scala Trees using the factory methods in MatchCodeGen.</p><div class="fullcomment"><div class="comment cmt"><p>Translate our IR (TreeMakers) into actual Scala Trees using the factory methods in MatchCodeGen.</p><p>The IR is mostly concerned with sequencing, substitution, and rendering all necessary conditions,
+mostly agnostic to whether we're in optimized/pure (virtualized) mode.
+</p></div></div>
+    </li><li name="scala.tools.nsc.transform.patmat.MatchWarnings" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchWarningsextendsAnyRef"></a><a id="MatchWarnings:MatchWarnings"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#MatchWarningsextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatchWarnings.html"><span class="name">MatchWarnings</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.PatternExpansion" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PatternExpansionextendsAnyRef"></a><a id="PatternExpansion:PatternExpansion"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#PatternExpansionextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An 'extractor' can be a case class or an unapply or unapplySeq method." href="PatternExpansion.html"><span class="name">PatternExpansion</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An 'extractor' can be a case class or an unapply or unapplySeq method.</p><div class="fullcomment"><div class="comment cmt"><p>An 'extractor' can be a case class or an unapply or unapplySeq method.</p><p>In a case class, the class is the unextracted type and the fixed and
+repeated types are derived from its constructor parameters.</p><p>In an unapply, this is reversed: the parameter to the unapply is the
+unextracted type, and the other types are derived based on the return
+type of the unapply method.</p><p>An extractor returns: F1, F2, ..., Fi, opt[Seq[E] or E*]
+A case matches: P1, P2, ..., Pj, opt[Seq[E]]
+Put together: P1/F1, P2/F2, ... Pi/Fi, Pi+1/E, Pi+2/E, ... Pj/E, opt[Seq[E]]</p><p>Here Pm/Fi is the last pattern to match the fixed arity section.</p><p>productArity: the value of i, i.e. the number of non-sequence types in the extractor
+nonStarArity: the value of j, i.e. the number of non-star patterns in the case definition
+elementArity: j - i, i.e. the number of non-star patterns which must match sequence elements
+starArity: 1 or 0 based on whether there is a star (sequence-absorbing) pattern
+totalArity: nonStarArity + starArity, i.e. the number of patterns in the case definition</p><p>Note that productArity is a function only of the extractor, and
+nonStar/star/totalArity are all functions of the patterns. The key
+value for aligning and typing the patterns is elementArity, as it
+is derived from both sets of information.</p><p>If elementArity is...</p><ul><li>zero: A perfect match between extractor and the fixed patterns.
+       If there is a star pattern it will match any sequence.</li><li>positive: There are more patterns than products. There will have to be a
+      sequence which can populate at least <code>elementArity</code> patterns.</li><li>negative: There are more products than patterns: compile time error.</li></ul></div></div>
+    </li><li name="scala.tools.nsc.transform.patmat.PatternMatching" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PatternMatchingextendsSubComponentwithTransformwithTypingTransformerswithDebuggingwithInterfacewithMatchTranslationwithMatchTreeMakingwithMatchCodeGenwithMatchCpswithScalaLogicwithSolvingwithMatchAnalysiswithMatchOptimizationwithMatchWarningswithPatternExpansion"></a><a id="PatternMatching:PatternMatching"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#PatternMatchingextendsSubComponentwithTransformwithTypingTransformerswithDebuggingwithInterfacewithMatchTranslationwithMatchTreeMakingwithMatchCodeGenwithMatchCpswithScalaLogicwithSolvingwithMatchAnalysiswithMatchOptimizationwithMatchWarningswithPatternExpansion" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Translate pattern matching." href="PatternMatching.html"><span class="name">PatternMatching</span></a><span class="result"> extends <a href="../../SubComponent.html" class="extype" name="scala.tools.nsc.SubComponent">SubComponent</a> with <a href="../Transform.html" class="extype" name="scala.tools.nsc.transform.Transform">Transform</a> with <a href="../TypingTransformers.html" class="extype" name="scala.tools.nsc.transform.TypingTransformers">TypingTransformers</a> with <a href="Debugging.html" class="extype" name="scala.tools.nsc.transform.patmat.Debugging">Debugging</a> with <a href="Interface.html" class="extype" name="scala.tools.nsc.transform.patmat.Interface">Interface</a> with <a href="MatchTranslation.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchTranslation">MatchTranslation</a> with <a href="MatchTreeMaking.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchTreeMaking">MatchTreeMaking</a> with <a href="MatchCodeGen.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchCodeGen">MatchCodeGen</a> with <a href="MatchCps.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchCps">MatchCps</a> with <a href="ScalaLogic.html" class="extype" name="scala.tools.nsc.transform.patmat.ScalaLogic">ScalaLogic</a> with <a href="Solving.html" class="extype" name="scala.tools.nsc.transform.patmat.Solving">Solving</a> with <a href="MatchAnalysis.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchAnalysis">MatchAnalysis</a> with <a href="MatchOptimization.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchOptimization">MatchOptimization</a> with <a href="MatchWarnings.html" class="extype" name="scala.tools.nsc.transform.patmat.MatchWarnings">MatchWarnings</a> with <a href="PatternExpansion.html" class="extype" name="scala.tools.nsc.transform.patmat.PatternExpansion">PatternExpansion</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Translate pattern matching.</p><div class="fullcomment"><div class="comment cmt"><p>Translate pattern matching.</p><p>Either into optimized if/then/else's, or virtualized as method calls (these methods form a zero-plus monad),
+similar in spirit to how for-comprehensions are compiled.</p><p>For each case, express all patterns as extractor calls, guards as 0-ary extractors, and sequence them using <code>flatMap</code>
+(lifting the body of the case into the monad using <code>one</code>).</p><p>Cases are combined into a pattern match using the <code>orElse</code> combinator (the implicit failure case is expressed using the monad's <code>zero</code>).</p><p>TODO:</p><ul><li>DCE (on irrefutable patterns)</li><li>update spec and double check it's implemented correctly (see TODO's)</li></ul><p>(longer-term) TODO:</p><ul><li>user-defined unapplyProd</li><li>recover GADT typing by locally inserting implicit witnesses to type equalities derived from the current case, and considering these witnesses during subtyping (?)</li><li>recover exhaustivity/unreachability of user-defined extractors by partitioning the types they match on using an HList or similar type-level structure
+</li></ul></div></div>
+    </li><li name="scala.tools.nsc.transform.patmat.PatternMatchingStats" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PatternMatchingStatsextendsAnyRef"></a><a id="PatternMatchingStats:PatternMatchingStats"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#PatternMatchingStatsextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PatternMatchingStats.html"><span class="name">PatternMatchingStats</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.ScalaLogic" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScalaLogicextendsInterfacewithLogicwithTreeAndTypeAnalysis"></a><a id="ScalaLogic:ScalaLogic"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#ScalaLogicextendsInterfacewithLogicwithTreeAndTypeAnalysis" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ScalaLogic.html"><span class="name">ScalaLogic</span></a><span class="result"> extends <a href="Interface.html" class="extype" name="scala.tools.nsc.transform.patmat.Interface">Interface</a> with <a href="Logic.html" class="extype" name="scala.tools.nsc.transform.patmat.Logic">Logic</a> with <a href="TreeAndTypeAnalysis.html" class="extype" name="scala.tools.nsc.transform.patmat.TreeAndTypeAnalysis">TreeAndTypeAnalysis</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.transform.patmat.Solving" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SolvingextendsLogic"></a><a id="Solving:Solving"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#SolvingextendsLogic" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Solve pattern matcher exhaustivity problem via DPLL." href="Solving.html"><span class="name">Solving</span></a><span class="result"> extends <a href="Logic.html" class="extype" name="scala.tools.nsc.transform.patmat.Logic">Logic</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Solve pattern matcher exhaustivity problem via DPLL.</p>
+    </li><li name="scala.tools.nsc.transform.patmat.TreeAndTypeAnalysis" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TreeAndTypeAnalysisextendsDebugging"></a><a id="TreeAndTypeAnalysis:TreeAndTypeAnalysis"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#TreeAndTypeAnalysisextendsDebugging" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TreeAndTypeAnalysis.html"><span class="name">TreeAndTypeAnalysis</span></a><span class="result"> extends <a href="Debugging.html" class="extype" name="scala.tools.nsc.transform.patmat.Debugging">Debugging</a></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.tools.nsc.transform.patmat.Lit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Lit"></a><a id="Lit:Lit"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/transform/patmat/index.html#Lit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Lit$.html"><span class="name">Lit</span></a>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

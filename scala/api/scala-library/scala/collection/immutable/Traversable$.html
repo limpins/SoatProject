@@ -1,0 +1,1221 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Standard Library 2.12.8 - scala.collection.immutable.Traversable</title>
+          <meta name="description" content="Scala Standard Library 2.12.8 - scala.collection.immutable.Traversable" />
+          <meta name="keywords" content="Scala Standard Library 2.12.8 scala.collection.immutable.Traversable" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This is the documentation for the Scala standard library." href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This is the documentation for the Scala standard library.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for the Scala standard library.</p><h4> Package structure </h4><p>The <a href="../../index.html" class="extype" name="scala">scala</a> package contains core types like <a href="../../Int.html" class="extype" name="scala.Int"><code>Int</code></a>, <a href="../../Float.html" class="extype" name="scala.Float"><code>Float</code></a>, <a href="../../Array.html" class="extype" name="scala.Array"><code>Array</code></a>
+or <a href="../../Option.html" class="extype" name="scala.Option"><code>Option</code></a> which are accessible in all Scala compilation units without explicit qualification or
+imports.</p><p>Notable packages include:</p><ul><li><a href="../index.html" class="extype" name="scala.collection"><code>scala.collection</code></a> and its sub-packages contain Scala's collections framework<ul><li><a href="index.html" class="extype" name="scala.collection.immutable"><code>scala.collection.immutable</code></a> - Immutable, sequential data-structures such as
+      <a href="Vector.html" class="extype" name="scala.collection.immutable.Vector"><code>Vector</code></a>, <a href="List.html" class="extype" name="scala.collection.immutable.List"><code>List</code></a>,
+      <a href="Range.html" class="extype" name="scala.collection.immutable.Range"><code>Range</code></a>, <a href="HashMap.html" class="extype" name="scala.collection.immutable.HashMap"><code>HashMap</code></a> or
+      <a href="HashSet.html" class="extype" name="scala.collection.immutable.HashSet"><code>HashSet</code></a></li><li><a href="../mutable/index.html" class="extype" name="scala.collection.mutable"><code>scala.collection.mutable</code></a> - Mutable, sequential data-structures such as
+      <a href="../mutable/ArrayBuffer.html" class="extype" name="scala.collection.mutable.ArrayBuffer"><code>ArrayBuffer</code></a>,
+      <a href="../mutable/StringBuilder.html" class="extype" name="scala.collection.mutable.StringBuilder"><code>StringBuilder</code></a>,
+      <a href="../mutable/HashMap.html" class="extype" name="scala.collection.mutable.HashMap"><code>HashMap</code></a> or <a href="../mutable/HashSet.html" class="extype" name="scala.collection.mutable.HashSet"><code>HashSet</code></a></li><li><a href="../concurrent/index.html" class="extype" name="scala.collection.concurrent"><code>scala.collection.concurrent</code></a> - Mutable, concurrent data-structures such as
+      <a href="../concurrent/TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap"><code>TrieMap</code></a></li><li><a href="../parallel/immutable/index.html" class="extype" name="scala.collection.parallel.immutable"><code>scala.collection.parallel.immutable</code></a> - Immutable, parallel
+      data-structures such as <a href="../parallel/immutable/ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector"><code>ParVector</code></a>,
+      <a href="../parallel/immutable/ParRange.html" class="extype" name="scala.collection.parallel.immutable.ParRange"><code>ParRange</code></a>,
+      <a href="../parallel/immutable/ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap"><code>ParHashMap</code></a> or
+      <a href="../parallel/immutable/ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet"><code>ParHashSet</code></a></li><li><a href="../parallel/mutable/index.html" class="extype" name="scala.collection.parallel.mutable"><code>scala.collection.parallel.mutable</code></a> - Mutable, parallel
+      data-structures such as <a href="../parallel/mutable/ParArray.html" class="extype" name="scala.collection.parallel.mutable.ParArray"><code>ParArray</code></a>,
+      <a href="../parallel/mutable/ParHashMap.html" class="extype" name="scala.collection.parallel.mutable.ParHashMap"><code>ParHashMap</code></a>,
+      <a href="../parallel/mutable/ParTrieMap.html" class="extype" name="scala.collection.parallel.mutable.ParTrieMap"><code>ParTrieMap</code></a> or
+      <a href="../parallel/mutable/ParHashSet.html" class="extype" name="scala.collection.parallel.mutable.ParHashSet"><code>ParHashSet</code></a></li></ul></li><li><a href="../../concurrent/index.html" class="extype" name="scala.concurrent"><code>scala.concurrent</code></a> - Primitives for concurrent programming such as
+    <a href="../../concurrent/Future.html" class="extype" name="scala.concurrent.Future"><code>Futures</code></a> and <a href="../../concurrent/Promise.html" class="extype" name="scala.concurrent.Promise"><code>Promises</code></a></li><li><a href="../../io/index.html" class="extype" name="scala.io"><code>scala.io</code></a>     - Input and output operations</li><li><a href="../../math/index.html" class="extype" name="scala.math"><code>scala.math</code></a>   - Basic math functions and additional numeric types like
+    <a href="../../math/BigInt.html" class="extype" name="scala.math.BigInt"><code>BigInt</code></a> and <a href="../../math/BigDecimal.html" class="extype" name="scala.math.BigDecimal"><code>BigDecimal</code></a></li><li><a href="../../sys/index.html" class="extype" name="scala.sys"><code>scala.sys</code></a>    - Interaction with other processes and the operating system</li><li><a href="../../util/matching/index.html" class="extype" name="scala.util.matching"><code>scala.util.matching</code></a> - <a href="../../util/matching/Regex.html" class="extype" name="scala.util.matching.Regex">Regular expressions</a></li></ul><p>Other packages exist.  See the complete list on the right.</p><p>Additional parts of the standard library are shipped as separate libraries. These include:</p><ul><li><a href="../../reflect/index.html" class="extype" name="scala.reflect"><code>scala.reflect</code></a>   - Scala's reflection API (scala-reflect.jar)</li><li><span class="extype" name="scala.xml"><code>scala.xml</code></span>    - XML parsing, manipulation, and serialization (scala-xml.jar)</li><li><span class="extype" name="scala.swing"><code>scala.swing</code></span>  - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)</li><li><span class="extype" name="scala.util.parsing"><code>scala.util.parsing</code></span> - Parser combinators (scala-parser-combinators.jar)</li></ul><h4> Automatic imports </h4><p>Identifiers in the scala package and the <a href="../../Predef$.html" class="extype" name="scala.Predef"><code>scala.Predef</code></a> object are always in scope by default.</p><p>Some of these identifiers are type aliases provided as shortcuts to commonly used classes.  For example, <code>List</code> is an alias for
+<a href="List.html" class="extype" name="scala.collection.immutable.List"><code>scala.collection.immutable.List</code></a>.</p><p>Other aliases refer to classes provided by the underlying platform.  For example, on the JVM, <code>String</code> is an alias for <code>java.lang.String</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Scala types." href="../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Scala types.</p><div class="fullcomment"><div class="comment cmt"><p>Core Scala types. They are always available without an explicit import.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.collection" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collection"></a><a id="collection:collection"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#collection" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains the base traits and objects needed to use and extend Scala's collection library." href="../index.html"><span class="name">collection</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains the base traits and objects needed to use and extend Scala's collection library.</p><div class="fullcomment"><div class="comment cmt"><p>Contains the base traits and objects needed to use and extend Scala's collection library.</p><h4> Guide </h4><p>A detailed guide for using the collections library is available
+at <a href="http://docs.scala-lang.org/overviews/collections/introduction.html" target="_blank">http://docs.scala-lang.org/overviews/collections/introduction.html</a>.
+Developers looking to extend the collections library can find a description
+of its architecture at
+<a href="http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html" target="_blank">http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html</a>.</p><h4> Using Collections </h4><p>It is convenient to treat all collections as either
+a <a href="../Traversable.html" class="extype" name="scala.collection.Traversable">scala.collection.Traversable</a> or <a href="../Iterable.html" class="extype" name="scala.collection.Iterable">scala.collection.Iterable</a>, as
+these traits define the vast majority of operations
+on a collection.</p><p>Collections can, of course, be treated as specifically as needed, and
+the library is designed to ensure that
+the methods that transform collections will return a collection of the same
+type: </p><pre>scala&gt; <span class="kw">val</span> array = <span class="std">Array</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+array: <span class="std">Array</span>[<span class="std">Int</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; array map { _.toString }
+res0: <span class="std">Array</span>[<span class="std">String</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; <span class="kw">val</span> list = <span class="std">List</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+list: <span class="std">List</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; list map { _.toString }
+res1: <span class="std">List</span>[<span class="std">String</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)</pre><h4> Creating Collections </h4><p>The most common way to create a collection is to use its companion object as
+a factory. The three most commonly used collections are
+<a href="../Seq.html" class="extype" name="scala.collection.Seq">scala.collection.Seq</a>, <a href="Set.html" class="extype" name="scala.collection.immutable.Set">scala.collection.immutable.Set</a>, and
+<a href="Map.html" class="extype" name="scala.collection.immutable.Map">scala.collection.immutable.Map</a>.
+They can be used directly as shown below since their companion objects are
+all available as type aliases in either the <a href="../../index.html" class="extype" name="scala">scala</a> package or in
+<code>scala.Predef</code>. New collections are created like this:</p><pre>scala&gt; <span class="kw">val</span> seq = <span class="std">Seq</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+seq: <span class="std">Seq</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">1</span>)
+
+scala&gt; <span class="kw">val</span> set = <span class="std">Set</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+set: scala.collection.immutable.<span class="std">Set</span>[<span class="std">Int</span>] = <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>)
+
+scala&gt; <span class="kw">val</span> map = <span class="std">Map</span>(<span class="num">1</span> -&gt; <span class="lit">"one"</span>, <span class="num">2</span> -&gt; <span class="lit">"two"</span>, <span class="num">3</span> -&gt; <span class="lit">"three"</span>, <span class="num">2</span> -&gt; <span class="lit">"too"</span>)
+map: scala.collection.immutable.<span class="std">Map</span>[<span class="std">Int</span>,<span class="std">String</span>] = <span class="std">Map</span>(<span class="num">1</span> -&gt; one, <span class="num">2</span> -&gt; too, <span class="num">3</span> -&gt; three)</pre><p>It is also typical to prefer the <a href="index.html" class="extype" name="scala.collection.immutable">scala.collection.immutable</a> collections
+over those in <a href="../mutable/index.html" class="extype" name="scala.collection.mutable">scala.collection.mutable</a>; the types aliased in
+the <code>scala.Predef</code> object are the immutable versions.</p><p>Also note that the collections library was carefully designed to include several implementations of
+each of the three basic collection types. These implementations have specific performance
+characteristics which are described
+in <a href="http://docs.scala-lang.org/overviews/collections/performance-characteristics.html" target="_blank">the guide</a>.</p><p>The concrete parallel collections also have specific performance characteristics which are
+described in <a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#performance-characteristics" target="_blank">the parallel collections guide</a></p><h5> Converting to and from Java Collections </h5><p>The <a href="../JavaConverters$.html" class="extype" name="scala.collection.JavaConverters">scala.collection.JavaConverters</a> object provides a collection
+of decorators that allow converting between Scala and Java collections using <code>asScala</code>
+and <code>asJava</code> methods.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.collection.immutable" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="immutable"></a><a id="immutable:immutable"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#immutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">immutable</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="$colon$colon.html" title="A non empty list characterized by a head and a tail."></a>
+                        <a href="$colon$colon.html" title="A non empty list characterized by a head and a tail.">::</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AbstractMap.html" title="Explicit instantiation of the Map trait to reduce class file size in subclasses."></a>
+                        <a href="AbstractMap.html" title="Explicit instantiation of the Map trait to reduce class file size in subclasses.">AbstractMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="BitSet$.html" title="This object provides a set of operations to create immutable.BitSet values."></a>
+                        <a class="class" href="BitSet.html" title="A class for immutable bitsets."></a>
+                        <a href="BitSet.html" title="A class for immutable bitsets.">BitSet</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DefaultMap.html" title="A default map which implements the + and - methods of maps."></a>
+                        <a href="DefaultMap.html" title="A default map which implements the + and - methods of maps.">DefaultMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="HashMap$.html" title="This object provides a set of operations needed to create immutable.HashMap values."></a>
+                        <a class="class" href="HashMap.html" title="This class implements immutable maps using a hash trie."></a>
+                        <a href="HashMap.html" title="This class implements immutable maps using a hash trie.">HashMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="HashSet$.html" title="This object provides a set of operations needed to create immutable.HashSet values."></a>
+                        <a class="class" href="HashSet.html" title="This class implements immutable sets using a hash trie."></a>
+                        <a href="HashSet.html" title="This class implements immutable sets using a hash trie.">HashSet</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="IndexedSeq$.html" title="This object provides a set of operations to create IndexedSeq values."></a>
+                        <a class="trait" href="IndexedSeq.html" title="A subtrait of collection.IndexedSeq which represents indexed sequences that are guaranteed immutable."></a>
+                        <a href="IndexedSeq.html" title="A subtrait of collection.IndexedSeq which represents indexed sequences that are guaranteed immutable.">IndexedSeq</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="IntMap$.html" title="A companion object for integer maps."></a>
+                        <a class="class" href="IntMap.html" title="Specialised immutable map structure for integer keys, based on Fast Mergeable Integer Maps by Okasaki and Gill."></a>
+                        <a href="IntMap.html" title="Specialised immutable map structure for integer keys, based on Fast Mergeable Integer Maps by Okasaki and Gill.">IntMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Iterable$.html" title="This object provides a set of operations to create immutable.Iterable values."></a>
+                        <a class="trait" href="Iterable.html" title="A base trait for iterable collections that are guaranteed immutable."></a>
+                        <a href="Iterable.html" title="A base trait for iterable collections that are guaranteed immutable.">Iterable</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="LinearSeq$.html" title="This object provides a set of operations to create immutable.LinearSeq values."></a>
+                        <a class="trait" href="LinearSeq.html" title="A subtrait of collection.LinearSeq which represents sequences that are guaranteed immutable."></a>
+                        <a href="LinearSeq.html" title="A subtrait of collection.LinearSeq which represents sequences that are guaranteed immutable.">LinearSeq</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="List$.html" title="This object provides a set of operations to create List values."></a>
+                        <a class="class" href="List.html" title="A class for immutable linked lists representing ordered collections of elements of type A."></a>
+                        <a href="List.html" title="A class for immutable linked lists representing ordered collections of elements of type A.">List</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ListMap$.html" title="This object provides a set of operations needed to create ListMap values."></a>
+                        <a class="class" href="ListMap.html" title="This class implements immutable maps using a list-based data structure."></a>
+                        <a href="ListMap.html" title="This class implements immutable maps using a list-based data structure.">ListMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ListSet$.html" title="This object provides a set of operations needed to create ListSet values."></a>
+                        <a class="class" href="ListSet.html" title="This class implements immutable sets using a list-based data structure."></a>
+                        <a href="ListSet.html" title="This class implements immutable sets using a list-based data structure.">ListSet</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="LongMap$.html" title="A companion object for long maps."></a>
+                        <a class="class" href="LongMap.html" title="Specialised immutable map structure for long keys, based on Fast Mergeable Long Maps by Okasaki and Gill."></a>
+                        <a href="LongMap.html" title="Specialised immutable map structure for long keys, based on Fast Mergeable Long Maps by Okasaki and Gill.">LongMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Map$.html" title="This object provides a set of operations needed to create immutable.Map values."></a>
+                        <a class="trait" href="Map.html" title="A generic trait for immutable maps."></a>
+                        <a href="Map.html" title="A generic trait for immutable maps.">Map</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MapLike.html" title="A generic template for immutable maps from keys of type K to values of type V."></a>
+                        <a href="MapLike.html" title="A generic template for immutable maps from keys of type K to values of type V.">MapLike</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MapProxy.html" title="This is a simple wrapper class for `scala.collection.immutable.Map`."></a>
+                        <a href="MapProxy.html" title="This is a simple wrapper class for `scala.collection.immutable.Map`.">MapProxy</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Nil$.html" title="The empty list."></a>
+                        <a href="Nil$.html" title="The empty list.">Nil</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="NumericRange$.html" title="A companion object for numeric ranges."></a>
+                        <a class="class" href="NumericRange.html" title="NumericRange is a more generic version of the Range class which works with arbitrary types."></a>
+                        <a href="NumericRange.html" title="NumericRange is a more generic version of the Range class which works with arbitrary types.">NumericRange</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="PagedSeq$.html" title="The PagedSeq object defines a lazy implementations of a random access sequence."></a>
+                        <a class="class" href="PagedSeq.html" title="An implementation of lazily computed sequences, where elements are stored in &quot;pages&quot;, i.e."></a>
+                        <a href="PagedSeq.html" title="An implementation of lazily computed sequences, where elements are stored in &quot;pages&quot;, i.e.">PagedSeq</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Queue$.html" title="This object provides a set of operations to create immutable.Queue values."></a>
+                        <a class="class" href="Queue.html" title="Queue objects implement data structures that allow to insert and retrieve elements in a first-in-first-out (FIFO) manner."></a>
+                        <a href="Queue.html" title="Queue objects implement data structures that allow to insert and retrieve elements in a first-in-first-out (FIFO) manner.">Queue</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Range$.html" title="A companion object for the Range class."></a>
+                        <a class="class" href="Range.html" title="The Range class represents integer values in range [start;end) with non-zero step value step."></a>
+                        <a href="Range.html" title="The Range class represents integer values in range [start;end) with non-zero step value step.">Range</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Seq$.html" title="This object provides a set of operations to create immutable.Seq values."></a>
+                        <a class="trait" href="Seq.html" title="A subtrait of collection.Seq which represents sequences that are guaranteed immutable."></a>
+                        <a href="Seq.html" title="A subtrait of collection.Seq which represents sequences that are guaranteed immutable.">Seq</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Set$.html" title="This object provides a set of operations needed to create immutable.Set values."></a>
+                        <a class="trait" href="Set.html" title="A generic trait for immutable sets."></a>
+                        <a href="Set.html" title="A generic trait for immutable sets.">Set</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SetProxy.html" title="This is a simple wrapper class for scala.collection.immutable.Set."></a>
+                        <a href="SetProxy.html" title="This is a simple wrapper class for scala.collection.immutable.Set.">SetProxy</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="SortedMap$.html" title="This object provides a set of operations needed to create sorted maps of type immutable.SortedMap."></a>
+                        <a class="trait" href="SortedMap.html" title="A map whose keys are sorted."></a>
+                        <a href="SortedMap.html" title="A map whose keys are sorted.">SortedMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="SortedSet$.html" title="This object provides a set of operations needed to create sorted sets of type immutable.SortedSet."></a>
+                        <a class="trait" href="SortedSet.html" title="A subtrait of collection.SortedSet which represents sorted sets which cannot be mutated."></a>
+                        <a href="SortedSet.html" title="A subtrait of collection.SortedSet which represents sorted sets which cannot be mutated.">SortedSet</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Stack$.html" title="This object provides a set of operations to create immutable.Stack values."></a>
+                        <a class="class" href="Stack.html" title="This class implements immutable stacks using a list-based data structure."></a>
+                        <a href="Stack.html" title="This class implements immutable stacks using a list-based data structure.">Stack</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Stream$.html" title="The object Stream provides helper functions to manipulate streams."></a>
+                        <a class="class" href="Stream.html" title="The class Stream implements lazy lists where elements are only evaluated when they are needed."></a>
+                        <a href="Stream.html" title="The class Stream implements lazy lists where elements are only evaluated when they are needed.">Stream</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="StreamIterator.html" title="A specialized, extra-lazy implementation of a stream iterator, so it can iterate as lazily as it traverses the tail."></a>
+                        <a href="StreamIterator.html" title="A specialized, extra-lazy implementation of a stream iterator, so it can iterate as lazily as it traverses the tail.">StreamIterator</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="StreamView.html" title=""></a>
+                        <a href="StreamView.html" title="">StreamView</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="StreamViewLike.html" title=""></a>
+                        <a href="StreamViewLike.html" title="">StreamViewLike</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="StringLike$.html" title="A companion object for the StringLike containing some constants."></a>
+                        <a class="trait" href="StringLike.html" title="A trait describing stringlike collections."></a>
+                        <a href="StringLike.html" title="A trait describing stringlike collections.">StringLike</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="StringOps.html" title="This class serves as a wrapper providing scala.Predef.Strings with all the operations found in indexed sequences."></a>
+                        <a href="StringOps.html" title="This class serves as a wrapper providing scala.Predef.Strings with all the operations found in indexed sequences.">StringOps</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="" title="This object provides a set of operations to create immutable.Traversable values."></a>
+                        <a class="trait" href="Traversable.html" title="A trait for traversable collections that are guaranteed immutable."></a>
+                        <a href="Traversable.html" title="A trait for traversable collections that are guaranteed immutable.">Traversable</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="TreeMap$.html" title="This object provides a set of operations needed to create sorted maps of type immutable.TreeMap."></a>
+                        <a class="class" href="TreeMap.html" title="This class implements immutable maps using a tree."></a>
+                        <a href="TreeMap.html" title="This class implements immutable maps using a tree.">TreeMap</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="TreeSet$.html" title="This object provides a set of operations needed to create sorted sets of type immutable.TreeSet."></a>
+                        <a class="class" href="TreeSet.html" title="This class implements immutable sets using a tree."></a>
+                        <a href="TreeSet.html" title="This class implements immutable sets using a tree.">TreeSet</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Vector$.html" title="Companion object to the Vector class"></a>
+                        <a class="class" href="Vector.html" title="Vector is a general-purpose, immutable data structure."></a>
+                        <a href="Vector.html" title="Vector is a general-purpose, immutable data structure.">Vector</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="VectorBuilder.html" title="A class to build instances of Vector."></a>
+                        <a href="VectorBuilder.html" title="A class to build instances of Vector.">VectorBuilder</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="VectorIterator.html" title=""></a>
+                        <a href="VectorIterator.html" title="">VectorIterator</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="WrappedString$.html" title="A companion object for wrapped strings."></a>
+                        <a class="class" href="WrappedString.html" title="This class serves as a wrapper augmenting Strings with all the operations found in indexed sequences."></a>
+                        <a href="WrappedString.html" title="This class serves as a wrapper augmenting Strings with all the operations found in indexed sequences.">WrappedString</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <a href="Traversable.html" title="See companion trait"><div class="big-circle object-companion-trait">o</div></a>
+        <p id="owner"><a href="../../index.html" class="extype" name="scala">scala</a>.<a href="../index.html" class="extype" name="scala.collection">collection</a>.<a href="index.html" class="extype" name="scala.collection.immutable">immutable</a></p>
+        <h1><a href="Traversable.html" title="See companion trait">Traversable</a><span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Traversable.html" title="See companion trait">trait Traversable</a>
+          </div></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Traversable</span><span class="result"> extends <a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>] with <a href="../generic/TraversableFactory.html" class="extype" name="scala.collection.generic.TraversableFactory">TraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>   This object provides a set of operations to create <code><code>immutable.Traversable</code></code> values.
+ The current default implementation of a <code>immutable.Traversable</code> is a <code>List</code>.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/library/scala/collection/immutable/Traversable.scala#L1" target="_blank">Traversable.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../generic/TraversableFactory.html" class="extype" name="scala.collection.generic.TraversableFactory">TraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>], <a href="../generic/GenericSeqCompanion.html" class="extype" name="scala.collection.generic.GenericSeqCompanion">GenericSeqCompanion</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>], <a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>], <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>], <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.collection.immutable.Traversable"><span>Traversable</span></li><li class="in" name="scala.collection.generic.TraversableFactory"><span>TraversableFactory</span></li><li class="in" name="scala.collection.generic.GenericSeqCompanion"><span>GenericSeqCompanion</span></li><li class="in" name="scala.collection.generic.GenTraversableFactory"><span>GenTraversableFactory</span></li><li class="in" name="scala.collection.generic.GenericCompanion"><span>GenericCompanion</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.collection.generic.GenTraversableFactory.GenericCanBuildFrom" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GenericCanBuildFrom[A]extendsCanBuildFrom[CC[_],A,CC[A]]"></a><a id="GenericCanBuildFrom[A]:GenericCanBuildFrom[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/generic/GenTraversableFactory.html#GenericCanBuildFrom[A]extendsCanBuildFrom[CC[_],A,CC[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A generic implementation of the CanBuildFrom trait, which forwards all calls to apply(from) to the genericBuilder method of collection from, and which forwards all calls of apply() to the newBuilder method of this factory." href="../generic/GenTraversableFactory$GenericCanBuildFrom.html"><span class="name">GenericCanBuildFrom</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../generic/CanBuildFrom.html" class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.CC">CC</span>[_], <span class="extype" name="scala.collection.generic.GenTraversableFactory.GenericCanBuildFrom.A">A</span>, <span class="extype" name="scala.collection.generic.GenTraversableFactory.CC">CC</span>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.GenericCanBuildFrom.A">A</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A generic implementation of the <code>CanBuildFrom</code> trait, which forwards
+ all calls to <code>apply(from)</code> to the <code>genericBuilder</code> method of
+ collection <code>from</code>, and which forwards all calls of <code>apply()</code> to the
+ <code>newBuilder</code> method of this factory.</p><div class="fullcomment"><div class="comment cmt"><p>A generic implementation of the <code>CanBuildFrom</code> trait, which forwards
+ all calls to <code>apply(from)</code> to the <code>genericBuilder</code> method of
+ collection <code>from</code>, and which forwards all calls of <code>apply()</code> to the
+ <code>newBuilder</code> method of this factory.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericCompanion.Coll" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Coll=CC[_]"></a><a id="Coll:Coll"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#Coll=CC[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Coll</span><span class="result alias"> = <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[_]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The underlying collection type with unknown element type</p><div class="fullcomment"><div class="comment cmt"><p>The underlying collection type with unknown element type</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd><a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Test two objects for inequality.</p><div class="fullcomment"><div class="comment cmt"><p>Test two objects for inequality.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if !(this == that), false otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>x.hashCode</code> except for boxed numeric types and <code>null</code>.
+ For numerics, it returns a hash value which is consistent
+ with value equality: if two value type instances compare
+ as true, then ## will produce the same hash value for each
+ of them.
+ For <code>null</code> returns a hashcode where <code>null.hashCode</code> throws a
+ <code>NullPointerException</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a hash value consistent with ==</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>The expression <code>x == that</code> is equivalent to <code>if (x eq null) that eq null else x.equals(that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#ReusableCBF" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReusableCBF:GenTraversableFactory.this.GenericCanBuildFrom[Nothing]"></a><a id="ReusableCBF:GenericCanBuildFrom[Nothing]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#ReusableCBF:GenTraversableFactory.this.GenericCanBuildFrom[Nothing]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReusableCBF</span><span class="result">: <a href="#GenericCanBuildFrom[A]extendsCanBuildFrom[CC[_],A,CC[A]]" class="extmbr" name="scala.collection.generic.GenTraversableFactory.GenericCanBuildFrom">GenericCanBuildFrom</a>[<a href="../../Nothing.html" class="extype" name="scala.Nothing">Nothing</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericCompanion#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[A](elems:A*):CC[A]"></a><a id="apply[A](A*):Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#apply[A](elems:A*):CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="elems">elems: <span class="extype" name="scala.collection.generic.GenericCompanion.apply.A">A</span>*</span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenericCompanion.apply.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Creates a collection with the specified elements.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a collection with the specified elements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the collection's elements</p></dd><dt class="param">elems</dt><dd class="cmt"><p>the elements of the created collection</p></dd><dt>returns</dt><dd class="cmt"><p>a new collection with elements <code>elems</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Cast the receiver object to be of type <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Cast the receiver object to be of type <code>T0</code>.</p><p> Note that the success of a cast at runtime is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at
+ runtime, while the expression <code>List(1).asInstanceOf[List[String]]</code> will not.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the requested type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../../index.html#ClassCastException=ClassCastException" class="extmbr" name="scala.ClassCastException"><code>ClassCastException</code></a> if the receiver object is not an instance of the erasure of type <code>T0</code>.</p></span></dd></dl></div>
+    </li><li name="scala.collection.immutable.Traversable#canBuildFrom" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="canBuildFrom[A]:scala.collection.generic.CanBuildFrom[scala.collection.immutable.Traversable.Coll,A,scala.collection.immutable.Traversable[A]]"></a><a id="canBuildFrom[A]:CanBuildFrom[Coll,A,Traversable[A]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#canBuildFrom[A]:scala.collection.generic.CanBuildFrom[scala.collection.immutable.Traversable.Coll,A,scala.collection.immutable.Traversable[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canBuildFrom</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="../generic/CanBuildFrom.html" class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</a>[<a href="#Coll=CC[_]" class="extmbr" name="scala.collection.immutable.Traversable.Coll">Coll</a>, <span class="extype" name="scala.collection.immutable.Traversable.canBuildFrom.A">A</span>, <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.immutable.Traversable.canBuildFrom.A">A</span>]]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Create a copy of the receiver object.</p><div class="fullcomment"><div class="comment cmt"><p>Create a copy of the receiver object.</p><p> The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#concat" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="concat[A](xss:Traversable[A]*):CC[A]"></a><a id="concat[A](collection.Traversable[A]*):Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#concat[A](xss:Traversable[A]*):CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">concat</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="xss">xss: <a href="../Traversable.html" class="extype" name="scala.collection.Traversable">collection.Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.concat.A">A</span>]*</span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.concat.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Concatenates all argument collections into a single collection.</p><div class="fullcomment"><div class="comment cmt"><p>Concatenates all argument collections into a single collection.
+</p></div><dl class="paramcmts block"><dt class="param">xss</dt><dd class="cmt"><p>the collections that are to be concatenated.</p></dd><dt>returns</dt><dd class="cmt"><p>the concatenation of all the collections.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenericCompanion#empty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="empty[A]:CC[A]"></a><a id="empty[A]:Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#empty[A]:CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">empty</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenericCompanion.empty.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An empty collection of type <code><code>CC</code>[A]</code></p><div class="fullcomment"><div class="comment cmt"><p>An empty collection of type <code><code>CC</code>[A]</code></p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the collection's elements</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Tests whether the argument (<code>that</code>) is a reference to the receiver object (<code>this</code>).</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the argument (<code>that</code>) is a reference to the receiver object (<code>this</code>).</p><p> The <code>eq</code> method implements an <a href="http://en.wikipedia.org/wiki/Equivalence_relation" target="_blank">equivalence relation</a> on
+ non-null instances of <code>AnyRef</code>, and has three additional properties:</p><ul><li>It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+    <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.</li><li>For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.</li><li><code>null.eq(null)</code> returns <code>true</code>.</li></ul><p> When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+ consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+ should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="../../Any.html" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The equality method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The equality method for reference types.  Default implementation delegates to <code>eq</code>.</p><p> See also <code>equals</code> in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fill[A](n1:Int,n2:Int,n3:Int,n4:Int,n5:Int)(elem:=&gt;A):CC[CC[CC[CC[CC[A]]]]]"></a><a id="fill[A](Int,Int,Int,Int,Int)(⇒A):Traversable[Traversable[Traversable[Traversable[Traversable[A]]]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#fill[A](n1:Int,n2:Int,n3:Int,n4:Int,n5:Int)(elem:=&gt;A):CC[CC[CC[CC[CC[A]]]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n4">n4: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n5">n5: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span>]]]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a five-dimensional collection containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a five-dimensional collection containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">n5</dt><dd class="cmt"><p>the number of elements in the 5th dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A collection that contains the results of <code>n1 x n2 x n3 x n4 x n5</code> evaluations of <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fill[A](n1:Int,n2:Int,n3:Int,n4:Int)(elem:=&gt;A):CC[CC[CC[CC[A]]]]"></a><a id="fill[A](Int,Int,Int,Int)(⇒A):Traversable[Traversable[Traversable[Traversable[A]]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#fill[A](n1:Int,n2:Int,n3:Int,n4:Int)(elem:=&gt;A):CC[CC[CC[CC[A]]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n4">n4: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span>]]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a four-dimensional collection containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a four-dimensional collection containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A collection that contains the results of <code>n1 x n2 x n3 x n4</code> evaluations of <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fill[A](n1:Int,n2:Int,n3:Int)(elem:=&gt;A):CC[CC[CC[A]]]"></a><a id="fill[A](Int,Int,Int)(⇒A):Traversable[Traversable[Traversable[A]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#fill[A](n1:Int,n2:Int,n3:Int)(elem:=&gt;A):CC[CC[CC[A]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span>]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a three-dimensional collection containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a three-dimensional collection containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A collection that contains the results of <code>n1 x n2 x n3</code> evaluations of <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fill[A](n1:Int,n2:Int)(elem:=&gt;A):CC[CC[A]]"></a><a id="fill[A](Int,Int)(⇒A):Traversable[Traversable[A]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#fill[A](n1:Int,n2:Int)(elem:=&gt;A):CC[CC[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a two-dimensional collection containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a two-dimensional collection containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A collection that contains the results of <code>n1 x n2</code> evaluations of <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fill[A](n:Int)(elem:=&gt;A):CC[A]"></a><a id="fill[A](Int)(⇒A):Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#fill[A](n:Int)(elem:=&gt;A):CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fill</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n">n: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="elem">elem: ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.fill.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a collection containing the results of some element computation a number of times.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a collection containing the results of some element computation a number of times.</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>the number of elements contained in the collection.</p></dd><dt class="param">elem</dt><dd class="cmt"><p>the element computation</p></dd><dt>returns</dt><dd class="cmt"><p>A collection that contains the results of <code>n</code> evaluations of <code>elem</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><div class="fullcomment"><div class="comment cmt"><p>Called by the garbage collector on the receiver object when there
+ are no more references to the object.</p><p> The details of when and if the <code>finalize</code> method is invoked, as
+ well as the interaction between <code>finalize</code> and non-local returns
+ and exceptions, are all platform dependent.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the runtime class representation of the object.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the runtime class representation of the object.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a class object corresponding to the runtime type of the receiver.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The hashCode method for reference types.</p><div class="fullcomment"><div class="comment cmt"><p>The hashCode method for reference types.  See hashCode in <a href="../../Any.html" class="extype" name="scala.Any">scala.Any</a>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for this object.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Test whether the dynamic type of the receiver object is <code>T0</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether the dynamic type of the receiver object is <code>T0</code>.</p><p> Note that the result of the test is modulo Scala's erasure semantics.
+ Therefore the expression <code>1.isInstanceOf[String]</code> will return <code>false</code>, while the
+ expression <code>List(1).isInstanceOf[List[String]]</code> will return <code>true</code>.
+ In the latter example, because the type argument is erased as part of compilation it is
+ not possible to check whether the contents of the list are of the specified type.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#iterate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="iterate[A](start:A,len:Int)(f:A=&gt;A):CC[A]"></a><a id="iterate[A](A,Int)((A)⇒A):Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#iterate[A](start:A,len:Int)(f:A=&gt;A):CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">iterate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="start">start: <span class="extype" name="scala.collection.generic.GenTraversableFactory.iterate.A">A</span></span>, <span name="len">len: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.generic.GenTraversableFactory.iterate.A">A</span>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.iterate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.iterate.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a collection containing repeated applications of a function to a start value.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a collection containing repeated applications of a function to a start value.
+</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the start value of the collection</p></dd><dt class="param">len</dt><dd class="cmt"><p>the number of elements contained in the collection</p></dd><dt class="param">f</dt><dd class="cmt"><p>the function that's repeatedly applied</p></dd><dt>returns</dt><dd class="cmt"><p>a collection with <code>len</code> values in the sequence <code>start, f(start), f(f(start)), ...</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="../../Boolean.html" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Equivalent to <code>!(this eq that)</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Equivalent to <code>!(this eq that)</code>.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is not a reference to the receiver object; <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.collection.immutable.Traversable#newBuilder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="newBuilder[A]:scala.collection.mutable.Builder[A,scala.collection.immutable.Traversable[A]]"></a><a id="newBuilder[A]:Builder[A,Traversable[A]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#newBuilder[A]:scala.collection.mutable.Builder[A,scala.collection.immutable.Traversable[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newBuilder</span><span class="tparams">[<span name="A">A</span>]</span><span class="result">: <a href="../mutable/Builder.html" class="extype" name="scala.collection.mutable.Builder">Builder</a>[<span class="extype" name="scala.collection.immutable.Traversable.newBuilder.A">A</span>, <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.immutable.Traversable.newBuilder.A">A</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The default builder for <code><code>immutable.Traversable</code></code> objects.</p><div class="fullcomment"><div class="comment cmt"><p>The default builder for <code><code>immutable.Traversable</code></code> objects.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type of the immutable traversable collection's elements</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.collection.immutable.Traversable">Traversable</a> → <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p><div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+        </dd><dt>Note</dt><dd><span class="cmt"><p>not specified by SLS as a member of AnyRef</p></span></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#range" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="range[T](start:T,end:T,step:T)(implicitevidence$2:Integral[T]):CC[T]"></a><a id="range[T](T,T,T)(Integral[T]):Traversable[T]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#range[T](start:T,end:T,step:T)(implicitevidence$2:Integral[T]):CC[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">range</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="start">start: <span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span></span>, <span name="end">end: <span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span></span>, <span name="step">step: <span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../../index.html#Integral[T]=scala.math.Integral[T]" class="extmbr" name="scala.Integral">Integral</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span>]</span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a collection containing equally spaced values in some integer interval.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a collection containing equally spaced values in some integer interval.</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the start value of the collection</p></dd><dt class="param">end</dt><dd class="cmt"><p>the end value of the collection (the first value NOT contained)</p></dd><dt class="param">step</dt><dd class="cmt"><p>the difference between successive elements of the collection (must be positive or negative)</p></dd><dt>returns</dt><dd class="cmt"><p>a collection with values <code>start, start + step, ...</code> up to, but excluding <code>end</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#range" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="range[T](start:T,end:T)(implicitevidence$1:Integral[T]):CC[T]"></a><a id="range[T](T,T)(Integral[T]):Traversable[T]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#range[T](start:T,end:T)(implicitevidence$1:Integral[T]):CC[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">range</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="start">start: <span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span></span>, <span name="end">end: <span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../../index.html#Integral[T]=scala.math.Integral[T]" class="extmbr" name="scala.Integral">Integral</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span>]</span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.range.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a collection containing a sequence of increasing of integers.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a collection containing a sequence of increasing of integers.
+</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the first element of the collection</p></dd><dt class="param">end</dt><dd class="cmt"><p>the end value of the collection (the first value NOT contained)</p></dd><dt>returns</dt><dd class="cmt"><p>a collection with values <code>start, start + 1, ..., end - 1</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tabulate[A](n1:Int,n2:Int,n3:Int,n4:Int,n5:Int)(f:(Int,Int,Int,Int,Int)=&gt;A):CC[CC[CC[CC[CC[A]]]]]"></a><a id="tabulate[A](Int,Int,Int,Int,Int)((Int,Int,Int,Int,Int)⇒A):Traversable[Traversable[Traversable[Traversable[Traversable[A]]]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#tabulate[A](n1:Int,n2:Int,n3:Int,n4:Int,n5:Int)(f:(Int,Int,Int,Int,Int)=&gt;A):CC[CC[CC[CC[CC[A]]]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tabulate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n4">n4: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n5">n5: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span>]]]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a five-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a five-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">n5</dt><dd class="cmt"><p>the number of elements in the 5th dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A collection consisting of elements <code>f(i1, i2, i3, i4, i5)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, <code>0 &lt;= i3 &lt; n3</code>, <code>0 &lt;= i4 &lt; n4</code>, and <code>0 &lt;= i5 &lt; n5</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tabulate[A](n1:Int,n2:Int,n3:Int,n4:Int)(f:(Int,Int,Int,Int)=&gt;A):CC[CC[CC[CC[A]]]]"></a><a id="tabulate[A](Int,Int,Int,Int)((Int,Int,Int,Int)⇒A):Traversable[Traversable[Traversable[Traversable[A]]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#tabulate[A](n1:Int,n2:Int,n3:Int,n4:Int)(f:(Int,Int,Int,Int)=&gt;A):CC[CC[CC[CC[A]]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tabulate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n4">n4: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span>]]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a four-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a four-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">n4</dt><dd class="cmt"><p>the number of elements in the 4th dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A collection consisting of elements <code>f(i1, i2, i3, i4)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, <code>0 &lt;= i3 &lt; n3</code>, and <code>0 &lt;= i4 &lt; n4</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tabulate[A](n1:Int,n2:Int,n3:Int)(f:(Int,Int,Int)=&gt;A):CC[CC[CC[A]]]"></a><a id="tabulate[A](Int,Int,Int)((Int,Int,Int)⇒A):Traversable[Traversable[Traversable[A]]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#tabulate[A](n1:Int,n2:Int,n3:Int)(f:(Int,Int,Int)=&gt;A):CC[CC[CC[A]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tabulate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n3">n3: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span>]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a three-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a three-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">n3</dt><dd class="cmt"><p>the number of elements in the 3nd dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A collection consisting of elements <code>f(i1, i2, i3)</code>
+         for <code>0 &lt;= i1 &lt; n1</code>, <code>0 &lt;= i2 &lt; n2</code>, and <code>0 &lt;= i3 &lt; n3</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tabulate[A](n1:Int,n2:Int)(f:(Int,Int)=&gt;A):CC[CC[A]]"></a><a id="tabulate[A](Int,Int)((Int,Int)⇒A):Traversable[Traversable[A]]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#tabulate[A](n1:Int,n2:Int)(f:(Int,Int)=&gt;A):CC[CC[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tabulate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n1">n1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>, <span name="n2">n2: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="../../Int.html" class="extype" name="scala.Int">Int</a>, <a href="../../Int.html" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a two-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a two-dimensional collection containing values of a given function over ranges of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n1</dt><dd class="cmt"><p>the number of elements in the 1st dimension</p></dd><dt class="param">n2</dt><dd class="cmt"><p>the number of elements in the 2nd dimension</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A collection consisting of elements <code>f(i1, i2)</code>
+         for <code>0 &lt;= i1 &lt; n1</code> and <code>0 &lt;= i2 &lt; n2</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.collection.generic.GenTraversableFactory#tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tabulate[A](n:Int)(f:Int=&gt;A):CC[A]"></a><a id="tabulate[A](Int)((Int)⇒A):Traversable[A]"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#tabulate[A](n:Int)(f:Int=&gt;A):CC[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tabulate</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="n">n: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="../../Int.html" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span></span>)</span><span class="result">: <a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>[<span class="extype" name="scala.collection.generic.GenTraversableFactory.tabulate.A">A</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Produces a collection containing values of a given function over a range of integer values starting from 0.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a collection containing values of a given function over a range of integer values starting from 0.</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>The number of elements in the collection</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function computing element values</p></dd><dt>returns</dt><dd class="cmt"><p>A collection consisting of elements <code>f(0), ..., f(n -1)</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a></dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Creates a String representation of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a String representation of this object.  The default
+ representation is platform dependent.  On the java platform it
+ is the concatenation of the class name, &quot;@&quot;, and the object's
+ hashcode in hexadecimal.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a String representation of the object.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → <a href="../../Any.html" class="extype" name="scala.Any">Any</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/immutable/Traversable$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="../../Long.html" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="../../Unit.html" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../native.html" class="extype" name="scala.native">native</a></span><span class="args">()</span>
+              
+                <span class="name">@<a href="../../throws.html" class="extype" name="scala.throws">throws</a></span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.collection.generic.TraversableFactory">
+              <h3>Inherited from <a href="../generic/TraversableFactory.html" class="extype" name="scala.collection.generic.TraversableFactory">TraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</h3>
+            </div><div class="parent" name="scala.collection.generic.GenericSeqCompanion">
+              <h3>Inherited from <a href="../generic/GenericSeqCompanion.html" class="extype" name="scala.collection.generic.GenericSeqCompanion">GenericSeqCompanion</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</h3>
+            </div><div class="parent" name="scala.collection.generic.GenTraversableFactory">
+              <h3>Inherited from <a href="../generic/GenTraversableFactory.html" class="extype" name="scala.collection.generic.GenTraversableFactory">GenTraversableFactory</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</h3>
+            </div><div class="parent" name="scala.collection.generic.GenericCompanion">
+              <h3>Inherited from <a href="../generic/GenericCompanion.html" class="extype" name="scala.collection.generic.GenericCompanion">GenericCompanion</a>[<a href="Traversable.html" class="extype" name="scala.collection.immutable.Traversable">Traversable</a>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

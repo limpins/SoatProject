@@ -1,0 +1,1405 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.interactive.Picklers</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.interactive.Picklers" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.interactive.Picklers" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interactive"></a><a id="interactive:interactive"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#interactive" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">interactive</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.tests" visbl="pub" class="indented5 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tests"></a><a id="tests:tests"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/index.html#tests" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="tests/index.html"><span class="name">tests</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.tools.nsc.interactive">interactive</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="CancelException$.html" title=""></a>
+                        <a href="CancelException$.html" title="">CancelException</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="CommentPreservingTypers.html" title="This trait allows the IDE to have an instance of the PC that does not clear the comments table at every new typer run (those being many and close between in this context)."></a>
+                        <a href="CommentPreservingTypers.html" title="This trait allows the IDE to have an instance of the PC that does not clear the comments table at every new typer run (those being many and close between in this context).">CommentPreservingTypers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="CompilerControl.html" title="Interface of interactive compiler to a client such as an IDE The model the presentation compiler consists of the following parts:"></a>
+                        <a href="CompilerControl.html" title="Interface of interactive compiler to a client such as an IDE The model the presentation compiler consists of the following parts:">CompilerControl</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="CondPickler.html" title="A subclass of Pickler can indicate whether a particular value can be pickled by instances of this class."></a>
+                        <a href="CondPickler.html" title="A subclass of Pickler can indicate whether a particular value can be pickled by instances of this class.">CondPickler</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextTrees.html" title=""></a>
+                        <a href="ContextTrees.html" title="">ContextTrees</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="FreshRunReq.html" title="Signals a request for a fresh background compiler run."></a>
+                        <a href="FreshRunReq.html" title="Signals a request for a fresh background compiler run.">FreshRunReq</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Global.html" title="The main class of the presentation compiler in an interactive environment such as an IDE"></a>
+                        <a href="Global.html" title="The main class of the presentation compiler in an interactive environment such as an IDE">Global</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="InteractiveAnalyzer.html" title=""></a>
+                        <a href="InteractiveAnalyzer.html" title="">InteractiveAnalyzer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="InteractiveReporter.html" title=""></a>
+                        <a href="InteractiveReporter.html" title="">InteractiveReporter</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Lexer$.html" title="Companion object of class Lexer which defines tokens and some utility concepts used for tokens and lexers"></a>
+                        <a class="class" href="Lexer.html" title="A simple lexer for tokens as they are used in JSON, plus parens (, ) Tokens understood are:"></a>
+                        <a href="Lexer.html" title="A simple lexer for tokens as they are used in JSON, plus parens (, ) Tokens understood are:">Lexer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="LogReplay.html" title=""></a>
+                        <a href="LogReplay.html" title="">LogReplay</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Logger.html" title=""></a>
+                        <a href="Logger.html" title="">Logger</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="Main$.html" title="The main class for NSC, a compiler for the programming language Scala."></a>
+                        <a href="Main$.html" title="The main class for NSC, a compiler for the programming language Scala.">Main</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="MissingResponse.html" title=""></a>
+                        <a href="MissingResponse.html" title="">MissingResponse</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="NoSuchUnitError.html" title=""></a>
+                        <a href="NoSuchUnitError.html" title="">NoSuchUnitError</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="NullLogger$.html" title=""></a>
+                        <a href="NullLogger$.html" title="">NullLogger</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Pickler$.html" title=""></a>
+                        <a class="class" href="Pickler.html" title="An abstract class for writing and reading Scala objects to and from a legible representation."></a>
+                        <a href="Pickler.html" title="An abstract class for writing and reading Scala objects to and from a legible representation.">Pickler</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">Picklers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="PresentationCompilerThread.html" title="A presentation compiler thread."></a>
+                        <a href="PresentationCompilerThread.html" title="A presentation compiler thread.">PresentationCompilerThread</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="PrettyWriter.html" title=""></a>
+                        <a href="PrettyWriter.html" title="">PrettyWriter</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Problem.html" title=""></a>
+                        <a href="Problem.html" title="">Problem</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="REPL$.html" title="Interface of interactive compiler to a client such as an IDE"></a>
+                        <a href="REPL$.html" title="Interface of interactive compiler to a client such as an IDE">REPL</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="RangePositions.html" title=""></a>
+                        <a href="RangePositions.html" title="">RangePositions</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Replayer.html" title=""></a>
+                        <a href="Replayer.html" title="">Replayer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Response.html" title="Typical interaction, given a predicate &lt;user-input&gt;, a function &lt;display&gt;, and an exception handler &lt;handle&gt;:"></a>
+                        <a href="Response.html" title="Typical interaction, given a predicate &lt;user-input&gt;, a function &lt;display&gt;, and an exception handler &lt;handle&gt;:">Response</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="RichCompilationUnits.html" title=""></a>
+                        <a href="RichCompilationUnits.html" title="">RichCompilationUnits</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="ShutdownReq$.html" title="Signals a request for a shutdown of the presentation compiler."></a>
+                        <a href="ShutdownReq$.html" title="Signals a request for a shutdown of the presentation compiler.">ShutdownReq</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.interactive">interactive</a></p>
+        <h1>Picklers<span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Picklers</span><span class="result"> extends <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="Global.html" class="extype" name="scala.tools.nsc.interactive.Global">Global</a></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/interactive/scala/tools/nsc/interactive/Picklers.scala#L1" target="_blank">Picklers.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="Global.html" class="extype" name="scala.tools.nsc.interactive.Global">Global</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.interactive.Picklers"><span>Picklers</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.interactive.Picklers.Diff" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Diff=(Int,Int,String)"></a><a id="Diff:Global.Diff"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#Diff=(Int,Int,String)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Diff</span><span class="result alias"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(Picklers,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#abstractFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="abstractFile:scala.tools.nsc.interactive.Pickler[scala.tools.nsc.io.AbstractFile]"></a><a id="abstractFile:Pickler[AbstractFile]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#abstractFile:scala.tools.nsc.interactive.Pickler[scala.tools.nsc.io.AbstractFile]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">abstractFile</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="../io/index.html#AbstractFile=scala.reflect.io.AbstractFile" class="extmbr" name="scala.tools.nsc.io.AbstractFile">AbstractFile</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#action" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="action:scala.tools.nsc.interactive.Pickler[()=&gt;Unit]"></a><a id="action:Pickler[()⇒Unit]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#action:scala.tools.nsc.interactive.Pickler[()=&gt;Unit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">action</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[() ⇒ <span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#askDocCommentItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askDocCommentItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskDocCommentItem]"></a><a id="askDocCommentItem:CondPickler[Global.AskDocCommentItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askDocCommentItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskDocCommentItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askDocCommentItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskDocCommentItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskDocCommentItem">Global.AskDocCommentItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askLinkPosItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askLinkPosItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskLinkPosItem]"></a><a id="askLinkPosItem:CondPickler[Global.AskLinkPosItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askLinkPosItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskLinkPosItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askLinkPosItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskLinkPosItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskLinkPosItem">Global.AskLinkPosItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askLoadedTypedItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askLoadedTypedItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskLoadedTypedItem]"></a><a id="askLoadedTypedItem:CondPickler[Global.AskLoadedTypedItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askLoadedTypedItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskLoadedTypedItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askLoadedTypedItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskLoadedTypedItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskLoadedTypedItem">Global.AskLoadedTypedItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askParsedEnteredItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askParsedEnteredItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskParsedEnteredItem]"></a><a id="askParsedEnteredItem:CondPickler[Global.AskParsedEnteredItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askParsedEnteredItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskParsedEnteredItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askParsedEnteredItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskParsedEnteredItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskParsedEnteredItem">Global.AskParsedEnteredItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askScopeCompletionItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askScopeCompletionItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskScopeCompletionItem]"></a><a id="askScopeCompletionItem:CondPickler[Global.AskScopeCompletionItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askScopeCompletionItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskScopeCompletionItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askScopeCompletionItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskScopeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskScopeCompletionItem">Global.AskScopeCompletionItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askToDoFirstItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askToDoFirstItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskToDoFirstItem]"></a><a id="askToDoFirstItem:CondPickler[Global.AskToDoFirstItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askToDoFirstItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskToDoFirstItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askToDoFirstItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskToDoFirstItemextendsCompilerControl.this.WorkItem" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskToDoFirstItem">Global.AskToDoFirstItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askTypeAtItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askTypeAtItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeAtItem]"></a><a id="askTypeAtItem:CondPickler[Global.AskTypeAtItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askTypeAtItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeAtItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askTypeAtItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskTypeAtItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskTypeAtItem">Global.AskTypeAtItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askTypeCompletionItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askTypeCompletionItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeCompletionItem]"></a><a id="askTypeCompletionItem:CondPickler[Global.AskTypeCompletionItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askTypeCompletionItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeCompletionItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askTypeCompletionItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskTypeCompletionItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskTypeCompletionItem">Global.AskTypeCompletionItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#askTypeItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="askTypeItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeItem]"></a><a id="askTypeItem:CondPickler[Global.AskTypeItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#askTypeItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.AskTypeItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">askTypeItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#AskTypeItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.AskTypeItem">Global.AskTypeItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#defaultThrowable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultThrowable[T&lt;:Throwable]:scala.tools.nsc.interactive.CondPickler[T]"></a><a id="defaultThrowable[T&lt;:Throwable]:CondPickler[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#defaultThrowable[T&lt;:Throwable]:scala.tools.nsc.interactive.CondPickler[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultThrowable</span><span class="tparams">[<span name="T">T &lt;: <a href="../../../index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>]</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<span class="extype" name="scala.tools.nsc.interactive.Picklers.defaultThrowable.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#delta" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="delta(f:scala.tools.nsc.io.AbstractFile,cs:Array[Char]):Picklers.this.Diff"></a><a id="delta(AbstractFile,Array[Char]):Global.Diff"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#delta(f:scala.tools.nsc.io.AbstractFile,cs:Array[Char]):Picklers.this.Diff" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delta</span><span class="params">(<span name="f">f: <a href="../io/index.html#AbstractFile=scala.reflect.io.AbstractFile" class="extmbr" name="scala.tools.nsc.io.AbstractFile">AbstractFile</a></span>, <span name="cs">cs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>)</span><span class="result">: <a href="Global.html#Diff=(Int,Int,String)" class="extmbr" name="scala.tools.nsc.interactive.Global.Diff">Global.Diff</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#emptyAction" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="emptyAction:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.util.EmptyAction]"></a><a id="emptyAction:CondPickler[EmptyAction]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#emptyAction:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.util.EmptyAction]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emptyAction</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="../util/EmptyAction.html" class="extype" name="scala.tools.nsc.util.EmptyAction">EmptyAction</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((Picklers)⇒Boolean,⇒Any):Picklers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((Picklers)⇒Boolean):Picklers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):Picklers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):Picklers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#freshRunReq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="freshRunReq:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.interactive.FreshRunReq]"></a><a id="freshRunReq:CondPickler[FreshRunReq]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#freshRunReq:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.interactive.FreshRunReq]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freshRunReq</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="FreshRunReq.html" class="extype" name="scala.tools.nsc.interactive.FreshRunReq">FreshRunReq</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#interruptReq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="interruptReq:scala.tools.nsc.interactive.Pickler[scala.tools.nsc.util.InterruptReq]"></a><a id="interruptReq:Pickler[InterruptReq]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#interruptReq:scala.tools.nsc.interactive.Pickler[scala.tools.nsc.util.InterruptReq]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interruptReq</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="../util/InterruptReq.html" class="extype" name="scala.tools.nsc.util.InterruptReq">InterruptReq</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#namePickler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="namePickler:scala.tools.nsc.interactive.Pickler[Picklers.this.Name]"></a><a id="namePickler:Pickler[Global.Name]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#namePickler:scala.tools.nsc.interactive.Pickler[Picklers.this.Name]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">namePickler</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="Global.html#NameextendsNames.this.NameApiwithCharSequence" class="extmbr" name="scala.tools.nsc.interactive.Global.Name">Global.Name</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#noPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="noPosition:scala.tools.nsc.interactive.CondPickler[reflect.internal.util.NoPosition.type]"></a><a id="noPosition:CondPickler[NoPosition.type]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#noPosition:scala.tools.nsc.interactive.CondPickler[reflect.internal.util.NoPosition.type]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noPosition</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<span class="extype" name="scala.reflect.internal.util.NoPosition">NoPosition</span>.type]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#offsetPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="offsetPosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]"></a><a id="offsetPosition:CondPickler[Global.Position]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#offsetPosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">offsetPosition</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#patch" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="patch(f:scala.tools.nsc.io.AbstractFile,d:Picklers.this.Diff):Array[Char]"></a><a id="patch(AbstractFile,Global.Diff):Array[Char]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#patch(f:scala.tools.nsc.io.AbstractFile,d:Picklers.this.Diff):Array[Char]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">patch</span><span class="params">(<span name="f">f: <a href="../io/index.html#AbstractFile=scala.reflect.io.AbstractFile" class="extmbr" name="scala.tools.nsc.io.AbstractFile">AbstractFile</a></span>, <span name="d">d: <a href="Global.html#Diff=(Int,Int,String)" class="extmbr" name="scala.tools.nsc.interactive.Global.Diff">Global.Diff</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Char">Char</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#position" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="position:scala.tools.nsc.interactive.Pickler[Picklers.this.Position]"></a><a id="position:Pickler[Global.Position]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#position:scala.tools.nsc.interactive.Pickler[Picklers.this.Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">position</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#rangePosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rangePosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]"></a><a id="rangePosition:CondPickler[Global.Position]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#rangePosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rangePosition</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#reloadItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reloadItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.ReloadItem]"></a><a id="reloadItem:CondPickler[Global.ReloadItem]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#reloadItem:scala.tools.nsc.interactive.CondPickler[Picklers.this.ReloadItem]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reloadItem</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#ReloadItemextendsCompilerControl.this.WorkItemwithProductwithSerializable" class="extmbr" name="scala.tools.nsc.interactive.CompilerControl.ReloadItem">Global.ReloadItem</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#shutdownReq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="shutdownReq:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.interactive.ShutdownReq.type]"></a><a id="shutdownReq:CondPickler[ShutdownReq.type]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#shutdownReq:scala.tools.nsc.interactive.CondPickler[scala.tools.nsc.interactive.ShutdownReq.type]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shutdownReq</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="ShutdownReq$.html" class="extype" name="scala.tools.nsc.interactive.ShutdownReq">ShutdownReq</a>.type]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#sourceFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sourceFile:scala.tools.nsc.interactive.Pickler[scala.reflect.internal.util.SourceFile]"></a><a id="sourceFile:Pickler[SourceFile]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#sourceFile:scala.tools.nsc.interactive.Pickler[scala.reflect.internal.util.SourceFile]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sourceFile</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<span class="extype" name="scala.reflect.internal.util.SourceFile">SourceFile</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.interactive.Picklers#symPickler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="symPickler:scala.tools.nsc.interactive.Pickler[Picklers.this.Symbol]"></a><a id="symPickler:Pickler[Global.Symbol]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#symPickler:scala.tools.nsc.interactive.Pickler[Picklers.this.Symbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symPickler</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="Global.html#SymbolextendsSymbols.this.SymbolContextApiImplwithHasFlagswithSymbols.this.Annotatable[Symbols.this.Symbol]withSymbols.this.Attachable" class="extmbr" name="scala.tools.nsc.interactive.Global.Symbol">Global.Symbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#throwable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="throwable:scala.tools.nsc.interactive.Pickler[Throwable]"></a><a id="throwable:Pickler[Throwable]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#throwable:scala.tools.nsc.interactive.Pickler[Throwable]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">throwable</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="../../../index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#transparentPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transparentPosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]"></a><a id="transparentPosition:CondPickler[Global.Position]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#transparentPosition:scala.tools.nsc.interactive.CondPickler[Picklers.this.Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transparentPosition</span><span class="result">: <a href="CondPickler.html" class="extype" name="scala.tools.nsc.interactive.CondPickler">CondPickler</a>[<a href="Global.html#Position=scala.reflect.internal.util.Position" class="extmbr" name="scala.tools.nsc.interactive.Global.Position">Global.Position</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.interactive.Picklers#workEvent" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="workEvent:scala.tools.nsc.interactive.Pickler[Picklers.this.WorkEvent]"></a><a id="workEvent:Pickler[WorkEvent]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#workEvent:scala.tools.nsc.interactive.Pickler[Picklers.this.WorkEvent]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">workEvent</span><span class="result">: <a href="Pickler.html" class="extype" name="scala.tools.nsc.interactive.Pickler">Pickler</a>[<a href="Global$WorkEvent.html" class="extype" name="scala.tools.nsc.interactive.Global.WorkEvent">WorkEvent</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(Picklers,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/interactive/Picklers.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.interactive.Picklers">Picklers</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

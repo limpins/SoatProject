@@ -1,0 +1,635 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.ast.parser</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.ast.parser" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.ast.parser" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ast"></a><a id="ast:ast"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#ast" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">ast</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser" visbl="pub" class="indented5 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parser"></a><a id="parser:parser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/ast/index.html#parser" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parser</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc.ast">ast</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.xml" visbl="pub" class="indented6 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="xml"></a><a id="xml:xml"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#xml" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="xml/index.html"><span class="name">xml</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BracePair.html" title="A descriptor for a matching pair of braces."></a>
+                        <a href="BracePair.html" title="A descriptor for a matching pair of braces.">BracePair</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="BracePatch.html" title="A patch that postulates that a brace needs to be inserted or deleted at a given position."></a>
+                        <a href="BracePatch.html" title="A patch that postulates that a brace needs to be inserted or deleted at a given position.">BracePatch</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Change.html" title=""></a>
+                        <a href="Change.html" title="">Change</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="CommonTokens.html" title="Common code between Scala's Tokens and JavaTokens."></a>
+                        <a href="CommonTokens.html" title="Common code between Scala's Tokens and JavaTokens.">CommonTokens</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Deletion.html" title=""></a>
+                        <a href="Deletion.html" title="">Deletion</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Insertion.html" title=""></a>
+                        <a href="Insertion.html" title="">Insertion</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="MarkupParsers.html" title=""></a>
+                        <a href="MarkupParsers.html" title="">MarkupParsers</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Parsers.html" title="Performs the following context-free rewritings:"></a>
+                        <a href="Parsers.html" title="Performs the following context-free rewritings:">Parsers</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ParsersCommon.html" title="Historical note: JavaParsers started life as a direct copy of Parsers but at a time when that Parsers had been replaced by a different one."></a>
+                        <a href="ParsersCommon.html" title="Historical note: JavaParsers started life as a direct copy of Parsers but at a time when that Parsers had been replaced by a different one.">ParsersCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="Patch.html" title=""></a>
+                        <a href="Patch.html" title="">Patch</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="Scanners.html" title=""></a>
+                        <a href="Scanners.html" title="">Scanners</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScannersCommon.html" title="See Parsers.scala / ParsersCommon for some explanation of ScannersCommon."></a>
+                        <a href="ScannersCommon.html" title="See Parsers.scala / ParsersCommon for some explanation of ScannersCommon.">ScannersCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SymbolicXMLBuilder.html" title="This class builds instance of Tree that represent XML."></a>
+                        <a href="SymbolicXMLBuilder.html" title="This class builds instance of Tree that represent XML.">SymbolicXMLBuilder</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="SyntaxAnalyzer.html" title="An nsc sub-component."></a>
+                        <a href="SyntaxAnalyzer.html" title="An nsc sub-component.">SyntaxAnalyzer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="Tokens$.html" title=""></a>
+                        <a href="Tokens$.html" title="">Tokens</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeBuilder.html" title="Methods for building trees, used in the parser."></a>
+                        <a href="TreeBuilder.html" title="Methods for building trees, used in the parser.">TreeBuilder</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="scala">scala</a>.<a href="../../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="../index.html" class="extype" name="scala.tools.nsc.ast">ast</a></p>
+        <h1>parser<span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parser</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.ast.parser.BracePair" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BracePairextendsProductwithSerializable"></a><a id="BracePair:BracePair"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#BracePairextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A descriptor for a matching pair of braces." href="BracePair.html"><span class="name">BracePair</span></a><span class="params">(<span name="loff">loff: <span class="extype" name="scala.Int">Int</span></span>, <span name="lindent">lindent: <span class="extype" name="scala.Int">Int</span></span>, <span name="roff">roff: <span class="extype" name="scala.Int">Int</span></span>, <span name="rindent">rindent: <span class="extype" name="scala.Int">Int</span></span>, <span name="nested">nested: <a href="../../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="BracePair.html" class="extype" name="scala.tools.nsc.ast.parser.BracePair">BracePair</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A descriptor for a matching pair of braces.</p><div class="fullcomment"><div class="comment cmt"><p>A descriptor for a matching pair of braces.</p></div><dl class="paramcmts block"><dt class="param">loff</dt><dd class="cmt"><p>The offset of the opening brace (-1 means missing)</p></dd><dt class="param">lindent</dt><dd class="cmt"><p>The indentation depth of the line of the opening brace (-1 means missing)</p></dd><dt class="param">roff</dt><dd class="cmt"><p>The offset of the closing brace (-1 means missing)</p></dd><dt class="param">rindent</dt><dd class="cmt"><p>The indentation depth of the line of the closing brace (-1 means missing)</p></dd><dt class="param">nested</dt><dd class="cmt"><p>The brace pairs nested in this one</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.BracePatch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BracePatchextendsPatchwithProductwithSerializable"></a><a id="BracePatch:BracePatch"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#BracePatchextendsPatchwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="A patch that postulates that a brace needs to be inserted or deleted at a given position." href="BracePatch.html"><span class="name">BracePatch</span></a><span class="params">(<span name="off">off: <span class="extype" name="scala.Int">Int</span></span>, <span name="inserted">inserted: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="Patch.html" class="extype" name="scala.tools.nsc.ast.parser.Patch">Patch</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A patch that postulates that a brace needs to be inserted or deleted at a given position.</p><div class="fullcomment"><div class="comment cmt"><p>A patch that postulates that a brace needs to be inserted or deleted at a given position.</p></div><dl class="paramcmts block"><dt class="param">off</dt><dd class="cmt"><p>The offset where the brace needs to be inserted or deleted</p></dd><dt class="param">inserted</dt><dd class="cmt"><p>If true, brace needs to be inserted, otherwise brace needs to be deleted.</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.Change" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ChangeextendsAnyRef"></a><a id="Change:Change"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#ChangeextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Change.html"><span class="name">Change</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.CommonTokens" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CommonTokensextendsAnyRef"></a><a id="CommonTokens:CommonTokens"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#CommonTokensextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Common code between Scala's Tokens and JavaTokens." href="CommonTokens.html"><span class="name">CommonTokens</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Common code between Scala's Tokens and JavaTokens.</p>
+    </li><li name="scala.tools.nsc.ast.parser.Deletion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeletionextendsChangewithProductwithSerializable"></a><a id="Deletion:Deletion"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#DeletionextendsChangewithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Deletion.html"><span class="name">Deletion</span></a><span class="params">(<span name="nchars">nchars: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Change.html" class="extype" name="scala.tools.nsc.ast.parser.Change">Change</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.Insertion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InsertionextendsChangewithProductwithSerializable"></a><a id="Insertion:Insertion"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#InsertionextendsChangewithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Insertion.html"><span class="name">Insertion</span></a><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Change.html" class="extype" name="scala.tools.nsc.ast.parser.Change">Change</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.MarkupParsers" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MarkupParsersextendsAnyRef"></a><a id="MarkupParsers:MarkupParsers"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#MarkupParsersextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MarkupParsers.html"><span class="name">MarkupParsers</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.Parsers" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ParsersextendsScannerswithMarkupParserswithParsersCommon"></a><a id="Parsers:Parsers"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#ParsersextendsScannerswithMarkupParserswithParsersCommon" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Performs the following context-free rewritings:" href="Parsers.html"><span class="name">Parsers</span></a><span class="result"> extends <a href="Scanners.html" class="extype" name="scala.tools.nsc.ast.parser.Scanners">Scanners</a> with <a href="MarkupParsers.html" class="extype" name="scala.tools.nsc.ast.parser.MarkupParsers">MarkupParsers</a> with <a href="ParsersCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon">ParsersCommon</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Performs the following context-free rewritings:</p><div class="fullcomment"><div class="comment cmt"><p>Performs the following context-free rewritings:</p><p> -
+     Places all pattern variables in Bind nodes. In a pattern, for
+     identifiers <code>x</code>:
+<pre>
+                x  => x @ _
+              x:T  => x @ (_ : T)
+</pre></p><ul><li>Removes pattern definitions (PatDef's) as follows:
+     If pattern is a simple (typed) identifier:
+<pre>
+       <b>val</b> x = e     ==>  <b>val</b> x = e
+       <b>val</b> x: T = e  ==>  <b>val</b> x: T = e
+</pre></li></ul><p>     if there are no variables in pattern
+<pre>
+       <b>val</b> p = e  ==>  e match (case p => ())
+</pre></p><p>     if there is exactly one variable in pattern
+<pre>
+       <b>val</b> x_1 = e <b>match</b> (case p => (x_1))
+</pre></p><p>     if there is more than one variable in pattern
+<pre>
+       <b>val</b> p = e  ==>  <b>private synthetic val</b> t$ = e <b>match</b> (case p => (x_1, ..., x_N))
+                       <b>val</b> x_1 = t$._1
+                       ...
+                       <b>val</b> x_N = t$._N
+</pre></p><p> -
+      Removes function types as follows:
+<pre>
+       (argtpes) => restpe   ==>   scala.Function_n[argtpes, restpe]
+</pre></p><p> -
+     Wraps naked case definitions in a match as follows:
+<pre>
+       { cases }   ==>   (x => x.match {cases})<span style="font-family:normal;">, except when already argument to match</span>
+</pre></p></div></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ParsersCommonextendsScannersCommon"></a><a id="ParsersCommon:ParsersCommon"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#ParsersCommonextendsScannersCommon" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Historical note: JavaParsers started life as a direct copy of Parsers but at a time when that Parsers had been replaced by a different one." href="ParsersCommon.html"><span class="name">ParsersCommon</span></a><span class="result"> extends <a href="ScannersCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon">ScannersCommon</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Historical note: JavaParsers started life as a direct copy of Parsers
+ but at a time when that Parsers had been replaced by a different one.</p><div class="fullcomment"><div class="comment cmt"><p>Historical note: JavaParsers started life as a direct copy of Parsers
+ but at a time when that Parsers had been replaced by a different one.
+ Later it was dropped and the original Parsers reinstated, leaving us with
+ massive duplication between Parsers and JavaParsers.</p><p> This trait and the similar one for Scanners/JavaScanners represents
+ the beginnings of a campaign against this latest incursion by Cutty
+ McPastington and his army of very similar soldiers.
+</p></div></div>
+    </li><li name="scala.tools.nsc.ast.parser.Patch" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PatchextendsAnyRef"></a><a id="Patch:Patch"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#PatchextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Patch.html"><span class="name">Patch</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.Scanners" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScannersextendsScannersCommon"></a><a id="Scanners:Scanners"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#ScannersextendsScannersCommon" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Scanners.html"><span class="name">Scanners</span></a><span class="result"> extends <a href="ScannersCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon">ScannersCommon</a></span>
+      </span>
+      
+      
+    </li><li name="scala.tools.nsc.ast.parser.ScannersCommon" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScannersCommonextendsAnyRef"></a><a id="ScannersCommon:ScannersCommon"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#ScannersCommonextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="See Parsers.scala / ParsersCommon for some explanation of ScannersCommon." href="ScannersCommon.html"><span class="name">ScannersCommon</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">See Parsers.scala / ParsersCommon for some explanation of ScannersCommon.</p>
+    </li><li name="scala.tools.nsc.ast.parser.SymbolicXMLBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SymbolicXMLBuilderextendsAnyRef"></a><a id="SymbolicXMLBuilder:SymbolicXMLBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#SymbolicXMLBuilderextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This class builds instance of Tree that represent XML." href="SymbolicXMLBuilder.html"><span class="name">SymbolicXMLBuilder</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class builds instance of <code>Tree</code> that represent XML.</p><div class="fullcomment"><div class="comment cmt"><p>This class builds instance of <code>Tree</code> that represent XML.</p><p> Note from martin: This needs to have its position info reworked. I don't
+ understand exactly what's done here. To make validation pass, I set many
+ positions to be transparent. Not sure this is a good idea for navigating
+ XML trees in the IDE but it's the best I can do right now. If someone
+ who understands this part better wants to give it a shot, please do!
+</p></div><dl class="attributes block"> <dt>Version</dt><dd><p>1.0</p></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.SyntaxAnalyzer" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SyntaxAnalyzerextendsSubComponentwithParserswithMarkupParserswithScannerswithJavaParserswithJavaScanners"></a><a id="SyntaxAnalyzer:SyntaxAnalyzer"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#SyntaxAnalyzerextendsSubComponentwithParserswithMarkupParserswithScannerswithJavaParserswithJavaScanners" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An nsc sub-component." href="SyntaxAnalyzer.html"><span class="name">SyntaxAnalyzer</span></a><span class="result"> extends <a href="../../SubComponent.html" class="extype" name="scala.tools.nsc.SubComponent">SubComponent</a> with <a href="Parsers.html" class="extype" name="scala.tools.nsc.ast.parser.Parsers">Parsers</a> with <a href="MarkupParsers.html" class="extype" name="scala.tools.nsc.ast.parser.MarkupParsers">MarkupParsers</a> with <a href="Scanners.html" class="extype" name="scala.tools.nsc.ast.parser.Scanners">Scanners</a> with <a href="../../javac/JavaParsers.html" class="extype" name="scala.tools.nsc.javac.JavaParsers">JavaParsers</a> with <a href="../../javac/JavaScanners.html" class="extype" name="scala.tools.nsc.javac.JavaScanners">JavaScanners</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">An nsc sub-component.</p>
+    </li><li name="scala.tools.nsc.ast.parser.TreeBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="TreeBuilderextendsAnyRef"></a><a id="TreeBuilder:TreeBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#TreeBuilderextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Methods for building trees, used in the parser." href="TreeBuilder.html"><span class="name">TreeBuilder</span></a><span class="result"> extends <a href="../../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Methods for building trees, used in the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Methods for building trees, used in the parser.  All the trees
+ returned by this class must be untyped.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.tools.nsc.ast.parser.Tokens" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tokens"></a><a id="Tokens:Tokens"></a>
+      <span class="permalink">
+      <a href="../../../../../scala/tools/nsc/ast/parser/index.html#Tokens" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Tokens$.html"><span class="name">Tokens</span></a><span class="result"> extends <a href="CommonTokens.html" class="extype" name="scala.tools.nsc.ast.parser.CommonTokens">CommonTokens</a></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

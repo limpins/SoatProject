@@ -1,0 +1,903 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Standard Library 2.12.8 - scala.collection.parallel.immutable</title>
+          <meta name="description" content="Scala Standard Library 2.12.8 - scala.collection.parallel.immutable" />
+          <meta name="keywords" content="Scala Standard Library 2.12.8 scala.collection.parallel.immutable" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This is the documentation for the Scala standard library." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This is the documentation for the Scala standard library.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for the Scala standard library.</p><h4> Package structure </h4><p>The <a href="../../../index.html" class="extype" name="scala">scala</a> package contains core types like <a href="../../../Int.html" class="extype" name="scala.Int"><code>Int</code></a>, <a href="../../../Float.html" class="extype" name="scala.Float"><code>Float</code></a>, <a href="../../../Array.html" class="extype" name="scala.Array"><code>Array</code></a>
+or <a href="../../../Option.html" class="extype" name="scala.Option"><code>Option</code></a> which are accessible in all Scala compilation units without explicit qualification or
+imports.</p><p>Notable packages include:</p><ul><li><a href="../../index.html" class="extype" name="scala.collection"><code>scala.collection</code></a> and its sub-packages contain Scala's collections framework<ul><li><a href="../../immutable/index.html" class="extype" name="scala.collection.immutable"><code>scala.collection.immutable</code></a> - Immutable, sequential data-structures such as
+      <a href="../../immutable/Vector.html" class="extype" name="scala.collection.immutable.Vector"><code>Vector</code></a>, <a href="../../immutable/List.html" class="extype" name="scala.collection.immutable.List"><code>List</code></a>,
+      <a href="../../immutable/Range.html" class="extype" name="scala.collection.immutable.Range"><code>Range</code></a>, <a href="../../immutable/HashMap.html" class="extype" name="scala.collection.immutable.HashMap"><code>HashMap</code></a> or
+      <a href="../../immutable/HashSet.html" class="extype" name="scala.collection.immutable.HashSet"><code>HashSet</code></a></li><li><a href="../../mutable/index.html" class="extype" name="scala.collection.mutable"><code>scala.collection.mutable</code></a> - Mutable, sequential data-structures such as
+      <a href="../../mutable/ArrayBuffer.html" class="extype" name="scala.collection.mutable.ArrayBuffer"><code>ArrayBuffer</code></a>,
+      <a href="../../mutable/StringBuilder.html" class="extype" name="scala.collection.mutable.StringBuilder"><code>StringBuilder</code></a>,
+      <a href="../../mutable/HashMap.html" class="extype" name="scala.collection.mutable.HashMap"><code>HashMap</code></a> or <a href="../../mutable/HashSet.html" class="extype" name="scala.collection.mutable.HashSet"><code>HashSet</code></a></li><li><a href="../../concurrent/index.html" class="extype" name="scala.collection.concurrent"><code>scala.collection.concurrent</code></a> - Mutable, concurrent data-structures such as
+      <a href="../../concurrent/TrieMap.html" class="extype" name="scala.collection.concurrent.TrieMap"><code>TrieMap</code></a></li><li><a href="" class="extype" name="scala.collection.parallel.immutable"><code>scala.collection.parallel.immutable</code></a> - Immutable, parallel
+      data-structures such as <a href="ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector"><code>ParVector</code></a>,
+      <a href="ParRange.html" class="extype" name="scala.collection.parallel.immutable.ParRange"><code>ParRange</code></a>,
+      <a href="ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap"><code>ParHashMap</code></a> or
+      <a href="ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet"><code>ParHashSet</code></a></li><li><a href="../mutable/index.html" class="extype" name="scala.collection.parallel.mutable"><code>scala.collection.parallel.mutable</code></a> - Mutable, parallel
+      data-structures such as <a href="../mutable/ParArray.html" class="extype" name="scala.collection.parallel.mutable.ParArray"><code>ParArray</code></a>,
+      <a href="../mutable/ParHashMap.html" class="extype" name="scala.collection.parallel.mutable.ParHashMap"><code>ParHashMap</code></a>,
+      <a href="../mutable/ParTrieMap.html" class="extype" name="scala.collection.parallel.mutable.ParTrieMap"><code>ParTrieMap</code></a> or
+      <a href="../mutable/ParHashSet.html" class="extype" name="scala.collection.parallel.mutable.ParHashSet"><code>ParHashSet</code></a></li></ul></li><li><a href="../../../concurrent/index.html" class="extype" name="scala.concurrent"><code>scala.concurrent</code></a> - Primitives for concurrent programming such as
+    <a href="../../../concurrent/Future.html" class="extype" name="scala.concurrent.Future"><code>Futures</code></a> and <a href="../../../concurrent/Promise.html" class="extype" name="scala.concurrent.Promise"><code>Promises</code></a></li><li><a href="../../../io/index.html" class="extype" name="scala.io"><code>scala.io</code></a>     - Input and output operations</li><li><a href="../../../math/index.html" class="extype" name="scala.math"><code>scala.math</code></a>   - Basic math functions and additional numeric types like
+    <a href="../../../math/BigInt.html" class="extype" name="scala.math.BigInt"><code>BigInt</code></a> and <a href="../../../math/BigDecimal.html" class="extype" name="scala.math.BigDecimal"><code>BigDecimal</code></a></li><li><a href="../../../sys/index.html" class="extype" name="scala.sys"><code>scala.sys</code></a>    - Interaction with other processes and the operating system</li><li><a href="../../../util/matching/index.html" class="extype" name="scala.util.matching"><code>scala.util.matching</code></a> - <a href="../../../util/matching/Regex.html" class="extype" name="scala.util.matching.Regex">Regular expressions</a></li></ul><p>Other packages exist.  See the complete list on the right.</p><p>Additional parts of the standard library are shipped as separate libraries. These include:</p><ul><li><a href="../../../reflect/index.html" class="extype" name="scala.reflect"><code>scala.reflect</code></a>   - Scala's reflection API (scala-reflect.jar)</li><li><span class="extype" name="scala.xml"><code>scala.xml</code></span>    - XML parsing, manipulation, and serialization (scala-xml.jar)</li><li><span class="extype" name="scala.swing"><code>scala.swing</code></span>  - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)</li><li><span class="extype" name="scala.util.parsing"><code>scala.util.parsing</code></span> - Parser combinators (scala-parser-combinators.jar)</li></ul><h4> Automatic imports </h4><p>Identifiers in the scala package and the <a href="../../../Predef$.html" class="extype" name="scala.Predef"><code>scala.Predef</code></a> object are always in scope by default.</p><p>Some of these identifiers are type aliases provided as shortcuts to commonly used classes.  For example, <code>List</code> is an alias for
+<a href="../../immutable/List.html" class="extype" name="scala.collection.immutable.List"><code>scala.collection.immutable.List</code></a>.</p><p>Other aliases refer to classes provided by the underlying platform.  For example, on the JVM, <code>String</code> is an alias for <code>java.lang.String</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Core Scala types." href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Core Scala types.</p><div class="fullcomment"><div class="comment cmt"><p>Core Scala types. They are always available without an explicit import.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.collection" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="collection"></a><a id="collection:collection"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#collection" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Contains the base traits and objects needed to use and extend Scala's collection library." href="../../index.html"><span class="name">collection</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Contains the base traits and objects needed to use and extend Scala's collection library.</p><div class="fullcomment"><div class="comment cmt"><p>Contains the base traits and objects needed to use and extend Scala's collection library.</p><h4> Guide </h4><p>A detailed guide for using the collections library is available
+at <a href="http://docs.scala-lang.org/overviews/collections/introduction.html" target="_blank">http://docs.scala-lang.org/overviews/collections/introduction.html</a>.
+Developers looking to extend the collections library can find a description
+of its architecture at
+<a href="http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html" target="_blank">http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html</a>.</p><h4> Using Collections </h4><p>It is convenient to treat all collections as either
+a <a href="../../Traversable.html" class="extype" name="scala.collection.Traversable">scala.collection.Traversable</a> or <a href="../../Iterable.html" class="extype" name="scala.collection.Iterable">scala.collection.Iterable</a>, as
+these traits define the vast majority of operations
+on a collection.</p><p>Collections can, of course, be treated as specifically as needed, and
+the library is designed to ensure that
+the methods that transform collections will return a collection of the same
+type: </p><pre>scala&gt; <span class="kw">val</span> array = <span class="std">Array</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+array: <span class="std">Array</span>[<span class="std">Int</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; array map { _.toString }
+res0: <span class="std">Array</span>[<span class="std">String</span>] = <span class="std">Array</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; <span class="kw">val</span> list = <span class="std">List</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>)
+list: <span class="std">List</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+
+scala&gt; list map { _.toString }
+res1: <span class="std">List</span>[<span class="std">String</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)</pre><h4> Creating Collections </h4><p>The most common way to create a collection is to use its companion object as
+a factory. The three most commonly used collections are
+<a href="../../Seq.html" class="extype" name="scala.collection.Seq">scala.collection.Seq</a>, <a href="../../immutable/Set.html" class="extype" name="scala.collection.immutable.Set">scala.collection.immutable.Set</a>, and
+<a href="../../immutable/Map.html" class="extype" name="scala.collection.immutable.Map">scala.collection.immutable.Map</a>.
+They can be used directly as shown below since their companion objects are
+all available as type aliases in either the <a href="../../../index.html" class="extype" name="scala">scala</a> package or in
+<code>scala.Predef</code>. New collections are created like this:</p><pre>scala&gt; <span class="kw">val</span> seq = <span class="std">Seq</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+seq: <span class="std">Seq</span>[<span class="std">Int</span>] = <span class="std">List</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">1</span>)
+
+scala&gt; <span class="kw">val</span> set = <span class="std">Set</span>(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>,<span class="num">1</span>)
+set: scala.collection.immutable.<span class="std">Set</span>[<span class="std">Int</span>] = <span class="std">Set</span>(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>)
+
+scala&gt; <span class="kw">val</span> map = <span class="std">Map</span>(<span class="num">1</span> -&gt; <span class="lit">"one"</span>, <span class="num">2</span> -&gt; <span class="lit">"two"</span>, <span class="num">3</span> -&gt; <span class="lit">"three"</span>, <span class="num">2</span> -&gt; <span class="lit">"too"</span>)
+map: scala.collection.immutable.<span class="std">Map</span>[<span class="std">Int</span>,<span class="std">String</span>] = <span class="std">Map</span>(<span class="num">1</span> -&gt; one, <span class="num">2</span> -&gt; too, <span class="num">3</span> -&gt; three)</pre><p>It is also typical to prefer the <a href="../../immutable/index.html" class="extype" name="scala.collection.immutable">scala.collection.immutable</a> collections
+over those in <a href="../../mutable/index.html" class="extype" name="scala.collection.mutable">scala.collection.mutable</a>; the types aliased in
+the <code>scala.Predef</code> object are the immutable versions.</p><p>Also note that the collections library was carefully designed to include several implementations of
+each of the three basic collection types. These implementations have specific performance
+characteristics which are described
+in <a href="http://docs.scala-lang.org/overviews/collections/performance-characteristics.html" target="_blank">the guide</a>.</p><p>The concrete parallel collections also have specific performance characteristics which are
+described in <a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#performance-characteristics" target="_blank">the parallel collections guide</a></p><h5> Converting to and from Java Collections </h5><p>The <a href="../../JavaConverters$.html" class="extype" name="scala.collection.JavaConverters">scala.collection.JavaConverters</a> object provides a collection
+of decorators that allow converting between Scala and Java collections using <code>asScala</code>
+and <code>asJava</code> methods.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.collection.parallel" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parallel"></a><a id="parallel:parallel"></a>
+      <span class="permalink">
+      <a href="../../scala/collection/index.html#parallel" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Package object for parallel collections." href="../index.html"><span class="name">parallel</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Package object for parallel collections.</p><div class="fullcomment"><div class="comment cmt"><p>Package object for parallel collections.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.collection">collection</a></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable" visbl="pub" class="indented4 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="immutable"></a><a id="immutable:immutable"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/parallel/index.html#immutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">immutable</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection.parallel">parallel</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="object" href="HashSetCombiner$.html" title=""></a>
+                        <a href="HashSetCombiner$.html" title="">HashSetCombiner</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParHashMap$.html" title="This object provides a set of operations needed to create immutable.ParHashMap values."></a>
+                        <a class="class" href="ParHashMap.html" title="Immutable parallel hash map, based on hash tries."></a>
+                        <a href="ParHashMap.html" title="Immutable parallel hash map, based on hash tries.">ParHashMap</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParHashSet$.html" title="This object provides a set of operations needed to create immutable.ParHashSet values."></a>
+                        <a class="class" href="ParHashSet.html" title="Immutable parallel hash set, based on hash tries."></a>
+                        <a href="ParHashSet.html" title="Immutable parallel hash set, based on hash tries.">ParHashSet</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParIterable$.html" title="This object provides a set of operations to create ParIterable values."></a>
+                        <a class="trait" href="ParIterable.html" title="A template trait for immutable parallel iterable collections."></a>
+                        <a href="ParIterable.html" title="A template trait for immutable parallel iterable collections.">ParIterable</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParMap$.html" title=""></a>
+                        <a class="trait" href="ParMap.html" title="A template trait for immutable parallel maps."></a>
+                        <a href="ParMap.html" title="A template trait for immutable parallel maps.">ParMap</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParRange$.html" title=""></a>
+                        <a class="class" href="ParRange.html" title="Parallel ranges."></a>
+                        <a href="ParRange.html" title="Parallel ranges.">ParRange</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParSeq$.html" title="This object provides a set of operations to create mutable.ParSeq values."></a>
+                        <a class="trait" href="ParSeq.html" title="An immutable variant of ParSeq."></a>
+                        <a href="ParSeq.html" title="An immutable variant of ParSeq.">ParSeq</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParSet$.html" title="This object provides a set of operations needed to create mutable.ParSet values."></a>
+                        <a class="trait" href="ParSet.html" title="An immutable variant of ParSet."></a>
+                        <a href="ParSet.html" title="An immutable variant of ParSet.">ParSet</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="ParVector$.html" title="This object provides a set of operations to create immutable.ParVector values."></a>
+                        <a class="class" href="ParVector.html" title="Immutable parallel vectors, based on vectors."></a>
+                        <a href="ParVector.html" title="Immutable parallel vectors, based on vectors.">ParVector</a>
+                      </li><li name="scala.collection.parallel.mutable" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mutable"></a><a id="mutable:mutable"></a>
+      <span class="permalink">
+      <a href="../../../scala/collection/parallel/index.html#mutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../mutable/index.html"><span class="name">mutable</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.collection.parallel">parallel</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.collection">collection</a>.<a href="../index.html" class="extype" name="scala.collection.parallel">parallel</a></p>
+        <h1>immutable<span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">immutable</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/library/scala/collection/parallel/immutable/package.scala#L1" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../../Any.html" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.collection.parallel.immutable"><span>immutable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.collection.parallel.immutable.ParHashMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ParHashMap[K,+V]extendsParMap[K,V]withGenericParMapTemplate[K,V,scala.collection.parallel.immutable.ParHashMap]withParMapLike[K,V,scala.collection.parallel.immutable.ParHashMap[K,V],scala.collection.immutable.HashMap[K,V]]withSerializable"></a><a id="ParHashMap[K,+V]:ParHashMap[K,V]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParHashMap[K,+V]extendsParMap[K,V]withGenericParMapTemplate[K,V,scala.collection.parallel.immutable.ParHashMap]withParMapLike[K,V,scala.collection.parallel.immutable.ParHashMap[K,V],scala.collection.immutable.HashMap[K,V]]withSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Immutable parallel hash map, based on hash tries." href="ParHashMap.html"><span class="name">ParHashMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">+V</span>]</span><span class="result"> extends <a href="ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParHashMap.V">V</span>] with <a href="../../generic/GenericParMapTemplate.html" class="extype" name="scala.collection.generic.GenericParMapTemplate">GenericParMapTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParHashMap.V">V</span>, <a href="ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap">ParHashMap</a>] with <a href="../ParMapLike.html" class="extype" name="scala.collection.parallel.ParMapLike">ParMapLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParHashMap.V">V</span>, <a href="ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap">ParHashMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParHashMap.V">V</span>], <a href="../../immutable/HashMap.html" class="extype" name="scala.collection.immutable.HashMap">HashMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParHashMap.V">V</span>]] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Immutable parallel hash map, based on hash tries.</p><div class="fullcomment"><div class="comment cmt"><p>Immutable parallel hash map, based on hash tries.</p><p> This is a base trait for Scala parallel collections. It defines behaviour
+ common to all parallel collections. Concrete parallel collections should
+ inherit this trait and <code>ParIterable</code> if they want to define specific combiner
+ factories.</p><p> Parallel operations are implemented with divide and conquer style algorithms that
+ parallelize well. The basic idea is to split the collection into smaller parts until
+ they are small enough to be operated on sequentially.</p><p> All of the parallel operations are implemented as tasks within this trait. Tasks rely
+ on the concept of splitters, which extend iterators. Every parallel collection defines:</p><pre><span class="kw">def</span> splitter: IterableSplitter[T]</pre><p> which returns an instance of <code>IterableSplitter[T]</code>, which is a subtype of <code>Splitter[T]</code>.
+ Splitters have a method <code>remaining</code> to check the remaining number of elements,
+ and method <code>split</code> which is defined by splitters. Method <code>split</code> divides the splitters
+ iterate over into disjunct subsets:</p><pre><span class="kw">def</span> split: <span class="std">Seq</span>[Splitter]</pre><p> which splits the splitter into a sequence of disjunct subsplitters. This is typically a
+ very fast operation which simply creates wrappers around the receiver collection.
+ This can be repeated recursively.</p><p> Tasks are scheduled for execution through a
+ <a href="../TaskSupport.html" class="extype" name="scala.collection.parallel.TaskSupport">scala.collection.parallel.TaskSupport</a> object, which can be changed
+ through the <code>tasksupport</code> setter of the collection.</p><p> Method <code>newCombiner</code> produces a new combiner. Combiners are an extension of builders.
+ They provide a method <code>combine</code> which combines two combiners and returns a combiner
+ containing elements of both combiners.
+ This method can be implemented by aggressively copying all the elements into the new combiner
+ or by lazily binding their results. It is recommended to avoid copying all of
+ the elements for performance reasons, although that cost might be negligible depending on
+ the use case. Standard parallel collection combiners avoid copying when merging results,
+ relying either on a two-step lazy construction or specific data-structure properties.</p><p> Methods:</p><pre><span class="kw">def</span> seq: Sequential
+<span class="kw">def</span> par: Repr</pre><p> produce the sequential or parallel implementation of the collection, respectively.
+ Method <code>par</code> just returns a reference to this parallel collection.
+ Method <code>seq</code> is efficient - it will not copy the elements. Instead,
+ it will create a sequential version of the collection using the same underlying data structure.
+ Note that this is not the case for sequential collections in general - they may copy the elements
+ and produce a different underlying data structure.</p><p> The combination of methods <code>toMap</code>, <code>toSeq</code> or <code>toSet</code> along with <code>par</code> and <code>seq</code> is a flexible
+ way to change between different collection types.</p><p> Since this trait extends the <code>GenIterable</code> trait, methods like <code>size</code> must also
+ be implemented in concrete collections, while <code>iterator</code> forwards to <code>splitter</code> by
+ default.</p><p> Each parallel collection is bound to a specific fork/join pool, on which dormant worker
+ threads are kept. The fork/join pool contains other information such as the parallelism
+ level, that is, the number of processors used. When a collection is created, it is assigned the
+ default fork/join pool found in the <code>scala.parallel</code> package object.</p><p> Parallel collections are not necessarily ordered in terms of the <code>foreach</code>
+ operation (see <code>Traversable</code>). Parallel sequences have a well defined order for iterators - creating
+ an iterator and traversing the elements linearly will always yield the same order.
+ However, bulk operations such as <code>foreach</code>, <code>map</code> or <code>filter</code> always occur in undefined orders for all
+ parallel collections.</p><p> Existing parallel collection implementations provide strict parallel iterators. Strict parallel iterators are aware
+ of the number of elements they have yet to traverse. It's also possible to provide non-strict parallel iterators,
+ which do not know the number of elements remaining. To do this, the new collection implementation must override
+ <code>isStrictSplitterCollection</code> to <code>false</code>. This will make some operations unavailable.</p><p> To create a new parallel collection, extend the <code>ParIterable</code> trait, and implement <code>size</code>, <code>splitter</code>,
+ <code>newCombiner</code> and <code>seq</code>. Having an implicit combiner factory requires extending this trait in addition, as
+ well as providing a companion object, as with regular collections.</p><p> Method <code>size</code> is implemented as a constant time operation for parallel collections, and parallel collection
+ operations rely on this assumption.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>the key type of the map</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>the value type of the map</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>2.9</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#parallel-hash-tries" target="_blank">Scala's Parallel Collections Library overview</a>
+ section on Parallel Hash Tries for more information.</p></span></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable.ParHashSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ParHashSet[T]extendsParSet[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParHashSet]withParSetLike[T,scala.collection.parallel.immutable.ParHashSet[T],scala.collection.immutable.HashSet[T]]withSerializable"></a><a id="ParHashSet[T]:ParHashSet[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParHashSet[T]extendsParSet[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParHashSet]withParSetLike[T,scala.collection.parallel.immutable.ParHashSet[T],scala.collection.immutable.HashSet[T]]withSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Immutable parallel hash set, based on hash tries." href="ParHashSet.html"><span class="name">ParHashSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashSet.T">T</span>] with <a href="../../generic/GenericParTemplate.html" class="extype" name="scala.collection.generic.GenericParTemplate">GenericParTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashSet.T">T</span>, <a href="ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>] with <a href="../ParSetLike.html" class="extype" name="scala.collection.parallel.ParSetLike">ParSetLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashSet.T">T</span>, <a href="ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashSet.T">T</span>], <a href="../../immutable/HashSet.html" class="extype" name="scala.collection.immutable.HashSet">HashSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParHashSet.T">T</span>]] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Immutable parallel hash set, based on hash tries.</p><div class="fullcomment"><div class="comment cmt"><p>Immutable parallel hash set, based on hash tries.</p><p> This is a base trait for Scala parallel collections. It defines behaviour
+ common to all parallel collections. Concrete parallel collections should
+ inherit this trait and <code>ParIterable</code> if they want to define specific combiner
+ factories.</p><p> Parallel operations are implemented with divide and conquer style algorithms that
+ parallelize well. The basic idea is to split the collection into smaller parts until
+ they are small enough to be operated on sequentially.</p><p> All of the parallel operations are implemented as tasks within this trait. Tasks rely
+ on the concept of splitters, which extend iterators. Every parallel collection defines:</p><pre><span class="kw">def</span> splitter: IterableSplitter[T]</pre><p> which returns an instance of <code>IterableSplitter[T]</code>, which is a subtype of <code>Splitter[T]</code>.
+ Splitters have a method <code>remaining</code> to check the remaining number of elements,
+ and method <code>split</code> which is defined by splitters. Method <code>split</code> divides the splitters
+ iterate over into disjunct subsets:</p><pre><span class="kw">def</span> split: <span class="std">Seq</span>[Splitter]</pre><p> which splits the splitter into a sequence of disjunct subsplitters. This is typically a
+ very fast operation which simply creates wrappers around the receiver collection.
+ This can be repeated recursively.</p><p> Tasks are scheduled for execution through a
+ <a href="../TaskSupport.html" class="extype" name="scala.collection.parallel.TaskSupport">scala.collection.parallel.TaskSupport</a> object, which can be changed
+ through the <code>tasksupport</code> setter of the collection.</p><p> Method <code>newCombiner</code> produces a new combiner. Combiners are an extension of builders.
+ They provide a method <code>combine</code> which combines two combiners and returns a combiner
+ containing elements of both combiners.
+ This method can be implemented by aggressively copying all the elements into the new combiner
+ or by lazily binding their results. It is recommended to avoid copying all of
+ the elements for performance reasons, although that cost might be negligible depending on
+ the use case. Standard parallel collection combiners avoid copying when merging results,
+ relying either on a two-step lazy construction or specific data-structure properties.</p><p> Methods:</p><pre><span class="kw">def</span> seq: Sequential
+<span class="kw">def</span> par: Repr</pre><p> produce the sequential or parallel implementation of the collection, respectively.
+ Method <code>par</code> just returns a reference to this parallel collection.
+ Method <code>seq</code> is efficient - it will not copy the elements. Instead,
+ it will create a sequential version of the collection using the same underlying data structure.
+ Note that this is not the case for sequential collections in general - they may copy the elements
+ and produce a different underlying data structure.</p><p> The combination of methods <code>toMap</code>, <code>toSeq</code> or <code>toSet</code> along with <code>par</code> and <code>seq</code> is a flexible
+ way to change between different collection types.</p><p> Since this trait extends the <code>GenIterable</code> trait, methods like <code>size</code> must also
+ be implemented in concrete collections, while <code>iterator</code> forwards to <code>splitter</code> by
+ default.</p><p> Each parallel collection is bound to a specific fork/join pool, on which dormant worker
+ threads are kept. The fork/join pool contains other information such as the parallelism
+ level, that is, the number of processors used. When a collection is created, it is assigned the
+ default fork/join pool found in the <code>scala.parallel</code> package object.</p><p> Parallel collections are not necessarily ordered in terms of the <code>foreach</code>
+ operation (see <code>Traversable</code>). Parallel sequences have a well defined order for iterators - creating
+ an iterator and traversing the elements linearly will always yield the same order.
+ However, bulk operations such as <code>foreach</code>, <code>map</code> or <code>filter</code> always occur in undefined orders for all
+ parallel collections.</p><p> Existing parallel collection implementations provide strict parallel iterators. Strict parallel iterators are aware
+ of the number of elements they have yet to traverse. It's also possible to provide non-strict parallel iterators,
+ which do not know the number of elements remaining. To do this, the new collection implementation must override
+ <code>isStrictSplitterCollection</code> to <code>false</code>. This will make some operations unavailable.</p><p> To create a new parallel collection, extend the <code>ParIterable</code> trait, and implement <code>size</code>, <code>splitter</code>,
+ <code>newCombiner</code> and <code>seq</code>. Having an implicit combiner factory requires extending this trait in addition, as
+ well as providing a companion object, as with regular collections.</p><p> Method <code>size</code> is implemented as a constant time operation for parallel collections, and parallel collection
+ operations rely on this assumption.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the element type of the set</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>2.9</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#parallel-hash-tries" target="_blank">Scala's Parallel Collections Library overview</a>
+ section on Parallel Hash Tries for more information.</p></span></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable.ParIterable" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ParIterable[+T]extendsGenIterable[T]withParIterable[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParIterable]withParIterableLike[T,scala.collection.parallel.immutable.ParIterable[T],scala.collection.immutable.Iterable[T]]withImmutable"></a><a id="ParIterable[+T]:ParIterable[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParIterable[+T]extendsGenIterable[T]withParIterable[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParIterable]withParIterableLike[T,scala.collection.parallel.immutable.ParIterable[T],scala.collection.immutable.Iterable[T]]withImmutable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A template trait for immutable parallel iterable collections." href="ParIterable.html"><span class="name">ParIterable</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../../GenIterable.html" class="extype" name="scala.collection.GenIterable">GenIterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>] with <a href="../ParIterable.html" class="extype" name="scala.collection.parallel.ParIterable">parallel.ParIterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>] with <a href="../../generic/GenericParTemplate.html" class="extype" name="scala.collection.generic.GenericParTemplate">GenericParTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>, <a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>] with <a href="../ParIterableLike.html" class="extype" name="scala.collection.parallel.ParIterableLike">ParIterableLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>, <a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>], <a href="../../immutable/Iterable.html" class="extype" name="scala.collection.immutable.Iterable">immutable.Iterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParIterable.T">T</span>]] with <a href="../../../Immutable.html" class="extype" name="scala.Immutable">Immutable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A template trait for immutable parallel iterable collections.</p><div class="fullcomment"><div class="comment cmt"><p>A template trait for immutable parallel iterable collections.</p><p> This is a base trait for Scala parallel collections. It defines behaviour
+ common to all parallel collections. Concrete parallel collections should
+ inherit this trait and <code>ParIterable</code> if they want to define specific combiner
+ factories.</p><p> Parallel operations are implemented with divide and conquer style algorithms that
+ parallelize well. The basic idea is to split the collection into smaller parts until
+ they are small enough to be operated on sequentially.</p><p> All of the parallel operations are implemented as tasks within this trait. Tasks rely
+ on the concept of splitters, which extend iterators. Every parallel collection defines:</p><pre><span class="kw">def</span> splitter: IterableSplitter[T]</pre><p> which returns an instance of <code>IterableSplitter[T]</code>, which is a subtype of <code>Splitter[T]</code>.
+ Splitters have a method <code>remaining</code> to check the remaining number of elements,
+ and method <code>split</code> which is defined by splitters. Method <code>split</code> divides the splitters
+ iterate over into disjunct subsets:</p><pre><span class="kw">def</span> split: <span class="std">Seq</span>[Splitter]</pre><p> which splits the splitter into a sequence of disjunct subsplitters. This is typically a
+ very fast operation which simply creates wrappers around the receiver collection.
+ This can be repeated recursively.</p><p> Tasks are scheduled for execution through a
+ <a href="../TaskSupport.html" class="extype" name="scala.collection.parallel.TaskSupport">scala.collection.parallel.TaskSupport</a> object, which can be changed
+ through the <code>tasksupport</code> setter of the collection.</p><p> Method <code>newCombiner</code> produces a new combiner. Combiners are an extension of builders.
+ They provide a method <code>combine</code> which combines two combiners and returns a combiner
+ containing elements of both combiners.
+ This method can be implemented by aggressively copying all the elements into the new combiner
+ or by lazily binding their results. It is recommended to avoid copying all of
+ the elements for performance reasons, although that cost might be negligible depending on
+ the use case. Standard parallel collection combiners avoid copying when merging results,
+ relying either on a two-step lazy construction or specific data-structure properties.</p><p> Methods:</p><pre><span class="kw">def</span> seq: Sequential
+<span class="kw">def</span> par: Repr</pre><p> produce the sequential or parallel implementation of the collection, respectively.
+ Method <code>par</code> just returns a reference to this parallel collection.
+ Method <code>seq</code> is efficient - it will not copy the elements. Instead,
+ it will create a sequential version of the collection using the same underlying data structure.
+ Note that this is not the case for sequential collections in general - they may copy the elements
+ and produce a different underlying data structure.</p><p> The combination of methods <code>toMap</code>, <code>toSeq</code> or <code>toSet</code> along with <code>par</code> and <code>seq</code> is a flexible
+ way to change between different collection types.</p><p> Since this trait extends the <code>GenIterable</code> trait, methods like <code>size</code> must also
+ be implemented in concrete collections, while <code>iterator</code> forwards to <code>splitter</code> by
+ default.</p><p> Each parallel collection is bound to a specific fork/join pool, on which dormant worker
+ threads are kept. The fork/join pool contains other information such as the parallelism
+ level, that is, the number of processors used. When a collection is created, it is assigned the
+ default fork/join pool found in the <code>scala.parallel</code> package object.</p><p> Parallel collections are not necessarily ordered in terms of the <code>foreach</code>
+ operation (see <code>Traversable</code>). Parallel sequences have a well defined order for iterators - creating
+ an iterator and traversing the elements linearly will always yield the same order.
+ However, bulk operations such as <code>foreach</code>, <code>map</code> or <code>filter</code> always occur in undefined orders for all
+ parallel collections.</p><p> Existing parallel collection implementations provide strict parallel iterators. Strict parallel iterators are aware
+ of the number of elements they have yet to traverse. It's also possible to provide non-strict parallel iterators,
+ which do not know the number of elements remaining. To do this, the new collection implementation must override
+ <code>isStrictSplitterCollection</code> to <code>false</code>. This will make some operations unavailable.</p><p> To create a new parallel collection, extend the <code>ParIterable</code> trait, and implement <code>size</code>, <code>splitter</code>,
+ <code>newCombiner</code> and <code>seq</code>. Having an implicit combiner factory requires extending this trait in addition, as
+ well as providing a companion object, as with regular collections.</p><p> Method <code>size</code> is implemented as a constant time operation for parallel collections, and parallel collection
+ operations rely on this assumption.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the element type of the collection</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>2.9</p></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable.ParMap" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ParMap[K,+V]extendsGenMap[K,V]withGenericParMapTemplate[K,V,scala.collection.parallel.immutable.ParMap]withParMap[K,V]withParIterable[(K,V)]withParMapLike[K,V,scala.collection.parallel.immutable.ParMap[K,V],scala.collection.immutable.Map[K,V]]"></a><a id="ParMap[K,+V]:ParMap[K,V]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParMap[K,+V]extendsGenMap[K,V]withGenericParMapTemplate[K,V,scala.collection.parallel.immutable.ParMap]withParMap[K,V]withParIterable[(K,V)]withParMapLike[K,V,scala.collection.parallel.immutable.ParMap[K,V],scala.collection.immutable.Map[K,V]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A template trait for immutable parallel maps." href="ParMap.html"><span class="name">ParMap</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">+V</span>]</span><span class="result"> extends <a href="../../GenMap.html" class="extype" name="scala.collection.GenMap">GenMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>] with <a href="../../generic/GenericParMapTemplate.html" class="extype" name="scala.collection.generic.GenericParMapTemplate">GenericParMapTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>, <a href="ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>] with <a href="../ParMap.html" class="extype" name="scala.collection.parallel.ParMap">parallel.ParMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>] with <a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>[(<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>)] with <a href="../ParMapLike.html" class="extype" name="scala.collection.parallel.ParMapLike">ParMapLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>, <a href="ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>], <a href="../../immutable/Map.html" class="extype" name="scala.collection.immutable.Map">immutable.Map</a>[<span class="extype" name="scala.collection.parallel.immutable.ParMap.K">K</span>, <span class="extype" name="scala.collection.parallel.immutable.ParMap.V">V</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A template trait for immutable parallel maps.</p><div class="fullcomment"><div class="comment cmt"><p>A template trait for immutable parallel maps.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>the key type of the map</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>the value type of the map</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>2.9</p></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable.ParRange" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ParRangeextendsParSeq[Int]withSerializable"></a><a id="ParRange:ParRange"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParRangeextendsParSeq[Int]withSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Parallel ranges." href="ParRange.html"><span class="name">ParRange</span></a><span class="result"> extends <a href="ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>[<a href="../../../Int.html" class="extype" name="scala.Int">Int</a>] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Parallel ranges.</p><div class="fullcomment"><div class="comment cmt"><p>Parallel ranges.</p><p> This is a base trait for Scala parallel collections. It defines behaviour
+ common to all parallel collections. Concrete parallel collections should
+ inherit this trait and <code>ParIterable</code> if they want to define specific combiner
+ factories.</p><p> Parallel operations are implemented with divide and conquer style algorithms that
+ parallelize well. The basic idea is to split the collection into smaller parts until
+ they are small enough to be operated on sequentially.</p><p> All of the parallel operations are implemented as tasks within this trait. Tasks rely
+ on the concept of splitters, which extend iterators. Every parallel collection defines:</p><pre><span class="kw">def</span> splitter: IterableSplitter[T]</pre><p> which returns an instance of <code>IterableSplitter[T]</code>, which is a subtype of <code>Splitter[T]</code>.
+ Splitters have a method <code>remaining</code> to check the remaining number of elements,
+ and method <code>split</code> which is defined by splitters. Method <code>split</code> divides the splitters
+ iterate over into disjunct subsets:</p><pre><span class="kw">def</span> split: <span class="std">Seq</span>[Splitter]</pre><p> which splits the splitter into a sequence of disjunct subsplitters. This is typically a
+ very fast operation which simply creates wrappers around the receiver collection.
+ This can be repeated recursively.</p><p> Tasks are scheduled for execution through a
+ <a href="../TaskSupport.html" class="extype" name="scala.collection.parallel.TaskSupport">scala.collection.parallel.TaskSupport</a> object, which can be changed
+ through the <code>tasksupport</code> setter of the collection.</p><p> Method <code>newCombiner</code> produces a new combiner. Combiners are an extension of builders.
+ They provide a method <code>combine</code> which combines two combiners and returns a combiner
+ containing elements of both combiners.
+ This method can be implemented by aggressively copying all the elements into the new combiner
+ or by lazily binding their results. It is recommended to avoid copying all of
+ the elements for performance reasons, although that cost might be negligible depending on
+ the use case. Standard parallel collection combiners avoid copying when merging results,
+ relying either on a two-step lazy construction or specific data-structure properties.</p><p> Methods:</p><pre><span class="kw">def</span> seq: Sequential
+<span class="kw">def</span> par: Repr</pre><p> produce the sequential or parallel implementation of the collection, respectively.
+ Method <code>par</code> just returns a reference to this parallel collection.
+ Method <code>seq</code> is efficient - it will not copy the elements. Instead,
+ it will create a sequential version of the collection using the same underlying data structure.
+ Note that this is not the case for sequential collections in general - they may copy the elements
+ and produce a different underlying data structure.</p><p> The combination of methods <code>toMap</code>, <code>toSeq</code> or <code>toSet</code> along with <code>par</code> and <code>seq</code> is a flexible
+ way to change between different collection types.</p><p> Since this trait extends the <code>GenIterable</code> trait, methods like <code>size</code> must also
+ be implemented in concrete collections, while <code>iterator</code> forwards to <code>splitter</code> by
+ default.</p><p> Each parallel collection is bound to a specific fork/join pool, on which dormant worker
+ threads are kept. The fork/join pool contains other information such as the parallelism
+ level, that is, the number of processors used. When a collection is created, it is assigned the
+ default fork/join pool found in the <code>scala.parallel</code> package object.</p><p> Parallel collections are not necessarily ordered in terms of the <code>foreach</code>
+ operation (see <code>Traversable</code>). Parallel sequences have a well defined order for iterators - creating
+ an iterator and traversing the elements linearly will always yield the same order.
+ However, bulk operations such as <code>foreach</code>, <code>map</code> or <code>filter</code> always occur in undefined orders for all
+ parallel collections.</p><p> Existing parallel collection implementations provide strict parallel iterators. Strict parallel iterators are aware
+ of the number of elements they have yet to traverse. It's also possible to provide non-strict parallel iterators,
+ which do not know the number of elements remaining. To do this, the new collection implementation must override
+ <code>isStrictSplitterCollection</code> to <code>false</code>. This will make some operations unavailable.</p><p> To create a new parallel collection, extend the <code>ParIterable</code> trait, and implement <code>size</code>, <code>splitter</code>,
+ <code>newCombiner</code> and <code>seq</code>. Having an implicit combiner factory requires extending this trait in addition, as
+ well as providing a companion object, as with regular collections.</p><p> Method <code>size</code> is implemented as a constant time operation for parallel collections, and parallel collection
+ operations rely on this assumption.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../../../SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
+              
+        </dd><dt>Since</dt><dd><p>2.9</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#parallel-range" target="_blank">Scala's Parallel Collections Library overview</a>
+ section on <code>ParRange</code> for more information.</p></span></dd></dl></div>
+    </li><li name="scala.collection.parallel.immutable.ParSeq" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ParSeq[+T]extendsGenSeq[T]withParSeq[T]withParIterable[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParSeq]withParSeqLike[T,scala.collection.parallel.immutable.ParSeq[T],scala.collection.immutable.Seq[T]]"></a><a id="ParSeq[+T]:ParSeq[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParSeq[+T]extendsGenSeq[T]withParSeq[T]withParIterable[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParSeq]withParSeqLike[T,scala.collection.parallel.immutable.ParSeq[T],scala.collection.immutable.Seq[T]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An immutable variant of ParSeq." href="ParSeq.html"><span class="name">ParSeq</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="../../GenSeq.html" class="extype" name="scala.collection.GenSeq">GenSeq</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>] with <a href="../ParSeq.html" class="extype" name="scala.collection.parallel.ParSeq">parallel.ParSeq</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>] with <a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>] with <a href="../../generic/GenericParTemplate.html" class="extype" name="scala.collection.generic.GenericParTemplate">GenericParTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>, <a href="ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>] with <a href="../ParSeqLike.html" class="extype" name="scala.collection.parallel.ParSeqLike">ParSeqLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>, <a href="ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>], <a href="../../immutable/Seq.html" class="extype" name="scala.collection.immutable.Seq">immutable.Seq</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSeq.T">T</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An immutable variant of <code>ParSeq</code>.</p>
+    </li><li name="scala.collection.parallel.immutable.ParSet" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ParSet[T]extendsGenSet[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParSet]withParSet[T]withParIterable[T]withParSetLike[T,scala.collection.parallel.immutable.ParSet[T],scala.collection.immutable.Set[T]]"></a><a id="ParSet[T]:ParSet[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParSet[T]extendsGenSet[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParSet]withParSet[T]withParIterable[T]withParSetLike[T,scala.collection.parallel.immutable.ParSet[T],scala.collection.immutable.Set[T]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An immutable variant of ParSet." href="ParSet.html"><span class="name">ParSet</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../GenSet.html" class="extype" name="scala.collection.GenSet">GenSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>] with <a href="../../generic/GenericParTemplate.html" class="extype" name="scala.collection.generic.GenericParTemplate">GenericParTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>, <a href="ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>] with <a href="../ParSet.html" class="extype" name="scala.collection.parallel.ParSet">parallel.ParSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>] with <a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>] with <a href="../ParSetLike.html" class="extype" name="scala.collection.parallel.ParSetLike">ParSetLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>, <a href="ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>], <a href="../../immutable/Set.html" class="extype" name="scala.collection.immutable.Set">immutable.Set</a>[<span class="extype" name="scala.collection.parallel.immutable.ParSet.T">T</span>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An immutable variant of <code>ParSet</code>.</p>
+    </li><li name="scala.collection.parallel.immutable.ParVector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ParVector[+T]extendsParSeq[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParVector]withParSeqLike[T,scala.collection.parallel.immutable.ParVector[T],scala.collection.immutable.Vector[T]]withSerializable"></a><a id="ParVector[+T]:ParVector[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParVector[+T]extendsParSeq[T]withGenericParTemplate[T,scala.collection.parallel.immutable.ParVector]withParSeqLike[T,scala.collection.parallel.immutable.ParVector[T],scala.collection.immutable.Vector[T]]withSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Immutable parallel vectors, based on vectors." href="ParVector.html"><span class="name">ParVector</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>[<span class="extype" name="scala.collection.parallel.immutable.ParVector.T">T</span>] with <a href="../../generic/GenericParTemplate.html" class="extype" name="scala.collection.generic.GenericParTemplate">GenericParTemplate</a>[<span class="extype" name="scala.collection.parallel.immutable.ParVector.T">T</span>, <a href="ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector">ParVector</a>] with <a href="../ParSeqLike.html" class="extype" name="scala.collection.parallel.ParSeqLike">ParSeqLike</a>[<span class="extype" name="scala.collection.parallel.immutable.ParVector.T">T</span>, <a href="ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector">ParVector</a>[<span class="extype" name="scala.collection.parallel.immutable.ParVector.T">T</span>], <a href="../../immutable/Vector.html" class="extype" name="scala.collection.immutable.Vector">immutable.Vector</a>[<span class="extype" name="scala.collection.parallel.immutable.ParVector.T">T</span>]] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Immutable parallel vectors, based on vectors.</p><div class="fullcomment"><div class="comment cmt"><p>Immutable parallel vectors, based on vectors.</p><p> This is a base trait for Scala parallel collections. It defines behaviour
+ common to all parallel collections. Concrete parallel collections should
+ inherit this trait and <code>ParIterable</code> if they want to define specific combiner
+ factories.</p><p> Parallel operations are implemented with divide and conquer style algorithms that
+ parallelize well. The basic idea is to split the collection into smaller parts until
+ they are small enough to be operated on sequentially.</p><p> All of the parallel operations are implemented as tasks within this trait. Tasks rely
+ on the concept of splitters, which extend iterators. Every parallel collection defines:</p><pre><span class="kw">def</span> splitter: IterableSplitter[T]</pre><p> which returns an instance of <code>IterableSplitter[T]</code>, which is a subtype of <code>Splitter[T]</code>.
+ Splitters have a method <code>remaining</code> to check the remaining number of elements,
+ and method <code>split</code> which is defined by splitters. Method <code>split</code> divides the splitters
+ iterate over into disjunct subsets:</p><pre><span class="kw">def</span> split: <span class="std">Seq</span>[Splitter]</pre><p> which splits the splitter into a sequence of disjunct subsplitters. This is typically a
+ very fast operation which simply creates wrappers around the receiver collection.
+ This can be repeated recursively.</p><p> Tasks are scheduled for execution through a
+ <a href="../TaskSupport.html" class="extype" name="scala.collection.parallel.TaskSupport">scala.collection.parallel.TaskSupport</a> object, which can be changed
+ through the <code>tasksupport</code> setter of the collection.</p><p> Method <code>newCombiner</code> produces a new combiner. Combiners are an extension of builders.
+ They provide a method <code>combine</code> which combines two combiners and returns a combiner
+ containing elements of both combiners.
+ This method can be implemented by aggressively copying all the elements into the new combiner
+ or by lazily binding their results. It is recommended to avoid copying all of
+ the elements for performance reasons, although that cost might be negligible depending on
+ the use case. Standard parallel collection combiners avoid copying when merging results,
+ relying either on a two-step lazy construction or specific data-structure properties.</p><p> Methods:</p><pre><span class="kw">def</span> seq: Sequential
+<span class="kw">def</span> par: Repr</pre><p> produce the sequential or parallel implementation of the collection, respectively.
+ Method <code>par</code> just returns a reference to this parallel collection.
+ Method <code>seq</code> is efficient - it will not copy the elements. Instead,
+ it will create a sequential version of the collection using the same underlying data structure.
+ Note that this is not the case for sequential collections in general - they may copy the elements
+ and produce a different underlying data structure.</p><p> The combination of methods <code>toMap</code>, <code>toSeq</code> or <code>toSet</code> along with <code>par</code> and <code>seq</code> is a flexible
+ way to change between different collection types.</p><p> Since this trait extends the <code>GenIterable</code> trait, methods like <code>size</code> must also
+ be implemented in concrete collections, while <code>iterator</code> forwards to <code>splitter</code> by
+ default.</p><p> Each parallel collection is bound to a specific fork/join pool, on which dormant worker
+ threads are kept. The fork/join pool contains other information such as the parallelism
+ level, that is, the number of processors used. When a collection is created, it is assigned the
+ default fork/join pool found in the <code>scala.parallel</code> package object.</p><p> Parallel collections are not necessarily ordered in terms of the <code>foreach</code>
+ operation (see <code>Traversable</code>). Parallel sequences have a well defined order for iterators - creating
+ an iterator and traversing the elements linearly will always yield the same order.
+ However, bulk operations such as <code>foreach</code>, <code>map</code> or <code>filter</code> always occur in undefined orders for all
+ parallel collections.</p><p> Existing parallel collection implementations provide strict parallel iterators. Strict parallel iterators are aware
+ of the number of elements they have yet to traverse. It's also possible to provide non-strict parallel iterators,
+ which do not know the number of elements remaining. To do this, the new collection implementation must override
+ <code>isStrictSplitterCollection</code> to <code>false</code>. This will make some operations unavailable.</p><p> To create a new parallel collection, extend the <code>ParIterable</code> trait, and implement <code>size</code>, <code>splitter</code>,
+ <code>newCombiner</code> and <code>seq</code>. Having an implicit combiner factory requires extending this trait in addition, as
+ well as providing a companion object, as with regular collections.</p><p> Method <code>size</code> is implemented as a constant time operation for parallel collections, and parallel collection
+ operations rely on this assumption.</p><p> The higher-order functions passed to certain operations may contain side-effects. Since implementations
+ of bulk operations may not be sequential, this means that side-effects may not be predictable and may
+ produce data-races, deadlocks or invalidation of state if care is not taken. It is up to the programmer
+ to either avoid using side-effects or to use some form of synchronization when accessing mutable data.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the element type of the vector</p></dd></dl><dl class="attributes block"> <dt>Since</dt><dd><p>2.9</p></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://docs.scala-lang.org/overviews/parallel-collections/concrete-parallel-collections.html#parallel-vector" target="_blank">Scala's Parallel Collections Library overview</a>
+ section on <code>ParVector</code> for more information.</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.collection.parallel.immutable#repetition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="repetition[T](elem:T,len:Int):scala.collection.parallel.immutable.Repetition[T]"></a><a id="repetition[T](T,Int):Repetition[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#repetition[T](elem:T,len:Int):scala.collection.parallel.immutable.Repetition[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repetition</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.parallel.immutable.repetition.T">T</span></span>, <span name="len">len: <a href="../../../Int.html" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.collection.parallel.immutable.Repetition">Repetition</span>[<span class="extype" name="scala.collection.parallel.immutable.repetition.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.collection.parallel.immutable.HashSetCombiner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashSetCombiner"></a><a id="HashSetCombiner:HashSetCombiner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#HashSetCombiner" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="HashSetCombiner$.html"><span class="name">HashSetCombiner</span></a>
+      </span>
+      
+      
+    </li><li name="scala.collection.parallel.immutable.ParHashMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParHashMap"></a><a id="ParHashMap:ParHashMap"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParHashMap" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations needed to create immutable.ParHashMap values." href="ParHashMap$.html"><span class="name">ParHashMap</span></a><span class="result"> extends <a href="../../generic/ParMapFactory.html" class="extype" name="scala.collection.generic.ParMapFactory">ParMapFactory</a>[<a href="ParHashMap.html" class="extype" name="scala.collection.parallel.immutable.ParHashMap">ParHashMap</a>] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations needed to create <code><code>immutable.ParHashMap</code></code> values.</p>
+    </li><li name="scala.collection.parallel.immutable.ParHashSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParHashSet"></a><a id="ParHashSet:ParHashSet"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParHashSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations needed to create immutable.ParHashSet values." href="ParHashSet$.html"><span class="name">ParHashSet</span></a><span class="result"> extends <a href="../../generic/ParSetFactory.html" class="extype" name="scala.collection.generic.ParSetFactory">ParSetFactory</a>[<a href="ParHashSet.html" class="extype" name="scala.collection.parallel.immutable.ParHashSet">ParHashSet</a>] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations needed to create <code><code>immutable.ParHashSet</code></code> values.</p>
+    </li><li name="scala.collection.parallel.immutable.ParIterable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParIterable"></a><a id="ParIterable:ParIterable"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParIterable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations to create ParIterable values." href="ParIterable$.html"><span class="name">ParIterable</span></a><span class="result"> extends <a href="../../generic/ParFactory.html" class="extype" name="scala.collection.generic.ParFactory">ParFactory</a>[<a href="ParIterable.html" class="extype" name="scala.collection.parallel.immutable.ParIterable">ParIterable</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations to create <code><code>ParIterable</code></code> values.</p>
+    </li><li name="scala.collection.parallel.immutable.ParMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParMap"></a><a id="ParMap:ParMap"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParMap" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ParMap$.html"><span class="name">ParMap</span></a><span class="result"> extends <a href="../../generic/ParMapFactory.html" class="extype" name="scala.collection.generic.ParMapFactory">ParMapFactory</a>[<a href="ParMap.html" class="extype" name="scala.collection.parallel.immutable.ParMap">ParMap</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.collection.parallel.immutable.ParRange" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParRange"></a><a id="ParRange:ParRange"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParRange" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ParRange$.html"><span class="name">ParRange</span></a><span class="result"> extends <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="scala.collection.parallel.immutable.ParSeq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParSeq"></a><a id="ParSeq:ParSeq"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParSeq" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations to create mutable.ParSeq values." href="ParSeq$.html"><span class="name">ParSeq</span></a><span class="result"> extends <a href="../../generic/ParFactory.html" class="extype" name="scala.collection.generic.ParFactory">ParFactory</a>[<a href="ParSeq.html" class="extype" name="scala.collection.parallel.immutable.ParSeq">ParSeq</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations to create <code><code>mutable.ParSeq</code></code> values.</p>
+    </li><li name="scala.collection.parallel.immutable.ParSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParSet"></a><a id="ParSet:ParSet"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations needed to create mutable.ParSet values." href="ParSet$.html"><span class="name">ParSet</span></a><span class="result"> extends <a href="../../generic/ParSetFactory.html" class="extype" name="scala.collection.generic.ParSetFactory">ParSetFactory</a>[<a href="ParSet.html" class="extype" name="scala.collection.parallel.immutable.ParSet">ParSet</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations needed to create <code><code>mutable.ParSet</code></code> values.</p>
+    </li><li name="scala.collection.parallel.immutable.ParVector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ParVector"></a><a id="ParVector:ParVector"></a>
+      <span class="permalink">
+      <a href="../../../../scala/collection/parallel/immutable/index.html#ParVector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="This object provides a set of operations to create immutable.ParVector values." href="ParVector$.html"><span class="name">ParVector</span></a><span class="result"> extends <a href="../../generic/ParFactory.html" class="extype" name="scala.collection.generic.ParFactory">ParFactory</a>[<a href="ParVector.html" class="extype" name="scala.collection.parallel.immutable.ParVector">ParVector</a>] with <a href="../../../Serializable.html" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">   This object provides a set of operations to create <code><code>immutable.ParVector</code></code> values.</p>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="../../../Any.html" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

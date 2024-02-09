@@ -1,0 +1,1692 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Reflection Library 2.12.8 - scala.reflect.api.Trees.Literal</title>
+          <meta name="description" content="Scala Reflection Library 2.12.8 - scala.reflect.api.Trees.Literal" />
+          <meta name="keywords" content="Scala Reflection Library 2.12.8 scala.reflect.api.Trees.Literal" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Reflection Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.reflect" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reflect"></a><a id="reflect:reflect"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#reflect" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">reflect</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.reflect.api" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="api"></a><a id="api:api"></a>
+      <span class="permalink">
+      <a href="../../scala/reflect/index.html#api" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="index.html"><span class="name">api</span></a>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>The Scala Reflection API (located in scala-reflect.jar).</p><p>In Scala 2.10.0, the Scala Reflection API and its implementation have an &quot;experimental&quot; status.
+This means that the API and the docs are not complete and can be changed in binary- and source-incompatible
+manner in 2.10.1. This also means that the implementation has some known issues.</p><p>The following types are the backbone of the Scala Reflection API, and serve as a good starting point
+for information about Scala Reflection:</p><ul><li><a href="Symbols.html" class="extype" name="scala.reflect.api.Symbols">scala.reflect.api.Symbols</a></li><li><a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a></li><li><a href="Mirrors.html" class="extype" name="scala.reflect.api.Mirrors">scala.reflect.api.Mirrors</a></li><li><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a></li></ul><p> For more information about Scala Reflection, see the
+<a href="http://docs.scala-lang.org/overviews/reflection/overview.html" target="_blank">Reflection Guide</a>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.reflect">reflect</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees" visbl="pub" class="indented4 " data-isabs="true" fullComment="yes" group="ReflectionAPI">
+      <a id="TreesextendsAnyRef"></a><a id="Trees:Trees"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/index.html#TreesextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="Trees.html"><span class="name">Trees</span></a><span class="result"> extends <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>This trait defines the node types used in Scala abstract syntax trees (AST) and operations on them.</p><p>Trees are the basis for Scala's abstract syntax that is used to represent programs. They are also called
+abstract syntax trees and commonly abbreviated as ASTs.</p><p>In Scala reflection, APIs that produce or use <code>Tree</code>s are:</p><ul><li><b>Annotations</b> which use trees to represent their arguments, exposed in <span class="extype" name="scala.reflect.api.Annotations#scalaArgs">Annotation.scalaArgs</span>.</li><li><b><a href="Universe.html#reify[T](expr:T):Universe.this.Expr[T]" class="extmbr" name="scala.reflect.api.Universe#reify">reify</a></b>, a special method on <a href="Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a> that takes an expression and returns an AST which represents the expression.</li><li><b>Macros and runtime compilation with toolboxes</b> which both use trees as their program representation medium.</li></ul><p> Trees are immutable, except for three fields
+ <a href="Trees$TreeApi.html#pos:Trees.this.Position" class="extmbr" name="scala.reflect.api.Trees.TreeApi#pos">pos</a>, <a href="Trees$TreeApi.html#symbol:Trees.this.Symbol" class="extmbr" name="scala.reflect.api.Trees.TreeApi#symbol">symbol</a>, and <a href="Trees$TreeApi.html#tpe:Trees.this.Type" class="extmbr" name="scala.reflect.api.Trees.TreeApi#tpe">tpe</a>, which are assigned when a tree is typechecked
+ to attribute it with the information gathered by the typechecker.</p><h5> Examples </h5><p> The following creates an AST representing a literal 5 in Scala source code:</p><pre>Literal(Constant(<span class="num">5</span>))</pre><p> The following creates an AST representing <code>print(&quot;Hello World&quot;)</code>:</p><pre>Apply(Select(Select(This(TypeName(<span class="lit">"scala"</span>)), TermName(<span class="lit">"Predef"</span>)), TermName(<span class="lit">"print"</span>)), <span class="std">List</span>(Literal(Constant(<span class="lit">"Hello World"</span>))))</pre><p> The following creates an AST from a literal 5, and then uses <code>showRaw</code> to print it in a readable format.</p><pre><span class="kw">import</span> scala.reflect.runtime.universe.{ reify, showRaw }
+print( showRaw( reify{<span class="num">5</span>}.tree ) )` <span class="cmt">// prints Literal(Constant(5))</span></pre><p> For more information about <code>Tree</code>s, see the <a href="http://docs.scala-lang.org/overviews/reflection/symbols-trees-types.html" target="_blank">Reflection Guide: Symbols, Trees, Types</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.reflect.api">api</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$AlternativeExtractor.html" title="An extractor class to create and pattern match with syntax Alternative(trees)."></a>
+                        <a class="abstract type" href="Trees$Alternative.html" title="Alternatives of patterns."></a>
+                        <a href="Trees$Alternative.html" title="Alternatives of patterns.">Alternative</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$AlternativeApi.html" title="The API that all alternatives support"></a>
+                        <a href="Trees$AlternativeApi.html" title="The API that all alternatives support">AlternativeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$AlternativeExtractor.html" title="An extractor class to create and pattern match with syntax Alternative(trees)."></a>
+                        <a href="Trees$AlternativeExtractor.html" title="An extractor class to create and pattern match with syntax Alternative(trees).">AlternativeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$AnnotatedExtractor.html" title="An extractor class to create and pattern match with syntax Annotated(annot, arg)."></a>
+                        <a class="abstract type" href="Trees$Annotated.html" title="A tree that has an annotation attached to it."></a>
+                        <a href="Trees$Annotated.html" title="A tree that has an annotation attached to it.">Annotated</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$AnnotatedApi.html" title="The API that all annotateds support"></a>
+                        <a href="Trees$AnnotatedApi.html" title="The API that all annotateds support">AnnotatedApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$AnnotatedExtractor.html" title="An extractor class to create and pattern match with syntax Annotated(annot, arg)."></a>
+                        <a href="Trees$AnnotatedExtractor.html" title="An extractor class to create and pattern match with syntax Annotated(annot, arg).">AnnotatedExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$AppliedTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax AppliedTypeTree(tpt, args)."></a>
+                        <a class="abstract type" href="Trees$AppliedTypeTree.html" title="Applied type &lt;tpt&gt; [ &lt;args&gt; ], eliminated by RefCheck"></a>
+                        <a href="Trees$AppliedTypeTree.html" title="Applied type &lt;tpt&gt; [ &lt;args&gt; ], eliminated by RefCheck">AppliedTypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$AppliedTypeTreeApi.html" title="The API that all applied type trees support"></a>
+                        <a href="Trees$AppliedTypeTreeApi.html" title="The API that all applied type trees support">AppliedTypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$AppliedTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax AppliedTypeTree(tpt, args)."></a>
+                        <a href="Trees$AppliedTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax AppliedTypeTree(tpt, args).">AppliedTypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Apply.html" title="Value application"></a>
+                        <a href="Trees$Apply.html" title="Value application">Apply</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ApplyApi.html" title="The API that all applies support"></a>
+                        <a href="Trees$ApplyApi.html" title="The API that all applies support">ApplyApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ApplyExtractor.html" title="An extractor class to create and pattern match with syntax Apply(fun, args)."></a>
+                        <a href="Trees$ApplyExtractor.html" title="An extractor class to create and pattern match with syntax Apply(fun, args).">ApplyExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$AssignExtractor.html" title="An extractor class to create and pattern match with syntax Assign(lhs, rhs)."></a>
+                        <a class="abstract type" href="Trees$Assign.html" title="Assignment"></a>
+                        <a href="Trees$Assign.html" title="Assignment">Assign</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$AssignApi.html" title="The API that all assigns support"></a>
+                        <a href="Trees$AssignApi.html" title="The API that all assigns support">AssignApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$AssignExtractor.html" title="An extractor class to create and pattern match with syntax Assign(lhs, rhs)."></a>
+                        <a href="Trees$AssignExtractor.html" title="An extractor class to create and pattern match with syntax Assign(lhs, rhs).">AssignExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$AssignOrNamedArgExtractor.html" title="An extractor class to create and pattern match with syntax AssignOrNamedArg(lhs, rhs)."></a>
+                        <a class="abstract type" href="Trees$AssignOrNamedArg.html" title="Either an assignment or a named argument."></a>
+                        <a href="Trees$AssignOrNamedArg.html" title="Either an assignment or a named argument.">AssignOrNamedArg</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$AssignOrNamedArgApi.html" title="The API that all assigns support"></a>
+                        <a href="Trees$AssignOrNamedArgApi.html" title="The API that all assigns support">AssignOrNamedArgApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$AssignOrNamedArgExtractor.html" title="An extractor class to create and pattern match with syntax AssignOrNamedArg(lhs, rhs)."></a>
+                        <a href="Trees$AssignOrNamedArgExtractor.html" title="An extractor class to create and pattern match with syntax AssignOrNamedArg(lhs, rhs).">AssignOrNamedArgExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Bind.html" title="Bind a variable to a rhs pattern."></a>
+                        <a href="Trees$Bind.html" title="Bind a variable to a rhs pattern.">Bind</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$BindApi.html" title="The API that all binds support"></a>
+                        <a href="Trees$BindApi.html" title="The API that all binds support">BindApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$BindExtractor.html" title="An extractor class to create and pattern match with syntax Bind(name, body)."></a>
+                        <a href="Trees$BindExtractor.html" title="An extractor class to create and pattern match with syntax Bind(name, body).">BindExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Block.html" title="Block of expressions (semicolon separated expressions)"></a>
+                        <a href="Trees$Block.html" title="Block of expressions (semicolon separated expressions)">Block</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$BlockApi.html" title="The API that all blocks support"></a>
+                        <a href="Trees$BlockApi.html" title="The API that all blocks support">BlockApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$BlockExtractor.html" title="An extractor class to create and pattern match with syntax Block(stats, expr)."></a>
+                        <a href="Trees$BlockExtractor.html" title="An extractor class to create and pattern match with syntax Block(stats, expr).">BlockExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$CaseDef.html" title="Case clause in a pattern match."></a>
+                        <a href="Trees$CaseDef.html" title="Case clause in a pattern match.">CaseDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$CaseDefApi.html" title="The API that all case defs support"></a>
+                        <a href="Trees$CaseDefApi.html" title="The API that all case defs support">CaseDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$CaseDefExtractor.html" title="An extractor class to create and pattern match with syntax CaseDef(pat, guard, body)."></a>
+                        <a href="Trees$CaseDefExtractor.html" title="An extractor class to create and pattern match with syntax CaseDef(pat, guard, body).">CaseDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ClassDefExtractor.html" title="An extractor class to create and pattern match with syntax ClassDef(mods, name, tparams, impl)."></a>
+                        <a class="abstract type" href="Trees$ClassDef.html" title="A class definition."></a>
+                        <a href="Trees$ClassDef.html" title="A class definition.">ClassDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ClassDefApi.html" title="The API that all class defs support"></a>
+                        <a href="Trees$ClassDefApi.html" title="The API that all class defs support">ClassDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ClassDefExtractor.html" title="An extractor class to create and pattern match with syntax ClassDef(mods, name, tparams, impl)."></a>
+                        <a href="Trees$ClassDefExtractor.html" title="An extractor class to create and pattern match with syntax ClassDef(mods, name, tparams, impl).">ClassDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$CompoundTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax CompoundTypeTree(templ)."></a>
+                        <a class="abstract type" href="Trees$CompoundTypeTree.html" title="Intersection type &lt;parent1&gt; with ..."></a>
+                        <a href="Trees$CompoundTypeTree.html" title="Intersection type &lt;parent1&gt; with ...">CompoundTypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$CompoundTypeTreeApi.html" title="The API that all compound type trees support"></a>
+                        <a href="Trees$CompoundTypeTreeApi.html" title="The API that all compound type trees support">CompoundTypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$CompoundTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax CompoundTypeTree(templ)."></a>
+                        <a href="Trees$CompoundTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax CompoundTypeTree(templ).">CompoundTypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$DefDefExtractor.html" title="An extractor class to create and pattern match with syntax DefDef(mods, name, tparams, vparamss, tpt, rhs)."></a>
+                        <a class="abstract type" href="Trees$DefDef.html" title="A method or macro definition."></a>
+                        <a href="Trees$DefDef.html" title="A method or macro definition.">DefDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$DefDefApi.html" title="The API that all def defs support"></a>
+                        <a href="Trees$DefDefApi.html" title="The API that all def defs support">DefDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$DefDefExtractor.html" title="An extractor class to create and pattern match with syntax DefDef(mods, name, tparams, vparamss, tpt, rhs)."></a>
+                        <a href="Trees$DefDefExtractor.html" title="An extractor class to create and pattern match with syntax DefDef(mods, name, tparams, vparamss, tpt, rhs).">DefDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$DefTree.html" title="A tree representing a symbol-defining entity: 1) A declaration or a definition (type, class, object, package, val, var, or def) 2) Bind that is used to represent binding occurrences in pattern matches 3) LabelDef that is used internally to represent while loops"></a>
+                        <a href="Trees$DefTree.html" title="A tree representing a symbol-defining entity: 1) A declaration or a definition (type, class, object, package, val, var, or def) 2) Bind that is used to represent binding occurrences in pattern matches 3) LabelDef that is used internally to represent while loops">DefTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$DefTreeApi.html" title="The API that all def trees support"></a>
+                        <a href="Trees$DefTreeApi.html" title="The API that all def trees support">DefTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ExistentialTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialTypeTree(tpt, whereClauses)."></a>
+                        <a class="abstract type" href="Trees$ExistentialTypeTree.html" title="Existential type tree node"></a>
+                        <a href="Trees$ExistentialTypeTree.html" title="Existential type tree node">ExistentialTypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ExistentialTypeTreeApi.html" title="The API that all existential type trees support"></a>
+                        <a href="Trees$ExistentialTypeTreeApi.html" title="The API that all existential type trees support">ExistentialTypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ExistentialTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialTypeTree(tpt, whereClauses)."></a>
+                        <a href="Trees$ExistentialTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax ExistentialTypeTree(tpt, whereClauses).">ExistentialTypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$FunctionExtractor.html" title="An extractor class to create and pattern match with syntax Function(vparams, body)."></a>
+                        <a class="abstract type" href="Trees$Function.html" title="Anonymous function, eliminated by compiler phase lambdalift"></a>
+                        <a href="Trees$Function.html" title="Anonymous function, eliminated by compiler phase lambdalift">Function</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$FunctionApi.html" title="The API that all functions support"></a>
+                        <a href="Trees$FunctionApi.html" title="The API that all functions support">FunctionApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$FunctionExtractor.html" title="An extractor class to create and pattern match with syntax Function(vparams, body)."></a>
+                        <a href="Trees$FunctionExtractor.html" title="An extractor class to create and pattern match with syntax Function(vparams, body).">FunctionExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$GenericApply.html" title="Common base class for Apply and TypeApply."></a>
+                        <a href="Trees$GenericApply.html" title="Common base class for Apply and TypeApply.">GenericApply</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$GenericApplyApi.html" title="The API that all applies support"></a>
+                        <a href="Trees$GenericApplyApi.html" title="The API that all applies support">GenericApplyApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Ident.html" title="A reference to identifier name."></a>
+                        <a href="Trees$Ident.html" title="A reference to identifier name.">Ident</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$IdentApi.html" title="The API that all idents support"></a>
+                        <a href="Trees$IdentApi.html" title="The API that all idents support">IdentApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$IdentExtractor.html" title="An extractor class to create and pattern match with syntax Ident(qual, name)."></a>
+                        <a href="Trees$IdentExtractor.html" title="An extractor class to create and pattern match with syntax Ident(qual, name).">IdentExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$IfExtractor.html" title="An extractor class to create and pattern match with syntax If(cond, thenp, elsep)."></a>
+                        <a class="abstract type" href="Trees$If.html" title="Conditional expression"></a>
+                        <a href="Trees$If.html" title="Conditional expression">If</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$IfApi.html" title="The API that all ifs support"></a>
+                        <a href="Trees$IfApi.html" title="The API that all ifs support">IfApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$IfExtractor.html" title="An extractor class to create and pattern match with syntax If(cond, thenp, elsep)."></a>
+                        <a href="Trees$IfExtractor.html" title="An extractor class to create and pattern match with syntax If(cond, thenp, elsep).">IfExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$ImplDef.html" title="A common base class for class and object definitions."></a>
+                        <a href="Trees$ImplDef.html" title="A common base class for class and object definitions.">ImplDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ImplDefApi.html" title="The API that all impl defs support"></a>
+                        <a href="Trees$ImplDefApi.html" title="The API that all impl defs support">ImplDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ImportExtractor.html" title="An extractor class to create and pattern match with syntax Import(expr, selectors)."></a>
+                        <a class="abstract type" href="Trees$Import.html" title="Import clause"></a>
+                        <a href="Trees$Import.html" title="Import clause">Import</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ImportApi.html" title="The API that all imports support"></a>
+                        <a href="Trees$ImportApi.html" title="The API that all imports support">ImportApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ImportExtractor.html" title="An extractor class to create and pattern match with syntax Import(expr, selectors)."></a>
+                        <a href="Trees$ImportExtractor.html" title="An extractor class to create and pattern match with syntax Import(expr, selectors).">ImportExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ImportSelectorExtractor.html" title="An extractor class to create and pattern match with syntax ImportSelector(name:, namePos, rename, renamePos)."></a>
+                        <a class="abstract type" href="Trees$ImportSelector.html" title="Import selector (not a tree, but a component of the Import tree)"></a>
+                        <a href="Trees$ImportSelector.html" title="Import selector (not a tree, but a component of the Import tree)">ImportSelector</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ImportSelectorApi.html" title="The API that all import selectors support"></a>
+                        <a href="Trees$ImportSelectorApi.html" title="The API that all import selectors support">ImportSelectorApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ImportSelectorExtractor.html" title="An extractor class to create and pattern match with syntax ImportSelector(name:, namePos, rename, renamePos)."></a>
+                        <a href="Trees$ImportSelectorExtractor.html" title="An extractor class to create and pattern match with syntax ImportSelector(name:, namePos, rename, renamePos).">ImportSelectorExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$LabelDefExtractor.html" title="An extractor class to create and pattern match with syntax LabelDef(name, params, rhs)."></a>
+                        <a class="abstract type" href="Trees$LabelDef.html" title="A labelled expression."></a>
+                        <a href="Trees$LabelDef.html" title="A labelled expression.">LabelDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$LabelDefApi.html" title="The API that all label defs support"></a>
+                        <a href="Trees$LabelDefApi.html" title="The API that all label defs support">LabelDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$LabelDefExtractor.html" title="An extractor class to create and pattern match with syntax LabelDef(name, params, rhs)."></a>
+                        <a href="Trees$LabelDefExtractor.html" title="An extractor class to create and pattern match with syntax LabelDef(name, params, rhs).">LabelDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$LiteralExtractor.html" title="An extractor class to create and pattern match with syntax Literal(value)."></a>
+                        <a class="abstract type" href="" title="Literal"></a>
+                        <a href="" title="Literal">Literal</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$LiteralApi.html" title="The API that all literals support"></a>
+                        <a href="Trees$LiteralApi.html" title="The API that all literals support">LiteralApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$LiteralExtractor.html" title="An extractor class to create and pattern match with syntax Literal(value)."></a>
+                        <a href="Trees$LiteralExtractor.html" title="An extractor class to create and pattern match with syntax Literal(value).">LiteralExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$MatchExtractor.html" title="An extractor class to create and pattern match with syntax Match(selector, cases)."></a>
+                        <a class="abstract type" href="Trees$Match.html" title="- Pattern matching expression  (before compiler phase explicitouter before 2.10 / patmat from 2.10)"></a>
+                        <a href="Trees$Match.html" title="- Pattern matching expression  (before compiler phase explicitouter before 2.10 / patmat from 2.10)">Match</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$MatchApi.html" title="The API that all matches support"></a>
+                        <a href="Trees$MatchApi.html" title="The API that all matches support">MatchApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$MatchExtractor.html" title="An extractor class to create and pattern match with syntax Match(selector, cases)."></a>
+                        <a href="Trees$MatchExtractor.html" title="An extractor class to create and pattern match with syntax Match(selector, cases).">MatchExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$MemberDef.html" title="Common base class for all member definitions: types, classes, objects, packages, vals and vars, defs."></a>
+                        <a href="Trees$MemberDef.html" title="Common base class for all member definitions: types, classes, objects, packages, vals and vars, defs.">MemberDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$MemberDefApi.html" title="The API that all member defs support"></a>
+                        <a href="Trees$MemberDefApi.html" title="The API that all member defs support">MemberDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Modifiers.html" title="The type of tree modifiers (not a tree, but rather part of DefTrees)."></a>
+                        <a href="Trees$Modifiers.html" title="The type of tree modifiers (not a tree, but rather part of DefTrees).">Modifiers</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ModifiersApi.html" title="The API that all Modifiers support"></a>
+                        <a href="Trees$ModifiersApi.html" title="The API that all Modifiers support">ModifiersApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ModifiersExtractor.html" title="An extractor class to create and pattern match with syntax Modifiers(flags, privateWithin, annotations)."></a>
+                        <a href="Trees$ModifiersExtractor.html" title="An extractor class to create and pattern match with syntax Modifiers(flags, privateWithin, annotations).">ModifiersExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ModuleDefExtractor.html" title="An extractor class to create and pattern match with syntax ModuleDef(mods, name, impl)."></a>
+                        <a class="abstract type" href="Trees$ModuleDef.html" title="An object definition, e.g."></a>
+                        <a href="Trees$ModuleDef.html" title="An object definition, e.g.">ModuleDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ModuleDefApi.html" title="The API that all module defs support"></a>
+                        <a href="Trees$ModuleDefApi.html" title="The API that all module defs support">ModuleDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ModuleDefExtractor.html" title="An extractor class to create and pattern match with syntax ModuleDef(mods, name, impl)."></a>
+                        <a href="Trees$ModuleDefExtractor.html" title="An extractor class to create and pattern match with syntax ModuleDef(mods, name, impl).">ModuleDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$NameTree.html" title="A tree that carries a name, e.g."></a>
+                        <a href="Trees$NameTree.html" title="A tree that carries a name, e.g.">NameTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$NameTreeApi.html" title="The API that all name trees support"></a>
+                        <a href="Trees$NameTreeApi.html" title="The API that all name trees support">NameTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$New.html" title="Object instantiation"></a>
+                        <a href="Trees$New.html" title="Object instantiation">New</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$NewApi.html" title="The API that all news support"></a>
+                        <a href="Trees$NewApi.html" title="The API that all news support">NewApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$NewExtractor.html" title="An extractor class to create and pattern match with syntax New(tpt)."></a>
+                        <a href="Trees$NewExtractor.html" title="An extractor class to create and pattern match with syntax New(tpt).">NewExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$PackageDefExtractor.html" title="An extractor class to create and pattern match with syntax PackageDef(pid, stats)."></a>
+                        <a class="abstract type" href="Trees$PackageDef.html" title="A packaging, such as package pid { stats }"></a>
+                        <a href="Trees$PackageDef.html" title="A packaging, such as package pid { stats }">PackageDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$PackageDefApi.html" title="The API that all package defs support"></a>
+                        <a href="Trees$PackageDefApi.html" title="The API that all package defs support">PackageDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$PackageDefExtractor.html" title="An extractor class to create and pattern match with syntax PackageDef(pid, stats)."></a>
+                        <a href="Trees$PackageDefExtractor.html" title="An extractor class to create and pattern match with syntax PackageDef(pid, stats).">PackageDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$RefTreeExtractor.html" title="An extractor class to create and pattern match with syntax RefTree(qual, name)."></a>
+                        <a class="abstract type" href="Trees$RefTree.html" title="A tree which references a symbol-carrying entity."></a>
+                        <a href="Trees$RefTree.html" title="A tree which references a symbol-carrying entity.">RefTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$RefTreeApi.html" title="The API that all ref trees support"></a>
+                        <a href="Trees$RefTreeApi.html" title="The API that all ref trees support">RefTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$RefTreeExtractor.html" title="An extractor class to create and pattern match with syntax RefTree(qual, name)."></a>
+                        <a href="Trees$RefTreeExtractor.html" title="An extractor class to create and pattern match with syntax RefTree(qual, name).">RefTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ReturnExtractor.html" title="An extractor class to create and pattern match with syntax Return(expr)."></a>
+                        <a class="abstract type" href="Trees$Return.html" title="Return expression"></a>
+                        <a href="Trees$Return.html" title="Return expression">Return</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ReturnApi.html" title="The API that all returns support"></a>
+                        <a href="Trees$ReturnApi.html" title="The API that all returns support">ReturnApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ReturnExtractor.html" title="An extractor class to create and pattern match with syntax Return(expr)."></a>
+                        <a href="Trees$ReturnExtractor.html" title="An extractor class to create and pattern match with syntax Return(expr).">ReturnExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Select.html" title="A member selection &lt;qualifier&gt; ."></a>
+                        <a href="Trees$Select.html" title="A member selection &lt;qualifier&gt; .">Select</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$SelectApi.html" title="The API that all selects support"></a>
+                        <a href="Trees$SelectApi.html" title="The API that all selects support">SelectApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$SelectExtractor.html" title="An extractor class to create and pattern match with syntax Select(qual, name)."></a>
+                        <a href="Trees$SelectExtractor.html" title="An extractor class to create and pattern match with syntax Select(qual, name).">SelectExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$SelectFromTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SelectFromTypeTree(qualifier, name)."></a>
+                        <a class="abstract type" href="Trees$SelectFromTypeTree.html" title="Type selection &lt;qualifier&gt; # &lt;name&gt;, eliminated by RefCheck"></a>
+                        <a href="Trees$SelectFromTypeTree.html" title="Type selection &lt;qualifier&gt; # &lt;name&gt;, eliminated by RefCheck">SelectFromTypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$SelectFromTypeTreeApi.html" title="The API that all selects from type trees support"></a>
+                        <a href="Trees$SelectFromTypeTreeApi.html" title="The API that all selects from type trees support">SelectFromTypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$SelectFromTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SelectFromTypeTree(qualifier, name)."></a>
+                        <a href="Trees$SelectFromTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SelectFromTypeTree(qualifier, name).">SelectFromTypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$SingletonTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SingletonTypeTree(ref)."></a>
+                        <a class="abstract type" href="Trees$SingletonTypeTree.html" title="Singleton type, eliminated by RefCheck"></a>
+                        <a href="Trees$SingletonTypeTree.html" title="Singleton type, eliminated by RefCheck">SingletonTypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$SingletonTypeTreeApi.html" title="The API that all singleton type trees support"></a>
+                        <a href="Trees$SingletonTypeTreeApi.html" title="The API that all singleton type trees support">SingletonTypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$SingletonTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SingletonTypeTree(ref)."></a>
+                        <a href="Trees$SingletonTypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax SingletonTypeTree(ref).">SingletonTypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$StarExtractor.html" title="An extractor class to create and pattern match with syntax Star(elem)."></a>
+                        <a class="abstract type" href="Trees$Star.html" title="Repetition of pattern."></a>
+                        <a href="Trees$Star.html" title="Repetition of pattern.">Star</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$StarApi.html" title="The API that all stars support"></a>
+                        <a href="Trees$StarApi.html" title="The API that all stars support">StarApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$StarExtractor.html" title="An extractor class to create and pattern match with syntax Star(elem)."></a>
+                        <a href="Trees$StarExtractor.html" title="An extractor class to create and pattern match with syntax Star(elem).">StarExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Super.html" title="Super reference, where qual is the corresponding this reference."></a>
+                        <a href="Trees$Super.html" title="Super reference, where qual is the corresponding this reference.">Super</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$SuperApi.html" title="The API that all supers support"></a>
+                        <a href="Trees$SuperApi.html" title="The API that all supers support">SuperApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$SuperExtractor.html" title="An extractor class to create and pattern match with syntax Super(qual, mix)."></a>
+                        <a href="Trees$SuperExtractor.html" title="An extractor class to create and pattern match with syntax Super(qual, mix).">SuperExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$SymTree.html" title="A tree that carries a symbol, e.g."></a>
+                        <a href="Trees$SymTree.html" title="A tree that carries a symbol, e.g.">SymTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$SymTreeApi.html" title="The API that all sym trees support"></a>
+                        <a href="Trees$SymTreeApi.html" title="The API that all sym trees support">SymTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$TemplateExtractor.html" title="An extractor class to create and pattern match with syntax Template(parents, self, body)."></a>
+                        <a class="abstract type" href="Trees$Template.html" title="Instantiation template of a class or trait"></a>
+                        <a href="Trees$Template.html" title="Instantiation template of a class or trait">Template</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TemplateApi.html" title="The API that all templates support"></a>
+                        <a href="Trees$TemplateApi.html" title="The API that all templates support">TemplateApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TemplateExtractor.html" title="An extractor class to create and pattern match with syntax Template(parents, self, body)."></a>
+                        <a href="Trees$TemplateExtractor.html" title="An extractor class to create and pattern match with syntax Template(parents, self, body).">TemplateExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$TermTree.html" title="A tree for a term."></a>
+                        <a href="Trees$TermTree.html" title="A tree for a term.">TermTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TermTreeApi.html" title="The API that all term trees support"></a>
+                        <a href="Trees$TermTreeApi.html" title="The API that all term trees support">TermTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$This.html" title="Self reference"></a>
+                        <a href="Trees$This.html" title="Self reference">This</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ThisApi.html" title="The API that all thises support"></a>
+                        <a href="Trees$ThisApi.html" title="The API that all thises support">ThisApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ThisExtractor.html" title="An extractor class to create and pattern match with syntax This(qual)."></a>
+                        <a href="Trees$ThisExtractor.html" title="An extractor class to create and pattern match with syntax This(qual).">ThisExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Throw.html" title="Throw expression"></a>
+                        <a href="Trees$Throw.html" title="Throw expression">Throw</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ThrowApi.html" title="The API that all tries support"></a>
+                        <a href="Trees$ThrowApi.html" title="The API that all tries support">ThrowApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ThrowExtractor.html" title="An extractor class to create and pattern match with syntax Throw(expr)."></a>
+                        <a href="Trees$ThrowExtractor.html" title="An extractor class to create and pattern match with syntax Throw(expr).">ThrowExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$Transformer.html" title="A class that implement a default tree transformation strategy: breadth-first component-wise cloning."></a>
+                        <a href="Trees$Transformer.html" title="A class that implement a default tree transformation strategy: breadth-first component-wise cloning.">Transformer</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$Traverser.html" title="A class that implement a default tree traversal strategy: breadth-first component-wise."></a>
+                        <a href="Trees$Traverser.html" title="A class that implement a default tree traversal strategy: breadth-first component-wise.">Traverser</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Tree.html" title="The type of Scala abstract syntax trees."></a>
+                        <a href="Trees$Tree.html" title="The type of Scala abstract syntax trees.">Tree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TreeApi.html" title="The API that all trees support."></a>
+                        <a href="Trees$TreeApi.html" title="The API that all trees support.">TreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$TreeCopier.html" title="The type of standard (lazy) tree copiers."></a>
+                        <a href="Trees$TreeCopier.html" title="The type of standard (lazy) tree copiers.">TreeCopier</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TreeCopierOps.html" title="The API of a tree copier."></a>
+                        <a href="Trees$TreeCopierOps.html" title="The API of a tree copier.">TreeCopierOps</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$Try.html" title="Try catch node"></a>
+                        <a href="Trees$Try.html" title="Try catch node">Try</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TryApi.html" title="The API that all tries support"></a>
+                        <a href="Trees$TryApi.html" title="The API that all tries support">TryApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TryExtractor.html" title="An extractor class to create and pattern match with syntax Try(block, catches, finalizer)."></a>
+                        <a href="Trees$TryExtractor.html" title="An extractor class to create and pattern match with syntax Try(block, catches, finalizer).">TryExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$TypTree.html" title="A tree for a type."></a>
+                        <a href="Trees$TypTree.html" title="A tree for a type.">TypTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypTreeApi.html" title="The API that all typ trees support"></a>
+                        <a href="Trees$TypTreeApi.html" title="The API that all typ trees support">TypTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$TypeApplyExtractor.html" title="An extractor class to create and pattern match with syntax TypeApply(fun, args)."></a>
+                        <a class="abstract type" href="Trees$TypeApply.html" title="Explicit type application."></a>
+                        <a href="Trees$TypeApply.html" title="Explicit type application.">TypeApply</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypeApplyApi.html" title="The API that all type applies support"></a>
+                        <a href="Trees$TypeApplyApi.html" title="The API that all type applies support">TypeApplyApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TypeApplyExtractor.html" title="An extractor class to create and pattern match with syntax TypeApply(fun, args)."></a>
+                        <a href="Trees$TypeApplyExtractor.html" title="An extractor class to create and pattern match with syntax TypeApply(fun, args).">TypeApplyExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$TypeBoundsTreeExtractor.html" title="An extractor class to create and pattern match with syntax TypeBoundsTree(lo, hi)."></a>
+                        <a class="abstract type" href="Trees$TypeBoundsTree.html" title="Type bounds tree node"></a>
+                        <a href="Trees$TypeBoundsTree.html" title="Type bounds tree node">TypeBoundsTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypeBoundsTreeApi.html" title="The API that all type bound trees support"></a>
+                        <a href="Trees$TypeBoundsTreeApi.html" title="The API that all type bound trees support">TypeBoundsTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TypeBoundsTreeExtractor.html" title="An extractor class to create and pattern match with syntax TypeBoundsTree(lo, hi)."></a>
+                        <a href="Trees$TypeBoundsTreeExtractor.html" title="An extractor class to create and pattern match with syntax TypeBoundsTree(lo, hi).">TypeBoundsTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$TypeDefExtractor.html" title="An extractor class to create and pattern match with syntax TypeDef(mods, name, tparams, rhs)."></a>
+                        <a class="abstract type" href="Trees$TypeDef.html" title="An abstract type, a type parameter, or a type alias."></a>
+                        <a href="Trees$TypeDef.html" title="An abstract type, a type parameter, or a type alias.">TypeDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypeDefApi.html" title="The API that all type defs support"></a>
+                        <a href="Trees$TypeDefApi.html" title="The API that all type defs support">TypeDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TypeDefExtractor.html" title="An extractor class to create and pattern match with syntax TypeDef(mods, name, tparams, rhs)."></a>
+                        <a href="Trees$TypeDefExtractor.html" title="An extractor class to create and pattern match with syntax TypeDef(mods, name, tparams, rhs).">TypeDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$TypeTree.html" title="A synthetic tree holding an arbitrary type."></a>
+                        <a href="Trees$TypeTree.html" title="A synthetic tree holding an arbitrary type.">TypeTree</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypeTreeApi.html" title="The API that all type trees support"></a>
+                        <a href="Trees$TypeTreeApi.html" title="The API that all type trees support">TypeTreeApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax TypeTree()."></a>
+                        <a href="Trees$TypeTreeExtractor.html" title="An extractor class to create and pattern match with syntax TypeTree().">TypeTreeExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$TypedExtractor.html" title="An extractor class to create and pattern match with syntax Typed(expr, tpt)."></a>
+                        <a class="abstract type" href="Trees$Typed.html" title="Type annotation, eliminated by compiler phase cleanup"></a>
+                        <a href="Trees$Typed.html" title="Type annotation, eliminated by compiler phase cleanup">Typed</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$TypedApi.html" title="The API that all typeds support"></a>
+                        <a href="Trees$TypedApi.html" title="The API that all typeds support">TypedApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$TypedExtractor.html" title="An extractor class to create and pattern match with syntax Typed(expr, tpt)."></a>
+                        <a href="Trees$TypedExtractor.html" title="An extractor class to create and pattern match with syntax Typed(expr, tpt).">TypedExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$UnApplyExtractor.html" title="An extractor class to create and pattern match with syntax UnApply(fun, args)."></a>
+                        <a class="abstract type" href="Trees$UnApply.html" title="Used to represent unapply methods in pattern matching."></a>
+                        <a href="Trees$UnApply.html" title="Used to represent unapply methods in pattern matching.">UnApply</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$UnApplyApi.html" title="The API that all unapplies support"></a>
+                        <a href="Trees$UnApplyApi.html" title="The API that all unapplies support">UnApplyApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$UnApplyExtractor.html" title="An extractor class to create and pattern match with syntax UnApply(fun, args)."></a>
+                        <a href="Trees$UnApplyExtractor.html" title="An extractor class to create and pattern match with syntax UnApply(fun, args).">UnApplyExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <a class="object" href="Trees$ValDefExtractor.html" title="An extractor class to create and pattern match with syntax ValDef(mods, name, tpt, rhs)."></a>
+                        <a class="abstract type" href="Trees$ValDef.html" title="Broadly speaking, a value definition."></a>
+                        <a href="Trees$ValDef.html" title="Broadly speaking, a value definition.">ValDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ValDefApi.html" title="The API that all val defs support"></a>
+                        <a href="Trees$ValDefApi.html" title="The API that all val defs support">ValDefApi</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="Trees$ValDefExtractor.html" title="An extractor class to create and pattern match with syntax ValDef(mods, name, tpt, rhs)."></a>
+                        <a href="Trees$ValDefExtractor.html" title="An extractor class to create and pattern match with syntax ValDef(mods, name, tpt, rhs).">ValDefExtractor</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Trees$ValOrDefDef.html" title="A common base class for ValDefs and DefDefs."></a>
+                        <a href="Trees$ValOrDefDef.html" title="A common base class for ValDefs and DefDefs.">ValOrDefDef</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees$ValOrDefDefApi.html" title="The API that all val defs and def defs support"></a>
+                        <a href="Trees$ValOrDefDefApi.html" title="The API that all val defs and def defs support">ValOrDefDefApi</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="abstract type type">
+      <div id="definition">
+        <a href="Trees$LiteralExtractor.html" title="See companion class"><div class="big-circle abstract type-companion-class">a</div></a>
+        <p id="owner"><a href="../../index.html" class="extype" name="scala">scala</a>.<a href="../index.html" class="extype" name="scala.reflect">reflect</a>.<a href="index.html" class="extype" name="scala.reflect.api">api</a>.<a href="Trees.html" class="extype" name="scala.reflect.api.Trees">Trees</a></p>
+        <h1><a href="Trees$LiteralExtractor.html" title="See companion class">Literal</a><span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Trees$LiteralExtractor.html" title="See companion class">class LiteralExtractor</a>
+          </div></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Literal</span><span class="result"> &gt;: <span class="extype" name="scala.Null">Null</span> &lt;: <a href="Universe.html#LiteralApiextendsTrees.this.TermTreeApi" class="extmbr" name="scala.reflect.api.Trees.LiteralApi">Universe.LiteralApi</a> with <a href="Universe.html#TermTree&gt;:Null&lt;:Trees.this.TermTreeApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.TermTree">Universe.TermTree</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Literal</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/reflect/scala/reflect/api/Trees.scala#L1" target="_blank">Trees.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.reflect.api.Trees.&lt;refinement&gt;">Universe.&lt;refinement&gt;</span>, <span class="extype" name="scala.reflect.api.Trees.&lt;refinement&gt;">Universe.&lt;refinement&gt;</span>, <a href="Universe.html#LiteralApiextendsTrees.this.TermTreeApi" class="extmbr" name="scala.reflect.api.Trees.LiteralApi">Universe.LiteralApi</a>, <a href="Universe.html#TermTreeApiextendsTrees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.TermTreeApi">Universe.TermTreeApi</a>, <a href="Universe.html#TreeApiextendsProduct" class="extmbr" name="scala.reflect.api.Trees.TreeApi">Universe.TreeApi</a>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.reflect.api.Trees.Literal"><span>Literal</span></li><li class="in" name="scala.reflect.api.Trees.&lt;refinement&gt;"><span>&lt;refinement&gt;</span></li><li class="in" name="scala.reflect.api.Trees.&lt;refinement&gt;"><span>&lt;refinement&gt;</span></li><li class="in" name="scala.reflect.api.Trees.LiteralApi"><span>LiteralApi</span></li><li class="in" name="scala.reflect.api.Trees.TermTreeApi"><span>TermTreeApi</span></li><li class="in" name="scala.reflect.api.Trees.TreeApi"><span>TreeApi</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.Equals#canEqual" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(that:Any):Boolean"></a><a id="canEqual(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#canEqual(that:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canEqual</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Equals</dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#canHaveAttrs" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="canHaveAttrs:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#canHaveAttrs:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canHaveAttrs</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Can this tree carry attributes (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Can this tree carry attributes (i.e. symbols, types or positions)?
+ Typically the answer is yes, except for the <code>EmptyTree</code> null object and
+ two special singletons: <code>noSelfType</code> and <code>pendingSuperCall</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#children" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="children:List[Trees.this.Tree]"></a><a id="children:List[Universe.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#children:List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">children</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The direct child trees of this tree.</p><div class="fullcomment"><div class="comment cmt"><p>The direct child trees of this tree.
+ EmptyTrees are always omitted.  Lists are flattened.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#collect" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="collect[T](pf:PartialFunction[Trees.this.Tree,T]):List[T]"></a><a id="collect[T](PartialFunction[Universe.Tree,T]):List[T]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#collect[T](pf:PartialFunction[Trees.this.Tree,T]):List[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collect</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>, <span class="extype" name="scala.reflect.api.Trees.TreeApi.collect.T">T</span>]</span>)</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.api.Trees.TreeApi.collect.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Apply <code>pf</code> to each subtree on which the function is defined and collect the results.</p><div class="fullcomment"><div class="comment cmt"><p>Apply <code>pf</code> to each subtree on which the function is defined and collect the results.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#duplicate" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="duplicate:TreeApi.this.type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#duplicate:TreeApi.this.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">duplicate</span><span class="result">: <a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a>.this.type</span>
+      </span>
+      
+      <p class="shortcomment cmt">Make a copy of this tree, keeping all attributes,
+ except that all positions are focused (so nothing
+ in this tree will be found when searching by position).</p><div class="fullcomment"><div class="comment cmt"><p>Make a copy of this tree, keeping all attributes,
+ except that all positions are focused (so nothing
+ in this tree will be found when searching by position).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#equalsStructure" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="equalsStructure(that:Trees.this.Tree):Boolean"></a><a id="equalsStructure(Universe.Tree):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#equalsStructure(that:Trees.this.Tree):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equalsStructure</span><span class="params">(<span name="that">that: <a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Tests whether two trees are structurally equal.</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether two trees are structurally equal.
+ Note that <code>==</code> on trees is reference equality.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#exists" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="exists(p:Trees.this.Tree=&gt;Boolean):Boolean"></a><a id="exists((Universe.Tree)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#exists(p:Trees.this.Tree=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exists</span><span class="params">(<span name="p">p: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is there exists a part of this tree which satisfies predicate <code>p</code>?</p><div class="fullcomment"><div class="comment cmt"><p>Is there exists a part of this tree which satisfies predicate <code>p</code>?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#filter" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]"></a><a id="filter((Universe.Tree)⇒Boolean):List[Universe.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#filter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Find all subtrees matching predicate <code>p</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Find all subtrees matching predicate <code>p</code>. Same as <code>withFilter</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#find" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="find(p:Trees.this.Tree=&gt;Boolean):Option[Trees.this.Tree]"></a><a id="find((Universe.Tree)⇒Boolean):Option[Universe.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#find(p:Trees.this.Tree=&gt;Boolean):Option[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">find</span><span class="params">(<span name="p">p: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns optionally first tree (in a preorder traversal) which satisfies predicate <code>p</code>,
+ or None if none exists.</p><div class="fullcomment"><div class="comment cmt"><p>Returns optionally first tree (in a preorder traversal) which satisfies predicate <code>p</code>,
+ or None if none exists.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#forAll" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="forAll(p:Trees.this.Tree=&gt;Boolean):Boolean"></a><a id="forAll((Universe.Tree)⇒Boolean):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#forAll(p:Trees.this.Tree=&gt;Boolean):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forAll</span><span class="params">(<span name="p">p: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Do all parts of this tree satisfy predicate <code>p</code>?</p><div class="fullcomment"><div class="comment cmt"><p>Do all parts of this tree satisfy predicate <code>p</code>?</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#foreach" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="foreach(f:Trees.this.Tree=&gt;Unit):Unit"></a><a id="foreach((Universe.Tree)⇒Unit):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#foreach(f:Trees.this.Tree=&gt;Unit):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Apply <code>f</code> to each subtree</p><div class="fullcomment"><div class="comment cmt"><p>Apply <code>f</code> to each subtree</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#isDef" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isDef:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#isDef:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDef</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Does this tree represent a definition? (of a method, of a class, etc)</p><div class="fullcomment"><div class="comment cmt"><p>Does this tree represent a definition? (of a method, of a class, etc)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#isEmpty" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#isEmpty:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is this tree one of the empty trees?</p><div class="fullcomment"><div class="comment cmt"><p>Is this tree one of the empty trees?</p><p> Empty trees are: the <code>EmptyTree</code> null object and <code>TypeTree</code> instances that don't carry a type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd><dt>See also</dt><dd><span class="cmt"><p><code>canHaveAttrs</code></p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#isTerm" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isTerm:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#isTerm:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTerm</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The canonical way to test if a Tree represents a term.</p><div class="fullcomment"><div class="comment cmt"><p>The canonical way to test if a Tree represents a term.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#isType" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isType:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#isType:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isType</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The canonical way to test if a Tree represents a type.</p><div class="fullcomment"><div class="comment cmt"><p>The canonical way to test if a Tree represents a type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#nonEmpty" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="nonEmpty:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#nonEmpty:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nonEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is this tree not an empty tree?
+</p><div class="fullcomment"><div class="comment cmt"><p>Is this tree not an empty tree?
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd><dt>See also</dt><dd><span class="cmt"><p><code>isEmpty</code></p></span></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#orElse" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="orElse(alt:=&gt;Trees.this.Tree):Trees.this.Tree"></a><a id="orElse(⇒Universe.Tree):Universe.Tree"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#orElse(alt:=&gt;Trees.this.Tree):Trees.this.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">orElse</span><span class="params">(<span name="alt">alt: ⇒ <a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a></span>)</span><span class="result">: <a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides an alternate if tree is empty</p><div class="fullcomment"><div class="comment cmt"><p>Provides an alternate if tree is empty</p></div><dl class="paramcmts block"><dt class="param">alt</dt><dd class="cmt"><p>The alternate tree</p></dd><dt>returns</dt><dd class="cmt"><p>If this tree is non empty, this tree, otherwise <code>alt</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#pos" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="pos:Trees.this.Position"></a><a id="pos:Universe.Position"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#pos:Trees.this.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pos</span><span class="result">: <a href="Universe.html#Position&gt;:Null&lt;:scala.reflect.api.Position{typePos=Positions.this.Position}" class="extmbr" name="scala.reflect.api.Universe.Position">Universe.Position</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Position of the tree.</p><div class="fullcomment"><div class="comment cmt"><p>Position of the tree.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.Product#productArity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#productArity:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.Product#productElement" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a><a id="productElement(Int):Any"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#productElement(n:Int):Any" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#symbol" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="symbol:Trees.this.Symbol"></a><a id="symbol:Universe.Symbol"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#symbol:Trees.this.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symbol</span><span class="result">: <a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Symbol of the tree.</p><div class="fullcomment"><div class="comment cmt"><p>Symbol of the tree.</p><p> For most trees symbol is <code>null</code>. In <code>SymTree</code>s,
+ it is overridden and implemented with a var, initialized to <code>NoSymbol</code>.</p><p> Trees which are not <code>SymTree</code>s but which carry symbols do so by
+ overriding <code>def symbol</code> to forward it elsewhere.  Examples:</p><ul><li><code>Super(qual, _)</code>              has <code>qual</code>'s symbol,</li><li><code>Apply(fun, args)</code>            has <code>fun</code>'s symbol,</li><li><code>TypeApply(fun, args)</code>        has <code>fun</code>'s symbol,</li><li><code>AppliedTypeTree(tpt, args)</code>  has <code>tpt</code>'s symbol,</li><li><code>TypeTree(tpe)</code>               has <code>tpe</code>'s <code>typeSymbol</code>, if <code>tpe != null</code>.
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#tpe" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="tpe:Trees.this.Type"></a><a id="tpe:Universe.Type"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#tpe:Trees.this.Type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tpe</span><span class="result">: <a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Type of the tree.</p><div class="fullcomment"><div class="comment cmt"><p>Type of the tree.</p><p> Upon creation most trees have their <code>tpe</code> set to <code>null</code>.
+ Types are typically assigned to trees during typechecking.
+ Some node factory methods set <code>tpe</code> immediately after creation.</p><p> When the typechecker encounters a tree with a non-null tpe,
+ it will assume it to be correct and not check it again. This means one has
+ to be careful not to erase the <code>tpe</code> field of subtrees.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.LiteralApi#value" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="value:Trees.this.Constant"></a><a id="value:Universe.Constant"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#value:Trees.this.Constant" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">value</span><span class="result">: <a href="Universe.html#Constant&gt;:Null&lt;:Constants.this.ConstantApi" class="extmbr" name="scala.reflect.api.Constants.Constant">Universe.Constant</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The compile-time constant underlying the literal.</p><div class="fullcomment"><div class="comment cmt"><p>The compile-time constant underlying the literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$LiteralApi.html" class="extype" name="scala.reflect.api.Trees.LiteralApi">LiteralApi</a></dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#withFilter" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="withFilter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]"></a><a id="withFilter((Universe.Tree)⇒Boolean):List[Universe.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#withFilter(f:Trees.this.Tree=&gt;Boolean):List[Trees.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withFilter</span><span class="params">(<span name="f">f: (<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Find all subtrees matching predicate <code>p</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Find all subtrees matching predicate <code>p</code>. Same as <code>filter</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Product#productIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productIterator:Iterator[Any]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#productIterator:Iterator[Any]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productIterator</span><span class="result">: <a href="../../index.html#Iterator[+A]=Iterator[A]" class="extmbr" name="scala.Iterator">Iterator</a>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.Product#productPrefix" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productPrefix:String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#productPrefix:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productPrefix</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.reflect.api.Trees.TreeApi#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Obtains string representation of a tree</p><div class="fullcomment"><div class="comment cmt"><p>Obtains string representation of a tree</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Trees$TreeApi.html" class="extype" name="scala.reflect.api.Trees.TreeApi">TreeApi</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/Trees$Literal.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.reflect.api.Trees.&lt;refinement&gt;">
+              <h3>Inherited from <span class="extype" name="scala.reflect.api.Trees.&lt;refinement&gt;">Universe.&lt;refinement&gt;</span></h3>
+            </div><div class="parent" name="scala.reflect.api.Trees.&lt;refinement&gt;">
+              <h3>Inherited from <span class="extype" name="scala.reflect.api.Trees.&lt;refinement&gt;">Universe.&lt;refinement&gt;</span></h3>
+            </div><div class="parent" name="scala.reflect.api.Trees.LiteralApi">
+              <h3>Inherited from <a href="Universe.html#LiteralApiextendsTrees.this.TermTreeApi" class="extmbr" name="scala.reflect.api.Trees.LiteralApi">Universe.LiteralApi</a></h3>
+            </div><div class="parent" name="scala.reflect.api.Trees.TermTreeApi">
+              <h3>Inherited from <a href="Universe.html#TermTreeApiextendsTrees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.TermTreeApi">Universe.TermTreeApi</a></h3>
+            </div><div class="parent" name="scala.reflect.api.Trees.TreeApi">
+              <h3>Inherited from <a href="Universe.html#TreeApiextendsProduct" class="extmbr" name="scala.reflect.api.Trees.TreeApi">Universe.TreeApi</a></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

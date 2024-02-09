@@ -1,0 +1,2344 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doc"></a><a id="doc:doc"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#doc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">doc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer" visbl="pub" class="indented5 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ScaladocSyntaxAnalyzer[G&lt;:scala.tools.nsc.Global]extendsSyntaxAnalyzer"></a><a id="ScaladocSyntaxAnalyzer[G&lt;:Global]:ScaladocSyntaxAnalyzer[G]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/index.html#ScaladocSyntaxAnalyzer[G&lt;:scala.tools.nsc.Global]extendsSyntaxAnalyzer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ScaladocSyntaxAnalyzer.html"><span class="name">ScaladocSyntaxAnalyzer</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../Global.html" class="extype" name="scala.tools.nsc.Global">Global</a></span>]</span><span class="result"> extends <a href="../ast/parser/SyntaxAnalyzer.html" class="extype" name="scala.tools.nsc.ast.parser.SyntaxAnalyzer">SyntaxAnalyzer</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.tools.nsc.doc">doc</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$AbstractJavaScanner.html" title="..."></a>
+                        <a href="../javac/JavaScanners$AbstractJavaScanner.html" title="...">AbstractJavaScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$AbstractJavaTokenData.html" title=""></a>
+                        <a href="../javac/JavaScanners$AbstractJavaTokenData.html" title="">AbstractJavaTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$CommonTokenData.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$CommonTokenData.html" title="">CommonTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$ConfusedAboutBracesControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$ConfusedAboutBracesControl$.html" title="">ConfusedAboutBracesControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$DocScanner.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$DocScanner.html" title="">DocScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaOpInfo.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaOpInfo.html" title="">JavaOpInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaParser.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaParser.html" title="">JavaParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$JavaScanner.html" title="A scanner for Java."></a>
+                        <a href="../javac/JavaScanners$JavaScanner.html" title="A scanner for Java.">JavaScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../javac/JavaScanners$JavaScannerConfiguration$.html" title=""></a>
+                        <a href="../javac/JavaScanners$JavaScannerConfiguration$.html" title="">JavaScannerConfiguration</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../javac/JavaScanners$JavaTokenData.html" title="A class for representing a token's data."></a>
+                        <a href="../javac/JavaScanners$JavaTokenData.html" title="A class for representing a token's data.">JavaTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaUnitParser.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaUnitParser.html" title="">JavaUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$JavaUnitScanner.html" title=""></a>
+                        <a href="../javac/JavaScanners$JavaUnitScanner.html" title="">JavaUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$MalformedInput.html" title=""></a>
+                        <a href="../ast/parser/Scanners$MalformedInput.html" title="">MalformedInput</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/MarkupParsers$MarkupParser.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$MarkupParser.html" title="">MarkupParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$MemberDefTraverser.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$MemberDefTraverser.html" title="">MemberDefTraverser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$MemberPosReporter.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$MemberPosReporter.html" title="">MemberPosReporter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$MissingEndTagControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$MissingEndTagControl$.html" title="">MissingEndTagControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$OpInfo.html" title=""></a>
+                        <a href="../ast/parser/Parsers$OpInfo.html" title="">OpInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$OutlineParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$OutlineParser.html" title="">OutlineParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$ParensAnalyzer.html" title=""></a>
+                        <a href="../ast/parser/Scanners$ParensAnalyzer.html" title="">ParensAnalyzer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$Parser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$Parser.html" title="">Parser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/ParsersCommon$ParserCommon.html" title="This is now an abstract class, only to work around the optimizer: methods in traits are never inlined."></a>
+                        <a href="../ast/parser/ParsersCommon$ParserCommon.html" title="This is now an abstract class, only to work around the optimizer: methods in traits are never inlined.">ParserCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$ParserPhase.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$ParserPhase.html" title="">ParserPhase</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">ScaladocJavaUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html" title="">ScaladocJavaUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" title="">ScaladocScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocUnitParser.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocUnitParser.html" title="">ScaladocUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocUnitScanner.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocUnitScanner.html" title="">ScaladocUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$Scanner.html" title=""></a>
+                        <a href="../ast/parser/Scanners$Scanner.html" title="">Scanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$ScannerCommon.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$ScannerCommon.html" title="">ScannerCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/Scanners$ScannerData.html" title="An interface to most of mutable data in Scanner defined in TokenData and CharArrayReader (+ next, prev fields) with copyFrom functionality to backup/restore data (used by quasiquotes' lookingAhead)."></a>
+                        <a href="../ast/parser/Scanners$ScannerData.html" title="An interface to most of mutable data in Scanner defined in TokenData and CharArrayReader (+ next, prev fields) with copyFrom functionality to backup/restore data (used by quasiquotes' lookingAhead).">ScannerData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$SourceFileParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$SourceFileParser.html" title="">SourceFileParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$SourceFileScanner.html" title="A scanner for a given source file not necessarily attached to a compilation unit."></a>
+                        <a href="../ast/parser/Scanners$SourceFileScanner.html" title="A scanner for a given source file not necessarily attached to a compilation unit.">SourceFileScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../SubComponent$StdPhase.html" title="A standard phase template"></a>
+                        <a href="../SubComponent$StdPhase.html" title="A standard phase template">StdPhase</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/Scanners$TokenData.html" title=""></a>
+                        <a href="../ast/parser/Scanners$TokenData.html" title="">TokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$TruncatedXMLControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$TruncatedXMLControl$.html" title="">TruncatedXMLControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$UnitParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$UnitParser.html" title="">UnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$UnitScanner.html" title="A scanner over a given compilation unit"></a>
+                        <a href="../ast/parser/Scanners$UnitScanner.html" title="A scanner over a given compilation unit">UnitScanner</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.doc">doc</a>.<a href="ScaladocSyntaxAnalyzer.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer">ScaladocSyntaxAnalyzer</a></p>
+        <h1>ScaladocJavaUnitParser<span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScaladocJavaUnitParser</span><span class="result"> extends <a href="ScaladocSyntaxAnalyzer.html#JavaUnitParserextendsJavaParsers.this.JavaParser" class="extmbr" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/scaladoc/scala/tools/nsc/doc/ScaladocAnalyzer.scala#L1" target="_blank">ScaladocAnalyzer.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="ScaladocSyntaxAnalyzer.html#JavaUnitParserextendsJavaParsers.this.JavaParser" class="extmbr" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">ScaladocSyntaxAnalyzer.JavaUnitParser</a>, <a href="ScaladocSyntaxAnalyzer.html#JavaParserextendsJavaParsers.this.ParserCommon" class="extmbr" name="scala.tools.nsc.javac.JavaParsers.JavaParser">ScaladocSyntaxAnalyzer.JavaParser</a>, <a href="ScaladocSyntaxAnalyzer.html#ParserCommonextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ScaladocSyntaxAnalyzer.ParserCommon</a>, <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser"><span>ScaladocJavaUnitParser</span></li><li class="in" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser"><span>JavaUnitParser</span></li><li class="in" name="scala.tools.nsc.javac.JavaParsers.JavaParser"><span>JavaParser</span></li><li class="in" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon"><span>ParserCommon</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(unit:ScaladocSyntaxAnalyzer.this.global.CompilationUnit):ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitParser"></a><a id="&lt;init&gt;:ScaladocJavaUnitParser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#&lt;init&gt;(unit:ScaladocSyntaxAnalyzer.this.global.CompilationUnit):ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitParser" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScaladocJavaUnitParser</span><span class="params">(<span name="unit">unit: <span class="extype" name="scala.tools.nsc.CompilationUnits.CompilationUnit">G.CompilationUnit</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(ScaladocJavaUnitParser,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#accept" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="accept(token:Int):Int"></a><a id="accept(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#accept(token:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">accept</span><span class="params">(<span name="token">token: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Consume one token of the specified type, or
+signal an error if it is not there.</p><div class="fullcomment"><div class="comment cmt"><p>Consume one token of the specified type, or
+signal an error if it is not there.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a> → <a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#acceptClosingAngle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="acceptClosingAngle():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#acceptClosingAngle():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">acceptClosingAngle</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#addCompanionObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addCompanionObject(statics:List[JavaParsers.this.global.Tree],cdef:JavaParsers.this.global.ClassDef):List[JavaParsers.this.global.Tree]"></a><a id="addCompanionObject(List[G.Tree],G.ClassDef):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#addCompanionObject(statics:List[JavaParsers.this.global.Tree],cdef:JavaParsers.this.global.ClassDef):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addCompanionObject</span><span class="params">(<span name="statics">statics: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>, <span name="cdef">cdef: <span class="extype" name="scala.reflect.internal.Trees.ClassDef">G.ClassDef</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#annotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="annotation():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#annotation():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">annotation</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Annotation ::= TypeName [<code>(</code> AnnotationArgument {<code>,</code> AnnotationArgument} <code>)</code>]
+</p><div class="fullcomment"><div class="comment cmt"><p>Annotation ::= TypeName [<code>(</code> AnnotationArgument {<code>,</code> AnnotationArgument} <code>)</code>]
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#annotationDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="annotationDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]"></a><a id="annotationDecl(G.Modifiers):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#annotationDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">annotationDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#annotationParents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="annotationParents:List[JavaParsers.this.global.Select]"></a><a id="annotationParents:collection.immutable.List[G.Select]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#annotationParents:List[JavaParsers.this.global.Select]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">annotationParents</span><span class="result">: <span class="extype" name="scala.collection.immutable.List">collection.immutable.List</span>[<span class="extype" name="scala.reflect.internal.Trees.Select">G.Select</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#annotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="annotations():List[JavaParsers.this.global.Tree]"></a><a id="annotations():List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#annotations():List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">annotations</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#arrayOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="arrayOf(tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.AppliedTypeTree"></a><a id="arrayOf(G.Tree):G.AppliedTypeTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#arrayOf(tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.AppliedTypeTree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">arrayOf</span><span class="params">(<span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.AppliedTypeTree">G.AppliedTypeTree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#basicType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="basicType():JavaParsers.this.global.Tree"></a><a id="basicType():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#basicType():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">basicType</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#blankExpr" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="blankExpr:JavaParsers.this.global.EmptyTree.type"></a><a id="blankExpr:G.EmptyTree.type"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#blankExpr:JavaParsers.this.global.EmptyTree.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">blankExpr</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.EmptyTree">G.EmptyTree</span>.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#bound" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bound():JavaParsers.this.global.Tree"></a><a id="bound():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#bound():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bound</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#classDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="classDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]"></a><a id="classDecl(G.Modifiers):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#classDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">classDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#compilationUnit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compilationUnit():JavaParsers.this.global.Tree"></a><a id="compilationUnit():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#compilationUnit():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compilationUnit</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">CompilationUnit ::= [package QualId semi] TopStatSeq
+</p><div class="fullcomment"><div class="comment cmt"><p>CompilationUnit ::= [package QualId semi] TopStatSeq
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#convertToTypeId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="convertToTypeId(tree:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree"></a><a id="convertToTypeId(G.Tree):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#convertToTypeId(tree:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convertToTypeId</span><span class="params">(<span name="tree">tree: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert (qual)ident to type identifier
+</p><div class="fullcomment"><div class="comment cmt"><p>Convert (qual)ident to type identifier
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#definesInterface" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="definesInterface(token:Int):Boolean"></a><a id="definesInterface(Int):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#definesInterface(token:Int):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">definesInterface</span><span class="params">(<span name="token">token: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#deprecationWarning" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deprecationWarning(off:Int,msg:String,since:String):Unit"></a><a id="deprecationWarning(Int,String,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#deprecationWarning(off:Int,msg:String,since:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deprecationWarning</span><span class="params">(<span name="off">off: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="since">since: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#dropAnyBraces" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropAnyBraces[T](body:=&gt;T):T"></a><a id="dropAnyBraces[T](⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#dropAnyBraces[T](body:=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropAnyBraces</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.dropAnyBraces.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.dropAnyBraces.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((ScaladocJavaUnitParser)⇒Boolean,⇒Any):ScaladocJavaUnitParser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((ScaladocJavaUnitParser)⇒Boolean):ScaladocJavaUnitParser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):ScaladocJavaUnitParser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):ScaladocJavaUnitParser"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#enumConst" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="enumConst(enumType:JavaParsers.this.global.Tree):(JavaParsers.this.global.ValDef,Boolean)"></a><a id="enumConst(G.Tree):(G.ValDef,Boolean)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#enumConst(enumType:JavaParsers.this.global.Tree):(JavaParsers.this.global.ValDef,Boolean)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enumConst</span><span class="params">(<span name="enumType">enumType: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: (<span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span>, <span class="extype" name="scala.Boolean">Boolean</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#enumDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="enumDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]"></a><a id="enumDecl(G.Modifiers):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#enumDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enumDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#errorTypeTree" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="errorTypeTree:JavaParsers.this.global.TypeTree"></a><a id="errorTypeTree:G.TypeTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#errorTypeTree:JavaParsers.this.global.TypeTree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errorTypeTree</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.TypeTree">G.TypeTree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#fieldDecls" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fieldDecls(pos:JavaParsers.this.global.Position,mods:JavaParsers.this.global.Modifiers,tpt:JavaParsers.this.global.Tree,name:JavaParsers.this.global.Name):List[JavaParsers.this.global.Tree]"></a><a id="fieldDecls(G.Position,G.Modifiers,G.Tree,G.Name):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#fieldDecls(pos:JavaParsers.this.global.Position,mods:JavaParsers.this.global.Modifiers,tpt:JavaParsers.this.global.Tree,name:JavaParsers.this.global.Name):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fieldDecls</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>, <span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>, <span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>, <span name="name">name: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Parse a sequence of field declarations, separated by commas.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a sequence of field declarations, separated by commas.
+ This one is tricky because a comma might also appear in an
+ initializer. Since we don't parse initializers we don't know
+ what the comma signifies.
+ We solve this with a second list buffer <code>maybe</code> which contains
+ potential variable definitions.
+ Once we have reached the end of the statement, we know whether
+ these potential definitions are real or not.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#formalParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formalParam():JavaParsers.this.global.ValDef"></a><a id="formalParam():G.ValDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#formalParam():JavaParsers.this.global.ValDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">formalParam</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#formalParams" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formalParams():List[JavaParsers.this.global.ValDef]"></a><a id="formalParams():List[G.ValDef]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#formalParams():List[JavaParsers.this.global.ValDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">formalParams</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#freshName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="freshName(prefix:String):JavaParsers.this.global.Name"></a><a id="freshName(String):G.Name"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#freshName(prefix:String):JavaParsers.this.global.Name" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freshName</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#freshTermName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="freshTermName(prefix:String):JavaParsers.this.global.TermName"></a><a id="freshTermName(String):G.TermName"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#freshTermName(prefix:String):JavaParsers.this.global.TermName" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freshTermName</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.TermName">G.TermName</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#freshTypeName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="freshTypeName(prefix:String):JavaParsers.this.global.TypeName"></a><a id="freshTypeName(String):G.TypeName"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#freshTypeName(prefix:String):JavaParsers.this.global.TypeName" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">freshTypeName</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.TypeName">G.TypeName</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#i2p" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="i2p(offset:Int):JavaParsers.this.global.Position"></a><a id="i2p(Int):G.Position"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#i2p(offset:Int):JavaParsers.this.global.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">i2p</span><span class="params">(<span name="offset">offset: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#ident" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ident():JavaParsers.this.global.Name"></a><a id="ident():G.Name"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ident():JavaParsers.this.global.Name" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ident</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#identForType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="identForType():JavaParsers.this.global.TypeName"></a><a id="identForType():G.TypeName"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#identForType():JavaParsers.this.global.TypeName" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">identForType</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.TypeName">G.TypeName</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#importCompanionObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="importCompanionObject(cdef:JavaParsers.this.global.ClassDef):JavaParsers.this.global.Tree"></a><a id="importCompanionObject(G.ClassDef):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#importCompanionObject(cdef:JavaParsers.this.global.ClassDef):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">importCompanionObject</span><span class="params">(<span name="cdef">cdef: <span class="extype" name="scala.reflect.internal.Trees.ClassDef">G.ClassDef</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#importDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="importDecl():List[JavaParsers.this.global.Tree]"></a><a id="importDecl():List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#importDecl():List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">importDecl</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser#in" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="in:ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitScanner"></a><a id="in:ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#in:ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitScanner" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">in</span><span class="result">: <a href="ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> → <a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a> → <a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inBraces" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inBraces[T](body:=&gt;T):T"></a><a id="inBraces[T](⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inBraces[T](body:=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inBraces</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBraces.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBraces.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inBracesOrError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inBracesOrError[T](body:=&gt;T,alt:T):T"></a><a id="inBracesOrError[T](⇒T,T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inBracesOrError[T](body:=&gt;T,alt:T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inBracesOrError</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBracesOrError.T">T</span></span>, <span name="alt">alt: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBracesOrError.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBracesOrError.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inBracesOrNil" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inBracesOrNil[T](body:=&gt;List[T]):List[T]"></a><a id="inBracesOrNil[T](⇒List[T]):List[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inBracesOrNil[T](body:=&gt;List[T]):List[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inBracesOrNil</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBracesOrNil.T">T</span>]</span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBracesOrNil.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inBracesOrUnit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inBracesOrUnit[T](body:=&gt;ParsersCommon.this.global.Tree):ParsersCommon.this.global.Tree"></a><a id="inBracesOrUnit[T](⇒G.Tree):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inBracesOrUnit[T](body:=&gt;ParsersCommon.this.global.Tree):ParsersCommon.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inBracesOrUnit</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inBrackets" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inBrackets[T](body:=&gt;T):T"></a><a id="inBrackets[T](⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inBrackets[T](body:=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inBrackets</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBrackets.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inBrackets.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inParens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inParens[T](body:=&gt;T):T"></a><a id="inParens[T](⇒T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inParens[T](body:=&gt;T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inParens</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParens.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParens.T">T</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Methods inParensOrError and similar take a second argument which, should
+ the next token not be the expected opener (e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Methods inParensOrError and similar take a second argument which, should
+ the next token not be the expected opener (e.g. LPAREN) will be returned
+ instead of the contents of the groupers.  However in all cases accept(LPAREN)
+ will be called, so a parse error will still result.  If the grouping is
+ optional, in.token should be tested before calling these methods.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inParensOrError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inParensOrError[T](body:=&gt;T,alt:T):T"></a><a id="inParensOrError[T](⇒T,T):T"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inParensOrError[T](body:=&gt;T,alt:T):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inParensOrError</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParensOrError.T">T</span></span>, <span name="alt">alt: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParensOrError.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParensOrError.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inParensOrNil" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inParensOrNil[T](body:=&gt;List[T]):List[T]"></a><a id="inParensOrNil[T](⇒List[T]):List[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inParensOrNil[T](body:=&gt;List[T]):List[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inParensOrNil</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParensOrNil.T">T</span>]</span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon.inParensOrNil.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#inParensOrUnit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inParensOrUnit[T](body:=&gt;ParsersCommon.this.global.Tree):ParsersCommon.this.global.Tree"></a><a id="inParensOrUnit[T](⇒G.Tree):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#inParensOrUnit[T](body:=&gt;ParsersCommon.this.global.Tree):ParsersCommon.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inParensOrUnit</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#interfaceDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interfaceDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]"></a><a id="interfaceDecl(G.Modifiers):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#interfaceDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interfaceDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#interfacesOpt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interfacesOpt():List[JavaParsers.this.global.Tree]"></a><a id="interfacesOpt():List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#interfacesOpt():List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interfacesOpt</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#javaDot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="javaDot(name:JavaParsers.this.global.Name):JavaParsers.this.global.Tree"></a><a id="javaDot(G.Name):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#javaDot(name:JavaParsers.this.global.Name):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaDot</span><span class="params">(<span name="name">name: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#javaLangDot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="javaLangDot(name:JavaParsers.this.global.Name):JavaParsers.this.global.Tree"></a><a id="javaLangDot(G.Name):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#javaLangDot(name:JavaParsers.this.global.Name):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaLangDot</span><span class="params">(<span name="name">name: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#javaLangObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="javaLangObject():JavaParsers.this.global.Tree"></a><a id="javaLangObject():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#javaLangObject():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaLangObject</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser#joinComment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="joinComment(trees:=&gt;List[ScaladocSyntaxAnalyzer.this.global.Tree]):List[ScaladocSyntaxAnalyzer.this.global.Tree]"></a><a id="joinComment(⇒List[G.Tree]):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#joinComment(trees:=&gt;List[ScaladocSyntaxAnalyzer.this.global.Tree]):List[ScaladocSyntaxAnalyzer.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">joinComment</span><span class="params">(<span name="trees">trees: ⇒ <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A hook for joining the comment associated with a definition.</p><div class="fullcomment"><div class="comment cmt"><p>A hook for joining the comment associated with a definition.
+Overridden by scaladoc.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeCompanionObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeCompanionObject(cdef:JavaParsers.this.global.ClassDef,statics:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.Tree"></a><a id="makeCompanionObject(G.ClassDef,List[G.Tree]):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeCompanionObject(cdef:JavaParsers.this.global.ClassDef,statics:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeCompanionObject</span><span class="params">(<span name="cdef">cdef: <span class="extype" name="scala.reflect.internal.Trees.ClassDef">G.ClassDef</span></span>, <span name="statics">statics: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeConstructor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeConstructor(formals:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.DefDef"></a><a id="makeConstructor(List[G.Tree]):G.DefDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeConstructor(formals:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.DefDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeConstructor</span><span class="params">(<span name="formals">formals: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.DefDef">G.DefDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makePackaging" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makePackaging(pkg:JavaParsers.this.global.RefTree,stats:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.PackageDef"></a><a id="makePackaging(G.RefTree,List[G.Tree]):G.PackageDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makePackaging(pkg:JavaParsers.this.global.RefTree,stats:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.PackageDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makePackaging</span><span class="params">(<span name="pkg">pkg: <span class="extype" name="scala.reflect.internal.Trees.RefTree">G.RefTree</span></span>, <span name="stats">stats: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.PackageDef">G.PackageDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeParam(name:JavaParsers.this.global.TermName,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef"></a><a id="makeParam(G.TermName,G.Tree):G.ValDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeParam(name:JavaParsers.this.global.TermName,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeParam</span><span class="params">(<span name="name">name: <span class="extype" name="scala.reflect.internal.Names.TermName">G.TermName</span></span>, <span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeParam(name:String,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef"></a><a id="makeParam(String,G.Tree):G.ValDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeParam(name:String,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeParam</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon#makeParens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeParens(body:=&gt;List[ParsersCommon.this.global.Tree]):ParsersCommon.this.global.Parens"></a><a id="makeParens(⇒List[G.Tree]):G.Parens"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeParens(body:=&gt;List[ParsersCommon.this.global.Tree]):ParsersCommon.this.global.Parens" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeParens</span><span class="params">(<span name="body">body: ⇒ <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.Trees.Parens">G.Parens</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Creates an actual Parens node (only used during parsing.)
+</p><div class="fullcomment"><div class="comment cmt"><p>Creates an actual Parens node (only used during parsing.)
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ParsersCommon$ParserCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ParserCommon</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeSyntheticParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeSyntheticParam(count:Int,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef"></a><a id="makeSyntheticParam(Int,G.Tree):G.ValDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeSyntheticParam(count:Int,tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.ValDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeSyntheticParam</span><span class="params">(<span name="count">count: <span class="extype" name="scala.Int">Int</span></span>, <span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#makeTemplate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeTemplate(parents:List[JavaParsers.this.global.Tree],stats:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.Template"></a><a id="makeTemplate(List[G.Tree],List[G.Tree]):G.Template"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#makeTemplate(parents:List[JavaParsers.this.global.Tree],stats:List[JavaParsers.this.global.Tree]):JavaParsers.this.global.Template" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeTemplate</span><span class="params">(<span name="parents">parents: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>, <span name="stats">stats: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Template">G.Template</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#memberDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="memberDecl(mods:JavaParsers.this.global.Modifiers,parentToken:Int):List[JavaParsers.this.global.Tree]"></a><a id="memberDecl(G.Modifiers,Int):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#memberDecl(mods:JavaParsers.this.global.Modifiers,parentToken:Int):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">memberDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>, <span name="parentToken">parentToken: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#methodBody" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="methodBody():JavaParsers.this.global.Tree"></a><a id="methodBody():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#methodBody():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">methodBody</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#modifiers" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modifiers(inInterface:Boolean):JavaParsers.this.global.Modifiers"></a><a id="modifiers(Boolean):G.Modifiers"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#modifiers(inInterface:Boolean):JavaParsers.this.global.Modifiers" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modifiers</span><span class="params">(<span name="inInterface">inInterface: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#optArrayBrackets" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optArrayBrackets(tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree"></a><a id="optArrayBrackets(G.Tree):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#optArrayBrackets(tpt:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optArrayBrackets</span><span class="params">(<span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#optThrows" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optThrows():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#optThrows():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optThrows</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#parse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parse():JavaParsers.this.global.Tree"></a><a id="parse():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#parse():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parse</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">this is the general parse method
+</p><div class="fullcomment"><div class="comment cmt"><p>this is the general parse method
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#qualId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="qualId():JavaParsers.this.global.RefTree"></a><a id="qualId():G.RefTree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#qualId():JavaParsers.this.global.RefTree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">qualId</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.RefTree">G.RefTree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#repsep" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="repsep[T&lt;:JavaParsers.this.global.Tree](p:()=&gt;T,sep:Int):List[T]"></a><a id="repsep[T&lt;:G.Tree](()⇒T,Int):List[T]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#repsep[T&lt;:JavaParsers.this.global.Tree](p:()=&gt;T,sep:Int):List[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repsep</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>]</span><span class="params">(<span name="p">p: () ⇒ <span class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser.repsep.T">T</span></span>, <span name="sep">sep: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser.repsep.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#skip" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skip():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#skip():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skip</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#skipAhead" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipAhead():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#skipAhead():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipAhead</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">skip parent or brace enclosed sequence of things</p><div class="fullcomment"><div class="comment cmt"><p>skip parent or brace enclosed sequence of things</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#skipTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipTo(tokens:Int*):Unit"></a><a id="skipTo(Int*):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#skipTo(tokens:Int*):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipTo</span><span class="params">(<span name="tokens">tokens: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#syntaxError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syntaxError(pos:Int,msg:String):Unit"></a><a id="syntaxError(Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#syntaxError(pos:Int,msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxError</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#syntaxError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syntaxError(pos:Int,msg:String,skipIt:Boolean):Unit"></a><a id="syntaxError(Int,String,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#syntaxError(pos:Int,msg:String,skipIt:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxError</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="skipIt">skipIt: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#syntaxError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syntaxError(msg:String,skipIt:Boolean):Unit"></a><a id="syntaxError(String,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#syntaxError(msg:String,skipIt:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxError</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="skipIt">skipIt: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#termDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="termDecl(mods:JavaParsers.this.global.Modifiers,parentToken:Int):List[JavaParsers.this.global.Tree]"></a><a id="termDecl(G.Modifiers,Int):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#termDecl(mods:JavaParsers.this.global.Modifiers,parentToken:Int):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">termDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>, <span name="parentToken">parentToken: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#tryLiteral" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tryLiteral(negate:Boolean):Option[JavaParsers.this.global.Constant]"></a><a id="tryLiteral(Boolean):Option[G.Constant]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#tryLiteral(negate:Boolean):Option[JavaParsers.this.global.Constant]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tryLiteral</span><span class="params">(<span name="negate">negate: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.reflect.internal.Constants.Constant">G.Constant</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typ" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typ():JavaParsers.this.global.Tree"></a><a id="typ():G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typ():JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typ</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeArgs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeArgs(t:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree"></a><a id="typeArgs(G.Tree):G.Tree"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeArgs(t:JavaParsers.this.global.Tree):JavaParsers.this.global.Tree" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeArgs</span><span class="params">(<span name="t">t: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeBody" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeBody(leadingToken:Int,parentName:JavaParsers.this.global.Name):(List[JavaParsers.this.global.Tree],List[JavaParsers.this.global.Tree])"></a><a id="typeBody(Int,G.Name):(List[G.Tree],List[G.Tree])"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeBody(leadingToken:Int,parentName:JavaParsers.this.global.Name):(List[JavaParsers.this.global.Tree],List[JavaParsers.this.global.Tree])" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeBody</span><span class="params">(<span name="leadingToken">leadingToken: <span class="extype" name="scala.Int">Int</span></span>, <span name="parentName">parentName: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>)</span><span class="result">: (<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>], <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>])</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeBodyDecls" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeBodyDecls(parentToken:Int,parentName:JavaParsers.this.global.Name):(List[JavaParsers.this.global.Tree],List[JavaParsers.this.global.Tree])"></a><a id="typeBodyDecls(Int,G.Name):(List[G.Tree],List[G.Tree])"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeBodyDecls(parentToken:Int,parentName:JavaParsers.this.global.Name):(List[JavaParsers.this.global.Tree],List[JavaParsers.this.global.Tree])" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeBodyDecls</span><span class="params">(<span name="parentToken">parentToken: <span class="extype" name="scala.Int">Int</span></span>, <span name="parentName">parentName: <span class="extype" name="scala.reflect.internal.Names.Name">G.Name</span></span>)</span><span class="result">: (<a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>], <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>])</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]"></a><a id="typeDecl(G.Modifiers):List[G.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeDecl(mods:JavaParsers.this.global.Modifiers):List[JavaParsers.this.global.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeDecl</span><span class="params">(<span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>)</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeParam():JavaParsers.this.global.TypeDef"></a><a id="typeParam():G.TypeDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeParam():JavaParsers.this.global.TypeDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeParam</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.TypeDef">G.TypeDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#typeParams" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="typeParams():List[JavaParsers.this.global.TypeDef]"></a><a id="typeParams():List[G.TypeDef]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#typeParams():List[JavaParsers.this.global.TypeDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeParams</span><span class="params">()</span><span class="result">: <a href="../../../index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="scala.reflect.internal.Trees.TypeDef">G.TypeDef</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#unit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unit:JavaParsers.this.global.CompilationUnit"></a><a id="unit:G.CompilationUnit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#unit:JavaParsers.this.global.CompilationUnit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unit</span><span class="result">: <span class="extype" name="scala.tools.nsc.CompilationUnits.CompilationUnit">G.CompilationUnit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaParser#varDecl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="varDecl(pos:JavaParsers.this.global.Position,mods:JavaParsers.this.global.Modifiers,tpt:JavaParsers.this.global.Tree,name:JavaParsers.this.global.TermName):JavaParsers.this.global.ValDef"></a><a id="varDecl(G.Position,G.Modifiers,G.Tree,G.TermName):G.ValDef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#varDecl(pos:JavaParsers.this.global.Position,mods:JavaParsers.this.global.Modifiers,tpt:JavaParsers.this.global.Tree,name:JavaParsers.this.global.TermName):JavaParsers.this.global.ValDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">varDecl</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>, <span name="mods">mods: <span class="extype" name="scala.reflect.internal.Trees.Modifiers">G.Modifiers</span></span>, <span name="tpt">tpt: <span class="extype" name="scala.reflect.internal.Trees.Tree">G.Tree</span></span>, <span name="name">name: <span class="extype" name="scala.reflect.internal.Names.TermName">G.TermName</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Trees.ValDef">G.ValDef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser#warning" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="warning(pos:Int,msg:String):Unit"></a><a id="warning(Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#warning(pos:Int,msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warning</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaParsers$JavaUnitParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">JavaUnitParser</a> → <a href="../javac/JavaParsers$JavaParser.html" class="extype" name="scala.tools.nsc.javac.JavaParsers.JavaParser">JavaParser</a></dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(ScaladocJavaUnitParser,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#JavaUnitParserextendsJavaParsers.this.JavaParser" class="extmbr" name="scala.tools.nsc.javac.JavaParsers.JavaUnitParser">ScaladocSyntaxAnalyzer.JavaUnitParser</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaParsers.JavaParser">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#JavaParserextendsJavaParsers.this.ParserCommon" class="extmbr" name="scala.tools.nsc.javac.JavaParsers.JavaParser">ScaladocSyntaxAnalyzer.JavaParser</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#ParserCommonextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ParsersCommon.ParserCommon">ScaladocSyntaxAnalyzer.ParserCommon</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitParser">ScaladocJavaUnitParser</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

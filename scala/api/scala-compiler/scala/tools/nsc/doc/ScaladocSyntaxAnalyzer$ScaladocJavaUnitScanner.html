@@ -1,0 +1,1726 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Compiler 2.12.8 - scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner</title>
+          <meta name="description" content="Scala Compiler 2.12.8 - scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner" />
+          <meta name="keywords" content="Scala Compiler 2.12.8 scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Compiler<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala compiler and reflection APIs." href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala compiler and reflection APIs.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala compiler and reflection APIs.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.tools" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tools"></a><a id="tools:tools"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#tools" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">tools</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.tools.nsc" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nsc"></a><a id="nsc:nsc"></a>
+      <span class="permalink">
+      <a href="../../scala/tools/index.html#nsc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">nsc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala.tools">tools</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doc"></a><a id="doc:doc"></a>
+      <span class="permalink">
+      <a href="../../../scala/tools/nsc/index.html#doc" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">doc</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer" visbl="pub" class="indented5 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ScaladocSyntaxAnalyzer[G&lt;:scala.tools.nsc.Global]extendsSyntaxAnalyzer"></a><a id="ScaladocSyntaxAnalyzer[G&lt;:Global]:ScaladocSyntaxAnalyzer[G]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/index.html#ScaladocSyntaxAnalyzer[G&lt;:scala.tools.nsc.Global]extendsSyntaxAnalyzer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ScaladocSyntaxAnalyzer.html"><span class="name">ScaladocSyntaxAnalyzer</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../Global.html" class="extype" name="scala.tools.nsc.Global">Global</a></span>]</span><span class="result"> extends <a href="../ast/parser/SyntaxAnalyzer.html" class="extype" name="scala.tools.nsc.ast.parser.SyntaxAnalyzer">SyntaxAnalyzer</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="scala.tools.nsc.doc">doc</a></dd></dl></div>
+    </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$AbstractJavaScanner.html" title="..."></a>
+                        <a href="../javac/JavaScanners$AbstractJavaScanner.html" title="...">AbstractJavaScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$AbstractJavaTokenData.html" title=""></a>
+                        <a href="../javac/JavaScanners$AbstractJavaTokenData.html" title="">AbstractJavaTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$CommonTokenData.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$CommonTokenData.html" title="">CommonTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$ConfusedAboutBracesControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$ConfusedAboutBracesControl$.html" title="">ConfusedAboutBracesControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$DocScanner.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$DocScanner.html" title="">DocScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaOpInfo.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaOpInfo.html" title="">JavaOpInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaParser.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaParser.html" title="">JavaParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$JavaScanner.html" title="A scanner for Java."></a>
+                        <a href="../javac/JavaScanners$JavaScanner.html" title="A scanner for Java.">JavaScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../javac/JavaScanners$JavaScannerConfiguration$.html" title=""></a>
+                        <a href="../javac/JavaScanners$JavaScannerConfiguration$.html" title="">JavaScannerConfiguration</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../javac/JavaScanners$JavaTokenData.html" title="A class for representing a token's data."></a>
+                        <a href="../javac/JavaScanners$JavaTokenData.html" title="A class for representing a token's data.">JavaTokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaParsers$JavaUnitParser.html" title=""></a>
+                        <a href="../javac/JavaParsers$JavaUnitParser.html" title="">JavaUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../javac/JavaScanners$JavaUnitScanner.html" title=""></a>
+                        <a href="../javac/JavaScanners$JavaUnitScanner.html" title="">JavaUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$MalformedInput.html" title=""></a>
+                        <a href="../ast/parser/Scanners$MalformedInput.html" title="">MalformedInput</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/MarkupParsers$MarkupParser.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$MarkupParser.html" title="">MarkupParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$MemberDefTraverser.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$MemberDefTraverser.html" title="">MemberDefTraverser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$MemberPosReporter.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$MemberPosReporter.html" title="">MemberPosReporter</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$MissingEndTagControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$MissingEndTagControl$.html" title="">MissingEndTagControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$OpInfo.html" title=""></a>
+                        <a href="../ast/parser/Parsers$OpInfo.html" title="">OpInfo</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$OutlineParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$OutlineParser.html" title="">OutlineParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$ParensAnalyzer.html" title=""></a>
+                        <a href="../ast/parser/Scanners$ParensAnalyzer.html" title="">ParensAnalyzer</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$Parser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$Parser.html" title="">Parser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/ParsersCommon$ParserCommon.html" title="This is now an abstract class, only to work around the optimizer: methods in traits are never inlined."></a>
+                        <a href="../ast/parser/ParsersCommon$ParserCommon.html" title="This is now an abstract class, only to work around the optimizer: methods in traits are never inlined.">ParserCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/SyntaxAnalyzer$ParserPhase.html" title=""></a>
+                        <a href="../ast/parser/SyntaxAnalyzer$ParserPhase.html" title="">ParserPhase</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocJavaUnitParser.html" title="">ScaladocJavaUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">ScaladocJavaUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" title="">ScaladocScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocUnitParser.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocUnitParser.html" title="">ScaladocUnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="ScaladocSyntaxAnalyzer$ScaladocUnitScanner.html" title=""></a>
+                        <a href="ScaladocSyntaxAnalyzer$ScaladocUnitScanner.html" title="">ScaladocUnitScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$Scanner.html" title=""></a>
+                        <a href="../ast/parser/Scanners$Scanner.html" title="">Scanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/ScannersCommon$ScannerCommon.html" title=""></a>
+                        <a href="../ast/parser/ScannersCommon$ScannerCommon.html" title="">ScannerCommon</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/Scanners$ScannerData.html" title="An interface to most of mutable data in Scanner defined in TokenData and CharArrayReader (+ next, prev fields) with copyFrom functionality to backup/restore data (used by quasiquotes' lookingAhead)."></a>
+                        <a href="../ast/parser/Scanners$ScannerData.html" title="An interface to most of mutable data in Scanner defined in TokenData and CharArrayReader (+ next, prev fields) with copyFrom functionality to backup/restore data (used by quasiquotes' lookingAhead).">ScannerData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$SourceFileParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$SourceFileParser.html" title="">SourceFileParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$SourceFileScanner.html" title="A scanner for a given source file not necessarily attached to a compilation unit."></a>
+                        <a href="../ast/parser/Scanners$SourceFileScanner.html" title="A scanner for a given source file not necessarily attached to a compilation unit.">SourceFileScanner</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../SubComponent$StdPhase.html" title="A standard phase template"></a>
+                        <a href="../SubComponent$StdPhase.html" title="A standard phase template">StdPhase</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="../ast/parser/Scanners$TokenData.html" title=""></a>
+                        <a href="../ast/parser/Scanners$TokenData.html" title="">TokenData</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="object" href="../ast/parser/MarkupParsers$TruncatedXMLControl$.html" title=""></a>
+                        <a href="../ast/parser/MarkupParsers$TruncatedXMLControl$.html" title="">TruncatedXMLControl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Parsers$UnitParser.html" title=""></a>
+                        <a href="../ast/parser/Parsers$UnitParser.html" title="">UnitParser</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="class" href="../ast/parser/Scanners$UnitScanner.html" title="A scanner over a given compilation unit"></a>
+                        <a href="../ast/parser/Scanners$UnitScanner.html" title="A scanner over a given compilation unit">UnitScanner</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="scala">scala</a>.<a href="../../index.html" class="extype" name="scala.tools">tools</a>.<a href="../index.html" class="extype" name="scala.tools.nsc">nsc</a>.<a href="index.html" class="extype" name="scala.tools.nsc.doc">doc</a>.<a href="ScaladocSyntaxAnalyzer.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer">ScaladocSyntaxAnalyzer</a></p>
+        <h1>ScaladocJavaUnitScanner<span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScaladocJavaUnitScanner</span><span class="result"> extends <a href="ScaladocSyntaxAnalyzer.html#JavaUnitScannerextendsJavaScanners.this.JavaScanner" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">JavaUnitScanner</a> with <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/scaladoc/scala/tools/nsc/doc/ScaladocAnalyzer.scala#L1" target="_blank">ScaladocAnalyzer.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a>, <a href="ScaladocSyntaxAnalyzer.html#JavaUnitScannerextendsJavaScanners.this.JavaScanner" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">ScaladocSyntaxAnalyzer.JavaUnitScanner</a>, <a href="ScaladocSyntaxAnalyzer.html#JavaScannerextendsJavaScanners.this.AbstractJavaScannerwithJavaScanners.this.JavaTokenDatawithCloneablewithJavaScanners.this.ScannerCommonwithJavaScanners.this.DocScanner" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">ScaladocSyntaxAnalyzer.JavaScanner</a>, <a href="ScaladocSyntaxAnalyzer.html#DocScannerextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">ScaladocSyntaxAnalyzer.DocScanner</a>, <a href="ScaladocSyntaxAnalyzer.html#ScannerCommonextendsScannersCommon.this.CommonTokenData" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">ScaladocSyntaxAnalyzer.ScannerCommon</a>, <a href="ScaladocSyntaxAnalyzer.html#CommonTokenDataextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.CommonTokenData">ScaladocSyntaxAnalyzer.CommonTokenData</a>, <span class="extype" name="scala.Cloneable">Cloneable</span>, <span class="extype" name="java.lang.Cloneable">java.lang.Cloneable</span>, <a href="ScaladocSyntaxAnalyzer.html#JavaTokenDataextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">ScaladocSyntaxAnalyzer.JavaTokenData</a>, <a href="ScaladocSyntaxAnalyzer.html#AbstractJavaScannerextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">ScaladocSyntaxAnalyzer.AbstractJavaScanner</a>, <a href="ScaladocSyntaxAnalyzer.html#AbstractJavaTokenDataextendsAnyRef" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">ScaladocSyntaxAnalyzer.AbstractJavaTokenData</a>, <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner"><span>ScaladocJavaUnitScanner</span></li><li class="in" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner"><span>ScaladocScanner</span></li><li class="in" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner"><span>JavaUnitScanner</span></li><li class="in" name="scala.tools.nsc.javac.JavaScanners.JavaScanner"><span>JavaScanner</span></li><li class="in" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner"><span>DocScanner</span></li><li class="in" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon"><span>ScannerCommon</span></li><li class="in" name="scala.tools.nsc.ast.parser.ScannersCommon.CommonTokenData"><span>CommonTokenData</span></li><li class="in" name="scala.Cloneable"><span>Cloneable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData"><span>JavaTokenData</span></li><li class="in" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner"><span>AbstractJavaScanner</span></li><li class="in" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData"><span>AbstractJavaTokenData</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(unit:ScaladocSyntaxAnalyzer.this.global.CompilationUnit):ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitScanner"></a><a id="&lt;init&gt;:ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#&lt;init&gt;(unit:ScaladocSyntaxAnalyzer.this.global.CompilationUnit):ScaladocSyntaxAnalyzer.this.ScaladocJavaUnitScanner" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScaladocJavaUnitScanner</span><span class="params">(<span name="unit">unit: <span class="extype" name="scala.tools.nsc.CompilationUnits.CompilationUnit">G.CompilationUnit</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData.ScanPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ScanPosition=Int"></a><a id="ScanPosition:ScanPosition"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ScanPosition=Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScanPosition</span><span class="result alias"> = <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a> → <a href="../javac/JavaScanners$AbstractJavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">AbstractJavaTokenData</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(ScaladocJavaUnitScanner,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#NoPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NoPos:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#NoPos:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NoPos</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a> → <a href="../javac/JavaScanners$AbstractJavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">AbstractJavaTokenData</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#base" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="base:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#base:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">base</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">the base of a number</p><div class="fullcomment"><div class="comment cmt"><p>the base of a number</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner#beginDocComment" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="beginDocComment(prefix:String):Unit"></a><a id="beginDocComment(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#beginDocComment(prefix:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">beginDocComment</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> → <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a> → <a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#cbuf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cbuf:StringBuilder"></a><a id="cbuf:collection.mutable.StringBuilder"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#cbuf:StringBuilder" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cbuf</span><span class="result">: <span class="extype" name="scala.collection.mutable.StringBuilder">collection.mutable.StringBuilder</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">character buffer for literals
+</p><div class="fullcomment"><div class="comment cmt"><p>character buffer for literals
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner#ch" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ch:Char"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ch:Char" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ch</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> → <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#copyFrom" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyFrom(td:JavaScanners.this.JavaTokenData):Unit"></a><a id="copyFrom(ScaladocSyntaxAnalyzer.JavaTokenData):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#copyFrom(td:JavaScanners.this.JavaTokenData):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyFrom</span><span class="params">(<span name="td">td: <a href="ScaladocSyntaxAnalyzer.html#JavaTokenDataextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">ScaladocSyntaxAnalyzer.JavaTokenData</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#currentPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentPos:JavaScanners.this.global.Position"></a><a id="currentPos:G.Position"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#currentPos:JavaScanners.this.global.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentPos</span><span class="result">: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner#deprecationWarning" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deprecationWarning(pos:Int,msg:String,since:String):Unit"></a><a id="deprecationWarning(Int,String,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#deprecationWarning(pos:Int,msg:String,since:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deprecationWarning</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="since">since: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaUnitScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">JavaUnitScanner</a> → <a href="../ast/parser/ScannersCommon$ScannerCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">ScannerCommon</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner#discardDocBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="discardDocBuffer():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#discardDocBuffer():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">discardDocBuffer</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">To prevent doc comments attached to expressions from leaking out of scope
+ onto the next documentable entity, they are discarded upon passing a right
+ brace, bracket, or parenthesis.</p><div class="fullcomment"><div class="comment cmt"><p>To prevent doc comments attached to expressions from leaking out of scope
+ onto the next documentable entity, they are discarded upon passing a right
+ brace, bracket, or parenthesis.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner#docPosition" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="docPosition:scala.reflect.internal.util.Position"></a><a id="docPosition:Position"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#docPosition:scala.reflect.internal.util.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">docPosition</span><span class="result">: <span class="extype" name="scala.reflect.internal.util.Position">Position</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> → <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((ScaladocJavaUnitScanner)⇒Boolean,⇒Any):ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((ScaladocJavaUnitScanner)⇒Boolean):ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):ScaladocJavaUnitScanner"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner#error" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="error(pos:Int,msg:String):Unit"></a><a id="error(Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#error(pos:Int,msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaUnitScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">JavaUnitScanner</a> → <a href="../ast/parser/ScannersCommon$ScannerCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">ScannerCommon</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner#finishDocComment" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finishDocComment():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#finishDocComment():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finishDocComment</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a> → <a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#floatVal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="floatVal(negated:Boolean):Double"></a><a id="floatVal(Boolean):Double"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#floatVal(negated:Boolean):Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">floatVal</span><span class="params">(<span name="negated">negated: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">convert name, base to double value
+</p><div class="fullcomment"><div class="comment cmt"><p>convert name, base to double value
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#floatVal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="floatVal:Double"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#floatVal:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">floatVal</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner#flushDoc" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flushDoc():ScannersCommon.this.global.DocComment"></a><a id="flushDoc():G.DocComment"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#flushDoc():ScannersCommon.this.global.DocComment" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flushDoc</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.tools.nsc.ast.DocComments.DocComment">G.DocComment</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner#g2p" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="g2p(pos:Int):JavaScanners.this.global.Position"></a><a id="g2p(Int):G.Position"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#g2p(pos:Int):JavaScanners.this.global.Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">g2p</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaUnitScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">JavaUnitScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#getFraction" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getFraction():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#getFraction():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFraction</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">read fractional part and exponent of floating point number
+ if one is present.</p><div class="fullcomment"><div class="comment cmt"><p>read fractional part and exponent of floating point number
+ if one is present.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#getNumber" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNumber():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#getNumber():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNumber</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">read a number into name and set base
+</p><div class="fullcomment"><div class="comment cmt"><p>read a number into name and set base
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#getlitch" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getlitch():AnyVal"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#getlitch():AnyVal" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getlitch</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">read next character in character or string literal:
+</p><div class="fullcomment"><div class="comment cmt"><p>read next character in character or string literal:
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#in" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="in:scala.tools.nsc.util.JavaCharArrayReader"></a><a id="in:JavaCharArrayReader"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#in:scala.tools.nsc.util.JavaCharArrayReader" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">in</span><span class="result">: <a href="../util/JavaCharArrayReader.html" class="extype" name="scala.tools.nsc.util.JavaCharArrayReader">JavaCharArrayReader</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner#incompleteInputError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="incompleteInputError(pos:Int,msg:String):Unit"></a><a id="incompleteInputError(Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#incompleteInputError(pos:Int,msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">incompleteInputError</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaUnitScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">JavaUnitScanner</a> → <a href="../ast/parser/ScannersCommon$ScannerCommon.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">ScannerCommon</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#incompleteInputError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="incompleteInputError(msg:String):Unit"></a><a id="incompleteInputError(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#incompleteInputError(msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">incompleteInputError</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">signal an error where the input ended in the middle of a token</p><div class="fullcomment"><div class="comment cmt"><p>signal an error where the input ended in the middle of a token</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#init" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#init():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">INIT: read lookahead character and token.</p><div class="fullcomment"><div class="comment cmt"><p>INIT: read lookahead character and token.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#intVal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intVal(negated:Boolean):Long"></a><a id="intVal(Boolean):Long"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#intVal(negated:Boolean):Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intVal</span><span class="params">(<span name="negated">negated: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">convert name to long value
+</p><div class="fullcomment"><div class="comment cmt"><p>convert name to long value
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#intVal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intVal:Long"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#intVal:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intVal</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#lastPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lastPos:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#lastPos:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lastPos</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">the first character position after the previous token</p><div class="fullcomment"><div class="comment cmt"><p>the first character position after the previous token</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#lookaheadToken" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lookaheadToken:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#lookaheadToken:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lookaheadToken</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:JavaScanners.this.global.TermName"></a><a id="name:G.TermName"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#name:JavaScanners.this.global.TermName" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.reflect.internal.Names.TermName">G.TermName</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">the name of an identifier or token</p><div class="fullcomment"><div class="comment cmt"><p>the name of an identifier or token</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a> → <a href="../javac/JavaScanners$AbstractJavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">AbstractJavaTokenData</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#next" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="next:JavaScanners.this.JavaTokenData"></a><a id="next:ScaladocSyntaxAnalyzer.JavaTokenData"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#next:JavaScanners.this.JavaTokenData" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">next</span><span class="result">: <a href="ScaladocSyntaxAnalyzer.html#JavaTokenDataextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">ScaladocSyntaxAnalyzer.JavaTokenData</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">we need one token lookahead
+</p><div class="fullcomment"><div class="comment cmt"><p>we need one token lookahead
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#nextToken" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextToken():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#nextToken():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextToken</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → <a href="../javac/JavaScanners$AbstractJavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">AbstractJavaScanner</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#pos" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pos:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#pos:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pos</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">the token's position</p><div class="fullcomment"><div class="comment cmt"><p>the token's position</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a> → <a href="../javac/JavaScanners$AbstractJavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">AbstractJavaTokenData</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#prev" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prev:JavaScanners.this.JavaTokenData"></a><a id="prev:ScaladocSyntaxAnalyzer.JavaTokenData"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#prev:JavaScanners.this.JavaTokenData" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prev</span><span class="result">: <a href="ScaladocSyntaxAnalyzer.html#JavaTokenDataextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">ScaladocSyntaxAnalyzer.JavaTokenData</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner#processCommentChar" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processCommentChar():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#processCommentChar():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processCommentChar</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a> → <a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#putChar" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="putChar(c:Char):Unit"></a><a id="putChar(Char):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#putChar(c:Char):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">putChar</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Char">Char</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">append Unicode character to &quot;lit&quot; buffer
+</p><div class="fullcomment"><div class="comment cmt"><p>append Unicode character to &quot;lit&quot; buffer
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#putCommentChar" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="putCommentChar():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#putCommentChar():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">putCommentChar</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner#registerDocComment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="registerDocComment(raw:String,pos:ScannersCommon.this.global.Position):Unit"></a><a id="registerDocComment(String,G.Position):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#registerDocComment(raw:String,pos:ScannersCommon.this.global.Position):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">registerDocComment</span><span class="params">(<span name="raw">raw: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="pos">pos: <span class="extype" name="scala.reflect.internal.Positions.Position">G.Position</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ast/parser/ScannersCommon$DocScanner.html" class="extype" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">DocScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#skipBlockComment" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipBlockComment(isDoc:Boolean):Unit"></a><a id="skipBlockComment(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#skipBlockComment(isDoc:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipBlockComment</span><span class="params">(<span name="isDoc">isDoc: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@tailrec</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#skipComment" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipComment():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#skipComment():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipComment</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#skipLineComment" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="skipLineComment():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#skipLineComment():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">skipLineComment</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@tailrec</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#syntaxError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syntaxError(msg:String):Unit"></a><a id="syntaxError(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#syntaxError(msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxError</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">generate an error at the current token position
+</p><div class="fullcomment"><div class="comment cmt"><p>generate an error at the current token position
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#syntaxError" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="syntaxError(pos:Int,msg:String):Unit"></a><a id="syntaxError(Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#syntaxError(pos:Int,msg:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxError</span><span class="params">(<span name="pos">pos: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">generate an error at the given position
+</p><div class="fullcomment"><div class="comment cmt"><p>generate an error at the given position
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a></dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaScanner#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaScanner.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">JavaScanner</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.tools.nsc.javac.JavaScanners.JavaTokenData#token" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="token:Int"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#token:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">token</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">the next token</p><div class="fullcomment"><div class="comment cmt"><p>the next token</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../javac/JavaScanners$JavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">JavaTokenData</a> → <a href="../javac/JavaScanners$AbstractJavaTokenData.html" class="extype" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">AbstractJavaTokenData</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(ScaladocJavaUnitScanner,B)"></a>
+      <span class="permalink">
+      <a href="../../../../scala/tools/nsc/doc/ScaladocSyntaxAnalyzer$ScaladocJavaUnitScanner.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer$ScaladocScanner.html" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocScanner">ScaladocScanner</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#JavaUnitScannerextendsJavaScanners.this.JavaScanner" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaUnitScanner">ScaladocSyntaxAnalyzer.JavaUnitScanner</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#JavaScannerextendsJavaScanners.this.AbstractJavaScannerwithJavaScanners.this.JavaTokenDatawithCloneablewithJavaScanners.this.ScannerCommonwithJavaScanners.this.DocScanner" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaScanner">ScaladocSyntaxAnalyzer.JavaScanner</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#DocScannerextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.DocScanner">ScaladocSyntaxAnalyzer.DocScanner</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#ScannerCommonextendsScannersCommon.this.CommonTokenData" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.ScannerCommon">ScaladocSyntaxAnalyzer.ScannerCommon</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.ast.parser.ScannersCommon.CommonTokenData">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#CommonTokenDataextendsAnyRef" class="extmbr" name="scala.tools.nsc.ast.parser.ScannersCommon.CommonTokenData">ScaladocSyntaxAnalyzer.CommonTokenData</a></h3>
+            </div><div class="parent" name="scala.Cloneable">
+              <h3>Inherited from <span class="extype" name="scala.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">java.lang.Cloneable</span></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#JavaTokenDataextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.JavaTokenData">ScaladocSyntaxAnalyzer.JavaTokenData</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#AbstractJavaScannerextendsJavaScanners.this.AbstractJavaTokenData" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaScanner">ScaladocSyntaxAnalyzer.AbstractJavaScanner</a></h3>
+            </div><div class="parent" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">
+              <h3>Inherited from <a href="ScaladocSyntaxAnalyzer.html#AbstractJavaTokenDataextendsAnyRef" class="extmbr" name="scala.tools.nsc.javac.JavaScanners.AbstractJavaTokenData">ScaladocSyntaxAnalyzer.AbstractJavaTokenData</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.tools.nsc.doc.ScaladocSyntaxAnalyzer.ScaladocJavaUnitScanner">ScaladocJavaUnitScanner</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

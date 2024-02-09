@@ -1,0 +1,2367 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Scala Reflection Library 2.12.8 - scala.reflect.api.ImplicitTags</title>
+          <meta name="description" content="Scala Reflection Library 2.12.8 - scala.reflect.api.ImplicitTags" />
+          <meta name="keywords" content="Scala Reflection Library 2.12.8 scala.reflect.api.ImplicitTags" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Scala Reflection Library<span id="doc-version">2.12.8</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.scala" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scala"></a><a id="scala:scala"></a>
+      <span class="permalink">
+      <a href="index.html#scala" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">scala</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="scala.reflect" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reflect"></a><a id="reflect:reflect"></a>
+      <span class="permalink">
+      <a href="../scala/index.html#reflect" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">reflect</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="scala">scala</a></dd></dl></div>
+    </li><li name="scala.reflect.api" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="api"></a><a id="api:api"></a>
+      <span class="permalink">
+      <a href="../../scala/reflect/index.html#api" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="EXPERIMENTAL" href="index.html"><span class="name">api</span></a>
+      </span>
+      
+      <p class="shortcomment cmt"><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><div class="fullcomment"><div class="comment cmt"><p><span class="badge badge-red" style="float: right;">EXPERIMENTAL</span></p><p>The Scala Reflection API (located in scala-reflect.jar).</p><p>In Scala 2.10.0, the Scala Reflection API and its implementation have an &quot;experimental&quot; status.
+This means that the API and the docs are not complete and can be changed in binary- and source-incompatible
+manner in 2.10.1. This also means that the implementation has some known issues.</p><p>The following types are the backbone of the Scala Reflection API, and serve as a good starting point
+for information about Scala Reflection:</p><ul><li><a href="Symbols.html" class="extype" name="scala.reflect.api.Symbols">scala.reflect.api.Symbols</a></li><li><a href="Types.html" class="extype" name="scala.reflect.api.Types">scala.reflect.api.Types</a></li><li><a href="Mirrors.html" class="extype" name="scala.reflect.api.Mirrors">scala.reflect.api.Mirrors</a></li><li><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">scala.reflect.api.Universe</a></li></ul><p> For more information about Scala Reflection, see the
+<a href="http://docs.scala-lang.org/overviews/reflection/overview.html" target="_blank">Reflection Guide</a>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="scala.reflect">reflect</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Annotations.html" title="EXPERIMENTAL"></a>
+                        <a href="Annotations.html" title="EXPERIMENTAL">Annotations</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Constants.html" title="EXPERIMENTAL"></a>
+                        <a href="Constants.html" title="EXPERIMENTAL">Constants</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Exprs.html" title="EXPERIMENTAL"></a>
+                        <a href="Exprs.html" title="EXPERIMENTAL">Exprs</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="FlagSets.html" title="EXPERIMENTAL"></a>
+                        <a href="FlagSets.html" title="EXPERIMENTAL">FlagSets</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Tags which preserve the identity of abstract types in the face of erasure."></a>
+                        <a href="" title="Tags which preserve the identity of abstract types in the face of erasure.">ImplicitTags</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Internals.html" title="EXPERIMENTAL"></a>
+                        <a href="Internals.html" title="EXPERIMENTAL">Internals</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JavaUniverse.html" title="EXPERIMENTAL"></a>
+                        <a href="JavaUniverse.html" title="EXPERIMENTAL">JavaUniverse</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Liftables.html" title=""></a>
+                        <a href="Liftables.html" title="">Liftables</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Mirror.html" title="EXPERIMENTAL"></a>
+                        <a href="Mirror.html" title="EXPERIMENTAL">Mirror</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Mirrors.html" title="EXPERIMENTAL"></a>
+                        <a href="Mirrors.html" title="EXPERIMENTAL">Mirrors</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Names.html" title="EXPERIMENTAL"></a>
+                        <a href="Names.html" title="EXPERIMENTAL">Names</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Position.html" title="EXPERIMENTAL"></a>
+                        <a href="Position.html" title="EXPERIMENTAL">Position</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Positions.html" title="EXPERIMENTAL"></a>
+                        <a href="Positions.html" title="EXPERIMENTAL">Positions</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Printers.html" title="EXPERIMENTAL"></a>
+                        <a href="Printers.html" title="EXPERIMENTAL">Printers</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Quasiquotes.html" title=""></a>
+                        <a href="Quasiquotes.html" title="">Quasiquotes</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Scopes.html" title="EXPERIMENTAL"></a>
+                        <a href="Scopes.html" title="EXPERIMENTAL">Scopes</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="StandardDefinitions.html" title="EXPERIMENTAL"></a>
+                        <a href="StandardDefinitions.html" title="EXPERIMENTAL">StandardDefinitions</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="StandardLiftables.html" title=""></a>
+                        <a href="StandardLiftables.html" title="">StandardLiftables</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="StandardNames.html" title="EXPERIMENTAL"></a>
+                        <a href="StandardNames.html" title="EXPERIMENTAL">StandardNames</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Symbols.html" title="EXPERIMENTAL"></a>
+                        <a href="Symbols.html" title="EXPERIMENTAL">Symbols</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeCreator.html" title="A mirror-aware factory for trees."></a>
+                        <a href="TreeCreator.html" title="A mirror-aware factory for trees.">TreeCreator</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trees.html" title="EXPERIMENTAL"></a>
+                        <a href="Trees.html" title="EXPERIMENTAL">Trees</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TypeCreator.html" title="A mirror-aware factory for types."></a>
+                        <a href="TypeCreator.html" title="A mirror-aware factory for types.">TypeCreator</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TypeTags.html" title="A TypeTag[T] encapsulates the runtime type representation of some type T."></a>
+                        <a href="TypeTags.html" title="A TypeTag[T] encapsulates the runtime type representation of some type T.">TypeTags</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Types.html" title="EXPERIMENTAL"></a>
+                        <a href="Types.html" title="EXPERIMENTAL">Types</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Universe.html" title="EXPERIMENTAL"></a>
+                        <a href="Universe.html" title="EXPERIMENTAL">Universe</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="scala">scala</a>.<a href="../index.html" class="extype" name="scala.reflect">reflect</a>.<a href="index.html" class="extype" name="scala.reflect.api">api</a></p>
+        <h1>ImplicitTags<span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ImplicitTags</span><span class="result"> extends <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Tags which preserve the identity of abstract types in the face of erasure.
+ Can be used for pattern matching, instance tests, serialization and the like.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/v2.12.8/src/reflect/scala/reflect/api/ImplicitTags.scala#L1" target="_blank">ImplicitTags.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="JavaUniverse.html" class="extype" name="scala.reflect.api.JavaUniverse">JavaUniverse</a>, <a href="Universe.html" class="extype" name="scala.reflect.api.Universe">Universe</a>, <a href="../macros/Universe.html" class="extype" name="scala.reflect.macros.Universe">Universe</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="scala.reflect.api.ImplicitTags"><span>ImplicitTags</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+                  <span class="filtertype">Implicitly<br />
+                  </span>
+                  <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.reflect.api.ImplicitTags#AlternativeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AlternativeTag:scala.reflect.ClassTag[ImplicitTags.this.Alternative]"></a><a id="AlternativeTag:ClassTag[Universe.Alternative]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AlternativeTag:scala.reflect.ClassTag[ImplicitTags.this.Alternative]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AlternativeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Alternative&gt;:Null&lt;:Trees.this.AlternativeApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Alternative">Universe.Alternative</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AnnotatedTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AnnotatedTag:scala.reflect.ClassTag[ImplicitTags.this.Annotated]"></a><a id="AnnotatedTag:ClassTag[Universe.Annotated]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AnnotatedTag:scala.reflect.ClassTag[ImplicitTags.this.Annotated]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AnnotatedTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Annotated&gt;:Null&lt;:Trees.this.AnnotatedApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.Annotated">Universe.Annotated</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AnnotatedTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AnnotatedTypeTag:scala.reflect.ClassTag[ImplicitTags.this.AnnotatedType]"></a><a id="AnnotatedTypeTag:ClassTag[Universe.AnnotatedType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AnnotatedTypeTag:scala.reflect.ClassTag[ImplicitTags.this.AnnotatedType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AnnotatedTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#AnnotatedType&gt;:Null&lt;:Types.this.AnnotatedTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.AnnotatedType">Universe.AnnotatedType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AnnotationTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AnnotationTag:scala.reflect.ClassTag[ImplicitTags.this.Annotation]"></a><a id="AnnotationTag:ClassTag[Universe.Annotation]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AnnotationTag:scala.reflect.ClassTag[ImplicitTags.this.Annotation]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AnnotationTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Annotation&gt;:Null&lt;:Annotations.this.AnnotationApi" class="extmbr" name="scala.reflect.api.Annotations.Annotation">Universe.Annotation</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AppliedTypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AppliedTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.AppliedTypeTree]"></a><a id="AppliedTypeTreeTag:ClassTag[Universe.AppliedTypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AppliedTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.AppliedTypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AppliedTypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#AppliedTypeTree&gt;:Null&lt;:Trees.this.AppliedTypeTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.AppliedTypeTree">Universe.AppliedTypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ApplyTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ApplyTag:scala.reflect.ClassTag[ImplicitTags.this.Apply]"></a><a id="ApplyTag:ClassTag[Universe.Apply]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ApplyTag:scala.reflect.ClassTag[ImplicitTags.this.Apply]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ApplyTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Apply&gt;:Null&lt;:Trees.this.ApplyApiwithTrees.this.GenericApply" class="extmbr" name="scala.reflect.api.Trees.Apply">Universe.Apply</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ArrayArgumentTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ArrayArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.ArrayArgument]"></a><a id="ArrayArgumentTag:ClassTag[Universe.ArrayArgument]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ArrayArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.ArrayArgument]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ArrayArgumentTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ArrayArgument&gt;:Null&lt;:Annotations.this.ArrayArgumentApiwithAnnotations.this.JavaArgument" class="extmbr" name="scala.reflect.api.Annotations.ArrayArgument">Universe.ArrayArgument</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AssignOrNamedArgTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AssignOrNamedArgTag:scala.reflect.ClassTag[ImplicitTags.this.AssignOrNamedArg]"></a><a id="AssignOrNamedArgTag:ClassTag[Universe.AssignOrNamedArg]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AssignOrNamedArgTag:scala.reflect.ClassTag[ImplicitTags.this.AssignOrNamedArg]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AssignOrNamedArgTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#AssignOrNamedArg&gt;:Null&lt;:Trees.this.AssignOrNamedArgApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.AssignOrNamedArg">Universe.AssignOrNamedArg</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#AssignTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AssignTag:scala.reflect.ClassTag[ImplicitTags.this.Assign]"></a><a id="AssignTag:ClassTag[Universe.Assign]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#AssignTag:scala.reflect.ClassTag[ImplicitTags.this.Assign]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AssignTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Assign&gt;:Null&lt;:Trees.this.AssignApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Assign">Universe.Assign</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#BindTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BindTag:scala.reflect.ClassTag[ImplicitTags.this.Bind]"></a><a id="BindTag:ClassTag[Universe.Bind]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#BindTag:scala.reflect.ClassTag[ImplicitTags.this.Bind]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BindTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Bind&gt;:Null&lt;:Trees.this.BindApiwithTrees.this.DefTree" class="extmbr" name="scala.reflect.api.Trees.Bind">Universe.Bind</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#BlockTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BlockTag:scala.reflect.ClassTag[ImplicitTags.this.Block]"></a><a id="BlockTag:ClassTag[Universe.Block]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#BlockTag:scala.reflect.ClassTag[ImplicitTags.this.Block]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BlockTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Block&gt;:Null&lt;:Trees.this.BlockApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Block">Universe.Block</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#BoundedWildcardTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BoundedWildcardTypeTag:scala.reflect.ClassTag[ImplicitTags.this.BoundedWildcardType]"></a><a id="BoundedWildcardTypeTag:ClassTag[Universe.BoundedWildcardType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#BoundedWildcardTypeTag:scala.reflect.ClassTag[ImplicitTags.this.BoundedWildcardType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BoundedWildcardTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#BoundedWildcardType&gt;:Null&lt;:Types.this.BoundedWildcardTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.BoundedWildcardType">Universe.BoundedWildcardType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#CaseDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CaseDefTag:scala.reflect.ClassTag[ImplicitTags.this.CaseDef]"></a><a id="CaseDefTag:ClassTag[Universe.CaseDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#CaseDefTag:scala.reflect.ClassTag[ImplicitTags.this.CaseDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CaseDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#CaseDef&gt;:Null&lt;:Trees.this.CaseDefApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.CaseDef">Universe.CaseDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ClassDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClassDefTag:scala.reflect.ClassTag[ImplicitTags.this.ClassDef]"></a><a id="ClassDefTag:ClassTag[Universe.ClassDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ClassDefTag:scala.reflect.ClassTag[ImplicitTags.this.ClassDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ClassDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ClassDef&gt;:Null&lt;:Trees.this.ClassDefApiwithTrees.this.ImplDef" class="extmbr" name="scala.reflect.api.Trees.ClassDef">Universe.ClassDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ClassInfoTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClassInfoTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ClassInfoType]"></a><a id="ClassInfoTypeTag:ClassTag[Universe.ClassInfoType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ClassInfoTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ClassInfoType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ClassInfoTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ClassInfoType&gt;:Null&lt;:Types.this.ClassInfoTypeApiwithTypes.this.CompoundType" class="extmbr" name="scala.reflect.api.Types.ClassInfoType">Universe.ClassInfoType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ClassSymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClassSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.ClassSymbol]"></a><a id="ClassSymbolTag:ClassTag[Universe.ClassSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ClassSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.ClassSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ClassSymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ClassSymbol&gt;:Null&lt;:Symbols.this.ClassSymbolApiwithSymbols.this.TypeSymbol" class="extmbr" name="scala.reflect.api.Symbols.ClassSymbol">Universe.ClassSymbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#CompoundTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CompoundTypeTag:scala.reflect.ClassTag[ImplicitTags.this.CompoundType]"></a><a id="CompoundTypeTag:ClassTag[Universe.CompoundType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#CompoundTypeTag:scala.reflect.ClassTag[ImplicitTags.this.CompoundType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CompoundTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#CompoundType&gt;:Null&lt;:Types.this.CompoundTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.CompoundType">Universe.CompoundType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#CompoundTypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CompoundTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.CompoundTypeTree]"></a><a id="CompoundTypeTreeTag:ClassTag[Universe.CompoundTypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#CompoundTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.CompoundTypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CompoundTypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#CompoundTypeTree&gt;:Null&lt;:Trees.this.CompoundTypeTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.CompoundTypeTree">Universe.CompoundTypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ConstantTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConstantTag:scala.reflect.ClassTag[ImplicitTags.this.Constant]"></a><a id="ConstantTag:ClassTag[Universe.Constant]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ConstantTag:scala.reflect.ClassTag[ImplicitTags.this.Constant]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ConstantTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Constant&gt;:Null&lt;:Constants.this.ConstantApi" class="extmbr" name="scala.reflect.api.Constants.Constant">Universe.Constant</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ConstantTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConstantTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ConstantType]"></a><a id="ConstantTypeTag:ClassTag[Universe.ConstantType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ConstantTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ConstantType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ConstantTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ConstantType&gt;:Null&lt;:Types.this.ConstantTypeApiwithTypes.this.SingletonType" class="extmbr" name="scala.reflect.api.Types.ConstantType">Universe.ConstantType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#DefDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DefDefTag:scala.reflect.ClassTag[ImplicitTags.this.DefDef]"></a><a id="DefDefTag:ClassTag[Universe.DefDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#DefDefTag:scala.reflect.ClassTag[ImplicitTags.this.DefDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#DefDef&gt;:Null&lt;:Trees.this.DefDefApiwithTrees.this.ValOrDefDef" class="extmbr" name="scala.reflect.api.Trees.DefDef">Universe.DefDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#DefTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DefTreeTag:scala.reflect.ClassTag[ImplicitTags.this.DefTree]"></a><a id="DefTreeTag:ClassTag[Universe.DefTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#DefTreeTag:scala.reflect.ClassTag[ImplicitTags.this.DefTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#DefTree&gt;:Null&lt;:Trees.this.DefTreeApiwithTrees.this.SymTreewithTrees.this.NameTree" class="extmbr" name="scala.reflect.api.Trees.DefTree">Universe.DefTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ExistentialTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExistentialTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ExistentialType]"></a><a id="ExistentialTypeTag:ClassTag[Universe.ExistentialType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ExistentialTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ExistentialType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ExistentialTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ExistentialType&gt;:Null&lt;:Types.this.ExistentialTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.ExistentialType">Universe.ExistentialType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ExistentialTypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExistentialTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.ExistentialTypeTree]"></a><a id="ExistentialTypeTreeTag:ClassTag[Universe.ExistentialTypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ExistentialTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.ExistentialTypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ExistentialTypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ExistentialTypeTree&gt;:Null&lt;:Trees.this.ExistentialTypeTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.ExistentialTypeTree">Universe.ExistentialTypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#FlagSetTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FlagSetTag:scala.reflect.ClassTag[ImplicitTags.this.FlagSet]"></a><a id="FlagSetTag:ClassTag[Universe.FlagSet]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#FlagSetTag:scala.reflect.ClassTag[ImplicitTags.this.FlagSet]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FlagSetTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#FlagSet" class="extmbr" name="scala.reflect.api.FlagSets.FlagSet">Universe.FlagSet</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#FunctionTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FunctionTag:scala.reflect.ClassTag[ImplicitTags.this.Function]"></a><a id="FunctionTag:ClassTag[Universe.Function]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#FunctionTag:scala.reflect.ClassTag[ImplicitTags.this.Function]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FunctionTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Function&gt;:Null&lt;:Trees.this.FunctionApiwithTrees.this.TermTreewithTrees.this.SymTree" class="extmbr" name="scala.reflect.api.Trees.Function">Universe.Function</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#GenericApplyTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GenericApplyTag:scala.reflect.ClassTag[ImplicitTags.this.GenericApply]"></a><a id="GenericApplyTag:ClassTag[Universe.GenericApply]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#GenericApplyTag:scala.reflect.ClassTag[ImplicitTags.this.GenericApply]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GenericApplyTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#GenericApply&gt;:Null&lt;:Trees.this.GenericApplyApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.GenericApply">Universe.GenericApply</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#IdentTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IdentTag:scala.reflect.ClassTag[ImplicitTags.this.Ident]"></a><a id="IdentTag:ClassTag[Universe.Ident]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#IdentTag:scala.reflect.ClassTag[ImplicitTags.this.Ident]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IdentTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Ident&gt;:Null&lt;:Trees.this.IdentApiwithTrees.this.RefTree" class="extmbr" name="scala.reflect.api.Trees.Ident">Universe.Ident</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#IfTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IfTag:scala.reflect.ClassTag[ImplicitTags.this.If]"></a><a id="IfTag:ClassTag[Universe.If]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#IfTag:scala.reflect.ClassTag[ImplicitTags.this.If]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IfTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#If&gt;:Null&lt;:Trees.this.IfApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.If">Universe.If</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ImplDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImplDefTag:scala.reflect.ClassTag[ImplicitTags.this.ImplDef]"></a><a id="ImplDefTag:ClassTag[Universe.ImplDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ImplDefTag:scala.reflect.ClassTag[ImplicitTags.this.ImplDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ImplDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ImplDef&gt;:Null&lt;:Trees.this.ImplDefApiwithTrees.this.MemberDef" class="extmbr" name="scala.reflect.api.Trees.ImplDef">Universe.ImplDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ImportSelectorTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImportSelectorTag:scala.reflect.ClassTag[ImplicitTags.this.ImportSelector]"></a><a id="ImportSelectorTag:ClassTag[Universe.ImportSelector]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ImportSelectorTag:scala.reflect.ClassTag[ImplicitTags.this.ImportSelector]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ImportSelectorTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ImportSelector&gt;:Null&lt;:Trees.this.ImportSelectorApi" class="extmbr" name="scala.reflect.api.Trees.ImportSelector">Universe.ImportSelector</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ImportTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImportTag:scala.reflect.ClassTag[ImplicitTags.this.Import]"></a><a id="ImportTag:ClassTag[Universe.Import]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ImportTag:scala.reflect.ClassTag[ImplicitTags.this.Import]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ImportTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Import&gt;:Null&lt;:Trees.this.ImportApiwithTrees.this.SymTree" class="extmbr" name="scala.reflect.api.Trees.Import">Universe.Import</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#JavaArgumentTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="JavaArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.JavaArgument]"></a><a id="JavaArgumentTag:ClassTag[Universe.JavaArgument]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#JavaArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.JavaArgument]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JavaArgumentTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#JavaArgument&gt;:Null&lt;:Annotations.this.JavaArgumentApi" class="extmbr" name="scala.reflect.api.Annotations.JavaArgument">Universe.JavaArgument</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#LabelDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LabelDefTag:scala.reflect.ClassTag[ImplicitTags.this.LabelDef]"></a><a id="LabelDefTag:ClassTag[Universe.LabelDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#LabelDefTag:scala.reflect.ClassTag[ImplicitTags.this.LabelDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LabelDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#LabelDef&gt;:Null&lt;:Trees.this.LabelDefApiwithTrees.this.DefTreewithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.LabelDef">Universe.LabelDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#LiteralArgumentTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LiteralArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.LiteralArgument]"></a><a id="LiteralArgumentTag:ClassTag[Universe.LiteralArgument]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#LiteralArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.LiteralArgument]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LiteralArgumentTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#LiteralArgument&gt;:Null&lt;:Annotations.this.LiteralArgumentApiwithAnnotations.this.JavaArgument" class="extmbr" name="scala.reflect.api.Annotations.LiteralArgument">Universe.LiteralArgument</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#LiteralTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LiteralTag:scala.reflect.ClassTag[ImplicitTags.this.Literal]"></a><a id="LiteralTag:ClassTag[Universe.Literal]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#LiteralTag:scala.reflect.ClassTag[ImplicitTags.this.Literal]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LiteralTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Literal&gt;:Null&lt;:Trees.this.LiteralApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Literal">Universe.Literal</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MatchTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatchTag:scala.reflect.ClassTag[ImplicitTags.this.Match]"></a><a id="MatchTag:ClassTag[Universe.Match]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MatchTag:scala.reflect.ClassTag[ImplicitTags.this.Match]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatchTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Match&gt;:Null&lt;:Trees.this.MatchApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Match">Universe.Match</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MemberDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MemberDefTag:scala.reflect.ClassTag[ImplicitTags.this.MemberDef]"></a><a id="MemberDefTag:ClassTag[Universe.MemberDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MemberDefTag:scala.reflect.ClassTag[ImplicitTags.this.MemberDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MemberDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#MemberDef&gt;:Null&lt;:Trees.this.MemberDefApiwithTrees.this.DefTree" class="extmbr" name="scala.reflect.api.Trees.MemberDef">Universe.MemberDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MemberScopeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MemberScopeTag:scala.reflect.ClassTag[ImplicitTags.this.MemberScope]"></a><a id="MemberScopeTag:ClassTag[Universe.MemberScope]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MemberScopeTag:scala.reflect.ClassTag[ImplicitTags.this.MemberScope]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MemberScopeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#MemberScope&gt;:Null&lt;:Scopes.this.MemberScopeApiwithScopes.this.Scope" class="extmbr" name="scala.reflect.api.Scopes.MemberScope">Universe.MemberScope</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MethodSymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MethodSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.MethodSymbol]"></a><a id="MethodSymbolTag:ClassTag[Universe.MethodSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MethodSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.MethodSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MethodSymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#MethodSymbol&gt;:Null&lt;:Symbols.this.MethodSymbolApiwithSymbols.this.TermSymbol" class="extmbr" name="scala.reflect.api.Symbols.MethodSymbol">Universe.MethodSymbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MethodTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MethodTypeTag:scala.reflect.ClassTag[ImplicitTags.this.MethodType]"></a><a id="MethodTypeTag:ClassTag[Universe.MethodType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MethodTypeTag:scala.reflect.ClassTag[ImplicitTags.this.MethodType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MethodTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#MethodType&gt;:Null&lt;:Types.this.MethodTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.MethodType">Universe.MethodType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#MirrorTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MirrorTag:scala.reflect.ClassTag[ImplicitTags.this.Mirror]"></a><a id="MirrorTag:ClassTag[Universe.Mirror]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#MirrorTag:scala.reflect.ClassTag[ImplicitTags.this.Mirror]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MirrorTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Mirror&gt;:Null&lt;:scala.reflect.api.Mirror[Mirrors.this.type]" class="extmbr" name="scala.reflect.api.Universe.Mirror">Universe.Mirror</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ModifiersTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ModifiersTag:scala.reflect.ClassTag[ImplicitTags.this.Modifiers]"></a><a id="ModifiersTag:ClassTag[Universe.Modifiers]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ModifiersTag:scala.reflect.ClassTag[ImplicitTags.this.Modifiers]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ModifiersTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Modifiers&gt;:Null&lt;:Trees.this.ModifiersApi" class="extmbr" name="scala.reflect.api.Universe.Modifiers">Universe.Modifiers</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ModuleDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ModuleDefTag:scala.reflect.ClassTag[ImplicitTags.this.ModuleDef]"></a><a id="ModuleDefTag:ClassTag[Universe.ModuleDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ModuleDefTag:scala.reflect.ClassTag[ImplicitTags.this.ModuleDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ModuleDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ModuleDef&gt;:Null&lt;:Trees.this.ModuleDefApiwithTrees.this.ImplDef" class="extmbr" name="scala.reflect.api.Trees.ModuleDef">Universe.ModuleDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ModuleSymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ModuleSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.ModuleSymbol]"></a><a id="ModuleSymbolTag:ClassTag[Universe.ModuleSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ModuleSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.ModuleSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ModuleSymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ModuleSymbol&gt;:Null&lt;:Symbols.this.ModuleSymbolApiwithSymbols.this.TermSymbol" class="extmbr" name="scala.reflect.api.Symbols.ModuleSymbol">Universe.ModuleSymbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#NameTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NameTag:scala.reflect.ClassTag[ImplicitTags.this.Name]"></a><a id="NameTag:ClassTag[Universe.Name]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#NameTag:scala.reflect.ClassTag[ImplicitTags.this.Name]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NameTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Name&gt;:Null&lt;:Names.this.NameApi" class="extmbr" name="scala.reflect.api.Universe.Name">Universe.Name</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#NameTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NameTreeTag:scala.reflect.ClassTag[ImplicitTags.this.NameTree]"></a><a id="NameTreeTag:ClassTag[Universe.NameTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#NameTreeTag:scala.reflect.ClassTag[ImplicitTags.this.NameTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NameTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#NameTree&gt;:Null&lt;:Trees.this.NameTreeApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.NameTree">Universe.NameTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#NestedArgumentTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NestedArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.NestedArgument]"></a><a id="NestedArgumentTag:ClassTag[Universe.NestedArgument]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#NestedArgumentTag:scala.reflect.ClassTag[ImplicitTags.this.NestedArgument]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NestedArgumentTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#NestedArgument&gt;:Null&lt;:Annotations.this.NestedArgumentApiwithAnnotations.this.JavaArgument" class="extmbr" name="scala.reflect.api.Annotations.NestedArgument">Universe.NestedArgument</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#NewTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NewTag:scala.reflect.ClassTag[ImplicitTags.this.New]"></a><a id="NewTag:ClassTag[Universe.New]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#NewTag:scala.reflect.ClassTag[ImplicitTags.this.New]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NewTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#New&gt;:Null&lt;:Trees.this.NewApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.New">Universe.New</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#NullaryMethodTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NullaryMethodTypeTag:scala.reflect.ClassTag[ImplicitTags.this.NullaryMethodType]"></a><a id="NullaryMethodTypeTag:ClassTag[Universe.NullaryMethodType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#NullaryMethodTypeTag:scala.reflect.ClassTag[ImplicitTags.this.NullaryMethodType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NullaryMethodTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#NullaryMethodType&gt;:Null&lt;:Types.this.NullaryMethodTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.NullaryMethodType">Universe.NullaryMethodType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#PackageDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PackageDefTag:scala.reflect.ClassTag[ImplicitTags.this.PackageDef]"></a><a id="PackageDefTag:ClassTag[Universe.PackageDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#PackageDefTag:scala.reflect.ClassTag[ImplicitTags.this.PackageDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PackageDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#PackageDef&gt;:Null&lt;:Trees.this.PackageDefApiwithTrees.this.MemberDef" class="extmbr" name="scala.reflect.api.Trees.PackageDef">Universe.PackageDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#PolyTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PolyTypeTag:scala.reflect.ClassTag[ImplicitTags.this.PolyType]"></a><a id="PolyTypeTag:ClassTag[Universe.PolyType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#PolyTypeTag:scala.reflect.ClassTag[ImplicitTags.this.PolyType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PolyTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#PolyType&gt;:Null&lt;:Types.this.PolyTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.PolyType">Universe.PolyType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#PositionTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PositionTag:scala.reflect.ClassTag[ImplicitTags.this.Position]"></a><a id="PositionTag:ClassTag[Universe.Position]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#PositionTag:scala.reflect.ClassTag[ImplicitTags.this.Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PositionTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Position&gt;:Null&lt;:scala.reflect.api.Position{typePos=Positions.this.Position}" class="extmbr" name="scala.reflect.api.Universe.Position">Universe.Position</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#RefTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RefTreeTag:scala.reflect.ClassTag[ImplicitTags.this.RefTree]"></a><a id="RefTreeTag:ClassTag[Universe.RefTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#RefTreeTag:scala.reflect.ClassTag[ImplicitTags.this.RefTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RefTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#RefTree&gt;:Null&lt;:Trees.this.RefTreeApiwithTrees.this.SymTreewithTrees.this.NameTree" class="extmbr" name="scala.reflect.api.Trees.RefTree">Universe.RefTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#RefinedTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RefinedTypeTag:scala.reflect.ClassTag[ImplicitTags.this.RefinedType]"></a><a id="RefinedTypeTag:ClassTag[Universe.RefinedType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#RefinedTypeTag:scala.reflect.ClassTag[ImplicitTags.this.RefinedType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RefinedTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#RefinedType&gt;:Null&lt;:Types.this.RefinedTypeApiwithTypes.this.CompoundType" class="extmbr" name="scala.reflect.api.Types.RefinedType">Universe.RefinedType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ReturnTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReturnTag:scala.reflect.ClassTag[ImplicitTags.this.Return]"></a><a id="ReturnTag:ClassTag[Universe.Return]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ReturnTag:scala.reflect.ClassTag[ImplicitTags.this.Return]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReturnTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Return&gt;:Null&lt;:Trees.this.ReturnApiwithTrees.this.SymTreewithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Return">Universe.Return</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#RuntimeClassTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RuntimeClassTag:scala.reflect.ClassTag[ImplicitTags.this.RuntimeClass]"></a><a id="RuntimeClassTag:ClassTag[Universe.RuntimeClass]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#RuntimeClassTag:scala.reflect.ClassTag[ImplicitTags.this.RuntimeClass]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RuntimeClassTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#RuntimeClass&gt;:Null&lt;:AnyRef" class="extmbr" name="scala.reflect.api.Universe.RuntimeClass">Universe.RuntimeClass</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ScopeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ScopeTag:scala.reflect.ClassTag[ImplicitTags.this.Scope]"></a><a id="ScopeTag:ClassTag[Universe.Scope]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ScopeTag:scala.reflect.ClassTag[ImplicitTags.this.Scope]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScopeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Scope&gt;:Null&lt;:Scopes.this.ScopeApi" class="extmbr" name="scala.reflect.api.Scopes.Scope">Universe.Scope</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SelectFromTypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SelectFromTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SelectFromTypeTree]"></a><a id="SelectFromTypeTreeTag:ClassTag[Universe.SelectFromTypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SelectFromTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SelectFromTypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SelectFromTypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SelectFromTypeTree&gt;:Null&lt;:Trees.this.SelectFromTypeTreeApiwithTrees.this.TypTreewithTrees.this.RefTree" class="extmbr" name="scala.reflect.api.Trees.SelectFromTypeTree">Universe.SelectFromTypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SelectTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SelectTag:scala.reflect.ClassTag[ImplicitTags.this.Select]"></a><a id="SelectTag:ClassTag[Universe.Select]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SelectTag:scala.reflect.ClassTag[ImplicitTags.this.Select]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SelectTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Select&gt;:Null&lt;:Trees.this.SelectApiwithTrees.this.RefTree" class="extmbr" name="scala.reflect.api.Trees.Select">Universe.Select</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SingleTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SingleTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SingleType]"></a><a id="SingleTypeTag:ClassTag[Universe.SingleType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SingleTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SingleType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SingleTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SingleType&gt;:Null&lt;:Types.this.SingleTypeApiwithTypes.this.SingletonType" class="extmbr" name="scala.reflect.api.Types.SingleType">Universe.SingleType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SingletonTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SingletonTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SingletonType]"></a><a id="SingletonTypeTag:ClassTag[Universe.SingletonType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SingletonTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SingletonType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SingletonTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SingletonType&gt;:Null&lt;:Types.this.SingletonTypeApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.SingletonType">Universe.SingletonType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SingletonTypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SingletonTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SingletonTypeTree]"></a><a id="SingletonTypeTreeTag:ClassTag[Universe.SingletonTypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SingletonTypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SingletonTypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SingletonTypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SingletonTypeTree&gt;:Null&lt;:Trees.this.SingletonTypeTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.SingletonTypeTree">Universe.SingletonTypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#StarTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StarTag:scala.reflect.ClassTag[ImplicitTags.this.Star]"></a><a id="StarTag:ClassTag[Universe.Star]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#StarTag:scala.reflect.ClassTag[ImplicitTags.this.Star]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">StarTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Star&gt;:Null&lt;:Trees.this.StarApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Star">Universe.Star</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SuperTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SuperTag:scala.reflect.ClassTag[ImplicitTags.this.Super]"></a><a id="SuperTag:ClassTag[Universe.Super]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SuperTag:scala.reflect.ClassTag[ImplicitTags.this.Super]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SuperTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Super&gt;:Null&lt;:Trees.this.SuperApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Super">Universe.Super</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SuperTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SuperTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SuperType]"></a><a id="SuperTypeTag:ClassTag[Universe.SuperType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SuperTypeTag:scala.reflect.ClassTag[ImplicitTags.this.SuperType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SuperTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SuperType&gt;:Null&lt;:Types.this.SuperTypeApiwithTypes.this.SingletonType" class="extmbr" name="scala.reflect.api.Types.SuperType">Universe.SuperType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SymTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SymTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SymTree]"></a><a id="SymTreeTag:ClassTag[Universe.SymTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SymTreeTag:scala.reflect.ClassTag[ImplicitTags.this.SymTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SymTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#SymTree&gt;:Null&lt;:Trees.this.SymTreeApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.SymTree">Universe.SymTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#SymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SymbolTag:scala.reflect.ClassTag[ImplicitTags.this.Symbol]"></a><a id="SymbolTag:ClassTag[Universe.Symbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#SymbolTag:scala.reflect.ClassTag[ImplicitTags.this.Symbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Symbol&gt;:Null&lt;:Symbols.this.SymbolApi" class="extmbr" name="scala.reflect.api.Symbols.Symbol">Universe.Symbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TemplateTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TemplateTag:scala.reflect.ClassTag[ImplicitTags.this.Template]"></a><a id="TemplateTag:ClassTag[Universe.Template]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TemplateTag:scala.reflect.ClassTag[ImplicitTags.this.Template]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TemplateTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Template&gt;:Null&lt;:Trees.this.TemplateApiwithTrees.this.SymTree" class="extmbr" name="scala.reflect.api.Trees.Template">Universe.Template</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TermNameTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TermNameTag:scala.reflect.ClassTag[ImplicitTags.this.TermName]"></a><a id="TermNameTag:ClassTag[Universe.TermName]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TermNameTag:scala.reflect.ClassTag[ImplicitTags.this.TermName]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TermNameTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TermName&gt;:Null&lt;:Names.this.TermNameApiwithNames.this.Name" class="extmbr" name="scala.reflect.api.Universe.TermName">Universe.TermName</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TermSymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TermSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.TermSymbol]"></a><a id="TermSymbolTag:ClassTag[Universe.TermSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TermSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.TermSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TermSymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TermSymbol&gt;:Null&lt;:Symbols.this.TermSymbolApiwithSymbols.this.Symbol" class="extmbr" name="scala.reflect.api.Symbols.TermSymbol">Universe.TermSymbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TermTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TermTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TermTree]"></a><a id="TermTreeTag:ClassTag[Universe.TermTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TermTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TermTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TermTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TermTree&gt;:Null&lt;:Trees.this.TermTreeApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.TermTree">Universe.TermTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ThisTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ThisTag:scala.reflect.ClassTag[ImplicitTags.this.This]"></a><a id="ThisTag:ClassTag[Universe.This]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ThisTag:scala.reflect.ClassTag[ImplicitTags.this.This]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ThisTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#This&gt;:Null&lt;:Trees.this.ThisApiwithTrees.this.TermTreewithTrees.this.SymTree" class="extmbr" name="scala.reflect.api.Trees.This">Universe.This</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ThisTypeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ThisTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ThisType]"></a><a id="ThisTypeTag:ClassTag[Universe.ThisType]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ThisTypeTag:scala.reflect.ClassTag[ImplicitTags.this.ThisType]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ThisTypeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ThisType&gt;:Null&lt;:Types.this.ThisTypeApiwithTypes.this.SingletonType" class="extmbr" name="scala.reflect.api.Types.ThisType">Universe.ThisType</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ThrowTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ThrowTag:scala.reflect.ClassTag[ImplicitTags.this.Throw]"></a><a id="ThrowTag:ClassTag[Universe.Throw]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ThrowTag:scala.reflect.ClassTag[ImplicitTags.this.Throw]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ThrowTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Throw&gt;:Null&lt;:Trees.this.ThrowApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Throw">Universe.Throw</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TreeCopierTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TreeCopierTag:scala.reflect.ClassTag[ImplicitTags.this.TreeCopier]"></a><a id="TreeCopierTag:ClassTag[Universe.TreeCopier]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TreeCopierTag:scala.reflect.ClassTag[ImplicitTags.this.TreeCopier]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TreeCopierTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TreeCopier&gt;:Null&lt;:Trees.this.TreeCopierOps" class="extmbr" name="scala.reflect.api.Trees.TreeCopier">Universe.TreeCopier</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TreeTag:scala.reflect.ClassTag[ImplicitTags.this.Tree]"></a><a id="TreeTag:ClassTag[Universe.Tree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TreeTag:scala.reflect.ClassTag[ImplicitTags.this.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Tree&gt;:Null&lt;:Trees.this.TreeApi" class="extmbr" name="scala.reflect.api.Trees.Tree">Universe.Tree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TryTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TryTag:scala.reflect.ClassTag[ImplicitTags.this.Try]"></a><a id="TryTag:ClassTag[Universe.Try]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TryTag:scala.reflect.ClassTag[ImplicitTags.this.Try]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TryTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Try&gt;:Null&lt;:Trees.this.TryApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Try">Universe.Try</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypTree]"></a><a id="TypTreeTag:ClassTag[Universe.TypTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypTree&gt;:Null&lt;:Trees.this.TypTreeApiwithTrees.this.Tree" class="extmbr" name="scala.reflect.api.Trees.TypTree">Universe.TypTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeApplyTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeApplyTag:scala.reflect.ClassTag[ImplicitTags.this.TypeApply]"></a><a id="TypeApplyTag:ClassTag[Universe.TypeApply]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeApplyTag:scala.reflect.ClassTag[ImplicitTags.this.TypeApply]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeApplyTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeApply&gt;:Null&lt;:Trees.this.TypeApplyApiwithTrees.this.GenericApply" class="extmbr" name="scala.reflect.api.Trees.TypeApply">Universe.TypeApply</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeBoundsTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeBoundsTag:scala.reflect.ClassTag[ImplicitTags.this.TypeBounds]"></a><a id="TypeBoundsTag:ClassTag[Universe.TypeBounds]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeBoundsTag:scala.reflect.ClassTag[ImplicitTags.this.TypeBounds]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeBoundsTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeBounds&gt;:Null&lt;:Types.this.TypeBoundsApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.TypeBounds">Universe.TypeBounds</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeBoundsTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeBoundsTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypeBoundsTree]"></a><a id="TypeBoundsTreeTag:ClassTag[Universe.TypeBoundsTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeBoundsTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypeBoundsTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeBoundsTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeBoundsTree&gt;:Null&lt;:Trees.this.TypeBoundsTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.TypeBoundsTree">Universe.TypeBoundsTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeDefTag:scala.reflect.ClassTag[ImplicitTags.this.TypeDef]"></a><a id="TypeDefTag:ClassTag[Universe.TypeDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeDefTag:scala.reflect.ClassTag[ImplicitTags.this.TypeDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeDef&gt;:Null&lt;:Trees.this.TypeDefApiwithTrees.this.MemberDef" class="extmbr" name="scala.reflect.api.Trees.TypeDef">Universe.TypeDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeNameTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeNameTag:scala.reflect.ClassTag[ImplicitTags.this.TypeName]"></a><a id="TypeNameTag:ClassTag[Universe.TypeName]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeNameTag:scala.reflect.ClassTag[ImplicitTags.this.TypeName]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeNameTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeName&gt;:Null&lt;:Names.this.TypeNameApiwithNames.this.Name" class="extmbr" name="scala.reflect.api.Universe.TypeName">Universe.TypeName</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeRefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeRefTag:scala.reflect.ClassTag[ImplicitTags.this.TypeRef]"></a><a id="TypeRefTag:ClassTag[Universe.TypeRef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeRefTag:scala.reflect.ClassTag[ImplicitTags.this.TypeRef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeRefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeRef&gt;:Null&lt;:Types.this.TypeRefApiwithTypes.this.Type" class="extmbr" name="scala.reflect.api.Types.TypeRef">Universe.TypeRef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeSymbolTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.TypeSymbol]"></a><a id="TypeSymbolTag:ClassTag[Universe.TypeSymbol]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeSymbolTag:scala.reflect.ClassTag[ImplicitTags.this.TypeSymbol]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeSymbolTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeSymbol&gt;:Null&lt;:Symbols.this.TypeSymbolApiwithSymbols.this.Symbol" class="extmbr" name="scala.reflect.api.Symbols.TypeSymbol">Universe.TypeSymbol</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeTagg" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeTagg:scala.reflect.ClassTag[ImplicitTags.this.Type]"></a><a id="TypeTagg:ClassTag[Universe.Type]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeTagg:scala.reflect.ClassTag[ImplicitTags.this.Type]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeTagg</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Type&gt;:Null&lt;:Types.this.TypeApi" class="extmbr" name="scala.reflect.api.Types.Type">Universe.Type</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypeTreeTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypeTree]"></a><a id="TypeTreeTag:ClassTag[Universe.TypeTree]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypeTreeTag:scala.reflect.ClassTag[ImplicitTags.this.TypeTree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeTreeTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#TypeTree&gt;:Null&lt;:Trees.this.TypeTreeApiwithTrees.this.TypTree" class="extmbr" name="scala.reflect.api.Trees.TypeTree">Universe.TypeTree</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#TypedTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypedTag:scala.reflect.ClassTag[ImplicitTags.this.Typed]"></a><a id="TypedTag:ClassTag[Universe.Typed]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#TypedTag:scala.reflect.ClassTag[ImplicitTags.this.Typed]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypedTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#Typed&gt;:Null&lt;:Trees.this.TypedApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.Typed">Universe.Typed</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#UnApplyTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UnApplyTag:scala.reflect.ClassTag[ImplicitTags.this.UnApply]"></a><a id="UnApplyTag:ClassTag[Universe.UnApply]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#UnApplyTag:scala.reflect.ClassTag[ImplicitTags.this.UnApply]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UnApplyTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#UnApply&gt;:Null&lt;:Trees.this.UnApplyApiwithTrees.this.TermTree" class="extmbr" name="scala.reflect.api.Trees.UnApply">Universe.UnApply</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ValDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ValDefTag:scala.reflect.ClassTag[ImplicitTags.this.ValDef]"></a><a id="ValDefTag:ClassTag[Universe.ValDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ValDefTag:scala.reflect.ClassTag[ImplicitTags.this.ValDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ValDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ValDef&gt;:Null&lt;:Trees.this.ValDefApiwithTrees.this.ValOrDefDef" class="extmbr" name="scala.reflect.api.Trees.ValDef">Universe.ValDef</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.reflect.api.ImplicitTags#ValOrDefDefTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ValOrDefDefTag:scala.reflect.ClassTag[ImplicitTags.this.ValOrDefDef]"></a><a id="ValOrDefDefTag:ClassTag[Universe.ValOrDefDef]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ValOrDefDefTag:scala.reflect.ClassTag[ImplicitTags.this.ValOrDefDef]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ValOrDefDefTag</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<a href="Universe.html#ValOrDefDef&gt;:Null&lt;:Trees.this.ValOrDefDefApiwithTrees.this.MemberDef" class="extmbr" name="scala.reflect.api.Trees.ValOrDefDef">Universe.ValOrDefDef</a>]</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a><a id="+(String):String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#+(other:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a><a id="-&gt;[B](B):(ImplicitTags,B)"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#-&gt;[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a><a id="ensuring((ImplicitTags)⇒Boolean,⇒Any):ImplicitTags"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a><a id="ensuring((ImplicitTags)⇒Boolean):ImplicitTags"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ensuring(cond:A=&gt;Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a><a id="ensuring(Boolean,⇒Any):ImplicitTags"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a><a id="ensuring(Boolean):ImplicitTags"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ensuring(cond:Boolean):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a><a id="formatted(String):String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#formatted(fmtstr:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a><a id="→[B](B):(ImplicitTags,B)"></a>
+      <span class="permalink">
+      <a href="../../../scala/reflect/api/ImplicitTags.html#→[B](y:B):(A,B)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="scala.reflect.api.ImplicitTags">ImplicitTags</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">Scala programming documentation. Copyright (c) 2003-2018 <a href="http://www.epfl.ch" target="_top">EPFL</a>, with contributions from <a href="http://www.lightbend.com" target="_top">Lightbend</a>.</div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
